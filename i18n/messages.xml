@@ -1308,7 +1308,7 @@
 	<message key="xmlui.administrative.item.EditBitstreamForm.user_label">Other Format</message>
 	<message key="xmlui.administrative.item.EditBitstreamForm.user_help">The application you used to create the file, and the version number (for example, "<i>ACMESoft SuperApp version 1.5</i>").</message>
     <message key="xmlui.administrative.item.EditBitstreamForm.name_label">Filename:</message>
-    <message key="xmlui.administrative.item.EditBitstreamForm.name_help">Rename the filename for this bitstream. Note that this will change the display bistream URL ,but old links will still resolve as long as sequence ID does not change.</message>
+    <message key="xmlui.administrative.item.EditBitstreamForm.name_help">Change the filename for this bitstream. Note that this will change the display bitstream URL, but old links will still resolve as long as the sequence ID does not change.</message>
 
 	<!-- org.dspace.app.xmlui.administrative.item.EditItemBitstreamsForm -->
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.title">Item Bitstreams</message>
@@ -1759,7 +1759,7 @@
 	<message key="xmlui.administrative.ControlPanel.start_bot">START recording bot activity.</message>
 	<message key="xmlui.administrative.ControlPanel.activity_sort_time">Time Stamp</message>
 	<message key="xmlui.administrative.ControlPanel.activity_sort_user">User</message>
-	<message key="xmlui.administrative.ControlPanel.activity_sort_ip">IP Address</message>
+	<message key="xmlui.administrative.ControlPanel.activity_sort_ip">IP address</message>
 	<message key="xmlui.administrative.ControlPanel.activity_sort_url">URL Page</message>
 	<message key="xmlui.administrative.ControlPanel.activity_sort_Agent">User-Agent</message>
 	<message key="xmlui.administrative.ControlPanel.activity_anonymous">Anonymous {0}</message>
@@ -2048,4 +2048,16 @@
   <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.title">LC Name Authority author lookup</message>
   <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Local value "@1@" (not in Naming Authority)</message>
 
+    <message key="xmlui.Submission.submit.UploadStep.upload_pdf_accepted">Das Dokument erfüllt alle Anforderungen der Checkliste</message>
+    <message key="xmlui.Submission.submit.UploadStep.upload_pdf_metadata">Das Dokument enhält die folgende Beschreibung: (Erklärung ung Anleitung hinzufügen)</message>
+    <message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_linearized">Optimiert für schnelle Webanzeige</message>
+    <message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_toc">Inhaltsverzeichnis vorhanden</message>
+    <message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_print">Drucken zulässig</message>
+    <message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_extract">Kopieren von Inhalt zulässig</message>
+    <message key="xmlui.Submission.submit.UploadStep.firstpdf_error">Bitte zuerst die Dissertation in PDF-Format hochladen</message>
+    <message key="xmlui.Submission.submit.UploadStep.pdfcheck_error">Das Dokument wurde abgelehnt, weil es nicht alle Anforderungen der Checkliste erfüllt. Brechen Sie bitte den Publikationsprozess ab, korrigieren Sie das Dokument und laden Sie es dann noch einmal hoch.</message>
+    <message key="xmlui.Submission.submit.UploadStep.pdfcheck_true">Ja</message>
+    <message key="xmlui.Submission.submit.UploadStep.pdfcheck_false">Nein</message>
+    <message key="xmlui.Submission.submit.UploadStep.invalidpdf_error">Die Datei ist kein valides PDF</message>
+    <message key="xmlui.Submission.submit.UploadStep.nopdfinfo">Die Datei enhält keine Beschreibung</message>
 </catalogue>

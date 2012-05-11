@@ -482,6 +482,13 @@
 
     <xsl:template match="dri:list[not(@type)]/dri:item" priority="2" mode="nested">
         <li>
+	    <xsl:if text="@n">
+		<xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute>
+	    </xsl:if>
+	   <xsl:if text="@rend">
+                <xsl:attribute name="class"><xsl:value-of select="@rend"/></xsl:attribute>
+            </xsl:if>
+ 
             <xsl:apply-templates />
             <!-- Wrap orphaned sub-lists into the preceding item -->
             <xsl:variable name="node-set1" select="./following-sibling::dri:list"/>
