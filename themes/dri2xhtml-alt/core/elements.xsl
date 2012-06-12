@@ -481,20 +481,24 @@
     </xsl:template>
 
     <xsl:template match="dri:list[not(@type)]/dri:item" priority="2" mode="nested">
-        <li>
-	    <xsl:if text="@n">
-		<xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute>
-	    </xsl:if>
-	   <xsl:if text="@rend">
-                <xsl:attribute name="class"><xsl:value-of select="@rend"/></xsl:attribute>
-            </xsl:if>
- 
-            <xsl:apply-templates />
-            <!-- Wrap orphaned sub-lists into the preceding item -->
-            <xsl:variable name="node-set1" select="./following-sibling::dri:list"/>
-            <xsl:variable name="node-set2" select="./following-sibling::dri:item[1]/following-sibling::dri:list"/>
-            <xsl:apply-templates select="$node-set1[count(.|$node-set2) != count($node-set2)]"/>
-        </li>
+	 <xsl:choose>
+	    <xsl:when test="@rend">
+	      <li class="{@rend}">
+	       	  <i18n:text><xsl:value-of select="."/></i18n:text>
+	          <xsl:text>: </xsl:text>
+	       	 <i18n:text><xsl:value-of select="concat('xmlui.Submission.submit.UploadStep.',@rend)"/></i18n:text>
+	      </li>
+	    </xsl:when>
+	    <xsl:otherwise> 
+		    <li>
+       	           <xsl:apply-templates />
+		        <!-- Wrap orphaned sub-lists into the preceding item -->
+               	   <xsl:variable name="node-set1" select="./following-sibling::dri:list"/>
+	                  <xsl:variable name="node-set2" select="./following-sibling::dri:item[1]/following-sibling::dri:list"/>
+       	           <xsl:apply-templates select="$node-set1[count(.|$node-set2) != count($node-set2)]"/>
+		      </li>
+	    </xsl:otherwise>
+	 </xsl:choose>
     </xsl:template>
 
 

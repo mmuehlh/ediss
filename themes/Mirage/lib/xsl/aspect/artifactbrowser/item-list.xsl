@@ -151,7 +151,25 @@
     <!--handles the rendering of a single item in a list in metadata mode-->
     <xsl:template match="dim:dim" mode="itemSummaryList-DIM-metadata">
         <xsl:param name="href"/>
-        <div class="artifact-description">
+		<div class="list-thumbnail-wrapper">
+			<div class="artifact-preview">
+				<a class="image-link" href="{$href}">
+					<xsl:choose>
+						<xsl:when test="mets:fileGrp[@USE='THUMBNAIL']">
+							<img alt="Thumbnail">
+								<xsl:attribute name="src">
+									<xsl:value-of select="mets:fileGrp[@USE='THUMBNAIL']/mets:file/mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
+								</xsl:attribute>
+							</img>
+						</xsl:when>
+						<xsl:otherwise>
+							<img alt="Icon" src="{concat($theme-path, '/images/mime.png')}" width="60px" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</a>
+			</div>
+		</div>
+		<div class="artifact-description">
             <div class="artifact-title">
                 <xsl:element name="a">
                     <xsl:attribute name="href">

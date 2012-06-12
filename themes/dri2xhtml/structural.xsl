@@ -339,7 +339,20 @@
                 </xsl:choose>
             </ul>
            
-            
+           <div id="ds-lang-refs">  
+              <p>                 
+                <xsl:for-each select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='xmlui-ml'][@qualifier='localeURL']">
+			<xsl:text> | </xsl:text>
+                	<a>
+	                 <xsl:attribute name="href">
+        	        	   <xsl:value-of select="."/>
+                	 </xsl:attribute>
+	                <i18n:text><xsl:value-of select="substring-after(.,'locale-attribute=')" /></i18n:text>          
+        	        </a>
+                	<xsl:text> | </xsl:text>
+                </xsl:for-each>                 
+              </p>
+            </div> 
             <xsl:choose>
                 <xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
                     <div id="ds-user-box">
