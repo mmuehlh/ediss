@@ -163,7 +163,7 @@
 							</img>
 						</xsl:when>
 						<xsl:otherwise>
-							<img alt="Icon" src="{concat($theme-path, '/images/mime.png')}" width="60px" />
+							<img alt="Icon" src="{concat($theme-path, '/images/mime.png')}" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</a>

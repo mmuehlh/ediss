@@ -455,6 +455,7 @@
 					<div id="ds-trail-hint">
 						TODO:HINTTEXT
 					</div>
+					<!-- TODO: Truncate trail if it does not fit into one line -->
 					<ul id="ds-trail">
 						<xsl:choose>
 							<xsl:when test="starts-with($request-uri, 'page/about')">
@@ -761,6 +762,18 @@
 		<script type="text/javascript">
 			runAfterJSImports.execute();
 		</script>
+		
+		<!-- TODO: Move to file -->
+		<xsl:text disable-output-escaping="yes"><![CDATA[
+			<script type="text/javascript">
+				$(function() {
+					while ( $('#ds-trail').height() > $('#ds-trail-hint').height() ) {
+						$('#ds-trail li:not(.truncated):eq(1)').addClass('truncated').text('…');
+					}
+				});
+				
+			</script>
+		]]></xsl:text>
 
 		<!-- Add a google analytics script if the key is present -->
 		<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">

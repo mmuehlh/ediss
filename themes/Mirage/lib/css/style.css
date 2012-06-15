@@ -150,9 +150,6 @@ cite, dfn, em, i {
 code, kbd, samp, pre, tt, var {
 	font-family: mono-space, monospace;
 }
-h1, h2, h3, h4, h5, h6 {
-	/*word-spacing: -0.125em;*/
-}
 p {
 	word-spacing: 0.125em;
 	hyphenate: auto;
@@ -241,7 +238,6 @@ ul, ol, dl, dialog {
 	font-size: 13px;
 	line-height: 18px;
 	position: relative;
-	top: 5px;
 	margin-top: 18px;
 	margin-bottom: 18px;
 }
@@ -287,30 +283,27 @@ form p {
 }
 input,
 select,
-textarea,
-.file-link a {
+textarea {
 	border-left: 5px solid #5C739F;
 	background: #fff;
 	box-shadow: 0 0 2px #777 inset;
-	padding: 5px;
+	padding: 6px;
 }
 input:focus,
 select:focus,
 textarea:focus,
 input:active,
 select:active,
-textarea:active,
-.file-link a {
+textarea:active {
 	border-color: #163776;
 	box-shadow: 0 0 4px #5C739F;
 }
 select {
-	padding: 4px;
+	padding: 5px 5px 5px 0;
 }
 input[type=submit],
 input[type=reset],
-input[type=button],
-.file-link a {
+input[type=button] {
 	background: #5C739F;
 	border-color: #163776;
 	box-shadow: 0 0 4px #aaa;
@@ -318,19 +311,17 @@ input[type=button],
 	float: right;
 	font-weight: bold;
 	line-height: 18px;
-	min-width: 4.5em;
-	padding: 4px;
+	min-width: 5em;
+	padding: 5px;
 	text-align: center;
 	text-shadow: 0 0 2px #163776;
 }
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
-.file-link a:hover,
 input[type=submit]:active,
 input[type=reset]:active,
-input[type=button]:active,
-.file-link a:active {
+input[type=button]:active {
 	background: #7D95C7;
 	border-color: #5C739F;
 	box-shadow: 0 0 4px #5C739F;
@@ -338,8 +329,7 @@ input[type=button]:active,
 }
 input[type=submit]:active,
 input[type=reset]:active,
-input[type=button]:active,
-.file-link a:active {
+input[type=button]:active {
 	color: #163776;
 }
 div + form {
@@ -650,7 +640,7 @@ input[name=query] {
 	border: none;
 	margin-right: .5em;
 	padding: none;
-	vertical-align: bottom;
+	vertical-align: middle;
 }
 #search a {
 	color: #fff;
@@ -682,6 +672,9 @@ input[name=query] {
 	font-size: 21px;
 	margin: 0;
 	top: 1px;
+}
+#sidebar h1 + div {
+	margin-top: 5px;
 }
 #sidebar h2 {
 	background: none;
@@ -853,7 +846,6 @@ p {
 }
 
 .primary {
-    margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -1076,11 +1068,6 @@ li.ds-form-item label.ds-composite-component.last{
     margin-left: 8px;
 }
 
-
-.ds-form-content input.ds-button-field {
-    font-size: 93%;
-}
-
 select#aspect_submission_submit_SelectCollectionStep_field_handle {
     max-width: 350px;
 }
@@ -1200,31 +1187,6 @@ span.field-help {
     border-top: none;
 }
 
-.pagination-links {
-    list-style: none;
-    float: right;
-    margin: 0;
-}
-
-.pagination-links li {
-    display: inline;
-    padding-left: 2px;
-    padding-right: 2px;
-}
-
-.current-page-link {
-    font-weight: bold;
-    color: #1F3F5E;
-}
-
-.current-page-link a {
-    color: #1F3F5E;
-}
-
-.pagination-masked.top {
-    margin-top: 5px;
-}
-
 #aspect_artifactbrowser_CommunityBrowser_div_comunity-browser .short-description, #aspect_discovery_SiteRecentSubmissions_div_site-home .short-description {
     display: none;
 }
@@ -1292,16 +1254,8 @@ form.search .ds-form-item {
     padding-bottom: 5px;
 }
 
-form.search .ds-form-item select{
+form.search .ds-form-item select {
     margin-top: 0;
-}
-
-form.search label.ds-composite-component .ds-select-field{
-    margin-top: 6px;
-}
-
-form.search .ds-form-item label {
-    font-size: 100%;
 }
 
 form.search .ds-form-content {
@@ -1382,17 +1336,6 @@ table.detailtable td.label-cell {
     width: 100px;
 }
 
-div.item-summary-view-metadata h1,
-div.item-summary-view-metadata h2 {
-    line-height: normal;
-}
-
-div.item-summary-view-metadata {
-    text-align: justify;
-    line-height: 161.6%;
-    margin-bottom: 30px;
-}
-
 div.simple-item-view-authors {
     font-size: 15px;
     font-weight: bold;
@@ -1425,7 +1368,7 @@ div.simple-item-view-authors {
 
 .file-metadata span.bold,
 .item-metadata span.bold {
-    width: 80px;
+    width: 100px;
     clear: left;
     text-align: right;
     margin-right: 7px;
@@ -1472,10 +1415,6 @@ div.simple-item-view-authors {
     margin-top: 15px;
     margin-bottom: 10px;
     text-align: center;
-}
-
-form.discover-search-box{
-    margin-bottom: 10px;
 }
 
 li.search-filter-list,
@@ -1577,17 +1516,20 @@ margin: 2px 2px 0px 2px;
 .ds-artifact-list .ds-artifact-item {
 	display: block;
 	margin: 0 0 0 -20px;
-	padding: 0 0 20px 20px;
+	padding: 0 0 15px 20px;
 	position: relative;
 }
-.thumbnail-wrapper {
+.list-thumbnail-wrapper {
 	padding-top: 3px;
 }
+.list-thumbnail-wrapper img {
+	width: 65px;
+}
 .ds-artifact-item + .ds-artifact-item .list-thumbnail-wrapper {
-	padding-top: 20px;
+	padding-top: 15px;
 }
 .ds-artifact-list .ds-artifact-item + .ds-artifact-item .artifact-description {
-	padding-top: 17px;
+	padding-top: 12px;
 }
 .ds-artifact-list .ds-artifact-item.even,
 tr.even {
@@ -1596,51 +1538,99 @@ tr.even {
 .ds-artifact-item ul {
 	margin-left: 18px;
 }
-.pagination {
+.pagination,
+.pagination-masked {
 	font-size: 11px;
-	height: 25px;
 	margin-bottom: 25px;
-	top: 10px;
+	min-height: 25px;
 	position: relative;
 }
 .pagination-info {
 	font-size: 1em;
 	margin: 0 150px;
 	text-align: center;
+	width: 400px;
 }
-a.previous-page-link {
-	background: url(../../images/pagination-bg.png) left 0 no-repeat;
+.previous-page-link,
+.next-page-link {
 	display: block;
+	font-size: 11px;
 	font-weight: bold;
-	height: 15px;
-	left: 0;
-	min-width: 85px;
-	padding: 5px 20px;
+	height: 25px;
+	line-height: 25px;
+	width: 90px;
+	padding: 0 20px !important;
 	position: absolute;
 	top: 0;
+	z-index: 0;
 }
-a.previous-page-link:hover {
+.previous-page-link {
+	background: url(../../images/pagination-bg.png) left 0 no-repeat;
+	left: 0;
+}
+.previous-page-link:hover {
 	background-position: left -50px;
 	color: #fff;
 	text-decoration: none;
 }
-a.next-page-link {
+.next-page-link {
 	background: url(../../images/pagination-bg.png) right -25px no-repeat;
-	display: block;
-	font-weight: bold;
-	height: 15px;
-	min-width: 85px;
-	padding: 5px 20px;
-	position: absolute;
 	right: 0;
 	text-align: right;
-	top: 0;
 }
-a.next-page-link:hover {
+.next-page-link:hover {
 	background-position: right -75px;
 	color: #fff;
 	text-decoration: none;
 }
+.pagination-links {
+	line-height: 18px;
+	margin-bottom: 0;
+	text-align: center;
+}
+.pagination-links li {
+	display: inline;
+}
+.pagination-links li a {
+	display: inline-block;
+	font-weight: bold;
+	min-width: 1em;
+	padding: 3px 5px;
+	text-align: center;
+}
+.current-page-link a {
+	border: 1px solid #5C739F;
+	color: #5C739F;
+}
+.page-link a:hover,
+.first-page-link a:hover,
+.current-page-link a:hover,
+.last-page-link a:hover {
+	color: #fff;
+	background: #5C739F;
+	text-decoration: none;
+	z-index: 999;
+}
+.pagination-links .previous-page-link {
+	left: 0;
+}
+
 .file-link a {
-	padding: 10px 20px;
+	background: url(../../images/download-button.png) 0 0 no-repeat;
+	display: block;
+	height: 80px;
+	text-indent: -9999px;
+	width: 120px;
+}
+.file-link a:hover,
+.file-link a:active {
+	background-position: 0 -80px;
+}
+.spacer {
+	display: none;
+}
+.subtitle {
+	color: #818181;
+	font-size: 18px;
+	top: 0;
 }
