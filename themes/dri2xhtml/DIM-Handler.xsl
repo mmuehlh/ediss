@@ -110,7 +110,7 @@
                     </xsl:attribute>
                     <xsl:choose>
                         <xsl:when test="dim:field[@mdschema='dc' and @element='title'] and (string-length(dim:field[@element='title']) &gt; 0)">
-                            <xsl:value-of select="dim:field[@mdschema='dc' and @element='title'][1]/node()"/>
+                            <xsl:value-of select="dim:field[@mdschema='dc' and @element='title'][1]/node()" disable-output-encoding="yes"/>
                         </xsl:when>
                         <xsl:otherwise>
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
@@ -278,7 +278,7 @@
         <a href="{@OBJID}">
             <xsl:choose>
 	            <xsl:when test="string-length($data/dim:field[@element='title'][1]) &gt; 0">
-	                <xsl:value-of select="$data/dim:field[@element='title'][1]"/>
+	                <xsl:value-of select="$data/dim:field[@element='title'][1]" disable-output-encoding="yes"/>
 	            </xsl:when>
 	            <xsl:otherwise>
 	                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
@@ -471,14 +471,14 @@
                     <xsl:choose>
                         <xsl:when test="count(dim:field[@element='title'][not(@qualifier)]) &gt; 1">
                             <xsl:for-each select="dim:field[@element='title'][not(@qualifier)]">
-                        	   <xsl:value-of select="./node()"/>
+                        	   <xsl:value-of select="./node()" disable-output-encoding="yes"/>
                         	   <xsl:if test="count(following-sibling::dim:field[@element='title'][not(@qualifier)]) != 0">
                                     <xsl:text>; </xsl:text><br/>
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:when>
                         <xsl:when test="count(dim:field[@element='title'][not(@qualifier)]) = 1">
-                            <xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()"/>
+                            <xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()" disable-output-encoding="yes"/>
                         </xsl:when>
                         <xsl:otherwise>
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>

@@ -333,52 +333,51 @@
 						<i18n:text>xmlui.dri2xhtml.structural.head-subtitle</i18n:text>
 					</h1>
 				</a>
-
-				<!--<xsl:choose>
-					<xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
-						<div id="ds-user-box">
-							<p>
-								<a>
-									<xsl:attribute name="href">
-										<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/
-										dri:metadata[@element='identifier' and @qualifier='url']"/>
-									</xsl:attribute>
-									<i18n:text>xmlui.dri2xhtml.structural.profile</i18n:text>
-									<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/
-									dri:metadata[@element='identifier' and @qualifier='firstName']"/>
-									<xsl:text> </xsl:text>
-									<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/
-									dri:metadata[@element='identifier' and @qualifier='lastName']"/>
-								</a>
-								<xsl:text> | </xsl:text>
-								<a>
-									<xsl:attribute name="href">
-										<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/
-										dri:metadata[@element='identifier' and @qualifier='logoutURL']"/>
-									</xsl:attribute>
-									<i18n:text>xmlui.dri2xhtml.structural.logout</i18n:text>
-								</a>
-							</p>
-						</div>
-					</xsl:when>
-					<xsl:otherwise>
-						<div id="ds-user-box">
-							<p>
-								<a>
-									<xsl:attribute name="href">
-										<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/
-										dri:metadata[@element='identifier' and @qualifier='loginURL']"/>
-									</xsl:attribute>
-									<i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
-								</a>
-							</p>
-						</div>
-					</xsl:otherwise>
-				</xsl:choose>-->
 				
-				<div id="search">
-					<!-- The form, complete with a text box and a button, all built from attributes referenced
-				 from under pageMeta. -->
+				<div id="topbox">
+
+					<div id="userbox">
+						<xsl:choose>
+							<xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
+								<p>
+									<a>
+										<xsl:attribute name="href">
+											<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='url']"/>
+										</xsl:attribute>
+										<i18n:text>xmlui.dri2xhtml.structural.profile</i18n:text>
+										<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='firstName']"/>
+										<xsl:text> </xsl:text>
+										<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='lastName']"/>
+									</a>
+									<xsl:text> | </xsl:text>
+									<a>
+										<xsl:attribute name="href">
+											<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='logoutURL']"/>
+										</xsl:attribute>
+										<i18n:text>xmlui.dri2xhtml.structural.logout</i18n:text>
+									</a>
+									<xsl:text> | </xsl:text>
+									<a>
+										<xsl:attribute name="href">
+											<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='submissionsURL']"/>
+										</xsl:attribute>
+										<i18n:text>xmlui.Submission.Navigation.submissions</i18n:text>
+									</a>
+								</p>
+							</xsl:when>
+							<xsl:otherwise>
+								<p>
+									<a>
+										<xsl:attribute name="href">
+											<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='loginURL']"/>
+										</xsl:attribute>
+										<i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
+									</a>
+								</p>
+							</xsl:otherwise>
+						</xsl:choose>
+					</div>
+					
 					<form id="ds-search-form" method="post">
 						<xsl:attribute name="action">
 							<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
@@ -439,6 +438,7 @@
 							</xsl:if>
 						</fieldset>
 					</form>
+					
 					<!--Only add if the advanced search url is different from the simple search-->
 					<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='advancedURL'] != /dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']">
 						<!-- The "Advanced search" link, to be perched underneath the search box -->
@@ -449,13 +449,14 @@
 							<i18n:text>xmlui.dri2xhtml.structural.search-advanced</i18n:text>
 						</a>
 					</xsl:if>
+					
 				</div>
 				
 				<div id="ds-trail-wrapper">
 					<div id="ds-trail-hint">
-						TODO:HINTTEXT
+						<i18n:text>xmlui.general.trail_hint</i18n:text>
 					</div>
-					<!-- TODO: Truncate trail if it does not fit into one line -->
+					<!-- Truncate trail if it does not fit into one line: done via JavaScript -->
 					<ul id="ds-trail">
 						<xsl:choose>
 							<xsl:when test="starts-with($request-uri, 'page/about')">

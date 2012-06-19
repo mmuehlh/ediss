@@ -548,7 +548,7 @@ input[name=query] {
 	position: absolute;
 	height: auto;
 	width: 760px;
-	text-shadow: 1px 1px 1px rgba(22, 55, 118, .2);
+	text-shadow: 1px 0 0 rgba(22, 55, 118, .2);
 }
 #ds-trail-hint {
 	color: #fff;
@@ -584,7 +584,7 @@ input[name=query] {
 .ds-trail-arrow {
 	display: none;
 }
-#search {
+#topbox {
 	background: url(../../images/header.png) right top no-repeat;
 	color: #fff;
 	float: right;
@@ -592,14 +592,14 @@ input[name=query] {
 	position: relative;
 	top: -228px;
 }
-#search form {
+#topbox form {
 	background: none;
 	border: none;
 	box-shadow: none;
 	margin: 0;
 	padding: 0;
 }
-#search .ds-text-field {
+#topbox .ds-text-field {
 	background: url(../../images/white-30.png);
 	border: 0;
 	border-left: 5px solid #fff;
@@ -611,10 +611,10 @@ input[name=query] {
 	padding: 0 33px 0 5px;
 	width: 140px;
 }
-#search .ds-text-field:focus {
+#topbox .ds-text-field:focus {
 	box-shadow: 0 0 2px #ddd inset;
 }
-#search .ds-button-field {
+#topbox .ds-button-field {
 	background: url(../../images/search-submit.png) 4px 4px no-repeat;
 	border: 0;
 	box-shadow: none;
@@ -623,31 +623,40 @@ input[name=query] {
 	position: absolute;
 	right: 10px;
 	text-indent: -9999px;
-	top: 10px;
+	top: 40px;
 	width: 28px;
 }
-#search .ds-button-field:hover {
+#topbox .ds-button-field:hover {
 	background-position: 4px -24px;
 }
 
-#search label {
+#topbox label {
 	cursor: pointer;
 	display: block;
 	margin-top: 5px;
 }
-#search input[type=radio] {
+#topbox input[type=radio] {
 	background: none;
 	border: none;
 	margin-right: .5em;
 	padding: none;
 	vertical-align: middle;
 }
-#search a {
+#topbox a {
 	color: #fff;
 	float: right;
 	font-weight: bold;
 	line-height: 1;
 	margin-top: 10px;
+}
+#userbox {
+	height: 30px;
+}
+#userbox p {
+	top: 0;
+}
+#userbox a {
+	float: none;
 }
 #content-wrapper {
 	width: 1000px;
@@ -712,6 +721,15 @@ input[name=query] {
 }
 #sidebar a[href$="/login"] {
 	background: url(../../images/icons.png) 7px 8px no-repeat;
+}
+#sidebar a[href$="/logout"] {
+	background: url(../../images/icons.png) 7px -216px no-repeat;
+}
+#sidebar a[href$="/profile"] {
+	background: url(../../images/icons.png) 7px -312px no-repeat;
+}
+#sidebar a[href$="/submissions"] {
+	background: url(../../images/icons.png) 7px -344px no-repeat;
 }
 #sidebar a[href$="/register"] {
 	background: url(../../images/icons.png) 7px -120px no-repeat;
@@ -1614,17 +1632,47 @@ tr.even {
 .pagination-links .previous-page-link {
 	left: 0;
 }
-
-.file-link a {
-	background: url(../../images/download-button.png) 0 0 no-repeat;
-	display: block;
-	height: 80px;
-	text-indent: -9999px;
-	width: 120px;
+.publish {
+	margin-bottom: 20px;
 }
-.file-link a:hover,
-.file-link a:active {
+.publish,
+.file-link {
+	background: url(../../images/button.png) 0 0 no-repeat;
+	text-align: center;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, .5);
+}
+.publish:hover,
+.file-link:hover {
+	background-position: 0 -40px;
+}
+.publish:active,
+.file-link:active {
 	background-position: 0 -80px;
+}
+.publish a,
+.file-link a {
+	border: 0 !important;
+	font-weight: bold;
+	color: #fff;
+	display: block;
+	line-height: 40px;
+	padding: 0 15px 0 38px !important;
+	width: 200px;
+}
+.publish a {
+	background: url(../../images/icons.png) no-repeat scroll 15px -244px transparent;
+}
+.file-link a {
+	background: url(../../images/icons.png) no-repeat scroll 15px -276px transparent;
+}
+.publish a:hover,
+.file-link a:hover {
+	text-decoration: none;
+	text-shadow: 0 0 5px #fff;
+}
+.publish a:active,
+.file-link a:active {
+	color: #fff;
 }
 .spacer {
 	display: none;

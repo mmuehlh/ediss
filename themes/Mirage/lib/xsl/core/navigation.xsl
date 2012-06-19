@@ -44,6 +44,16 @@
     <xsl:template match="dri:options">
         <div id="sidebar">
 
+			<div class="publish">
+				<a>
+					<xsl:attribute name="href">
+						<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+						<xsl:text>/submit</xsl:text>
+					</xsl:attribute>
+					<i18n:text>xmlui.general.publish_now</i18n:text>
+				</a>
+			</div>
+			
 			<!-- Once the search box is built, the other parts of the options are added -->
 			<xsl:apply-templates/>
 

@@ -160,16 +160,16 @@
 			<xsl:when test="count(dim:field[@element='title'][not(@qualifier)]) &gt; 1">
 				<!-- display first title as h1 -->
 				<h1 class="title">
-					<xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()"/>
+					<xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()" disable-output-escaping="yes"/>
 				</h1>
 				<xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
-					<p class="subtitle"><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" /></p>
+					<p class="subtitle"><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" disable-output-escaping="yes"/></p>
 				</xsl:if>
 				<div class="simple-item-view-other">
 					<span class="bold"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-title</i18n:text>:</span>
 					<span>
 						<xsl:for-each select="dim:field[@element='title'][not(@qualifier)]">
-							<xsl:value-of select="./node()"/>
+							<xsl:value-of select="./node()" disable-output-escaping="yes"/>
 							<xsl:if test="count(following-sibling::dim:field[@element='title'][not(@qualifier)]) != 0">
 								<xsl:text>; </xsl:text>
 								<br/>
@@ -180,10 +180,10 @@
 			</xsl:when>
 			<xsl:when test="count(dim:field[@element='title'][not(@qualifier)]) = 1">
 				<h1 class="title">
-					<xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()"/>
+					<xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()" disable-output-escaping="yes"/>
 				</h1>
 				<xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
-					<p class="subtitle"><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" /></p>
+					<p class="subtitle"><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" disable-output-escaping="yes"/></p>
 				</xsl:if>
 			</xsl:when>
 			<xsl:otherwise>
@@ -591,7 +591,7 @@
 					</div>
 				</xsl:if>
 			</div>
-			<div class="file-link" style="height: {$thumbnail.maxheight}px;">
+			<div class="file-link" style="max-height: {$thumbnail.maxheight}px;">
 				<a>
 					<xsl:attribute name="href">
 						<xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>

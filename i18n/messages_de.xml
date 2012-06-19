@@ -2043,4 +2043,46 @@
   <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.title">LC Personennamenreferenzdatenbank</message>
   <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Lokaler Wert "@1@" (nicht in Referenzdatenbank)</message>
 
+    <message key="xmlui.ArtifactBrowser.Navigation.browse_advisor">Gutachter</message>
+    <message key="xmlui.ArtifactBrowser.Navigation.browse_gok">GOK</message>
+    <message key="xmlui.ArtifactBrowser.Navigation.browse_bk">BK</message>
+    <message key="xmlui.ArtifactBrowser.Navigation.browse_dnb">DNB-Klasse</message>
+    <message key="xmlui.ArtifactBrowser.Navigation.browse_topic">Topic</message>
+    <message key="xmlui.ArtifactBrowser.Navigation.browse_lang">Sprache</message>
+    <message key="xmlui.ArtifactBrowser.Navigation.browse_titletranslated">Übersetzter Titel</message>
+    <message key="xmlui.ArtifactBrowser.Navigation.browse_examen">Tag d. Prüfung</message>
+    <message key="xmlui.ArtifactBrowser.Navigation.browse_institute">Institute</message>
+
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.advisor">Dokumente nach Gutachter</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.gok">Dokumente nach GOK</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.bk">Dokumente nach BK</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.dnb">Dokumente nach DNB-Klasse</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.topic">Dokumente nach Topic</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.lang">Dokumente nach Sprache</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.titletranslated">Dokumente nach übersetztem Titel</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.examen">Dokumente nach Tag d. Prüfung</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.institute">Dokumente nach Institute</message>
+
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.advisor">Dokumente {0} nach Gutatchter {1}</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.gok">Dokumente {0} nach GOK {1}</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.bk">Dokumente {0} nach BK {1}</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.dnb">Dokumente {0} nach DNB-Klasse {1}</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.topic">Dokumente {0} nach Topic {1}</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.lang">Dokumente {0} nach Sprache {1}</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.titletranslated">Dokumente {0} nach übersetztem Titel {1}</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.examen">Dokumente {0} nach Tag d. Prüfung {1}</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.institute">Dokumente {0} nach Institute {1}</message>
+
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.advisor.column_heading">Gutachter</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.gok.column_heading">GOK</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.bk.column_heading">BK</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.dnb.column_heading">DNB-Klasse</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.topic.column_heading">Topic</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.lang.column_heading">Sprache</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.titletranslated.column_heading">Übersetzter Titel</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.examen.column_heading">Tag d. Prüfung</message>
+    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.institute.column_heading">Institute</message>
+	
+	<message key="xmlui.general.publish_now">Jetzt veröffentlichen</message>
+	
 </catalogue>
