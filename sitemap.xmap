@@ -63,6 +63,7 @@
                             <encoding>UTF-8</encoding>
                             <indent>yes</indent>
                         </map:serializer>
+			<map:serializer name="zip" mime-type="application/zip" src="org.apache.cocoon.serialization.ZipArchiveSerializer"/>
                 </map:serializers>
                 <map:transformers default="xslt">
                         <map:transformer logger="sitemap.transformer.xslt" name="xslt" pool-max="32"
@@ -369,6 +370,15 @@
                                         <map:parameter name="fileName" value="{1}"/>
                                 </map:read>
                         </map:match>
+
+			<!-- generate zip for docs of item by handle -->
+			<map:match pattern="*/*.zip">
+				<map:generate type="DSpaceMETSGenerator">
+                                        <map:parameter name="handle" value="{1}/{2}"/>
+                                </map:generate>
+				<map:transform src="ziparchive.xsl"/>	
+			  	<map:serialize type="zip"/>	
+                        </map:match> 
 
                         <map:match pattern="csv/handle/*/*">
                                 <map:read type="MetadataExportReader">

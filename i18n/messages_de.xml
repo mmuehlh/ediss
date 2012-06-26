@@ -24,7 +24,7 @@
 		--> 
 	
 	<!-- General keys -->
-	<message key="xmlui.general.dspace_home">DSpace Startseite</message>
+	<message key="xmlui.general.dspace_home">Startseite</message>
 	<message key="xmlui.general.search">Suche</message>
 	<message key="xmlui.general.go">Los</message>
 	<message key="xmlui.general.go_home">Zur Startseite</message>
@@ -196,7 +196,7 @@
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityBrowser.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.title">Bereichsliste</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.trail">Bereichsliste</message>
-	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Bereiche in DSpace</message>
+	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Bereiche in eDiss</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.select">Wählen Sie einen Bereich, um die enthaltenen Sammlungen zu durchstöbern.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityViewer.java -->
@@ -226,7 +226,7 @@
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.title">Ihre Anregungen/Meinung</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.trail">Ihre Anregungen/Meinung</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.head">Ihre Anregungen/Meinung</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Danke für Ihre Anregungen/Meinung zu DSpace. Ihre Kommentare sind jederzeit willkommen!</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Danke für Ihre Anregungen/Meinung zu eDiss. Ihre Kommentare sind jederzeit willkommen!</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email">Ihre E-Mail-Adresse</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email_help">Diese Adresse wird benutzt, damit wir ggf. mit Ihnen Rücksprache halten können.</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.comments">Kommentar</message>
@@ -239,7 +239,7 @@
 	<message key="xmlui.ArtifactBrowser.FeedbackSent.para1">Danke für Ihre(n) Anregungen/Kommentar.</message>
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.FrontPageSearch.java -->
-	<message key="xmlui.ArtifactBrowser.FrontPageSearch.head">DSpace Suche</message>
+	<message key="xmlui.ArtifactBrowser.FrontPageSearch.head">eDiss Suche</message>
 	<message key="xmlui.ArtifactBrowser.FrontPageSearch.para1">Zum Suchen geben Sie den Suchbegriff in das Feld unten ein.</message>
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.ItemViewer.java -->
@@ -338,7 +338,7 @@
 	<!-- org.dspace.app.xmlui.eperson.CannotRegister.java -->
 	<message key="xmlui.EPerson.CannotRegister.title">Registrierung nicht verfügbar</message>
 	<message key="xmlui.EPerson.CannotRegister.head">Registrierung nicht verfügbar</message>
-	<message key="xmlui.EPerson.CannotRegister.para1">Dieses DSpace Repositorium ist so konfiguriert, dass eine Registrierung in diesem Kontext nicht möglich ist. Bitte wenden Sie sich and den <a href="../contact">Administrator</a>, wenn Sie Fragen dazu haben.</message>
+	<message key="xmlui.EPerson.CannotRegister.para1">Dieses eDiss Repositorium ist so konfiguriert, dass eine Registrierung in diesem Kontext nicht möglich ist. Bitte wenden Sie sich and den <a href="../contact">Administrator</a>, wenn Sie Fragen dazu haben.</message>
 	
 	<!-- org.dspace.app.xmlui.eperson.EditProfile.java -->
 	<message key="xmlui.EPerson.EditProfile.title_update">Benutzerdaten aktualisieren</message>
@@ -398,7 +398,7 @@
 	<!-- org.dspace.app.xmlui.eperson.PasswordLogin.java -->
 	<message key="xmlui.EPerson.PasswordLogin.title">Einloggen</message>
 	<message key="xmlui.EPerson.PasswordLogin.trail">Einloggen</message>
-	<message key="xmlui.EPerson.PasswordLogin.head1">In DSpace Einloggen</message>
+	<message key="xmlui.EPerson.PasswordLogin.head1">In eDiss Einloggen</message>
 	<message key="xmlui.EPerson.PasswordLogin.title">Einloggen</message>
 	<message key="xmlui.EPerson.PasswordLogin.email_address">E-Mail-Addresse</message>
 	<message key="xmlui.EPerson.PasswordLogin.error_bad_login">Die angegebene E-Mail-Adresse und/oder das Passwort sind ungültig.</message>
@@ -412,7 +412,7 @@
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
 	<message key="xmlui.EPerson.LDAPLogin.title">Einloggen</message>
 	<message key="xmlui.EPerson.LDAPLogin.trail">Einloggen</message>
-	<message key="xmlui.EPerson.LDAPLogin.head1">In DSpace einloggen</message>
+	<message key="xmlui.EPerson.LDAPLogin.head1">In eDiss einloggen</message>
 	<message key="xmlui.EPerson.LDAPLogin.title">Einloggen</message>
 	<message key="xmlui.EPerson.LDAPLogin.username">Benutzername</message>
 	<message key="xmlui.EPerson.LDAPLogin.error_bad_login">Der Benutzername und/oder Passwort sind ungültig.</message>
@@ -512,8 +512,8 @@
 	<!-- general submission aspect messages -->
 	<message key="xmlui.Submission.general.default.title">Ressourcen einreichen</message>
 	<message key="xmlui.Submission.general.default.trail">Ressourcen einreichen</message>
-	<message key="xmlui.Submission.general.mydspace_home">Mein DSpace</message>
-	<message key="xmlui.Submission.general.go_mydspace">Gehe zu Mein DSpace</message>
+	<message key="xmlui.Submission.general.mydspace_home">Mein eDiss</message>
+	<message key="xmlui.Submission.general.go_mydspace">Gehe zu Mein eDiss</message>
 	<message key="xmlui.Submission.general.submission.title">Dokument veröffentlichen</message>
 	<message key="xmlui.Submission.general.submission.trail">Dokument veröffentlichen</message>
 	<message key="xmlui.Submission.general.submission.head">Dokument veröffentlichen</message>	
@@ -590,7 +590,7 @@
 
     <!-- Same transformer, completed submissions section -->
     <message key="xmlui.Submission.Submissions.completed.head">Angenommene Veröffentlichungen</message>
-    <message key="xmlui.Submission.Submissions.completed.info">Dies sind die Ihre in DSpace angenommenen Veröffentlichungen.</message>
+    <message key="xmlui.Submission.Submissions.completed.info">Dies sind die Ihre in eDiss angenommenen Veröffentlichungen.</message>
     <message key="xmlui.Submission.Submissions.completed.column1">Zugangsdatum</message>
     <message key="xmlui.Submission.Submissions.completed.column2">Titel</message>
     <message key="xmlui.Submission.Submissions.completed.column3">SAmmlung</message>
@@ -604,7 +604,7 @@
 	<message key="xmlui.Submission.submit.progressbar.verify">Überprüfen</message>
 	<message key="xmlui.Submission.submit.progressbar.creative-commons">Creative Commons Lizenz</message>
 	<message key="xmlui.Submission.submit.progressbar.CClicense">CC Lizenz</message>
-	<message key="xmlui.Submission.submit.progressbar.license">DSpace Lizenz</message>
+	<message key="xmlui.Submission.submit.progressbar.license">eDiss Lizenz</message>
 	<message key="xmlui.Submission.submit.progressbar.complete">Fertig</message>
 	
 	<!-- org.dspace.app.xmlui.Submission.submit.ResumeStep -->
@@ -722,7 +722,7 @@
 	<message key="xmlui.Submission.submit.CCLicenseStep.select_change">Auswahl oder Änderung der Lizenz</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
-	<message key="xmlui.Submission.submit.LicenseStep.head">DSpace Lizenz</message>
+	<message key="xmlui.Submission.submit.LicenseStep.head">eDiss Lizenz</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>Dies ist der letzte Schritt:</strong> Damit Ihr Dokument im Institutionellen Repositorium entsprechend verarbeitet und weiterverbreitet werden kann, müssen Sie folgenden Bedingungen zustimmen.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info2">Akzeptieren Sie die Standardlizenzbestimmung des Repositoriums indem Sie 'Ich akzeptiere die Lizenzbestimmungen' anhaken und klicken Sie dann auf 'Veröffentlichung abschließen'.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3">Wenn Sie Fragen zu den Lizenzbestimmungen haben, wenden Sie sich an den Administrator.</message>
@@ -1107,7 +1107,7 @@
 	<!-- org.dspace.app.xmlui.administrative.registries.MetadatRegistryMain.java -->
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.title">Metadaten Referenzliste</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.head1">Metadaten Referenzliste</message>
-	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">Die Metadatenreferenzliste enthält alle Metadatenfelder dieses Repositoriums. Die Metadatenfelder können auf mehrere Schema aufgeteilt werden. DSpace benötigt als Basis qualifiziertes Dublin Core. Sie können das Dublin Core Schema erweitern oder neue Schemata anlegen.</message>
+	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">Die Metadatenreferenzliste enthält alle Metadatenfelder dieses Repositoriums. Die Metadatenfelder können auf mehrere Schema aufgeteilt werden. eDiss benötigt als Basis qualifiziertes Dublin Core. Sie können das Dublin Core Schema erweitern oder neue Schemata anlegen.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column1"></message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column2">ID</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column3">Namensraum</message>
@@ -1560,7 +1560,7 @@
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.trail">Harvesting</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.options_harvest">Quelle des Inhalts</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.label_source">Quelle des Inhalts</message>
-	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">Dies ist eine Standard-DSpace-Sammlung</message>
+	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">Dies ist eine Standard-eDiss-Sammlung</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_harvested">Diese Sammlung bezieht ihren Inhalt via Harvesting aus einer externen Quelle.</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.submit_save">Speichern</message>
 	
@@ -1694,7 +1694,7 @@
 	<message key="xmlui.administrative.ControlPanel.trail">Systeminformationen</message>
 	<message key="xmlui.administrative.ControlPanel.head">Systeminformationen</message>
 	<message key="xmlui.administrative.ControlPanel.option_java">Java Umgebung</message>
-	<message key="xmlui.administrative.ControlPanel.option_dspace">DSpace Konfiguration</message>
+	<message key="xmlui.administrative.ControlPanel.option_dspace">eDiss Konfiguration</message>
 	<message key="xmlui.administrative.ControlPanel.option_alerts">Systemweite Benachrichtigungen</message>
 	<message key="xmlui.administrative.ControlPanel.hours">{0} Stunde(n)</message>
 	<message key="xmlui.administrative.ControlPanel.minutes">{0} Minute(n)</message>
@@ -1719,11 +1719,11 @@
     <message key="xmlui.administrative.ControlPanel.cocoon_cache_clear">(Cache sofort löschen)</message>
     <message key="xmlui.administrative.ControlPanel.cocoon_persistent_cache_size">Persistente Cache Größe ({0})</message>
     <message key="xmlui.administrative.ControlPanel.cocoon_transient_cache_size">Flüchtige Cache Größe ({0})</message>	
-	<message key="xmlui.administrative.ControlPanel.dspace_head">DSpace Einstellungen</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_dir">DSpace Installationsverzeichnis</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_url">DSpace Basis-URL</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_version">DSpace Version</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_hostname">DSpace Name des Hosts</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_head">eDiss Einstellungen</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_dir">eDiss Installationsverzeichnis</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_url">eDiss Basis-URL</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_version">eDiss Version</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_hostname">eDiss Name des Hosts</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_name">Name der Seite</message>
 	<message key="xmlui.administrative.ControlPanel.db_name">Datenbank Name</message>
 	<message key="xmlui.administrative.ControlPanel.db_url">Datenbank URLL</message>
@@ -1783,7 +1783,7 @@
     <!-- System-wide Curation Tasks form (org.dspace.app.xmlui.aspect.administrative.CurateForm) -->
     <message key="xmlui.administrative.CurateForm.title">Datenpflege</message>
     <message key="xmlui.administrative.CurateForm.trail">Datenpflege - Aufgaben</message>
-    <message key="xmlui.administrative.CurateForm.object_label_name">Handle eines DSpace Objektes</message>
+    <message key="xmlui.administrative.CurateForm.object_label_name">Handle eines eDiss Objektes</message>
     <message key="xmlui.administrative.CurateForm.object_hint">Hinweis: Geben Sie [ihr-handle-prefix]/0 ein um ein Aufgabe systemweit durchzuführen (nicht alle Aufgaben können auf allen Objekten ausgeführt werden).</message>
     <message key="xmlui.administrative.CurateForm.task_label_name">Aufgabe</message>
     <!-- Used by Curate<DSO>Form classes also -->
@@ -1825,7 +1825,7 @@
 			<span id="ds-footer-logo">&#160;</span>
 		</a>
 		<p>
-			Diese Seite verwendet Manakin, das neue DSpace Front-End, welches von den Texas A&amp;M University 
+			Diese Seite verwendet Manakin, das neue eDiss Front-End, welches von den Texas A&amp;M University 
 			Libraries entwickelt wurde. Das Front-End ist extrem flexibel und kann über Manakin Aspekte und XLS basierte Themen angepasst werden. 
 			Weiterführende Informationen finden Sie unter:
 			<a href="http://di.tamu.edu">http://di.tamu.edu</a> und
@@ -1835,13 +1835,13 @@
 	<message key="xmlui.dri2xhtml.structural.contact-link">Kontakt</message>
 	<message key="xmlui.dri2xhtml.structural.feedback-link">Feedback abschicken</message>
 	
-	<message key="xmlui.dri2xhtml.structural.head-subtitle">DSpace Repositorium (Manakin basiert)</message>
+	<message key="xmlui.dri2xhtml.structural.head-subtitle">eDiss Repositorium (Manakin basiert)</message>
 
 	<message key="xmlui.dri2xhtml.structural.profile">Profil: </message>
 	<message key="xmlui.dri2xhtml.structural.logout">Ausloggen</message>
 	<message key="xmlui.dri2xhtml.structural.login">Einloggen</message>
 
-	<message key="xmlui.dri2xhtml.structural.search">DSpace Suche</message>
+	<message key="xmlui.dri2xhtml.structural.search">eDiss Suche</message>
 	<message key="xmlui.dri2xhtml.structural.search-advanced">Erweiterte Suche</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-community">In diesem Bereich</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-collection">In dieser Sammlung</message>
@@ -1861,7 +1861,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.no-title">Ohne Titel</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.no-author">Unbekannter Autor</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.non-conformant">
-		Dieses DSpace ist nicht METS 1.0 kompatibel und kann daher nicht entsprechend übersetzt werden. 
+		Dieses eDiss ist nicht METS 1.0 kompatibel und kann daher nicht entsprechend übersetzt werden. 
 		Sie können entweder die allgemeingültige Schablone in dri2xhtml überschreiben oder ihre eigene Schablone 
 		anlegen, um Ihrem Profil gerecht zu werden.
     </message>
@@ -1914,7 +1914,7 @@
 		DS-METS-1.0-QDC.xsl -->
 	<message key="xmlui.dri2xhtml.METS-1.0.qdc-not-applicable">
 	    Qualifiziertes Dublin Core (QDC) kann auf Bereiche und Sammlungen nicht angewendet werden. Wenn Sie 
-	    QDC verwenden, sollten Sie den QDC crosswalk für DSpace Dokumente und entweder DIM oder MODS zur Verarbeitung von Bereichen 
+	    QDC verwenden, sollten Sie den QDC crosswalk für eDiss Dokumente und entweder DIM oder MODS zur Verarbeitung von Bereichen 
 	    und Sammlungen verwenden.
 	</message>
 	
@@ -2021,7 +2021,7 @@
      - JavaScript (AJAX) that completes the lookup popup window.
      - So, positional parameters are @1@, @2@, etc.
     -->
-  <message key="xmlui.ChoiceLookupTransformer.title">DSpace Referenzwerte nachschlagen</message>
+  <message key="xmlui.ChoiceLookupTransformer.title">eDiss Referenzwerte nachschlagen</message>
   <message key="xmlui.ChoiceLookupTransformer.accept">Akzeptieren</message>
   <message key="xmlui.ChoiceLookupTransformer.add">Hinzufügen</message>
   <message key="xmlui.ChoiceLookupTransformer.cancel">Abbrechen</message>
@@ -2043,46 +2043,70 @@
   <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.title">LC Personennamenreferenzdatenbank</message>
   <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Lokaler Wert "@1@" (nicht in Referenzdatenbank)</message>
 
-    <message key="xmlui.ArtifactBrowser.Navigation.browse_advisor">Gutachter</message>
-    <message key="xmlui.ArtifactBrowser.Navigation.browse_gok">GOK</message>
-    <message key="xmlui.ArtifactBrowser.Navigation.browse_bk">BK</message>
-    <message key="xmlui.ArtifactBrowser.Navigation.browse_dnb">DNB-Klasse</message>
-    <message key="xmlui.ArtifactBrowser.Navigation.browse_topic">Topic</message>
-    <message key="xmlui.ArtifactBrowser.Navigation.browse_lang">Sprache</message>
-    <message key="xmlui.ArtifactBrowser.Navigation.browse_titletranslated">Übersetzter Titel</message>
-    <message key="xmlui.ArtifactBrowser.Navigation.browse_examen">Tag d. Prüfung</message>
-    <message key="xmlui.ArtifactBrowser.Navigation.browse_institute">Institute</message>
 
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.advisor">Dokumente nach Gutachter</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.gok">Dokumente nach GOK</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.bk">Dokumente nach BK</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.dnb">Dokumente nach DNB-Klasse</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.topic">Dokumente nach Topic</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.lang">Dokumente nach Sprache</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.titletranslated">Dokumente nach übersetztem Titel</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.examen">Dokumente nach Tag d. Prüfung</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.institute">Dokumente nach Institute</message>
+        <message key="xmlui.Submission.submit.UploadStep.upload_pdf_accepted">Das Dokument erfüllt alle Anforderungen der Checkliste</message>
+        <message key="xmlui.Submission.submit.UploadStep.upload_pdf_metadata">Das Dokument enhält die folgende Beschreibung: (Erklärung ung Anleitung hinzufügen)</message>
+        <message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_linearized">Optimiert für schnelle Webanzeige</message>
+        <message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_toc">Inhaltsverzeichnis vorhanden</message>
+        <message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_print">Drucken zulässig</message>
+        <message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_extract">Kopieren von Inhalt zulässig</message>
+        <message key="xmlui.Submission.submit.UploadStep.firstpdf_error">Bitte zuerst die Dissertation in PDF-Format hochladen</message>
+        <message key="xmlui.Submission.submit.UploadStep.pdfcheck_error">Das Dokument wurde abgelehnt, weil es nicht alle Anforderungen der Checkliste erfüllt. Brechen Sie bitte den Publikationsprozess ab, korrigieren Sie das Dokument und laden Sie es dann noch einmal hoch.</message>
+        <message key="xmlui.Submission.submit.UploadStep.pdfcheck_true">Ja</message>
+        <message key="xmlui.Submission.submit.UploadStep.pdfcheck_false">Nein</message>
+        <message key="xmlui.Submission.submit.UploadStep.invalidpdf_error">Die Datei ist kein valides PDF</message>
+        <message key="xmlui.Submission.submit.UploadStep.nopdfinfo">Die Datei enhält keine Beschreibung</message>
 
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.advisor">Dokumente {0} nach Gutatchter {1}</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.gok">Dokumente {0} nach GOK {1}</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.bk">Dokumente {0} nach BK {1}</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.dnb">Dokumente {0} nach DNB-Klasse {1}</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.topic">Dokumente {0} nach Topic {1}</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.lang">Dokumente {0} nach Sprache {1}</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.titletranslated">Dokumente {0} nach übersetztem Titel {1}</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.examen">Dokumente {0} nach Tag d. Prüfung {1}</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.institute">Dokumente {0} nach Institute {1}</message>
+        <message key="xmlui.Submission.submit.UploadStep.check-true">ja</message>
+        <message key="xmlui.Submission.submit.UploadStep.check-false">nein</message>
 
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.advisor.column_heading">Gutachter</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.gok.column_heading">GOK</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.bk.column_heading">BK</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.dnb.column_heading">DNB-Klasse</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.topic.column_heading">Topic</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.lang.column_heading">Sprache</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.titletranslated.column_heading">Übersetzter Titel</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.examen.column_heading">Tag d. Prüfung</message>
-    <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.institute.column_heading">Institute</message>
-	
+
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_advisor">Gutachter</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_gok">GOK</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_bk">BK</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_dnb">DNB-Klasse</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_topic">Topic</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_lang">Sprache</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_titletranslated">Übersetzter Titel</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_examen">Tag d. Prüfung</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_institute">Institute</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_subjecteng">Schlagworten eng</message>
+
+
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.advisor">Dokumente nach Gutachter</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.gok">Dokumente nach GOK</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.bk">Dokumente nach BK</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.dnb">Dokumente nach DNB-Klasse</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.topic">Dokumente nach Topic</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.lang">Dokumente nach Sprache</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.titletranslated">Dokumente nach übersetztem Titel</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.examen">Dokumente nach Tag d. Prüfung</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.institute">Dokumente nach Institute</message>
+         <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subjecteng">Dokuemente nach Schlagworten eng</message>
+
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.advisor">Dokumente {0} nach Gutatchter {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.gok">Dokumente {0} nach GOK {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.bk">Dokumente {0} nach BK {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.dnb">Dokumente {0} nach DNB-Klasse {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.topic">Dokumente {0} nach Topic {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.lang">Dokumente {0} nach Sprache {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.titletranslated">Dokumente {0} nach übersetztem Titel {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.examen">Dokumente {0} nach Tag d. Prüfung {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.institute">Dokumente {0} nach Institute {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subjecteng">Dokuemente {0} nach Schlagworten eng {1}</message>
+
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.advisor.column_heading">Gutachter</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.gok.column_heading">GOK</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.bk.column_heading">BK</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.dnb.column_heading">DNB-Klasse</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.topic.column_heading">Topic</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.lang.column_heading">Sprache</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.titletranslated.column_heading">Übersetzter Titel</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.examen.column_heading">Tag d. Prüfung</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.institute.column_heading">Institute</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subjecteng.column_heading">Schlagworten eng</message>
+
+
 	<message key="xmlui.general.publish_now">Jetzt veröffentlichen</message>
 	
 </catalogue>

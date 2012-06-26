@@ -58,7 +58,7 @@
 		overriding the dri:document template.
 	-->
 	<xsl:template match="dri:document">
-		<html class="no-js">
+		<html>
 			<!-- First of all, build the HTML head element -->
 			<xsl:call-template name="buildHead"/>
 			<!-- Then proceed to the body -->
@@ -335,35 +335,59 @@
 				</a>
 				
 				<div id="topbox">
-
+					
+					<div id="localebox">  
+						<p>                 
+							<xsl:for-each select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='xmlui-ml'][@qualifier='localeURL']">
+								<a>
+									<xsl:attribute name="href">
+										<xsl:value-of select="."/>
+									</xsl:attribute>
+									<i18n:text><xsl:value-of select="substring-after(.,'locale-attribute=')" /></i18n:text>
+									<!--
+									<img>
+										<xsl:attribute name="src"><xsl:value-of select="$theme-path" />/images/<xsl:value-of select="." />.gif</xsl:attribute>
+									</img>
+									-->
+								</a>
+								<xsl:text>&#160;</xsl:text>
+							</xsl:for-each>                 
+						</p>
+					</div>
+					
 					<div id="userbox">
 						<xsl:choose>
 							<xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
-								<p>
-									<a>
-										<xsl:attribute name="href">
-											<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='url']"/>
-										</xsl:attribute>
-										<i18n:text>xmlui.dri2xhtml.structural.profile</i18n:text>
-										<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='firstName']"/>
-										<xsl:text> </xsl:text>
-										<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='lastName']"/>
-									</a>
-									<xsl:text> | </xsl:text>
-									<a>
-										<xsl:attribute name="href">
-											<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='logoutURL']"/>
-										</xsl:attribute>
-										<i18n:text>xmlui.dri2xhtml.structural.logout</i18n:text>
-									</a>
-									<xsl:text> | </xsl:text>
-									<a>
-										<xsl:attribute name="href">
-											<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='submissionsURL']"/>
-										</xsl:attribute>
-										<i18n:text>xmlui.Submission.Navigation.submissions</i18n:text>
-									</a>
-								</p>
+								<i18n:text>xmlui.dri2xhtml.structural.profile</i18n:text>
+								<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='firstName']"/>
+								<xsl:text> </xsl:text>
+								<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='lastName']"/>
+								<ul>
+									<li>
+										<a>
+											<xsl:attribute name="href">
+												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='url']"/>
+											</xsl:attribute>
+											<i18n:text>xmlui.dri2xhtml.structural.profile</i18n:text>
+										</a>
+									</li>
+									<li>
+										<a>
+											<xsl:attribute name="href">
+												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='logoutURL']"/>
+											</xsl:attribute>
+											<i18n:text>xmlui.dri2xhtml.structural.logout</i18n:text>
+										</a>
+									</li>
+									<li>
+										<a>
+											<xsl:attribute name="href">
+												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='submissionsURL']"/>
+											</xsl:attribute>
+											<i18n:text>xmlui.Submission.Navigation.submissions</i18n:text>
+										</a>
+									</li>
+								</ul>
 							</xsl:when>
 							<xsl:otherwise>
 								<p>
@@ -378,7 +402,7 @@
 						</xsl:choose>
 					</div>
 					
-					<form id="ds-search-form" method="post">
+					<form id="searchbox" method="post">
 						<xsl:attribute name="action">
 							<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
 							<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
@@ -439,10 +463,10 @@
 						</fieldset>
 					</form>
 					
-					<!--Only add if the advanced search url is different from the simple search-->
+					<!-- Only add if the advanced search url is different from the simple search -->
 					<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='advancedURL'] != /dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']">
 						<!-- The "Advanced search" link, to be perched underneath the search box -->
-						<a>
+						<a class="advanced-search">
 							<xsl:attribute name="href">
 								<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='advancedURL']"/>
 							</xsl:attribute>
@@ -452,10 +476,8 @@
 					
 				</div>
 				
-				<div id="ds-trail-wrapper">
-					<div id="ds-trail-hint">
-						<i18n:text>xmlui.general.trail_hint</i18n:text>
-					</div>
+				<!--<div id="ds-trail-wrapper">-->
+					<!--<div id="ds-trail-hint"><i18n:text>xmlui.general.trail_hint</i18n:text></div>-->
 					<!-- Truncate trail if it does not fit into one line: done via JavaScript -->
 					<ul id="ds-trail">
 						<xsl:choose>
@@ -470,12 +492,12 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</ul>
-				</div>
+				<!--</div>-->
 
 			</div>
 		</div>
 	</xsl:template>
-
+	
 	<xsl:template match="dri:trail">
 		<!--put an arrow between the parts of the trail-->
 		<xsl:if test="position()>1">
@@ -768,11 +790,30 @@
 		<xsl:text disable-output-escaping="yes"><![CDATA[
 			<script type="text/javascript">
 				$(function() {
-					while ( $('#ds-trail').height() > $('#ds-trail-hint').height() ) {
-						$('#ds-trail li:not(.truncated):eq(1)').addClass('truncated').text('…');
+					var i = 1;
+					var items = $('#ds-trail a');
+					// Cut trail if too long and there are still untruncated items
+					while ( $('#ds-trail').height() > 28 && i < items.length) {
+						var item = items.eq(i);
+						// If current item contains more than one word, replace last word with … (&hellip;). Otherwise, move to next item.
+						if ( item.text().indexOf(' ') >= 0 ) {
+							item.text( item.text().replace(/\s[^\s]+…*$/, '…') );
+						} else {
+							i++;
+						}
+					}
+					// If still too long, remove items completely
+					i = 0;
+					while ( $('#ds-trail').height() > 28 && i++ < 5) {
+						items.eq(i).text('…');
+						i++;
+					}
+					// Still too long!? Truncate last li, but exit if does not help after 9 tries
+					i = 0
+					while ( $('#ds-trail').height() > 28 && ++i < 9) {
+						$('#ds-trail li:last').text( $('#ds-trail li:last').text().replace(/\s[^\s]+…*$/, '…') );
 					}
 				});
-				
 			</script>
 		]]></xsl:text>
 
