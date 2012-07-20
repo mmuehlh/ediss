@@ -151,6 +151,7 @@
     <!--handles the rendering of a single item in a list in metadata mode-->
     <xsl:template match="dim:dim" mode="itemSummaryList-DIM-metadata">
         <xsl:param name="href"/>
+		<!--
 		<div class="list-thumbnail-wrapper">
 			<div class="artifact-preview">
 				<a class="image-link" href="{$href}">
@@ -169,8 +170,9 @@
 				</a>
 			</div>
 		</div>
+		-->
 		<div class="artifact-description">
-            <div class="artifact-title">
+			<div class="artifact-title">
                 <xsl:element name="a">
                     <xsl:attribute name="href">
                         <xsl:value-of select="$href"/>

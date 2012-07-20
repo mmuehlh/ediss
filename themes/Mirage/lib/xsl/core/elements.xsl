@@ -46,7 +46,14 @@
         </xsl:element>
     </xsl:template>
 
-
+    <xsl:template match="dri:strong" priority="4">
+        <strong><xsl:apply-templates /></strong>
+    </xsl:template>
+	
+	<xsl:template match="dri:small" priority="4">
+        <small><xsl:apply-templates /></small>
+    </xsl:template>
+	
     <xsl:template match="dri:div/dri:head" priority="3">
         <xsl:call-template name="renderHead">
             <xsl:with-param name="class">ds-div-head</xsl:with-param>

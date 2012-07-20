@@ -24,16 +24,16 @@
 		--> 
 	
 	<!-- General keys -->
-	<message key="xmlui.general.dspace_home">Startseite</message>
+	<message key="xmlui.general.dspace_home">Startseite</message>>
 	<message key="xmlui.general.search">Suche</message>
 	<message key="xmlui.general.go">Los</message>
 	<message key="xmlui.general.go_home">Zur Startseite</message>
 	<message key="xmlui.general.save">Speichern</message>
 	<message key="xmlui.general.cancel">Abbrechen</message>
-	<message key="xmlui.general.return">Zurück</message>
+	<message key="xmlui.general.return">← Zurück</message>
 	<message key="xmlui.general.update">Aktualisieren</message>
 	<message key="xmlui.general.delete">Löschen</message>
-	<message key="xmlui.general.next">Weiter</message>
+	<message key="xmlui.general.next">Weiter →</message>
 	<message key="xmlui.general.untitled">Ohne Titel</message>
 	<message key="xmlui.general.perform">Ausführen</message>
     <message key="xmlui.general.queue">In die Warteschleife</message>
@@ -87,7 +87,7 @@
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_community">Suchergebnisse für den Bereich: {0}</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_collection">Suchergebnisse für die Sammlung {0}</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_none">Suchergebnisse</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.result_query">Ihre Suchanfrage: "{0}" ergab {1} Treffer.</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.result_query">Ihre Suchanfrage „{0}“ ergab {1} Treffer.</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head2">Bereiche und Sammlungen zu Ihrer Suchanfrage</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head3">Dokumente zu Ihrer Suchanfrage</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.no_results">Die Suche führte zu keinem Treffer.</message>
@@ -129,7 +129,7 @@
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_subject">Schlagwort</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_description">Abstract</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_relation">Beziehung</message>
-   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_mime">Mime-Typ</message>
+   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_mime">MIME-Typ</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_other">Sonstige beteiligte Person</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_advisor">Betreuer</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_department">Abteilung</message>	
@@ -141,9 +141,9 @@
 	
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.ConfigureableBrowse.java -->
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with">Oder geben Sie die ersten Buchstaben ein:</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with">Oder geben Sie die ersten Buchstaben ein: </message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with_help">Auflistung von Dokumenten, die mit diesen Buchstaben anfangen</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_select">Gehe zu einem Punkt im Index:</message>	
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_select">Gehe zu einem Punkt im Index: </message>	
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_month">(Wähle Monat)</message>	
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_year">(Wähle Jahr)</message>	
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_year">Oder geben Sie ein Jahr ein: </message>
@@ -187,7 +187,7 @@
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">Gesamter Bestand</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.full_text_search">Volltextsuche:</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_browse">Auflistung nach</message>
-	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Titeln</message>
+	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Titel</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_authors">Autoren</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_dates">Datum</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.advanced_search_link">Erweiterte Suche</message>
@@ -203,8 +203,8 @@
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.search_scope">Suchbereich</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">Gesamter Bestand</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Volltextsuche:</message>
-	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Auflistung nach</message>
-	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Titeln</message>
+	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Durchsuche</message>
+	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Titel</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_authors">Autoren</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_dates">Datum</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.advanced_search_link">Erweiterte Suche</message>
@@ -218,29 +218,29 @@
 	<message key="xmlui.ArtifactBrowser.Contact.trail">Kontakt</message>
 	<message key="xmlui.ArtifactBrowser.Contact.head">Kontakt</message>
 	<message key="xmlui.ArtifactBrowser.Contact.para1">{0} Administratoren können kontaktiert werden via:</message>
-	<message key="xmlui.ArtifactBrowser.Contact.feedback_label">Onlineformular</message>
+	<message key="xmlui.ArtifactBrowser.Contact.feedback_label">Kontaktformular</message>
 	<message key="xmlui.ArtifactBrowser.Contact.feedback_link">Feedback</message>
 	<message key="xmlui.ArtifactBrowser.Contact.email">E-Mail</message>
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.FeedbackForm.java -->
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.title">Ihre Anregungen/Meinung</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.trail">Ihre Anregungen/Meinung</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.title">Ihre Anregungen</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.trail">Ihre Anregungen</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.head">Ihre Anregungen/Meinung</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Danke für Ihre Anregungen/Meinung zu eDiss. Ihre Kommentare sind jederzeit willkommen!</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email">Ihre E-Mail-Adresse</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.email_help">Diese Adresse wird benutzt, damit wir ggf. mit Ihnen Rücksprache halten können.</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.email_help">Diese Adresse wird benutzt, um bei Bedarf mit Ihnen Rücksprache halten zu können.</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.comments">Kommentar</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.submit">Feedback abschicken</message>
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.FeedbackSent.java -->
-	<message key="xmlui.ArtifactBrowser.FeedbackSent.title">Ihre Anregungen/Meinung</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackSent.trail">Ihre Anregungen/Meinung</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackSent.title">Ihre Anregungen</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackSent.trail">Ihre Anregungen</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackSent.head">Feedback gesendet</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackSent.para1">Danke für Ihre(n) Anregungen/Kommentar.</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackSent.para1">Danke für Ihre Anregungen.</message>
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.FrontPageSearch.java -->
-	<message key="xmlui.ArtifactBrowser.FrontPageSearch.head">eDiss Suche</message>
-	<message key="xmlui.ArtifactBrowser.FrontPageSearch.para1">Zum Suchen geben Sie den Suchbegriff in das Feld unten ein.</message>
+	<message key="xmlui.ArtifactBrowser.FrontPageSearch.head">eDiss-Suche</message>
+	<message key="xmlui.ArtifactBrowser.FrontPageSearch.para1">Geben Sie den Suchbegriff in das Feld unten ein.</message>
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.ItemViewer.java -->
 	<message key="xmlui.ArtifactBrowser.ItemViewer.trail">Dokumentanzeige</message>
@@ -252,13 +252,13 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Stöbern</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Gesamter Bestand</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Bereiche &amp; Sammlungen</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titeln</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titel</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Autoren</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Schlagworten</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Schlagworte</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Erscheinungsdatum</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">Zugangsdatum</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_collection">Diese Sammlung</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.head_this_community">Diesen Bereich</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_this_community">Dieser Bereich</message>
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.SimpleSearch.java -->
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.title">Suche</message>
@@ -332,13 +332,13 @@
 	
 	
 	<!-- General keys used by the EPerson aspect -->
-	<message key="xmlui.EPerson.trail_new_registration">Registrierung Neuer Benutzer</message>
+	<message key="xmlui.EPerson.trail_new_registration">Benutzer registrieren</message>
 	<message key="xmlui.EPerson.trail_forgot_password">Passwort vergessen</message>
 	
 	<!-- org.dspace.app.xmlui.eperson.CannotRegister.java -->
 	<message key="xmlui.EPerson.CannotRegister.title">Registrierung nicht verfügbar</message>
 	<message key="xmlui.EPerson.CannotRegister.head">Registrierung nicht verfügbar</message>
-	<message key="xmlui.EPerson.CannotRegister.para1">Dieses eDiss Repositorium ist so konfiguriert, dass eine Registrierung in diesem Kontext nicht möglich ist. Bitte wenden Sie sich and den <a href="../contact">Administrator</a>, wenn Sie Fragen dazu haben.</message>
+	<message key="xmlui.EPerson.CannotRegister.para1">Dieses eDiss-Repositorium ist so konfiguriert, dass eine Registrierung in diesem Kontext nicht möglich ist. Bitte wenden Sie sich and den <a href="../contact">Administrator</a>, wenn Sie Fragen dazu haben.</message>
 	
 	<!-- org.dspace.app.xmlui.eperson.EditProfile.java -->
 	<message key="xmlui.EPerson.EditProfile.title_update">Benutzerdaten aktualisieren</message>
@@ -362,7 +362,7 @@
 	<message key="xmlui.EPerson.EditProfile.submit_update">Registrierung abgeschlossen</message>
 	<message key="xmlui.EPerson.EditProfile.submit_create">Benutzerdaten aktualisieren</message>
 	<message key="xmlui.EPerson.EditProfile.error_required">Dies ist ein Pflichtfeld</message>
-	<message key="xmlui.EPerson.EditProfile.error_invalid_password">Wählen Sie ein Passwort, welches mindestens 6 Zeichen lang ist.</message>
+	<message key="xmlui.EPerson.EditProfile.error_invalid_password">Bitte wählen Sie ein Passwort mit mindestens 6 Zeichen.</message>
 	<message key="xmlui.EPerson.EditProfile.error_unconfirmed_password">Bitte geben Sie Ihr Passwort noch einmal ein, um es zu bestätigen.</message>
 	<message key="xmlui.EPerson.EditProfile.head_auth">Benutzergruppen, denen Sie angehören</message>
 	<message key="xmlui.EPerson.EditProfile.head_identify">Identifikation</message>
@@ -415,7 +415,7 @@
 	<message key="xmlui.EPerson.LDAPLogin.head1">In eDiss einloggen</message>
 	<message key="xmlui.EPerson.LDAPLogin.title">Einloggen</message>
 	<message key="xmlui.EPerson.LDAPLogin.username">Benutzername</message>
-	<message key="xmlui.EPerson.LDAPLogin.error_bad_login">Der Benutzername und/oder Passwort sind ungültig.</message>
+	<message key="xmlui.EPerson.LDAPLogin.error_bad_login">Unbekannter Benutzername oder falsches Passwort.</message>
 	<message key="xmlui.EPerson.LDAPLogin.password">Passwort</message>
 	<message key="xmlui.EPerson.LDAPLogin.submit">Einloggen</message>
 	
@@ -424,8 +424,8 @@
 	<message key="xmlui.EPerson.LoginChooser.trail">Einlogart wählen</message>
 	<message key="xmlui.EPerson.LoginChooser.head1">Einlogart wählen</message>
 	<message key="xmlui.EPerson.LoginChooser.para1">Einloggen via:</message>
-	<message key="org.dspace.authenticate.ShibAuthentication.title">Shibboleth Authentifizierung</message>
-	<message key="org.dspace.eperson.LDAPAuthentication.title">LDAP Authentifizierung</message>
+	<message key="org.dspace.authenticate.ShibAuthentication.title">Shibboleth-Authentifizierung</message>
+	<message key="org.dspace.eperson.LDAPAuthentication.title">LDAP-Authentifizierung</message>
 	<message key="org.dspace.eperson.PasswordAuthentication.title">Passwort</message>
 	<message key="org.dspace.eperson.X509Authentication.title">Web Zertifikat</message>
 
@@ -452,7 +452,7 @@
 	<!-- org.dspace.app.xmlui.eperson.RegistrationFinished.java -->
 	<message key="xmlui.EPerson.RegistrationFinished.title">Registrierung abgeschlossen</message>
 	<message key="xmlui.EPerson.RegistrationFinished.head">Registrierung abgeschlossen</message>
-	<message key="xmlui.EPerson.RegistrationFinished.para1">Sie sind nun ein registrierter Benutzer.  Jetzt können Sie z. B. den Alerting-Dienst für Neuerscheinungen nutzen.</message>
+	<message key="xmlui.EPerson.RegistrationFinished.para1">Sie sind nun ein registrierter Benutzer. Jetzt können Sie z. B. den Alerting-Dienst für Neuerscheinungen nutzen.</message>
 	
 	<!-- org.dspace.app.xmlui.eperson.ResetPassword.java -->
 	<message key="xmlui.EPerson.ResetPassword.title">Passwort neu setzen</message>
@@ -517,9 +517,9 @@
 	<message key="xmlui.Submission.general.submission.title">Dokument veröffentlichen</message>
 	<message key="xmlui.Submission.general.submission.trail">Dokument veröffentlichen</message>
 	<message key="xmlui.Submission.general.submission.head">Dokument veröffentlichen</message>	
-	<message key="xmlui.Submission.general.submission.previous">&lt; Zurück</message>
-	<message key="xmlui.Submission.general.submission.save">Speicher / Abbrechen</message>
-	<message key="xmlui.Submission.general.submission.next">Weiter &gt;</message>
+	<message key="xmlui.Submission.general.submission.previous">← Zurück</message>
+	<message key="xmlui.Submission.general.submission.save">Speichern und zurück</message>
+	<message key="xmlui.Submission.general.submission.next">Weiter →</message>
 	<message key="xmlui.Submission.general.submission.complete">Veröffentlichung abschließen</message>
 	<message key="xmlui.Submission.general.workflow.title">Dokument veröffentlichen</message>
 	<message key="xmlui.Submission.general.workflow.trail">Dokument veröffentlichen</message>
@@ -537,7 +537,7 @@
 	<!-- org.dspace.app.xmlui.Submission.submissions -->
 	<message key="xmlui.Submission.Submissions.title">Veröffentlichungen &amp; Geschäftsgänge</message>
 	<message key="xmlui.Submission.Submissions.trail">Veröffentlichungen</message>
-	<message key="xmlui.Submission.Submissions.head">Veröffentlichungen  &amp; übernommen Aufgaben</message>
+	<message key="xmlui.Submission.Submissions.head">Veröffentlichungen  &amp; übernommene Aufgaben</message>
 	<message key="xmlui.Submission.Submissions.untitled"><i>ohne Titel</i></message>
 	<message key="xmlui.Submission.Submissions.email">E-Mail: </message>
 	<!-- Same transformer, workflow section -->
@@ -594,7 +594,7 @@
     <message key="xmlui.Submission.Submissions.completed.column1">Zugangsdatum</message>
     <message key="xmlui.Submission.Submissions.completed.column2">Titel</message>
     <message key="xmlui.Submission.Submissions.completed.column3">SAmmlung</message>
-    <message key="xmlui.Submission.Submissions.completed.limit">Es werden 50 Ihrer Veröffentlichungen angezeigt. </message>
+    <message key="xmlui.Submission.Submissions.completed.limit">Es werden 50 Ihrer Veröffentlichungen angezeigt.</message>
     <message key="xmlui.Submission.Submissions.completed.displayall">Anzeige aller Veröffentlichungen.</message>
 
 	<!-- submission progress bar messages -->
@@ -602,9 +602,9 @@
 	<message key="xmlui.Submission.submit.progressbar.describe">Beschreiben</message>
 	<message key="xmlui.Submission.submit.progressbar.upload">Hochladen</message>
 	<message key="xmlui.Submission.submit.progressbar.verify">Überprüfen</message>
-	<message key="xmlui.Submission.submit.progressbar.creative-commons">Creative Commons Lizenz</message>
-	<message key="xmlui.Submission.submit.progressbar.CClicense">CC Lizenz</message>
-	<message key="xmlui.Submission.submit.progressbar.license">eDiss Lizenz</message>
+	<message key="xmlui.Submission.submit.progressbar.creative-commons">Creative-Commons-Lizenz</message>
+	<message key="xmlui.Submission.submit.progressbar.CClicense">CC-Lizenz</message>
+	<message key="xmlui.Submission.submit.progressbar.license">eDiss-Lizenz</message>
 	<message key="xmlui.Submission.submit.progressbar.complete">Fertig</message>
 	
 	<!-- org.dspace.app.xmlui.Submission.submit.ResumeStep -->
@@ -622,7 +622,6 @@
 	<message key="xmlui.Submission.submit.SaveOrRemoveStep.submit_back">Veröffentlichung fortsetzen</message>
 	<message key="xmlui.Submission.submit.SaveOrRemoveStep.submit_save">Speichern, um später daran weiterzuarbeiten</message>
 	<message key="xmlui.Submission.submit.SaveOrRemoveStep.submit_remove">Löschen</message>
-
 	
 	<!-- org.dpspace.app.xmlui.Submission.submit.InitialQuestionsStep -->
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.head">Einleitende Fragen</message>
@@ -680,7 +679,7 @@
 	<message key="xmlui.Submission.submit.UploadStep.submit_edit">Bearbeiten</message>
 	<message key="xmlui.Submission.submit.UploadStep.checksum">Prüfsumme:</message>
 	<message key="xmlui.Submission.submit.UploadStep.submit_remove">Ausgewählte Datei(en) entfernen</message>
-	
+
 	<!-- org.dspace.app.xmlui.Submission.submit.EditFileStep -->
 	<message key="xmlui.Submission.submit.EditFileStep.head">Datei bearbeiten</message>
 	<message key="xmlui.Submission.submit.EditFileStep.file">Datei</message>
@@ -693,7 +692,6 @@
 	<message key="xmlui.Submission.submit.EditFileStep.info2">Wenn Ihr Format nicht in der Liste vorhanden ist, <strong>wählen Sie "Format nicht in Auswahlliste" </strong> und geben Sie eine kurze Beschreibung des Formats in das Feld unten ein.</message>
 	<message key="xmlui.Submission.submit.EditFileStep.format_user">Sonstiges Format</message>
 	<message key="xmlui.Submission.submit.EditFileStep.format_user_help">Die Anwendung inkl. Versionsnummer mit der die Datei erstellt wurde z. B. "<i>ACMESoft SuperApp version 1.5</i>".</message>
-
 
 	<!-- org.dspace.app.xmlui.Submission.submit.ReviewStep -->
 	<message key="xmlui.Submission.submit.ReviewStep.head">Veröffentlichung überprüfen</message>
@@ -710,7 +708,7 @@
 	<message key="xmlui.Submission.submit.ReviewStep.unknown">unbekannt</message>
 	<message key="xmlui.Submission.submit.ReviewStep.known">bekannt</message>
 	<message key="xmlui.Submission.submit.ReviewStep.supported">unterstützt</message>
-	
+
 	<!-- org.dspace.app.xmlui.Submission.submit.CCLicenseStep -->
 	<message key="xmlui.Submission.submit.CCLicenseStep.head">Creative Commons Lizenz</message>
 	<message key="xmlui.Submission.submit.CCLicenseStep.info1">Wenn Sie eine  <a href="http://creativecommons.org/">Creative Commons</a> Lizenz zu Ihrem Dokument hinzufügen: <strong>Creative Commons Lizenzen legen fest, wie ihr Werk genutzt werden kann.</strong> Wenn Sie eine Creative Commons Lizenz hinzufügen möchten, klicken sie auf die untere Schaltfläche. Sie werden dann zur Creative Commons Seite weitergeleite, wo Sie aus verschiedenen Lizenzmodellen auswählen können.  Nachdem Sie eine Lizenz ausgewählt haben, kehren Sie zu dieser Seite zurück.</message>
@@ -764,21 +762,20 @@
 	<message key="xmlui.Submission.workflow.RejectTaskStep.reason_required">Sie müssen den Ablehnungsgrund angeben</message>
 	<message key="xmlui.Submission.workflow.RejectTaskStep.submit_reject">Ressource ablehnen</message>
 
-	
-	
+
 	<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		
 		             Administrative Aspect
 		
 		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-	
+
+
 	<!-- action-generated messages. These are referenced from the sitemap rather than a transformer --> 	
-	
 	<message key="xmlui.administrative.FlowCurationUtils.curate_success_notice">Die Aufgabe wurde erfolgreich ausgeführt.</message>
-    <message key="xmlui.administrative.FlowCurationUtils.curate_failed_notice">Die Aufgabe wurde unerwartet abgebrochen oder die Ausführung ist fehlgeschlagen. Für weitere Informationen wenden Sie sich an den Administrator und überprüfen Sie die Log-Dateien.</message>
-    <message key="xmlui.administrative.FlowCurationUtils.queue_success_notice">Die Aufgabe wurde erfolgreich in die Warteschlange eingereiht.</message>
-    <message key="xmlui.administrative.FlowCurationUtils.queue_failed_notice">Die Aufgabe konnte nicht in die Warteschlange eingefügt werden. Es ist ein Fehler aufgetreten.Für weitere Informationen wenden Sie sich an den Administrator und überprüfen Sie die Log-Dateien.</message>
-    <message key="xmlui.administrative.FlowEPersonUtils.add_eperson_success_notice">Der Benutzeraccount wurde angelegt.</message>
+	<message key="xmlui.administrative.FlowCurationUtils.curate_failed_notice">Die Aufgabe wurde unerwartet abgebrochen oder die Ausführung ist fehlgeschlagen. Für weitere Informationen wenden Sie sich an den Administrator und überprüfen Sie die Log-Dateien.</message>
+	<message key="xmlui.administrative.FlowCurationUtils.queue_success_notice">Die Aufgabe wurde erfolgreich in die Warteschlange eingereiht.</message>
+	<message key="xmlui.administrative.FlowCurationUtils.queue_failed_notice">Die Aufgabe konnte nicht in die Warteschlange eingefügt werden. Es ist ein Fehler aufgetreten.Für weitere Informationen wenden Sie sich an den Administrator und überprüfen Sie die Log-Dateien.</message>
+	<message key="xmlui.administrative.FlowEPersonUtils.add_eperson_success_notice">Der Benutzeraccount wurde angelegt.</message>
 	<message key="xmlui.administrative.FlowEPersonUtils.edit_eperson_success_notice">Der Benutzeraccount wurde aktualisiert.</message>
 	<message key="xmlui.administrative.FlowEPersonUtils.reset_password_success_notice">Dem Benutzer wurde eine E-Mail mit entsprechender Kennung gesandt, unter der er sein Passwort neu vergeben kann.</message>
 	<message key="xmlui.administrative.FlowEPersonUtils.delete_eperson_success_notice">Der/Die Benutzer wurden gelöscht.</message>
@@ -805,10 +802,10 @@
 	<message key="xmlui.administrative.FlowItemUtils.bitstream_delete">Ausgewählte Datei(en) gelöscht.</message>
 	<message key="xmlui.administrative.FlowMapperUtils.map_items">Dokument(e) gespiegelt.</message>
 	<message key="xmlui.administrative.FlowMapperUtils.unmaped_items">Die Dokumentspiegelung wurde rückgängig gemacht.</message>
-	
+
 	<!-- general items for all of the eperson classes -->
 	<message key="xmlui.administrative.eperson.general.epeople_trail">Benutzerverwaltung</message>
-		
+
 	<!-- org.dspace.app.xmlui.administrative.Navigation -->
 	<!-- contextual menu items -->
 	<message key="xmlui.administrative.Navigation.context_head">Kontext</message>
@@ -820,10 +817,10 @@
 	<message key="xmlui.administrative.Navigation.context_create_subcommunity">Teilbereich anlegen</message>
 	<message key="xmlui.administrative.Navigation.context_create_community">Bereich anlegen</message>
 	<message key="xmlui.administrative.Navigation.context_export_item">Dokument Exportieren</message>
-    <message key="xmlui.administrative.Navigation.context_export_collection">Sammlung Exportieren</message>
-    <message key="xmlui.administrative.Navigation.context_export_community">Bereich Exportieren</message>
-    <message key="xmlui.administrative.Navigation.context_export_metadata">Metadaten Exportieren</message>
-	
+	<message key="xmlui.administrative.Navigation.context_export_collection">Sammlung Exportieren</message>
+	<message key="xmlui.administrative.Navigation.context_export_community">Bereich Exportieren</message>
+	<message key="xmlui.administrative.Navigation.context_export_metadata">Metadaten Exportieren</message>
+
 	<!-- Site administrator options -->
 	<message key="xmlui.administrative.Navigation.administrative_head">Administration</message>
 	<message key="xmlui.administrative.Navigation.administrative_access_control">Zugriffsrechte</message>
@@ -839,11 +836,10 @@
 	<message key="xmlui.administrative.Navigation.statistics">Statistiken</message>
 	<message key="xmlui.administrative.Navigation.administrative_import_metadata">Metadaten Importieren</message>
 	<message key="xmlui.administrative.Navigation.administrative_curation">Datenpflege - Aufgabens</message>
-	
-    <!-- my account items -->
+
+	<!-- my account items -->
 	<message key="xmlui.administrative.Navigation.account_export">Meine Exporte</message>
-	
-	
+
 	<!-- export item -->
 	<message key="xmlui.administrative.ItemExport.head">Exportierte Archive</message>
 	<message key="xmlui.administrative.ItemExport.item.id.error">Die ID des Dokumentes ist ungültig.</message>
@@ -852,12 +848,11 @@
 	<message key="xmlui.administrative.ItemExport.item.not.found">Das angeforderte Dokument wurde nicht gefunden.</message>
 	<message key="xmlui.administrative.ItemExport.collection.not.found">Die angeforderte Sammlung wurde nicht gefunden.</message>
 	<message key="xmlui.administrative.ItemExport.community.not.found">Der angeforderte Bereich wurde nicht gefunden.</message>
-		<message key="xmlui.administrative.ItemExport.item.success">Das Dokument wurde exportiert. Sie werden per E-Mail benachrichtigt, sobald das Archiv zum Herunterladen bereitsteht. Sie können auch den Link "Meine Exporte" verwenden, um zu einer Auflistung aller Ihrer Exporte zu gelangen.</message>
-	<message key="xmlui.administrative.ItemExport.collection.success">Die Sammlung wurde exportiert.  Sie werden per E-Mail benachrichtigt, sobald das Archiv zum Herunterladen bereitsteht. Sie können auch den Link "Meine Exporte" verwenden, um zu einer Auflistung aller Ihrer Exporte zu gelangen.</message>
-	<message key="xmlui.administrative.ItemExport.community.success">Der Bereich wurde exportiert.  Sie werden per E-Mail benachrichtigt, sobald das Archiv zum Herunterladen bereitsteht. Sie können auch den Link "Meine Exporte" verwenden, um zu einer Auflistung aller Ihrer Exporte zu gelangen.</message>
+		<message key="xmlui.administrative.ItemExport.item.success">Das Dokument wurde exportiert. Sie werden per E-Mail benachrichtigt, sobald das Archiv zum Herunterladen bereitsteht. Sie können auch den Link „Meine Exporte“ verwenden, um zu einer Auflistung aller Ihrer Exporte zu gelangen.</message>
+	<message key="xmlui.administrative.ItemExport.collection.success">Die Sammlung wurde exportiert.  Sie werden per E-Mail benachrichtigt, sobald das Archiv zum Herunterladen bereitsteht. Sie können auch den Link „Meine Exporte“ verwenden, um zu einer Auflistung aller Ihrer Exporte zu gelangen.</message>
+	<message key="xmlui.administrative.ItemExport.community.success">Der Bereich wurde exportiert.  Sie werden per E-Mail benachrichtigt, sobald das Archiv zum Herunterladen bereitsteht. Sie können auch den Link „Meine Exporte“ verwenden, um zu einer Auflistung aller Ihrer Exporte zu gelangen.</message>
 	<message key="xmlui.administrative.ItemExport.available.head">Archive, die zum Herunterladen bereitstehen:</message>
-	
-		
+
 	<!-- org.dspace.app.xmlui.administrative.eperson.ManageEPeopleMain -->
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.title">Benutzeraccounts verwalten</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.main_head">Benutzerverwaltung</message>
@@ -876,8 +871,7 @@
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column4">E-Mail-Adresse</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.submit_delete">Benutzeraccount löschen</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.no_results">Ihre Suche führte zu keinem Treffer.</message>
-		
-		
+
 	<!-- org.dspace.app.xmlui.administrative.eperson.AddEPersonForm -->
 	<message key="xmlui.administrative.eperson.AddEPersonForm.title">Benutzer hinzufügen</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.trail">Benutzer hinzufügen</message>
@@ -891,7 +885,7 @@
 	<message key="xmlui.administrative.eperson.AddEPersonForm.req_certs">Zertifikat erforderlich</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.can_log_in">Benutzer kann sich einloggen</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.submit_create">Benutzeraccount anlegen</message>
-	
+
 	<!-- org.dspace.app.xmlui.administrative.eperson.EditEPersonForm -->
 	<message key="xmlui.administrative.eperson.EditEPersonForm.title">Benutzeraccount bearbeiten</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.trail">Benutzeraccount bearbeiten</message>
@@ -1841,7 +1835,7 @@
 	<message key="xmlui.dri2xhtml.structural.logout">Ausloggen</message>
 	<message key="xmlui.dri2xhtml.structural.login">Einloggen</message>
 
-	<message key="xmlui.dri2xhtml.structural.search">eDiss Suche</message>
+	<message key="xmlui.dri2xhtml.structural.search">Gesamtes Repository</message>
 	<message key="xmlui.dri2xhtml.structural.search-advanced">Erweiterte Suche</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-community">In diesem Bereich</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-collection">In dieser Sammlung</message>
@@ -1930,183 +1924,212 @@
 	
 	  <!--###### File Format MIME Type Mappings ######-->
 
-  <!-- Application-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.application/marc">MARC Datensatz</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/mathematica">Mathematica</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/msword">Microsoft Word</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/octet-stream">Unbekannt</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/pdf">PDF</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/postscript">Postscript</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/sgml">SGML</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-excel">Microsoft Excel</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-powerpoint">Microsoft PowerPoint</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-project">Microsoft Project</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.database">OpenOffice Base</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.formula">OpenOffice Math</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.graphics">OpenOffice Draw</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.presentation">OpenOffice Impress</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.spreadsheet">OpenOffice Calc</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.text">OpenOffice Writer</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.presentationml.presentation">Microsoft PowerPoint 2007</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">Microsoft Excel 2007</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.wordprocessingml.document">Microsoft Word 2007</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.calc">OpenOffice Calc (1.x)</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.draw">OpenOffice Draw (1.x)</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.impress">OpenOffice Impress (1.x)</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.writer.global">OpenOffice Writer (1.x)</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.visio">Microsoft Visio</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/wordperfect5.1">WordPerfect</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-dvi">TeX DVI</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-filemaker">FileMaker Pro</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-java-applet">Java applet</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-latex">LaTeX</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-photoshop">Photoshop</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-tex">TeX</message>
+	<!-- Application-based formats -->
+	<message key="xmlui.dri2xhtml.mimetype.application/marc">MARC Datensatz</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/mathematica">Mathematica</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/msword">Microsoft Word</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/octet-stream">Unbekannt</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/pdf">PDF</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/postscript">Postscript</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/sgml">SGML</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-excel">Microsoft Excel</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-powerpoint">Microsoft PowerPoint</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-project">Microsoft Project</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.database">OpenOffice Base</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.formula">OpenOffice Math</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.graphics">OpenOffice Draw</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.presentation">OpenOffice Impress</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.spreadsheet">OpenOffice Calc</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.text">OpenOffice Writer</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.presentationml.presentation">Microsoft PowerPoint 2007</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">Microsoft Excel 2007</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.wordprocessingml.document">Microsoft Word 2007</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.calc">OpenOffice Calc (1.x)</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.draw">OpenOffice Draw (1.x)</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.impress">OpenOffice Impress (1.x)</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.writer.global">OpenOffice Writer (1.x)</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/vnd.visio">Microsoft Visio</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/wordperfect5.1">WordPerfect</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/x-dvi">TeX DVI</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/x-filemaker">FileMaker Pro</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/x-java-applet">Java applet</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/x-latex">LaTeX</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/x-photoshop">Photoshop</message>
+	<message key="xmlui.dri2xhtml.mimetype.application/x-tex">TeX</message>
 
-  <!-- Audio-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.audio/basic">Basic Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/flac">FLAC Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/m4a">AAC audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/m4a-latm">AAC audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/mpeg">mp3 audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-aiff">AIFF audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-mpeg">MPEG Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-ms-wma">WMA Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-ms-wmv">WMV Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-ogg">Ogg Vorbis</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-pn-realaudio">RealAudio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-wav">WAV audio</message>
+	<!-- Audio-based formats -->
+	<message key="xmlui.dri2xhtml.mimetype.audio/basic">Basic Audio</message>
+	<message key="xmlui.dri2xhtml.mimetype.audio/flac">FLAC Audio</message>
+	<message key="xmlui.dri2xhtml.mimetype.audio/m4a">AAC audio</message>
+	<message key="xmlui.dri2xhtml.mimetype.audio/m4a-latm">AAC audio</message>
+	<message key="xmlui.dri2xhtml.mimetype.audio/mpeg">mp3 audio</message>
+	<message key="xmlui.dri2xhtml.mimetype.audio/x-aiff">AIFF audio</message>
+	<message key="xmlui.dri2xhtml.mimetype.audio/x-mpeg">MPEG Audio</message>
+	<message key="xmlui.dri2xhtml.mimetype.audio/x-ms-wma">WMA Audio</message>
+	<message key="xmlui.dri2xhtml.mimetype.audio/x-ms-wmv">WMV Audio</message>
+	<message key="xmlui.dri2xhtml.mimetype.audio/x-ogg">Ogg Vorbis</message>
+	<message key="xmlui.dri2xhtml.mimetype.audio/x-pn-realaudio">RealAudio</message>
+	<message key="xmlui.dri2xhtml.mimetype.audio/x-wav">WAV audio</message>
 
-  <!-- Image-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.image/gif">GIF Graphik</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/jp2">JPEG 2000 Graphik</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/jpeg">JPEG Graphik</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/png">PNG Graphik</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/tiff">TIFF Graphik</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/x-ms-bmp">BMP Graphik</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/x-photo-cd">Photo CD</message>
+	<!-- Image-based formats -->
+	<message key="xmlui.dri2xhtml.mimetype.image/gif">GIF Graphik</message>
+	<message key="xmlui.dri2xhtml.mimetype.image/jp2">JPEG 2000 Graphik</message>
+	<message key="xmlui.dri2xhtml.mimetype.image/jpeg">JPEG Graphik</message>
+	<message key="xmlui.dri2xhtml.mimetype.image/png">PNG Graphik</message>
+	<message key="xmlui.dri2xhtml.mimetype.image/tiff">TIFF Graphik</message>
+	<message key="xmlui.dri2xhtml.mimetype.image/x-ms-bmp">BMP Graphik</message>
+	<message key="xmlui.dri2xhtml.mimetype.image/x-photo-cd">Photo CD</message>
 
-  <!-- Text-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.text/css">CSS-Datei</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/csv">CSV-Datei</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/html">HTML</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/javascript">Javascript</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/plain">Text</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/richtext">RTF</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/xml">XML</message>
+	<!-- Text-based formats -->
+	<message key="xmlui.dri2xhtml.mimetype.text/css">CSS-Datei</message>
+	<message key="xmlui.dri2xhtml.mimetype.text/csv">CSV-Datei</message>
+	<message key="xmlui.dri2xhtml.mimetype.text/html">HTML</message>
+	<message key="xmlui.dri2xhtml.mimetype.text/javascript">Javascript</message>
+	<message key="xmlui.dri2xhtml.mimetype.text/plain">Text</message>
+	<message key="xmlui.dri2xhtml.mimetype.text/richtext">RTF</message>
+	<message key="xmlui.dri2xhtml.mimetype.text/xml">XML</message>
 
-  <!-- Video-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.video/avi">AVI Video</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/mjp2">Motion JPEG 2000</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/mpeg">MPEG Video</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/mpeg2">MPEG-2 Video</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/mp4">MPEG-4 Video</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/quicktime">QuickTime Video</message>
-  
-    <!-- explanatory messages for choice authority confidence values -->
-  <message key="xmlui.authority.confidence.description.cf_unset">Dieser Wert wurde niemals validiert.</message>
-  <message key="xmlui.authority.confidence.description.cf_novalue">Im Normdatenbereich gibt es keinen passenden Wert.</message>
-  <message key="xmlui.authority.confidence.description.cf_rejected">Die Normdatenreferenz empfiehlt, diese Veröffentlichung abzulehnen</message>
-  <message key="xmlui.authority.confidence.description.cf_failed">Im Normdatenreferenzbereich ist ein interner Fehler aufgetreten.</message>
-  <message key="xmlui.authority.confidence.description.cf_notfound">Im Normdatenbereich gibt es keine passenden Treffer</message>
-  <message key="xmlui.authority.confidence.description.cf_ambiguous">Es gibt mehrere Treffer in der Normdatenreferenz.</message>
-  <message key="xmlui.authority.confidence.description.cf_uncertain">Der Wert ist eindeutig und gültig, wurde aber bis jetzt noch nicht von einem menschlichen Bearbeiter bestätigt und gilt somit als unsicher.</message>
-  <message key="xmlui.authority.confidence.description.cf_accepted">Dieser Normdateneintrag wurde von einem Benutzer als gültig bestätigt.</message>
-  <!-- help message on "unlock" button in EditItemMetadata display -->
-  <message key="xmlui.authority.confidence.unlock.help">Gebe den Normdatenwert für die manuelle Bearbeitung frei oder markiere ihn wieder als gesperrt.</message>
+	<!-- Video-based formats -->
+	<message key="xmlui.dri2xhtml.mimetype.video/avi">AVI Video</message>
+	<message key="xmlui.dri2xhtml.mimetype.video/mjp2">Motion JPEG 2000</message>
+	<message key="xmlui.dri2xhtml.mimetype.video/mpeg">MPEG Video</message>
+	<message key="xmlui.dri2xhtml.mimetype.video/mpeg2">MPEG-2 Video</message>
+	<message key="xmlui.dri2xhtml.mimetype.video/mp4">MPEG-4 Video</message>
+	<message key="xmlui.dri2xhtml.mimetype.video/quicktime">QuickTime Video</message>
 
-  <!-- Choice Lookup popup window -->
-  <!-- NOTE: These messages necessarily use a *different* format for
-     - parameters, unfortunately, since substitution happens in the
-     - JavaScript (AJAX) that completes the lookup popup window.
-     - So, positional parameters are @1@, @2@, etc.
-    -->
-  <message key="xmlui.ChoiceLookupTransformer.title">eDiss Referenzwerte nachschlagen</message>
-  <message key="xmlui.ChoiceLookupTransformer.accept">Akzeptieren</message>
-  <message key="xmlui.ChoiceLookupTransformer.add">Hinzufügen</message>
-  <message key="xmlui.ChoiceLookupTransformer.cancel">Abbrechen</message>
-  <message key="xmlui.ChoiceLookupTransformer.more">Weitere Ergebnisse anzeigen</message>
-  <!-- params are: start, end, total-count, search-value -->
-  <message key="xmlui.ChoiceLookupTransformer.results">Ergebniss(e) @1@ bis @2@ von @3@ für "@4@"</message>
-  <message key="xmlui.ChoiceLookupTransformer.fail">Laden der Auswahldaten fehlgeschlagen: </message>
+	<!-- explanatory messages for choice authority confidence values -->
+	<message key="xmlui.authority.confidence.description.cf_unset">Dieser Wert wurde niemals validiert.</message>
+	<message key="xmlui.authority.confidence.description.cf_novalue">Im Normdatenbereich gibt es keinen passenden Wert.</message>
+	<message key="xmlui.authority.confidence.description.cf_rejected">Die Normdatenreferenz empfiehlt, diese Veröffentlichung abzulehnen</message>
+	<message key="xmlui.authority.confidence.description.cf_failed">Im Normdatenreferenzbereich ist ein interner Fehler aufgetreten.</message>
+	<message key="xmlui.authority.confidence.description.cf_notfound">Im Normdatenbereich gibt es keine passenden Treffer</message>
+	<message key="xmlui.authority.confidence.description.cf_ambiguous">Es gibt mehrere Treffer in der Normdatenreferenz.</message>
+	<message key="xmlui.authority.confidence.description.cf_uncertain">Der Wert ist eindeutig und gültig, wurde aber bis jetzt noch nicht von einem menschlichen Bearbeiter bestätigt und gilt somit als unsicher.</message>
+	<message key="xmlui.authority.confidence.description.cf_accepted">Dieser Normdateneintrag wurde von einem Benutzer als gültig bestätigt.</message>
+	<!-- help message on "unlock" button in EditItemMetadata display -->
+	<message key="xmlui.authority.confidence.unlock.help">Gebe den Normdatenwert für die manuelle Bearbeitung frei oder markiere ihn wieder als gesperrt.</message>
 
-  <!-- Choice Lookup - sample config for dc.publisher field -->
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.help">Name des Herausgebers</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.title">Herausgeber nachschlagen</message>
-  <!-- Params are: search-value -->
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.nonauthority">Nicht-Referenzwert: @1@</message>
+	<!-- Choice Lookup popup window -->
+	<!-- NOTE: These messages necessarily use a *different* format for
+	 - parameters, unfortunately, since substitution happens in the
+	 - JavaScript (AJAX) that completes the lookup popup window.
+	 - So, positional parameters are @1@, @2@, etc.
+	-->
+	<message key="xmlui.ChoiceLookupTransformer.title">eDiss Referenzwerte nachschlagen</message>
+	<message key="xmlui.ChoiceLookupTransformer.accept">Akzeptieren</message>
+	<message key="xmlui.ChoiceLookupTransformer.add">Hinzufügen</message>
+	<message key="xmlui.ChoiceLookupTransformer.cancel">Abbrechen</message>
+	<message key="xmlui.ChoiceLookupTransformer.more">Weitere Ergebnisse anzeigen</message>
+	<!-- params are: start, end, total-count, search-value -->
+	<message key="xmlui.ChoiceLookupTransformer.results">Ergebniss(e) @1@ bis @2@ von @3@ für "@4@"</message>
+	<message key="xmlui.ChoiceLookupTransformer.fail">Laden der Auswahldaten fehlgeschlagen: </message>
 
-  <!-- Choice Lookup - sample config for dc.contributor.author field -->
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help">Name in der Form "Nachname, Vorname"</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.last">Nachname, z. B. "Müller"</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.first">Vorname(n) z. B. "Michael"</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.title">LC Personennamenreferenzdatenbank</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Lokaler Wert "@1@" (nicht in Referenzdatenbank)</message>
+	<!-- Choice Lookup - sample config for dc.publisher field -->
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.help">Name des Herausgebers</message>
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.title">Herausgeber nachschlagen</message>
+	<!-- Params are: search-value -->
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.nonauthority">Nicht-Referenzwert: @1@</message>
 
-
-        <message key="xmlui.Submission.submit.UploadStep.upload_pdf_accepted">Das Dokument erfüllt alle Anforderungen der Checkliste</message>
-        <message key="xmlui.Submission.submit.UploadStep.upload_pdf_metadata">Das Dokument enhält die folgende Beschreibung: (Erklärung ung Anleitung hinzufügen)</message>
-        <message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_linearized">Optimiert für schnelle Webanzeige</message>
-        <message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_toc">Inhaltsverzeichnis vorhanden</message>
-        <message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_print">Drucken zulässig</message>
-        <message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_extract">Kopieren von Inhalt zulässig</message>
-        <message key="xmlui.Submission.submit.UploadStep.firstpdf_error">Bitte zuerst die Dissertation in PDF-Format hochladen</message>
-        <message key="xmlui.Submission.submit.UploadStep.pdfcheck_error">Das Dokument wurde abgelehnt, weil es nicht alle Anforderungen der Checkliste erfüllt. Brechen Sie bitte den Publikationsprozess ab, korrigieren Sie das Dokument und laden Sie es dann noch einmal hoch.</message>
-        <message key="xmlui.Submission.submit.UploadStep.pdfcheck_true">Ja</message>
-        <message key="xmlui.Submission.submit.UploadStep.pdfcheck_false">Nein</message>
-        <message key="xmlui.Submission.submit.UploadStep.invalidpdf_error">Die Datei ist kein valides PDF</message>
-        <message key="xmlui.Submission.submit.UploadStep.nopdfinfo">Die Datei enhält keine Beschreibung</message>
-
-        <message key="xmlui.Submission.submit.UploadStep.check-true">ja</message>
-        <message key="xmlui.Submission.submit.UploadStep.check-false">nein</message>
+	<!-- Choice Lookup - sample config for dc.contributor.author field -->
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help">Name in der Form "Nachname, Vorname"</message>
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.last">Nachname, z. B. "Müller"</message>
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.first">Vorname(n) z. B. "Michael"</message>
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.title">LC Personennamenreferenzdatenbank</message>
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Lokaler Wert "@1@" (nicht in Referenzdatenbank)</message>
 
 
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_advisor">Gutachter</message>
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_gok">GOK</message>
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_bk">BK</message>
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_dnb">DNB-Klasse</message>
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_topic">Topic</message>
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_lang">Sprache</message>
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_titletranslated">Übersetzter Titel</message>
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_examen">Tag d. Prüfung</message>
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_institute">Institute</message>
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_subjecteng">Schlagworten eng</message>
+	<message key="xmlui.Submission.submit.UploadStep.upload_pdf_accepted">Das Dokument erfüllt alle Anforderungen der Checkliste</message>
+	<message key="xmlui.Submission.submit.UploadStep.upload_pdf_metadata">Das Dokument enhält die folgende Beschreibung: (Erklärung ung Anleitung hinzufügen)</message>
+	<message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_linearized">Optimiert für schnelle Webanzeige</message>
+	<message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_toc">Inhaltsverzeichnis vorhanden</message>
+	<message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_print">Drucken zulässig</message>
+	<message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_extract">Kopieren von Inhalt zulässig</message>
+	<message key="xmlui.Submission.submit.UploadStep.firstpdf_error">Bitte zuerst die Dissertation in PDF-Format hochladen</message>
+	<message key="xmlui.Submission.submit.UploadStep.pdfcheck_error">Das Dokument wurde abgelehnt, weil es nicht alle Anforderungen der Checkliste erfüllt. Brechen Sie bitte den Publikationsprozess ab, korrigieren Sie das Dokument und laden Sie es dann noch einmal hoch.</message>
+	<message key="xmlui.Submission.submit.UploadStep.pdfcheck_true">Ja</message>
+	<message key="xmlui.Submission.submit.UploadStep.pdfcheck_false">Nein</message>
+	<message key="xmlui.Submission.submit.UploadStep.invalidpdf_error">Die Datei ist kein valides PDF</message>
+	<message key="xmlui.Submission.submit.UploadStep.nopdfinfo">Die Datei enhält keine Beschreibung</message>
+
+	<message key="xmlui.Submission.submit.UploadStep.check-true">ja</message>
+	<message key="xmlui.Submission.submit.UploadStep.check-false">nein</message>
 
 
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.advisor">Dokumente nach Gutachter</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.gok">Dokumente nach GOK</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.bk">Dokumente nach BK</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.dnb">Dokumente nach DNB-Klasse</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.topic">Dokumente nach Topic</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.lang">Dokumente nach Sprache</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.titletranslated">Dokumente nach übersetztem Titel</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.examen">Dokumente nach Tag d. Prüfung</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.institute">Dokumente nach Institute</message>
-         <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subjecteng">Dokuemente nach Schlagworten eng</message>
-
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.advisor">Dokumente {0} nach Gutatchter {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.gok">Dokumente {0} nach GOK {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.bk">Dokumente {0} nach BK {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.dnb">Dokumente {0} nach DNB-Klasse {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.topic">Dokumente {0} nach Topic {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.lang">Dokumente {0} nach Sprache {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.titletranslated">Dokumente {0} nach übersetztem Titel {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.examen">Dokumente {0} nach Tag d. Prüfung {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.institute">Dokumente {0} nach Institute {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subjecteng">Dokuemente {0} nach Schlagworten eng {1}</message>
-
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.advisor.column_heading">Gutachter</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.gok.column_heading">GOK</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.bk.column_heading">BK</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.dnb.column_heading">DNB-Klasse</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.topic.column_heading">Topic</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.lang.column_heading">Sprache</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.titletranslated.column_heading">Übersetzter Titel</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.examen.column_heading">Tag d. Prüfung</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.institute.column_heading">Institute</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subjecteng.column_heading">Schlagworten eng</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_advisor">Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_gok">GOK</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_bk">BK</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_dnb">DNB-Klasse</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_topic">Topic</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_lang">Sprache</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_titletranslated">Übersetzter Titel</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_examen">Tag der Prüfung</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_institute">Institute</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_subjecteng">Schlagworte (englisch)</message>
 
 
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.advisor">Dokumente nach Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.gok">Dokumente nach GOK</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.bk">Dokumente nach BK</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.dnb">Dokumente nach DNB-Klasse</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.topic">Dokumente nach Topic</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.lang">Dokumente nach Sprache</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.titletranslated">Dokumente nach übersetztem Titel</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.examen">Dokumente nach Tag der Prüfung</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.institute">Dokumente nach Institute</message>
+	 <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subjecteng">Dokumente nach Schlagworten (englisch)</message>
+
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.advisor">Dokumente {0} nach Gutatchter {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.gok">Dokumente {0} nach GOK {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.bk">Dokumente {0} nach BK {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.dnb">Dokumente {0} nach DNB-Klasse {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.topic">Dokumente {0} nach Topic {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.lang">Dokumente {0} nach Sprache {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.titletranslated">Dokumente {0} nach übersetztem Titel {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.examen">Dokumente {0} nach Tag d. Prüfung {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.institute">Dokumente {0} nach Institute {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subjecteng">Dokuemente {0} nach Schlagworten eng {1}</message>
+
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.advisor.column_heading">Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.gok.column_heading">GOK</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.bk.column_heading">BK</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.dnb.column_heading">DNB-Klasse</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.topic.column_heading">Topic</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.lang.column_heading">Sprache</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.titletranslated.column_heading">Übersetzter Titel</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.examen.column_heading">Tag d. Prüfung</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.institute.column_heading">Institute</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subjecteng.column_heading">Schlagworten eng</message>
+
+	<!-- Custom strings for eDiss -->
 	<message key="xmlui.general.publish_now">Jetzt veröffentlichen</message>
+	<message key="xmlui.general.locale.language">Sprache</message>
+	<message key="xmlui.lf"></message>
+	<message key="xmlui.home.head">Elektronische Dissertationen der Georg-August-Universität Göttingen</message>
+	<message key="xmlui.home.head2">Wir veröffentlichen Ihre elektronische Dissertation auf dem eDiss-Server der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB).</message>
+	<message key="xmlui.home.publication.process">Um den Online-Publikationsprozess für Ihre Doktorarbeit zu starten, gehen Sie bitte wie folgt vor:</message>
+	<message key="xmlui.home.publication.process.register"><a href="register">Registrieren</a> Sie ein Benutzerkonto bei eDiss.</message>
+	<message key="xmlui.home.publication.process.publish">Klicken Sie auf <a href="submit">„Jetzt veröffentlichen“</a>.</message>
+	<message key="xmlui.home.publication.process.finish">Laden Sie Ihre Arbeit als PDF hoch und folgen Sie dem Formular. Fertig!</message>
+	<message key="xmlui.home.publication.process.upload">Laden Sie Ihre Arbeit als PDF hoch.</message>
+	<message key="xmlui.home.publication.process.metadata">Geben Sie Metadaten zu ihrer Arbeit an.</message>
+	<message key="xmlui.home.publication.process.notes">Bitte beachten Sie: Alle Angaben sind verbindlich!</message>
+	<message key="xmlui.home.publication.complete">Das Gänseliesel dürfen Sie erst küssen, wenn Sie uns die folgende Dokumente vorbeigebracht oder zugeschickt haben:</message>
+	<message key="xmlui.home.publication.complete.contract">Ausgefüllte Vertragsbedingungen</message>
+	<message key="xmlui.home.publication.complete.print">2 gedruckte Exemplare Ihrer Arbeit</message>
+	<message key="xmlui.home.publication.complete.price">€ 25,‒ Gebühr für die Veröffentlichung*</message>
+	<message key="xmlui.home.publication.complete.price.footnote">* Bei postalischer Abwicklung teilen Sie uns bitte Ihre aktuelle Adresse mit ‒ Sie erhalten dann eine Rechnung.</message>
+	<message key="xmlui.home.contact.label">Bei Fragen können Sie sich gern an uns wenden:</message>
+	<message key="xmlui.home.library.name">Zentralbibliothek</message>
+	<message key="xmlui.home.epu.place">2. Etage links im LRC, Raum 2.19</message>
+	<message key="xmlui.home.library.address">Platz der Göttinger Sieben 1</message>
+	<message key="xmlui.home.library.zipcode">37073 Göttingen</message>
+	<message key="xmlui.home.library.tel">Tel.: 0551 / 39-5383</message>
+	<message key="xmlui.home.library.email">E-Mail: eDiss@sub.uni-goettingen.de</message>
+	<message key="xmlui.home.contact.time.label">Unsere Öffnungszeiten:</message>
+	<message key="xmlui.home.epu.times">Montag bis Freitag jeweils von 10:00 bis 12:00 Uhr.</message>
+	<message key="xmlui.home.epu.freetime">Es können auch Termine vereinbart werden, die außerhalb der Öffnungszeiten liegen.</message>
+
+	<message key="xmlui.general.language.de">Deutsch</message>
+	<message key="xmlui.general.language.en">Englisch</message>
 	
 </catalogue>

@@ -51,8 +51,6 @@
 			<xsl:apply-templates select="$dim" mode="itemURI-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemDate-DIM"/>
 			<!--<xsl:apply-templates select="$dim" mode="itemPublisher-DIM"/>-->
-			<xsl:apply-templates select="$dim" mode="itemAbstractGer-DIM"/>
-			<xsl:apply-templates select="$dim" mode="itemAbstractEng-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemPURL-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemExamination-DIM"/> 
 			<!--<xsl:apply-templates select="$dim" mode="itemEmail-DIM"/>-->
@@ -76,6 +74,7 @@
 				</p>
 			</xsl:if>
 			<span class="spacer">&#160;</span>
+			
 		</div>
 		
 		<!-- Generate the bitstream information from the file section -->
@@ -108,15 +107,22 @@
 			</xsl:otherwise>
 		</xsl:choose>
 		
-		<xsl:apply-templates select="$dim" mode="itemKeywords-DIM"/>
-		
 		<!-- Generate the Creative Commons license information from the file section (DSpace deposit license hidden by default)-->
 		<xsl:apply-templates select="./mets:fileSec/mets:fileGrp[@USE='CC-LICENSE']"/>
 		<xsl:apply-templates select="$dim" mode="itemLicense-DIM" />
-		<xsl:apply-templates select="$dim" mode="itemSummaryView-DIM"/>
+		
+		<h2><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h2>
+		<div class="metadata">
+			<xsl:apply-templates select="$dim" mode="itemAbstractGer-DIM"/>
+			<xsl:apply-templates select="$dim" mode="itemAbstractEng-DIM"/>
+			<div class="spacer">&#160;</div>
+		</div>
+		
+		<xsl:apply-templates select="$dim" mode="itemKeywords-DIM"/>
+		
+		<!--<xsl:apply-templates select="$dim" mode="itemSummaryView-DIM"/>-->
 
 	</xsl:template>
-
 
 	<xsl:template match="dim:dim" mode="itemSummaryView-DIM">
 
@@ -312,14 +318,14 @@
 	<xsl:template match="dim:dim" mode="itemLicense-DIM">
 		 <xsl:if test="contains(dim:field[@element='rights'][@qualifier='uri'], 'creativecommons')">
 			<div class="license-info">
-					<p><i18n:text>xmlui.dri2xhtml.METS-1.0.license-text</i18n:text></p>
+				<p><i18n:text>xmlui.dri2xhtml.METS-1.0.license-text</i18n:text></p>
 				<ul>
 					<li><a href="{dim:field[@element='rights'][@qualifier='uri']}"><i18n:text>xmlui.dri2xhtml.structural.link_cc</i18n:text></a></li>
 				</ul>
-				</div>
-				 </xsl:if>
-		
+			</div>
+		 </xsl:if>
 	</xsl:template>
+	
 	<xsl:template name="split-list">
 		<xsl:param name="list"/>
 		<xsl:variable name="newlist" select="normalize-space($list)"/>
@@ -431,30 +437,32 @@
 		</xsl:if>
 	</xsl:template>
 
-        <xsl:template match="dim:dim" mode="itemAbstractGer-DIM">
-                <!-- Abstract german row -->
-                <xsl:if test="dim:field[@element='description' and @qualifier='abstractger']">
-			<div class="simple-item-view-other">
-                                <span class="bold"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-description</i18n:text>:</span>
-                                <span>
+	<xsl:template match="dim:dim" mode="itemAbstractGer-DIM">
+		<!-- Abstract german row -->
+		<xsl:if test="dim:field[@element='description' and @qualifier='abstractger']">
+			<div class="simple-item-view-abstract">
+				<!--<span class="bold"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-description</i18n:text>:</span>-->
+				<h3><i18n:text>xmlui.general.language.de</i18n:text></h3>
+				<span>
 					<xsl:value-of select="dim:field[@element='description' and @qualifier='abstractger']" disable-output-escaping="yes"/>
-                                </span>
+				</span>
 			</div>
-                </xsl:if>
-        </xsl:template>
+		</xsl:if>
+	</xsl:template>
 
 
-        <xsl:template match="dim:dim" mode="itemAbstractEng-DIM">
-                <!-- Abstract english row -->
-                <xsl:if test="dim:field[@element='description' and @qualifier='abstracteng']">
-			<div class="simple-item-view-other">
-                                <span class="bold"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-description</i18n:text>:</span>
-                                <span>
-                                        <xsl:value-of select="dim:field[@element='description' and @qualifier='abstracteng']" disable-output-escaping="yes"/>
-                                </span>
+	<xsl:template match="dim:dim" mode="itemAbstractEng-DIM">
+		<!-- Abstract english row -->
+		<xsl:if test="dim:field[@element='description' and @qualifier='abstracteng']">
+			<div class="simple-item-view-abstract">
+				<!--<span class="bold"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-description</i18n:text>:</span>-->
+				<h3><i18n:text>xmlui.general.language.en</i18n:text></h3>
+				<span>
+					<xsl:value-of select="dim:field[@element='description' and @qualifier='abstracteng']" disable-output-escaping="yes"/>
+				</span>
 			</div>
-                </xsl:if>
-        </xsl:template>
+		</xsl:if>
+	</xsl:template>
 
 	<xsl:template match="dim:dim" mode="itemPURL-DIM">
         <xsl:if test="dim:field[@element='identifier' and @qualifier='purl']">
@@ -656,6 +664,7 @@
 	<xsl:template match="mets:file">
 		<xsl:param name="context" select="."/>
 		<div class="file-wrapper clearfix">
+			<!--
 			<div class="thumbnail-wrapper">
 				<a class="image-link">
 					<xsl:attribute name="href">
@@ -675,7 +684,8 @@
 					</xsl:choose>
 				</a>
 			</div>
-			<div class="file-metadata" style="height: {$thumbnail.maxheight}px;">
+			-->
+			<div class="file-metadata"><!--style="height: {$thumbnail.maxheight}px;"-->
 				<div>
 					<span class="bold">
 						<i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-name</i18n:text>
@@ -748,7 +758,7 @@
 					</div>
 				</xsl:if>
 			</div>
-			<div class="file-link" style="max-height: {$thumbnail.maxheight}px;">
+			<div class="file-link"><!-- style="max-height: {$thumbnail.maxheight}px;" -->
 				<a>
 					<xsl:attribute name="href">
 						<xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>

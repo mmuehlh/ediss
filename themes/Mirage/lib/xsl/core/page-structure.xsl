@@ -59,6 +59,7 @@
 	-->
 	<xsl:template match="dri:document">
 		<html>
+			
 			<!-- First of all, build the HTML head element -->
 			<xsl:call-template name="buildHead"/>
 			<!-- Then proceed to the body -->
@@ -71,53 +72,55 @@
 				&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt;&lt;body&gt;&lt;!--&lt;![endif]--&gt;</xsl:text>
 
 			<xsl:choose>
-			  <xsl:when test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='framing'][@qualifier='popup']">
-				<xsl:apply-templates select="dri:body/*"/>
-			  </xsl:when>
-				  <xsl:otherwise>
-					<!--The header div, complete with title, subtitle and trail -->
-					<xsl:call-template name="buildHeader"/>
+				<xsl:when test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='framing'][@qualifier='popup']">
+					<xsl:apply-templates select="dri:body/*"/>
+				</xsl:when>
+				<xsl:otherwise>
+				
+					<div id="page-wrapper">
+					
+						<!--The header div, complete with title, subtitle and trail -->
+						<xsl:call-template name="buildHeader"/>
 
-					<!--javascript-disabled warning, will be invisible if javascript is enabled-->
-					<div id="no-js-warning-wrapper" class="hidden">
-						<div id="no-js-warning">
-							<div class="notice failure">
-								<xsl:text>JavaScript is disabled for your browser. Some features of this site may not work without it.</xsl:text>
+						<!--javascript-disabled warning, will be invisible if javascript is enabled-->
+						<div id="no-js-warning-wrapper" class="hidden">
+							<div id="no-js-warning">
+								<div class="notice failure">
+									<xsl:text>JavaScript is disabled for your browser. Some features of this site may not work without it.</xsl:text>
+								</div>
 							</div>
 						</div>
+
+
+						<!--ds-content is a groups ds-body and the navigation together and used to put the clearfix on, center, etc.
+							ds-content-wrapper is necessary for IE6 to allow it to center the page content-->
+						<div id="content-wrapper">
+							<!--
+							   Goes over the document tag's children elements: body, options, meta. The body template
+							   generates the ds-body div that contains all the content. The options template generates
+							   the ds-options div that contains the navigation and action options available to the
+							   user. The meta element is ignored since its contents are not processed directly, but
+							   instead referenced from the different points in the document. -->
+							<xsl:apply-templates/>
+						</div>
+						
 					</div>
-
-
-					<!--ds-content is a groups ds-body and the navigation together and used to put the clearfix on, center, etc.
-						ds-content-wrapper is necessary for IE6 to allow it to center the page content-->
-					<div id="top">&#160;</div>
-					<div id="content-wrapper">
-						<!--
-						   Goes over the document tag's children elements: body, options, meta. The body template
-						   generates the ds-body div that contains all the content. The options template generates
-						   the ds-options div that contains the navigation and action options available to the
-						   user. The meta element is ignored since its contents are not processed directly, but
-						   instead referenced from the different points in the document. -->
-						<xsl:apply-templates/>
-						<br style="clear: both;">&#160;</br>
-					</div>
-					<div id="bottom">&#160;</div>
-
+					
 					<!--
 						The footer div, dropping whatever extra information is needed on the page. It will
 						most likely be something similar in structure to the currently given example. -->
 					<xsl:call-template name="buildFooter"/>
 
-					</xsl:otherwise>
+				</xsl:otherwise>
 			</xsl:choose>
-				<!-- Javascript at the bottom for fast page loading -->
-			  <xsl:call-template name="addJavascript"/>
+			<!-- Javascript at the bottom for fast page loading -->
+			<xsl:call-template name="addJavascript"/>
 
 			<xsl:text disable-output-escaping="yes">&lt;/body&gt;</xsl:text>
 		</html>
 	</xsl:template>
 
-		<!-- The HTML head element contains references to CSS as well as embedded JavaScript code. Most of this
+	<!-- The HTML head element contains references to CSS as well as embedded JavaScript code. Most of this
 		information is either user-provided bits of post-processing (as in the case of the JavaScript), or
 		references to stylesheets pulled directly from the pageMeta element. -->
 	<xsl:template name="buildHead">
@@ -153,13 +156,13 @@
 			</link>
 
 			<meta name="Generator">
-			  <xsl:attribute name="content">
-				<xsl:text>DSpace</xsl:text>
-				<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='dspace'][@qualifier='version']">
-				  <xsl:text> </xsl:text>
-				  <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='dspace'][@qualifier='version']"/>
-				</xsl:if>
-			  </xsl:attribute>
+				<xsl:attribute name="content">
+					<xsl:text>DSpace</xsl:text>
+					<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='dspace'][@qualifier='version']">
+						<xsl:text> </xsl:text>
+						<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='dspace'][@qualifier='version']"/>
+					</xsl:if>
+				</xsl:attribute>
 			</meta>
 			<!-- Add stylsheets -->
 			<xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='stylesheet']">
@@ -280,15 +283,15 @@
 			<xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title']" />
 			<title>
 				<xsl:choose>
-						<xsl:when test="starts-with($request-uri, 'page/about')">
-								<xsl:text>About This Repository</xsl:text>
-						</xsl:when>
-						<xsl:when test="not($page_title)">
-								<xsl:text>  </xsl:text>
-						</xsl:when>
-						<xsl:otherwise>
-								<xsl:copy-of select="$page_title/node()" />
-						</xsl:otherwise>
+					<xsl:when test="starts-with($request-uri, 'page/about')">
+						<xsl:text>About This Repository</xsl:text>
+					</xsl:when>
+					<xsl:when test="not($page_title)">
+						<xsl:text>  </xsl:text>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:copy-of select="$page_title/node()" />
+					</xsl:otherwise>
 				</xsl:choose>
 			</title>
 
@@ -312,63 +315,83 @@
 	<xsl:template name="buildHeader">
 		<div id="header-wrapper">
 			<div id="header">
-				<a id="logo">
-					<xsl:attribute name="href">
-						<xsl:value-of
-								select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-						<xsl:text>/</xsl:text>
-					</xsl:attribute>
-					<h1>
+				<h1>
+					<a id="logo">
+						<xsl:attribute name="href">
+							<xsl:value-of
+									select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+							<xsl:text>/</xsl:text>
+						</xsl:attribute>
 						<xsl:choose>
 							<!-- protectiotion against an empty page title -->
 							<xsl:when test="not(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title'])">
 								<xsl:text> </xsl:text>
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:copy-of
-										select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title']/node()"/>
+								<xsl:copy-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title']/node()"/>
 							</xsl:otherwise>
 						</xsl:choose>
 						&#8211;
 						<i18n:text>xmlui.dri2xhtml.structural.head-subtitle</i18n:text>
-					</h1>
-				</a>
-				
+					</a>
+				</h1>
+
 				<div id="topbox">
-					
+
 					<div id="localebox">  
 						<p>                 
+							<i18n:text>xmlui.general.locale.language</i18n:text>:
+							<!-- NOT WORKING! TODO -->
+							<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='locale']"/>
+							<!--<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']" />-->
 							<xsl:for-each select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='xmlui-ml'][@qualifier='localeURL']">
 								<a>
 									<xsl:attribute name="href">
 										<xsl:value-of select="."/>
 									</xsl:attribute>
-									<i18n:text><xsl:value-of select="substring-after(.,'locale-attribute=')" /></i18n:text>
+									<xsl:attribute name="class">
+										<!--<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:[@element='page'][@qualifier='currentLocale']"/>-->
+									</xsl:attribute>
+									<i18n:text>xmlui.general.locale.<xsl:value-of select="substring-after(.,'locale-attribute=')" /></i18n:text>
 									<!--
 									<img>
 										<xsl:attribute name="src"><xsl:value-of select="$theme-path" />/images/<xsl:value-of select="." />.gif</xsl:attribute>
 									</img>
 									-->
 								</a>
-								<xsl:text>&#160;</xsl:text>
+								<xsl:if test="position() != last()">
+									<xsl:text>&#160;|&#160;</xsl:text>
+								</xsl:if>
 							</xsl:for-each>                 
 						</p>
 					</div>
-					
+
 					<div id="userbox">
 						<xsl:choose>
 							<xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
-								<i18n:text>xmlui.dri2xhtml.structural.profile</i18n:text>
-								<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='firstName']"/>
-								<xsl:text> </xsl:text>
-								<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='lastName']"/>
+								<p class="profile">
+									<!--<i18n:text>xmlui.dri2xhtml.structural.profile</i18n:text>-->
+									<span>
+										<xsl:choose>
+											<xsl:when test="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='firstName']">
+												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='firstName']"/>
+												<xsl:text> </xsl:text>
+												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='lastName']"/>
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='email']"/>
+											</xsl:otherwise>
+										</xsl:choose>
+										↓
+									</span>
+								</p>
 								<ul>
 									<li>
 										<a>
 											<xsl:attribute name="href">
 												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='url']"/>
 											</xsl:attribute>
-											<i18n:text>xmlui.dri2xhtml.structural.profile</i18n:text>
+											<i18n:text>xmlui.EPerson.Navigation.profile</i18n:text>
 										</a>
 									</li>
 									<li>
@@ -376,13 +399,14 @@
 											<xsl:attribute name="href">
 												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='logoutURL']"/>
 											</xsl:attribute>
-											<i18n:text>xmlui.dri2xhtml.structural.logout</i18n:text>
+											<i18n:text>xmlui.EPerson.Navigation.logout</i18n:text>
 										</a>
 									</li>
 									<li>
 										<a>
 											<xsl:attribute name="href">
-												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='submissionsURL']"/>
+												<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
+												<xsl:text>/submissions</xsl:text>
 											</xsl:attribute>
 											<i18n:text>xmlui.Submission.Navigation.submissions</i18n:text>
 										</a>
@@ -390,53 +414,54 @@
 								</ul>
 							</xsl:when>
 							<xsl:otherwise>
-								<p>
+								<p class="login">
 									<a>
 										<xsl:attribute name="href">
 											<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='loginURL']"/>
 										</xsl:attribute>
-										<i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
+										<i18n:text>xmlui.EPerson.Navigation.login</i18n:text>
+									</a>
+									<xsl:text> | </xsl:text>
+									<a>
+										<xsl:attribute name="href">
+											<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
+											<xsl:text>/register</xsl:text>
+										</xsl:attribute>
+										<i18n:text>xmlui.EPerson.Navigation.register</i18n:text>
 									</a>
 								</p>
 							</xsl:otherwise>
 						</xsl:choose>
 					</div>
-					
+
 					<form id="searchbox" method="post">
 						<xsl:attribute name="action">
 							<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
 							<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
 						</xsl:attribute>
 						<fieldset>
-							<input class="ds-text-field " type="text">
+							<input class="ds-text-field " type="text" i18n:attr="value" value="xmlui.ArtifactBrowser.SimpleSearch.full_text_search">
 								<xsl:attribute name="name">
 									<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='queryField']"/>
 								</xsl:attribute>
-								<!--
-								TODO
-								<xsl:attribute name="value">
-									<xsl:value-of select="xmlui.dri2xhtml.structural.search" />
-								</xsl:attribute>
-								-->
 							</input>
 							<input class="ds-button-field " name="submit" type="submit" i18n:attr="value" value="xmlui.general.go">
 								<xsl:attribute name="onclick">
-								<xsl:text>
+									<xsl:text>
 									var radio = document.getElementById(&quot;ds-search-form-scope-container&quot;);
-									if (radio != undefined &amp;&amp; radio.checked)
-									{
-									var form = document.getElementById(&quot;ds-search-form&quot;);
-									form.action=
-								</xsl:text>
+									if (radio != undefined &amp;&amp; radio.checked) {
+										var form = document.getElementById(&quot;ds-search-form&quot;);
+										form.action=
+									</xsl:text>
 									<xsl:text>&quot;</xsl:text>
 									<xsl:value-of
-											select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
+													select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
 									<xsl:text>/handle/&quot; + radio.value + &quot;</xsl:text>
 									<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
 									<xsl:text>&quot; ; </xsl:text>
-								<xsl:text>
+									<xsl:text>
 									}
-								</xsl:text>
+									</xsl:text>
 								</xsl:attribute>
 							</input>
 							<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='container']">
@@ -462,7 +487,7 @@
 							</xsl:if>
 						</fieldset>
 					</form>
-					
+
 					<!-- Only add if the advanced search url is different from the simple search -->
 					<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='advancedURL'] != /dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']">
 						<!-- The "Advanced search" link, to be perched underneath the search box -->
@@ -473,31 +498,31 @@
 							<i18n:text>xmlui.dri2xhtml.structural.search-advanced</i18n:text>
 						</a>
 					</xsl:if>
-					
+
 				</div>
-				
+
 				<!--<div id="ds-trail-wrapper">-->
-					<!--<div id="ds-trail-hint"><i18n:text>xmlui.general.trail_hint</i18n:text></div>-->
-					<!-- Truncate trail if it does not fit into one line: done via JavaScript -->
-					<ul id="ds-trail">
-						<xsl:choose>
-							<xsl:when test="starts-with($request-uri, 'page/about')">
-								 <xsl:text>About This Repository</xsl:text>
-							</xsl:when>
-							<xsl:when test="count(/dri:document/dri:meta/dri:pageMeta/dri:trail) = 0">
-								<li class="ds-trail-link first-link">-</li>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:apply-templates select="/dri:document/dri:meta/dri:pageMeta/dri:trail"/>
-							</xsl:otherwise>
-						</xsl:choose>
-					</ul>
+				<!--<div id="ds-trail-hint"><i18n:text>xmlui.general.trail_hint</i18n:text></div>-->
+				<!-- Truncate trail if it does not fit into one line: done via JavaScript -->
+				<ul id="ds-trail">
+					<xsl:choose>
+						<xsl:when test="starts-with($request-uri, 'page/about')">
+							<xsl:text>About This Repository</xsl:text>
+						</xsl:when>
+						<xsl:when test="count(/dri:document/dri:meta/dri:pageMeta/dri:trail) = 0">
+							<li class="ds-trail-link first-link">-</li>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:apply-templates select="/dri:document/dri:meta/dri:pageMeta/dri:trail"/>
+						</xsl:otherwise>
+					</xsl:choose>
+				</ul>
 				<!--</div>-->
 
 			</div>
 		</div>
 	</xsl:template>
-	
+
 	<xsl:template match="dri:trail">
 		<!--put an arrow between the parts of the trail-->
 		<xsl:if test="position()>1">
@@ -547,49 +572,49 @@
 					  select="document($externalMetadataURL)//dim:field[@element='rights'][@qualifier='uri']"
 					  />
 		<xsl:variable name="handleUri">
-					<xsl:for-each select="document($externalMetadataURL)//dim:field[@element='identifier' and @qualifier='uri']">
-						<a>
-							<xsl:attribute name="href">
-								<xsl:copy-of select="./node()"/>
-							</xsl:attribute>
-							<xsl:copy-of select="./node()"/>
-						</a>
-						<xsl:if test="count(following-sibling::dim:field[@element='identifier' and @qualifier='uri']) != 0">
-							<xsl:text>, </xsl:text>
-						</xsl:if>
-				</xsl:for-each>
+			<xsl:for-each select="document($externalMetadataURL)//dim:field[@element='identifier' and @qualifier='uri']">
+				<a>
+					<xsl:attribute name="href">
+						<xsl:copy-of select="./node()"/>
+					</xsl:attribute>
+					<xsl:copy-of select="./node()"/>
+				</a>
+				<xsl:if test="count(following-sibling::dim:field[@element='identifier' and @qualifier='uri']) != 0">
+					<xsl:text>, </xsl:text>
+				</xsl:if>
+			</xsl:for-each>
 		</xsl:variable>
 
-   <xsl:if test="$ccLicenseName and $ccLicenseUri and contains($ccLicenseUri, 'creativecommons')">
-		<div about="{$handleUri}">
-			<xsl:attribute name="style">
-				<xsl:text>margin:0em 2em 0em 2em; padding-bottom:0em;</xsl:text>
-			</xsl:attribute>
-			<a rel="license"
+		<xsl:if test="$ccLicenseName and $ccLicenseUri and contains($ccLicenseUri, 'creativecommons')">
+			<div about="{$handleUri}">
+				<xsl:attribute name="style">
+					<xsl:text>margin:0em 2em 0em 2em; padding-bottom:0em;</xsl:text>
+				</xsl:attribute>
+				<a rel="license"
 				href="{$ccLicenseUri}"
 				alt="{$ccLicenseName}"
 				title="{$ccLicenseName}"
 				>
-				<img>
-					 <xsl:attribute name="src">
-						<xsl:value-of select="concat($theme-path,'/images/cc-ship.gif')"/>
-					 </xsl:attribute>
-					 <xsl:attribute name="alt">
-						 <xsl:value-of select="$ccLicenseName"/>
-					 </xsl:attribute>
-					 <xsl:attribute name="style">
-						 <xsl:text>float:left; margin:0em 1em 0em 0em; border:none;</xsl:text>
-					 </xsl:attribute>
-				</img>
-			</a>
-			<span>
-				<xsl:attribute name="style">
-					<xsl:text>vertical-align:middle; text-indent:0 !important;</xsl:text>
-				</xsl:attribute>
-				<i18n:text>xmlui.dri2xhtml.METS-1.0.cc-license-text</i18n:text>
-				<xsl:value-of select="$ccLicenseName"/>
-			</span>
-		</div>
+					<img>
+						<xsl:attribute name="src">
+							<xsl:value-of select="concat($theme-path,'/images/cc-ship.gif')"/>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="$ccLicenseName"/>
+						</xsl:attribute>
+						<xsl:attribute name="style">
+							<xsl:text>float:left; margin:0em 1em 0em 0em; border:none;</xsl:text>
+						</xsl:attribute>
+					</img>
+				</a>
+				<span>
+					<xsl:attribute name="style">
+						<xsl:text>vertical-align:middle; text-indent:0 !important;</xsl:text>
+					</xsl:attribute>
+					<i18n:text>xmlui.dri2xhtml.METS-1.0.cc-license-text</i18n:text>
+					<xsl:value-of select="$ccLicenseName"/>
+				</span>
+			</div>
 		</xsl:if>
 	</xsl:template>
 
@@ -615,17 +640,28 @@
 						</xsl:attribute>
 						<i18n:text>xmlui.dri2xhtml.structural.feedback-link</i18n:text>
 					</a>
+					<xsl:text> | </xsl:text>
+					<a>
+						<xsl:attribute name="href">
+							<xsl:value-of
+									select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+							<xsl:text>/impressum</xsl:text>
+						</xsl:attribute>
+						<i18n:text>xmlui.dri2xhtml.structural.impressum-link</i18n:text>
+					</a>
 				</div>
 				<div id="footer-right">
-					<a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2011
+					<!--<a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2011
 					<xsl:text> | </xsl:text>
-					<a href="http://www.duraspace.org/" target="_blank">Duraspace</a>
+					<a href="http://www.duraspace.org/" target="_blank">Duraspace</a>-->
+					<a href="http://www.sub.uni-goettingen.de">Staats- und Universitätsbibliothek Göttingen</a>
+					<xsl:text> | </xsl:text>
+					<a href="http://www.uni-goettingen.de">Georg-August-Univerisät Göttingen</a>
 				</div>
 				<!--Invisible link to HTML sitemap (for search engines) -->
 				<a class="hidden">
 					<xsl:attribute name="href">
-						<xsl:value-of
-								select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+						<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
 						<xsl:text>/htmlmap</xsl:text>
 					</xsl:attribute>
 					<xsl:text>&#160;</xsl:text>
@@ -635,7 +671,7 @@
 	</xsl:template>
 
 
-<!--
+	<!--
 		The meta, body, options elements; the three top-level elements in the schema
 -->
 
@@ -709,7 +745,7 @@
 		<script type="text/javascript" src="{concat($protocol, 'ajax.googleapis.com/ajax/libs/jquery/', $jqueryVersion ,'/jquery.min.js')}">&#160;</script>
 
 		<xsl:variable name="localJQuerySrc">
-				<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+			<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
 			<xsl:text>/static/js/jquery-</xsl:text>
 			<xsl:value-of select="$jqueryVersion"/>
 			<xsl:text>.min.js</xsl:text>
@@ -764,7 +800,7 @@
 
 		<!-- add setup JS code if this is a choices lookup page -->
 		<xsl:if test="dri:body/dri:div[@n='lookup']">
-		  <xsl:call-template name="choiceLookupPopUpSetup"/>
+			<xsl:call-template name="choiceLookupPopUpSetup"/>
 		</xsl:if>
 
 		<!--PNG Fix for IE6-->
@@ -785,18 +821,22 @@
 		<script type="text/javascript">
 			runAfterJSImports.execute();
 		</script>
-		
+
 		<!-- TODO: Move to file -->
 		<xsl:text disable-output-escaping="yes"><![CDATA[
 			<script type="text/javascript">
 				$(function() {
+					
+					/* Trail */
 					var i = 1;
 					var items = $('#ds-trail a');
+					var cut_items = [];
 					// Cut trail if too long and there are still untruncated items
 					while ( $('#ds-trail').height() > 28 && i < items.length) {
 						var item = items.eq(i);
 						// If current item contains more than one word, replace last word with … (&hellip;). Otherwise, move to next item.
 						if ( item.text().indexOf(' ') >= 0 ) {
+							if ( !cut_items[i] ) cut_items[i] = item.text();
 							item.text( item.text().replace(/\s[^\s]+…*$/, '…') );
 						} else {
 							i++;
@@ -808,11 +848,73 @@
 						items.eq(i).text('…');
 						i++;
 					}
-					// Still too long!? Truncate last li, but exit if does not help after 9 tries
-					i = 0
-					while ( $('#ds-trail').height() > 28 && ++i < 9) {
-						$('#ds-trail li:last').text( $('#ds-trail li:last').text().replace(/\s[^\s]+…*$/, '…') );
+					// Still too long!? Truncate second-to-last li, then last li; exit after 10 iterations each
+					i = -20
+					while ( $('#ds-trail').height() > 28 && ++i < 0) {
+						key = parseInt(i / 10 - 1);
+						items = $('#ds-trail .ds-trail-link');
+						item_text = items.eq(key).text();
+						items.eq(key).text( items.eq(key).text().replace(/\s[^\s]+…*$/, '…') );
+						if ( item_text != items.eq(key).text() && !cut_items[key] ) cut_items[key] = item_text;
 					}
+					// Add hint div for truncated/removed elements, fade in on hover
+					for (i = -2; i < cut_items.length; i++) {
+						if (cut_items[i]) $('#ds-trail .ds-trail-link').eq(i).append('<div class="hint"><span>' + cut_items[i] + '</span></div>');
+					}
+					$('#ds-trail li').hover( function() {
+						$(this).find('.hint').css('opacity', 1).delay(500).fadeIn();
+					}, function() {
+						$(this).find('.hint').clearQueue().fadeOut();
+					});
+					
+					/* Userbox */
+					while ( $('#userbox span').height() > 28) {
+						$('#userbox span').text( $('#userbox span').text().replace(/.…*$/, '…') );
+					}
+					
+					/* Search */
+					var searchtext = $('#searchbox .ds-text-field').val();
+					var searchhover = false;
+					$('.search-extra').click(function() {
+						//$('#searchbox .ds-text-field').focus();
+					}).hide();
+					$('#searchbox .ds-text-field').focus(function() {
+						if ( $(this).val() == searchtext ) $(this).val('');
+					}).blur(function() {
+						if ( $(this).val() == '' ) $(this).val(searchtext);
+						if ( !searchhover ) {
+							//$(this).animate({width:'140px'});
+							$('.search-extra').slideUp();
+						}
+					});
+					$('#searchbox').mouseenter(function() {
+						//$('#searchbox .ds-text-field').animate({width:'220px'});
+						$('.search-extra').slideDown();
+						searchhover = true;
+					}).mouseleave(function() {
+						if ( !$('#searchbox .ds-text-field').is(':focus') ) {
+							//$('#searchbox .ds-text-field').animate({width:'140px'});
+							$('.search-extra').slideUp();
+						}
+						searchhover = false;
+					});
+					
+					/* Submission form */
+					// If selected language is english, hide fields that are only needed for non-english publications
+					$('#aspect_submission_StepTransformer_field_dc_language_iso').change(function() {
+						var elements = [
+							'#aspect_submission_StepTransformer_field_dc_title_translated',
+							'#aspect_submission_StepTransformer_field_dc_title_alternativeTranslated',
+							'#aspect_submission_StepTransformer_field_dc_description_abstract'
+						];
+						if ( $(this).val() == 'eng' ) {
+							$.each(elements, function(key, value) { $('.ds-form-item').has(value).hide(); });
+						} else {
+							$.each(elements, function(key, value) { $('.ds-form-item').has(value).show(); });
+						}
+					});
+					$('#aspect_submission_StepTransformer_field_dc_language_iso').change();
+					
 				});
 			</script>
 		]]></xsl:text>
@@ -829,7 +931,7 @@
 					   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 					   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 				   })();
-		   </xsl:text></script>
+				</xsl:text></script>
 		</xsl:if>
 	</xsl:template>
 
