@@ -141,14 +141,14 @@
 
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.ConfigureableBrowse.java -->
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with">Or enter first few letters:</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with">Or enter first few letters: </message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with_help">Browse for items that begin with these letters</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_select">Jump to a point in the index:</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_month">(Choose month)</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_year">(Choose year)</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_year">Or type in a year: </message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_year_help">Browse for items that are from the given year.</message>
-		<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.no_results">Sorry, there are no results for this browse.</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.no_results">Sorry, there are no results for this browse.</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.sort_by"> Sort by: </message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.order"> Order: </message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.rpp"> Results: </message><!-- /Page -->
@@ -218,7 +218,7 @@
 	<message key="xmlui.ArtifactBrowser.Contact.trail">Contact us</message>
 	<message key="xmlui.ArtifactBrowser.Contact.head">Contact us</message>
 	<message key="xmlui.ArtifactBrowser.Contact.para1">{0} administrators may be contacted at:</message>
-	<message key="xmlui.ArtifactBrowser.Contact.feedback_label">On-line form</message>
+	<message key="xmlui.ArtifactBrowser.Contact.feedback_label">Online form</message>
 	<message key="xmlui.ArtifactBrowser.Contact.feedback_link">Feedback</message>
 	<message key="xmlui.ArtifactBrowser.Contact.email">Email</message>
 
@@ -266,8 +266,8 @@
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.title">Search</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.trail">Search</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.head">Search</message>
-	<message key="xmlui.ArtifactBrowser.SimpleSearch.search_scope">Search Scope</message>
-	<message key="xmlui.ArtifactBrowser.SimpleSearch.full_text_search">Full Text Search</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.search_scope">Search scope</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.full_text_search">Full-text search</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.RestrictedItem.java -->
 	<message key="xmlui.ArtifactBrowser.RestrictedItem.title">This resource is restricted</message>
@@ -1844,10 +1844,10 @@
 	<message key="xmlui.dri2xhtml.structural.logout">Logout</message>
 	<message key="xmlui.dri2xhtml.structural.login">Login</message>
 
-	<message key="xmlui.dri2xhtml.structural.search">Search eDiss</message>
+	<message key="xmlui.dri2xhtml.structural.search">Everywhere</message>
 	<message key="xmlui.dri2xhtml.structural.search-advanced">Advanced Search</message>
-	<message key="xmlui.dri2xhtml.structural.search-in-community">This Community</message>
-	<message key="xmlui.dri2xhtml.structural.search-in-collection">This Collection</message>
+	<message key="xmlui.dri2xhtml.structural.search-in-community">In this community</message>
+	<message key="xmlui.dri2xhtml.structural.search-in-collection">In this collection</message>
 
 	<message key="xmlui.dri2xhtml.structural.pagination-previous">Previous Page</message>
 	<message key="xmlui.dri2xhtml.structural.pagination-info">Now showing items {0}-{1} of {2}</message>
@@ -2085,7 +2085,7 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.titletranslated">Dokumente nach übersetztem Titel</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.examen">Dokumente nach Tag d. Prüfung</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.institute">Dokumente nach Institute</message>
-	 <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subjecteng">Dokuemente nach Schlagworten eng</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subjecteng">Dokuemente nach Schlagworten eng</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.advisor">Dokumente {0} nach Gutatchter {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.gok">Dokumente {0} nach GOK {1}</message>
@@ -2111,5 +2111,36 @@
 
 	<!-- Custom strings for eDiss -->
 	<message key="xmlui.general.publish_now">Publish Now</message>
+	<message key="xmlui.general.locale.language">Language</message>
+	<message key="xmlui.general.locale.en">English</message>
+	<message key="xmlui.general.locale.de">Deutsch</message>
+	<message key="xmlui.lf"></message>
+	<message key="xmlui.home.head">Electronic Dissertations at Georg-August-Universität Göttingen</message>
+	<message key="xmlui.home.head2">We publish your digital doctor theses on the eDiss server of the Göttingen State and Univerity Library.</message>
+	<message key="xmlui.home.publication.process">To begin publishing your work, please follow these steps:</message>
+	<message key="xmlui.home.publication.process.register"><a href="register">Register</a> an account on eDiss.</message>
+	<message key="xmlui.home.publication.process.publish">Click on <a href="submit">“Publish now”</a>.</message>
+	<message key="xmlui.home.publication.process.finish">Upload your your thesis as PDF and complete the form. Done!</message>
+	<message key="xmlui.home.publication.process.upload">Laden Sie Ihre Arbeit als PDF hoch.</message>
+	<message key="xmlui.home.publication.process.metadata">Metadaten zu ihrer Arbeit angeben</message>
+	<message key="xmlui.home.publication.process.notes">Please note that your information is binding.</message>
+	<message key="xmlui.home.publication.complete">If you want to kiss the Gänseliesel, you need to bring or send us these documents:</message>
+	<message key="xmlui.home.publication.complete.contract">Signed terms of contract</message>
+	<message key="xmlui.home.publication.complete.print">2 printed copies of your work</message>
+	<message key="xmlui.home.publication.complete.price">€ 25,‒ publication fee*</message>
+	<message key="xmlui.home.publication.complete.price.footnote">* If you provide your work by mail, please include your mailing address so we can send you an invoice.</message>
+	<message key="xmlui.home.contact.label">If you have any questions, feel free to contact us:</message>
+	<message key="xmlui.home.library.name">Zentralbibliothek</message>
+	<message key="xmlui.home.epu.place">2. Etage links im LRC, Raum 2.19</message>
+	<message key="xmlui.home.library.address">Platz der Göttinger Sieben 1</message>
+	<message key="xmlui.home.library.zipcode">37073 Göttingen</message>
+	<message key="xmlui.home.library.tel">Tel.: 0551 / 39-5383</message>
+	<message key="xmlui.home.library.email">E-Mail: eDiss@sub.uni-goettingen.de</message>
+	<message key="xmlui.home.contact.time.label">Opening hours:</message>
+	<message key="xmlui.home.epu.times">Monday to Friday from 10:00 to 12:00 h.</message>
+	<message key="xmlui.home.epu.freetime">Appointments can also be made outside of these hours.</message>
+	
+	<message key="xmlui.general.language.de">German</message>
+	<message key="xmlui.general.language.en">English</message>
 	
 </catalogue>

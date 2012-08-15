@@ -226,7 +226,7 @@ p, pre, address {
 	font-size: 13px;
 	line-height: 18px;
 	position: relative;
-	top: 5px;
+	top: 10px;
 }
 small {
 	font-size: 11px;
@@ -284,10 +284,11 @@ form p {
 }
 input,
 select,
-textarea {
-	border-color: #ccc #848484 #848484 #ccc;
-	border-left: 5px solid #5C739F;
+textarea,
+.customfile {
 	background: #fff;
+	border-color: #ccc #818181 #818181 #ccc;
+	border-left: 5px solid #5C739F;
 	box-shadow: 0 0 2px #777 inset;
 	border-radius: 3px;
 	font-size: 13px;
@@ -299,17 +300,21 @@ textarea:focus,
 input:active,
 select:active,
 textarea:active {
+	background: #fff;
 	border-color: #163776;
 	box-shadow: 0 0 4px #5C739F;
 }
 select {
 	padding: 5px 5px 5px 0;
+	max-width: 475px;
 }
 input[type=submit],
 input[type=reset],
 input[type=button],
 .publish,
-.file-link {
+.file-link,
+.browse li a,
+.customfile-button {
 	border: 1px solid;
 	border-color: #163776 #163776 #434343;
 	background: #163776 url(../../images/button-bg.png) 0 0 repeat-x;
@@ -330,8 +335,12 @@ input[type=reset]:active,
 input[type=button]:active,
 .publish:hover,
 .file-link:hover,
+.browse li a:hover,
 .publish:active,
-.file-link:active {
+.file-link:active,
+.browse li a:active,
+.customfile-hover .customfile-button,
+.customfile-focus .customfile-button {
 	background-position: 0 -40px;
 	border-color: #5C739F #5C739F #163776;
 	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px #5C739F;
@@ -342,13 +351,53 @@ input[type=submit]:active,
 input[type=reset]:active,
 input[type=button]:active,
 .publish:active,
-.file-link:active {
+.file-link:active,
+.browse li a:active,
+.customfile-focus .customfile-button {
 	background-position: 0 -80px;
 	border-color: #163776 #163776 #5C739F;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) inset;
 	position: relative;
 	top: 1px;
 }
+input#upload { background: #aaa url(../images/bg-btn.png) bottom repeat-x; padding: .4em 1.2em;border: 1px solid #aaa; color: #222; font-size: 1.2em; font-weight: bold; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; cursor: pointer; margin: 2em 0; }
+input#upload:hover { background: #eee; color: #111; border-color:#777; }
+
+/* custom upload elements */
+.customfile-input {
+	position: absolute;
+	height: 100px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+	z-index: 999;
+}
+.customfile {
+	cursor: pointer;
+	font-weight: bold;
+	overflow: hidden;
+	position: relative;
+}
+.customfile-feedback {
+	color: #818181;
+	display: block;
+	font-style: italic;
+	margin: 0 !important;
+}
+.customfile-feedback-populated {
+	color: #434343;
+	font-style: normal;
+}
+.customfile-button {
+	border-radius: 0 3px 3px 0;
+	float: right;
+	margin: -3px !important;
+	padding: 2px 8px;
+}
+
 div + form {
 	margin-top: 13px;
 }
@@ -419,7 +468,7 @@ body:after {
 	visibility: hidden;
 }
 img  {
-	border: 0px;
+	border: 0;
 }
 br {
 	line-height: 7px;
@@ -468,8 +517,6 @@ br {
 }
 #logo {
 	background: url(../../images/header.png) left top no-repeat;
-	border-left: 1px solid #434343;
-	border-right: 1px solid #434343;
 	color: #fff;
 	display: block;
 	height: 208px;
@@ -646,9 +693,7 @@ input[name=query] {
 }
 #topbox {
 	background: url(../../images/header.png) right top no-repeat;
-	border: 1px solid #434343;
-	border-top: none;
-	border-radius: 0 0 6px 6px;
+	border-radius: 0 0 5px 5px;
 	color: #fff;
 	width: 208px;
 	overflow: show;
@@ -709,9 +754,25 @@ input[name=query] {
 	font-weight: bold;
 	line-height: 1;
 }
-a.advanced-search {
+#topbox a[href$="/advanced-search"],
+form a[href$="/advanced-search"] {
+	background: #ccc;
+	border-radius: 5px 0;
+	color: #163776 !important;
 	float: right;
+	font-weight: bold;
+	float: right;
+	line-height: 1;
+	margin-bottom: -10px;
+	margin-right: -10px;
 	margin-top: 10px;
+	padding: 5px;
+}
+#topbox a[href$="/advanced-search"]:hover,
+form a[href$="/advanced-search"]:hover {
+	background: #fff;
+	color: #163776 !important;
+	text-decoration: none;
 }
 #localebox,
 #userbox {
@@ -807,6 +868,7 @@ form h3 {
 	/* border-bottom: 1px solid #ccc; */
 	font-weight: bold;
 	padding: 7px 10px 8px 30px;
+	white-space: nowrap;
 	width: 180px;
 }
 #sidebar a[href$="/community-list"] {
@@ -963,7 +1025,8 @@ li.button.disabled input {
 }
 .submission .ds-form-list input.ds-text-field,
 .administrative .ds-form-list input.ds-text-field,
-textarea.ds-textarea-field {
+textarea.ds-textarea-field,
+.customfile {
     width: 475px;
 }
 table textarea.ds-textarea-field {
@@ -1048,7 +1111,8 @@ span.field-help {
 }
 .ds-checkbox-field label,
 .ds-radio-field label {
-    margin-right: 18px;
+    display: inline-block;
+	margin-right: 18px;
 }
 /*hide the double label for checkboxes & radio buttons*/
 .ds-checkbox-field legend,
@@ -1228,11 +1292,6 @@ div.simple-item-view-authors {
 .item-metadata {
     float: left;
 }
-.file-metadata {
-	margin-right: 20px;
-	max-width: 400px;
-	min-width: 235px;
-}
 .metadata div {
 	clear: both;
 }
@@ -1247,7 +1306,17 @@ div.simple-item-view-authors {
 .metadata span.bold {
     width: 110px;
     clear: left;
-    margin-right: 7px;
+}
+.file-metadata {
+	width: 247px;
+}
+.file-metadata span + span {
+	width: 128px;
+	float: right;
+}
+.metadata span + span {
+	width: 602px;
+	float: right;
 }
 #ds-system-wide-alert,
 .notice {
@@ -1349,10 +1418,18 @@ ul.horizontalVanilla li {
 
 /* DSpace Specific Styles
 ---------------------------------------------------------------------------*/
+.browse ul {
+	margin-top: -5px;
+}
 .browse li {
+	display: inline;
+}
+.browse li a {
+	border-radius: 3px;
 	display: inline-block;
-	width: 140px;
-	top: 0;
+	padding: 3px 5px;
+	margin-top: 5px;
+	width: 128px;
 }
 /* Only needed if thumbnails are enabled
 .ds-artifact-list .artifact-description {
@@ -1364,7 +1441,7 @@ ul.horizontalVanilla li {
 .ds-artifact-list .ds-artifact-item {
 	display: block;
 	margin: 0 0 0 -20px;
-	padding: 0 0 15px 20px;
+	padding: 10px 0 10px 20px;
 	position: relative;
 }
 .list-thumbnail-wrapper {
@@ -1373,11 +1450,8 @@ ul.horizontalVanilla li {
 .list-thumbnail-wrapper img {
 	width: 65px;
 }
-.ds-artifact-list .ds-artifact-item + .ds-artifact-item .artifact-description {
-	padding-top: 12px;
-}
-.ds-artifact-list .ds-artifact-item.even,
-tr.even {
+.ds-artifact-list .ds-artifact-item.odd,
+tr.odd {
 	background: url(../../images/list-shade.png) 0 0 repeat-y;
 }
 .ds-artifact-item ul {
@@ -1436,7 +1510,9 @@ tr.even {
 .pagination-links li {
 	display: inline;
 }
-.pagination-links li a {
+.pagination-links li a,
+#aspect_artifactbrowser_ConfigurableBrowse_list_jump-list a {
+	border-radius: 3px;
 	display: inline-block;
 	font-weight: bold;
 	min-width: 1em;
@@ -1450,9 +1526,10 @@ tr.even {
 .page-link a:hover,
 .first-page-link a:hover,
 .current-page-link a:hover,
-.last-page-link a:hover {
+.last-page-link a:hover,
+#aspect_artifactbrowser_ConfigurableBrowse_list_jump-list a:hover {
 	color: #fff;
-	background: #5C739F;
+	background: #163776;
 	text-decoration: none;
 	z-index: 999;
 }
@@ -1477,7 +1554,7 @@ tr.even {
 	display: block;
 	line-height: 40px;
 	padding: 0 15px 0 38px !important;
-	width: 200px;
+	width: 147px !important;
 }
 .publish a {
 	background: url(../../images/icons.png) no-repeat scroll 15px -244px transparent;
@@ -1521,11 +1598,8 @@ tr.even {
 	list-style: decimal outside;
 	margin-left: 20px;
 }
-#aspect_artifactbrowser_ConfigurableBrowse_list_jump-list {
-	font-weight: bold;
-}
-#aspect_artifactbrowser_ConfigurableBrowse_list_jump-list li {
-	padding: 0 2px 2px 0;
+#aspect_artifactbrowser_ConfigurableBrowse_list_jump-list a {
+	padding: 3px;
 }
 
 /* Main page
@@ -1763,7 +1837,7 @@ ul.ds-progress-list li.disabled input.ds-button-field
 }
 .check-true {
 	background: url(../../images/icons.png) 7px -416px no-repeat;
-	background-color: #20c220;
+	background-color: #1AA11A;
 	padding: 2px 0 2px 30px;
 }
 .check-false {
@@ -1774,11 +1848,10 @@ ul.ds-progress-list li.disabled input.ds-button-field
 
 /* Community Search Form
 ---------------------------------------------------------------------------*/
-#aspect_artifactbrowser_CommunitySearch_div_community-search p + p,
-#aspect_artifactbrowser_CollectionSearch_div_collection-search p + p {
-	font-weight: bold;
-	float: right;
-	margin-top: -20px;
+#aspect_artifactbrowser_CommunitySearch_div_community-search a[href$="/advanced-search"],
+#aspect_artifactbrowser_CollectionSearch_div_collection-search a[href$="/advanced-search"] {
+	border-color: #ccc;
+	margin-top: -18px;
 }
 
 /* Item View
@@ -1821,6 +1894,19 @@ a[href ^="http://creativecommons.org/licenses/by-sa/"] {
 #aspect_artifactbrowser_CommunityBrowser_div_comunity-browser > ul > li > div {
 	font-weight: bold;
 }
+
+/* Search form
+---------------------------------------------------------------------------*/
+#aspect_artifactbrowser_ConfigurableBrowse_div_browse-navigation {
+	padding-bottom: 47px;
+}
+#aspect_artifactbrowser_ConfigurableBrowse_div_browse-controls {
+	background: none;
+	border: 0 none;
+	box-shadow: none;
+	margin-top: -78px;
+}
+
 
 /* Admin: Edit document form
 ---------------------------------------------------------------------------*/

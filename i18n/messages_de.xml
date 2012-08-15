@@ -80,11 +80,8 @@
 	
 	
 	
-	
-	
-	
 	<!-- org.dspace.app.xmlui.artifactbrowser.AbstractSearch.java -->
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_community">Suchergebnisse für den Bereich: {0}</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_community">Suchergebnisse für den Bereich {0}</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_collection">Suchergebnisse für die Sammlung {0}</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_none">Suchergebnisse</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.result_query">Ihre Suchanfrage „{0}“ ergab {1} Treffer.</message>
@@ -144,8 +141,8 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with">Oder geben Sie die ersten Buchstaben ein: </message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with_help">Auflistung von Dokumenten, die mit diesen Buchstaben anfangen</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_select">Gehe zu einem Punkt im Index: </message>	
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_month">(Wähle Monat)</message>	
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_year">(Wähle Jahr)</message>	
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_month">(Monat)</message>	
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_year">(Jahr)</message>	
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_year">Oder geben Sie ein Jahr ein: </message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_year_help">Auflistung von Dokumenten eines bestimmten Jahres.</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.no_results">Für diese Browse-Ansicht gibt es keine Ergebnisse.</message>
@@ -406,8 +403,8 @@
 	<message key="xmlui.EPerson.PasswordLogin.forgot_link"> Haben Sie Ihr Passwort vergessen?</message>
 	<message key="xmlui.EPerson.PasswordLogin.submit">Einloggen</message>
 	<message key="xmlui.EPerson.PasswordLogin.head2">Einen neuen Benutzer registrieren</message>
-	<message key="xmlui.EPerson.PasswordLogin.para1">Legen Sie einen Benutzeracccount an, um Dienste wie den Neuerscheinungsinformationsdienst nutzen zu können.</message>
-	<message key="xmlui.EPerson.PasswordLogin.register_link">Klicken Sie hier, um einen neuen Benutzeraccount anzulegen.</message>
+	<message key="xmlui.EPerson.PasswordLogin.para1">Legen Sie ein neues Benutzerkonto an, um selbst zu veröffentlichen oder Dienste wie Informationen über Neuerscheinungen nutzen zu können.</message>
+	<message key="xmlui.EPerson.PasswordLogin.register_link">Klicken Sie hier, um ein neues Benutzerkonto anzulegen.</message>
 	
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
 	<message key="xmlui.EPerson.LDAPLogin.title">Einloggen</message>
@@ -441,7 +438,7 @@
 	<message key="xmlui.eperson.noAuthMethod.head">Keine Authentifizierungsmethode gefunden</message>
 	<message key="xmlui.eperson.noAuthMethod.p1">Keine Authentifizierungsmethode gefunden. Bitte wenden Sie sich an den Administrator.</message>
 	<message key="xmlui.eperson.shibbLoginFailure.head">Shibboleth Login fehlgeschlagen</message>
-	<message key="xmlui.eperson.shibbLoginFailure.p1">Die Authentifizierung vie Shibboleth steht momentan nicht zur Verfügung. Bitte wenden Sie sich an den Administrator.</message>
+	<message key="xmlui.eperson.shibbLoginFailure.p1">Die Authentifizierung via Shibboleth steht momentan nicht zur Verfügung. Bitte wenden Sie sich an den Administrator.</message>
 	
 	<!-- org.dspace.app.xmlui.eperson.ProfileUpdated.java -->
 	<message key="xmlui.EPerson.ProfileUpdated.title">Benutzerdaten aktualisiert</message>
@@ -452,12 +449,12 @@
 	<!-- org.dspace.app.xmlui.eperson.RegistrationFinished.java -->
 	<message key="xmlui.EPerson.RegistrationFinished.title">Registrierung abgeschlossen</message>
 	<message key="xmlui.EPerson.RegistrationFinished.head">Registrierung abgeschlossen</message>
-	<message key="xmlui.EPerson.RegistrationFinished.para1">Sie sind nun ein registrierter Benutzer. Jetzt können Sie z. B. den Alerting-Dienst für Neuerscheinungen nutzen.</message>
+	<message key="xmlui.EPerson.RegistrationFinished.para1">Sie haben sich erfolgreich registriert und können nun alle eDiss-Dienste nutzen.</message>
 	
 	<!-- org.dspace.app.xmlui.eperson.ResetPassword.java -->
 	<message key="xmlui.EPerson.ResetPassword.title">Passwort neu setzen</message>
 	<message key="xmlui.EPerson.ResetPassword.head">Passwort neu setzen</message>
-	<message key="xmlui.EPerson.ResetPassword.para1">Bitte geben Sie ein neues Passwort in das Feld unten ein und bestätigen Sie es durch eine zusätzliche Eingabe in die zweite Box. Ihr Passwort muss mindestens 6 Zeichen lang sein.</message>
+	<message key="xmlui.EPerson.ResetPassword.para1">Bitte geben Sie ein neues Passwort ein und und wiederholen Sie die Eingabe. Ihr Passwort muss mindestens 6 Zeichen lang sein.</message>
 	<message key="xmlui.EPerson.ResetPassword.email_address">E-Mail-Adresse</message>
 	<message key="xmlui.EPerson.ResetPassword.new_password">Neues Passwort</message>
 	<message key="xmlui.EPerson.ResetPassword.confirm_password">Erneute Eingabe zur Bestätigung</message>
@@ -477,11 +474,11 @@
 	<!-- org.dspace.app.xmlui.eperson.StartRegistration.java -->
 	<message key="xmlui.EPerson.StartRegistration.title">Registrierung Neuer Benutzer</message>
 	<message key="xmlui.EPerson.StartRegistration.head1">Die E-Mail-Adresse wird bereits von einem Benutzer verwendet.</message>
-	<message key="xmlui.EPerson.StartRegistration.para1">Die E-Mail-Adresse wird bereits von einem Benutzer verwendet. Wenn Sie Ihr Passwort vergessen haben, Klicken Sie bitte auf Passwort vergessen.</message>
+	<message key="xmlui.EPerson.StartRegistration.para1">Die E-Mail-Adresse wird bereits von einem Benutzer verwendet. Wenn Sie Ihr Passwort vergessen haben, Klicken Sie bitte auf „Passwort vergessen“.</message>
 	<message key="xmlui.EPerson.StartRegistration.reset_password_for">Passwort neu setzen für: </message>
 	<message key="xmlui.EPerson.StartRegistration.submit_reset">Passwort neu setzen</message>
 	<message key="xmlui.EPerson.StartRegistration.head2">Registrierung Neuer Benutzer</message>
-	<message key="xmlui.EPerson.StartRegistration.para2">Legen Sie einen Benutzeraccount an, um Dienste wie das Abonnement von Neuerscheinungen nutzen zu können.</message>
+	<message key="xmlui.EPerson.StartRegistration.para2">Legen Sie einen Benutzerkonto an, um Dienste wie das Abonnement von Neuerscheinungen nutzen zu können.</message>
 	<message key="xmlui.EPerson.StartRegistration.email_address">E-Mail-Adresse</message>
 	<message key="xmlui.EPerson.StartRegistration.email_address_help">Diese E-Mail-Adresse wird überprüft und als Ihre Benutzername verwandt.</message>
 	<message key="xmlui.EPerson.StartRegistration.error_bad_email">Es war nicht möglich, an diese Adresse eine E-Mail zu schicken.</message>
@@ -490,7 +487,7 @@
 	<!-- org.dspace.app.xmlui.eperson.VerifyEmail.java -->
 	<message key="xmlui.EPerson.VerifyEmail.title">E-Mail zur Verifizierung gesendet.</message>
 	<message key="xmlui.EPerson.VerifyEmail.head">E-Mail zur Verifizierung gesendet.</message>
-	<message key="xmlui.EPerson.VerifyEmail.para">Eine E-Mail wurde an Sie gesendet. Diese enthält eine spezielle URL, unter der Sie Ihre Registrierung abschließen können.</message>
+	<message key="xmlui.EPerson.VerifyEmail.para">Eine E-Mail wurde an Sie gesendet. Diese enthält einen Link zur Seite, auf der Sie Ihre Registrierung abschließen können.</message>
 
 
 
@@ -535,10 +532,10 @@
 
 	
 	<!-- org.dspace.app.xmlui.Submission.submissions -->
-	<message key="xmlui.Submission.Submissions.title">Veröffentlichungen &amp; Geschäftsgänge</message>
+	<message key="xmlui.Submission.Submissions.title">Veröffentlichungen und Geschäftsgänge</message>
 	<message key="xmlui.Submission.Submissions.trail">Veröffentlichungen</message>
-	<message key="xmlui.Submission.Submissions.head">Veröffentlichungen  &amp; übernommene Aufgaben</message>
-	<message key="xmlui.Submission.Submissions.untitled"><i>ohne Titel</i></message>
+	<message key="xmlui.Submission.Submissions.head">Veröffentlichungen und übernommene Aufgaben</message>
+	<message key="xmlui.Submission.Submissions.untitled"><i>Ohne Titel</i></message>
 	<message key="xmlui.Submission.Submissions.email">E-Mail: </message>
 	<!-- Same transformer, workflow section -->
 	<message key="xmlui.Submission.Submissions.workflow_head1">Aufgaben aus Geschäftsgängen</message>
@@ -556,7 +553,7 @@
 	<message key="xmlui.Submission.Submissions.workflow_info3">Keine Dokumente im gemeinsamen Aufgabenpool vorhanden</message>
 	<!-- Same transformer, submissions section -->
 	<message key="xmlui.Submission.Submissions.submit_head1">Veröffentlichen</message>
-	<message key="xmlui.Submission.Submissions.submit_info1a">Sie können </message>
+	<message key="xmlui.Submission.Submissions.submit_info1a">Sie können </message><!-- TODO: Warum geteilt? -->
 	<message key="xmlui.Submission.Submissions.submit_info1b">eine neue Veröffentlichung starten</message>
 	<message key="xmlui.Submission.Submissions.submit_info1c">Der Veröffentlichungsprozess beinhaltet die Beschreibung des Dokuments und das Hochladen der zugehörigen Dateien. Jeder Bereich oder Sammlung kann seine eigenen Veröffentlichungsbestimmungen haben.</message>
 	<message key="xmlui.Submission.Submissions.submit_head2">Unvollendete Veröffentlichungen</message>
@@ -642,10 +639,10 @@
 	
 	<!-- org.dspace.app.xmlui.Submission.submit.DescribeStep -->
 	<message key="xmlui.Submission.submit.DescribeStep.head">Dokument beschreiben</message>
-	<message key="xmlui.Submission.submit.DescribeStep.unknown_field">Fehler: Unbekannter Feldtyp</message>
+	<message key="xmlui.Submission.submit.DescribeStep.unknown_field">Fehler: unbekannter Feldtyp</message>
 	<message key="xmlui.Submission.submit.DescribeStep.required_field">Dieses Feld ist obligatorisch</message>
-	<message key="xmlui.Submission.submit.DescribeStep.last_name_help">Nachname, <i>z. B. Mustermann</i></message>
-	<message key="xmlui.Submission.submit.DescribeStep.first_name_help">Vorname(n) + Titel, <i>Max Dr.</i></message>
+	<message key="xmlui.Submission.submit.DescribeStep.last_name_help">Nachname, z. B.<i> Mustermann</i></message>
+	<message key="xmlui.Submission.submit.DescribeStep.first_name_help">Vorname(n) und Titel, z. B. <i>Gabi Dr.</i></message>
 	<message key="xmlui.Submission.submit.DescribeStep.year">Jahr</message>
 	<message key="xmlui.Submission.submit.DescribeStep.month">Monat</message>
 	<message key="xmlui.Submission.submit.DescribeStep.day">Tag</message>
@@ -678,20 +675,20 @@
 	<message key="xmlui.Submission.submit.UploadStep.unsupported">(Nicht unterstützt)</message>
 	<message key="xmlui.Submission.submit.UploadStep.submit_edit">Bearbeiten</message>
 	<message key="xmlui.Submission.submit.UploadStep.checksum">Prüfsumme:</message>
-	<message key="xmlui.Submission.submit.UploadStep.submit_remove">Ausgewählte Datei(en) entfernen</message>
+	<message key="xmlui.Submission.submit.UploadStep.submit_remove">Ausgewählte entfernen</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.EditFileStep -->
 	<message key="xmlui.Submission.submit.EditFileStep.head">Datei bearbeiten</message>
 	<message key="xmlui.Submission.submit.EditFileStep.file">Datei</message>
 	<message key="xmlui.Submission.submit.EditFileStep.description">Dateibeschreibung</message>
-	<message key="xmlui.Submission.submit.EditFileStep.description_help">Zusätzlich können Sie ein kurze Beschreibung der Datei eingeben, z. B. "<i>Hauptband</i>", oder "<i>Anhang</i>".</message>
-	<message key="xmlui.Submission.submit.EditFileStep.info1">Wählen Sie das entsprechende Dateiformat aus der Liste, z. B.  "<i>Adobe PDF</i>" oder "<i>Microsoft Word</i>." <strong>Wenn das Format nicht in der Liste enthalten ist</strong>, geben Sie bitte eine kurze Beschreibung in das Feld unten ein.</message>
+	<message key="xmlui.Submission.submit.EditFileStep.description_help">Zusätzlich können Sie ein kurze Beschreibung der Datei eingeben, z. B. <i>Hauptband</i>, oder <i>Anhang</i>.</message>
+	<message key="xmlui.Submission.submit.EditFileStep.info1">Wählen Sie das entsprechende Dateiformat aus der Liste, z. B. <i>Adobe PDF</i> oder <i>Microsoft Word</i>. <strong>Wenn das Format nicht in der Liste enthalten ist, geben Sie bitte eine kurze Beschreibung in das Feld unten ein.</strong></message>
 	<message key="xmlui.Submission.submit.EditFileStep.format_detected">Erkanntes Format</message>
 	<message key="xmlui.Submission.submit.EditFileStep.format_selected">Gewähltes Format</message>
 	<message key="xmlui.Submission.submit.EditFileStep.format_default">Format nicht in Auswahlliste</message>
-	<message key="xmlui.Submission.submit.EditFileStep.info2">Wenn Ihr Format nicht in der Liste vorhanden ist, <strong>wählen Sie "Format nicht in Auswahlliste" </strong> und geben Sie eine kurze Beschreibung des Formats in das Feld unten ein.</message>
+	<message key="xmlui.Submission.submit.EditFileStep.info2">Wenn Ihr Format nicht in der Liste vorhanden ist, <strong>wählen Sie „Format nicht in Auswahlliste“ </strong> und geben Sie eine kurze Beschreibung des Formats in das Feld unten ein.</message>
 	<message key="xmlui.Submission.submit.EditFileStep.format_user">Sonstiges Format</message>
-	<message key="xmlui.Submission.submit.EditFileStep.format_user_help">Die Anwendung inkl. Versionsnummer mit der die Datei erstellt wurde z. B. "<i>ACMESoft SuperApp version 1.5</i>".</message>
+	<message key="xmlui.Submission.submit.EditFileStep.format_user_help">Die Anwendung, mit der die Datei erstellt wurde, einschließlich Versionsnummer, z. B. <i>ACMESoft SuperApp 1.5</i>.</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.ReviewStep -->
 	<message key="xmlui.Submission.submit.ReviewStep.head">Veröffentlichung überprüfen</message>
@@ -711,18 +708,18 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.CCLicenseStep -->
 	<message key="xmlui.Submission.submit.CCLicenseStep.head">Creative Commons Lizenz</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.info1">Wenn Sie eine  <a href="http://creativecommons.org/">Creative Commons</a> Lizenz zu Ihrem Dokument hinzufügen: <strong>Creative Commons Lizenzen legen fest, wie ihr Werk genutzt werden kann.</strong> Wenn Sie eine Creative Commons Lizenz hinzufügen möchten, klicken sie auf die untere Schaltfläche. Sie werden dann zur Creative Commons Seite weitergeleite, wo Sie aus verschiedenen Lizenzmodellen auswählen können.  Nachdem Sie eine Lizenz ausgewählt haben, kehren Sie zu dieser Seite zurück.</message>
+	<message key="xmlui.Submission.submit.CCLicenseStep.info1"><strong>Creative-Commons-Lizenzen legen fest, wie ihr Werk genutzt werden kann.</strong> Wenn Sie eine <a href="http://creativecommons.org/">Creative-Commons-Lizenz</a> zu Ihrem Dokument hinzufügen möchten, klicken sie auf die untere Schaltfläche. Sie werden dann zu einer Seite weitergeleitet, auf der Sie aus verschiedenen Lizenzmodellen auswählen können. Danach kehren Sie zu dieser Seite zurück.</message>
 	<message key="xmlui.Submission.submit.CCLicenseStep.submit_choose_creative_commons">Wählen Sie eine Lizenz</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.submit_to_creative_commons">Weiter zur Creative Commons Seite, um eine Lizenz auszuwählen.</message>
+	<message key="xmlui.Submission.submit.CCLicenseStep.submit_to_creative_commons">Weiter zur Creative-Commons-Seite, um eine Lizenz auszuwählen.</message>
 	<message key="xmlui.Submission.submit.CCLicenseStep.license">Lizenz</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.no_license">keine Creative Commons Lizenz wurde ausgewählt</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.save_changes">Sie müssen auf "Weiter" klicken, um Ihre Ändeurngen zu speichern.</message>
+	<message key="xmlui.Submission.submit.CCLicenseStep.no_license">Keine Creative-Commons-Lizenz ausgewählt</message>
+	<message key="xmlui.Submission.submit.CCLicenseStep.save_changes">Klicken Sie auf „Weiter“, um Ihre Ändeurngen zu speichern.</message>
 	<message key="xmlui.Submission.submit.CCLicenseStep.select_change">Auswahl oder Änderung der Lizenz</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
-	<message key="xmlui.Submission.submit.LicenseStep.head">eDiss Lizenz</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>Dies ist der letzte Schritt:</strong> Damit Ihr Dokument im Institutionellen Repositorium entsprechend verarbeitet und weiterverbreitet werden kann, müssen Sie folgenden Bedingungen zustimmen.</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info2">Akzeptieren Sie die Standardlizenzbestimmung des Repositoriums indem Sie 'Ich akzeptiere die Lizenzbestimmungen' anhaken und klicken Sie dann auf 'Veröffentlichung abschließen'.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.head">eDiss-Lizenz</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>Dies ist der letzte Schritt:</strong> Damit Ihr Dokument veröffentlicht werden kann, müssen Sie folgenden Bedingungen zustimmen.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info2">Akzeptieren Sie die Standardlizenzbestimmungen, indem Sie „Ich akzeptiere die Lizenzbestimmungen“ selektieren und klicken Sie dann auf „Veröffentlichung abschließen“.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3">Wenn Sie Fragen zu den Lizenzbestimmungen haben, wenden Sie sich an den Administrator.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Lizenzbestimmung</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">Ich akzeptiere die Lizenzbestimmungen</message>
@@ -730,8 +727,8 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.RemovedStep -->
 	<message key="xmlui.Submission.submit.RemovedStep.head">Veröffentlichung gelöscht</message>
-	<message key="xmlui.Submission.submit.RemovedStep.info1">Ihre Veröffentlichung wurde abgebrochen und das unfertige Dokument vom System gelöscht.</message>
-	<message key="xmlui.Submission.submit.RemovedStep.go_submission">Zur Veröffentlichungsseite</message>	
+	<message key="xmlui.Submission.submit.RemovedStep.info1">Ihre Veröffentlichung wurde abgebrochen und das unfertige Dokument gelöscht.</message>
+	<message key="xmlui.Submission.submit.RemovedStep.go_submission">Zur Veröffentlichungsseite</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.CompletedStep -->
 	<message key="xmlui.Submission.submit.CompletedStep.head">Veröffentlichung abgeschlossen</message>	
@@ -741,7 +738,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.workflow.PerformTaskStep -->
 	<message key="xmlui.Submission.workflow.PerformTaskStep.info1">Aktionen, die Sie in diesem Bearbeitungsschritt durchführen können:</message>
-	<message key="xmlui.Submission.workflow.PerformTaskStep.take_help">Diese Aufgabe, sich selbst zuordnen.</message>
+	<message key="xmlui.Submission.workflow.PerformTaskStep.take_help">Diese Aufgabe mir zuordnen.</message>
 	<message key="xmlui.Submission.workflow.PerformTaskStep.take_submit">Aufgabe übernehmen</message>
 	<message key="xmlui.Submission.workflow.PerformTaskStep.leave_help">Aufgabe im Aufgabenpool lassen.</message>
 	<message key="xmlui.Submission.workflow.PerformTaskStep.leave_submit">Im Pool lassen</message>
@@ -775,8 +772,8 @@
 	<message key="xmlui.administrative.FlowCurationUtils.curate_failed_notice">Die Aufgabe wurde unerwartet abgebrochen oder die Ausführung ist fehlgeschlagen. Für weitere Informationen wenden Sie sich an den Administrator und überprüfen Sie die Log-Dateien.</message>
 	<message key="xmlui.administrative.FlowCurationUtils.queue_success_notice">Die Aufgabe wurde erfolgreich in die Warteschlange eingereiht.</message>
 	<message key="xmlui.administrative.FlowCurationUtils.queue_failed_notice">Die Aufgabe konnte nicht in die Warteschlange eingefügt werden. Es ist ein Fehler aufgetreten.Für weitere Informationen wenden Sie sich an den Administrator und überprüfen Sie die Log-Dateien.</message>
-	<message key="xmlui.administrative.FlowEPersonUtils.add_eperson_success_notice">Der Benutzeraccount wurde angelegt.</message>
-	<message key="xmlui.administrative.FlowEPersonUtils.edit_eperson_success_notice">Der Benutzeraccount wurde aktualisiert.</message>
+	<message key="xmlui.administrative.FlowEPersonUtils.add_eperson_success_notice">Der Benutzerkonto wurde angelegt.</message>
+	<message key="xmlui.administrative.FlowEPersonUtils.edit_eperson_success_notice">Der Benutzerkonto wurde aktualisiert.</message>
 	<message key="xmlui.administrative.FlowEPersonUtils.reset_password_success_notice">Dem Benutzer wurde eine E-Mail mit entsprechender Kennung gesandt, unter der er sein Passwort neu vergeben kann.</message>
 	<message key="xmlui.administrative.FlowEPersonUtils.delete_eperson_success_notice">Der/Die Benutzer wurden gelöscht.</message>
 	<message key="xmlui.administrative.FlowEPersonUtils.delete_eperson_failed_notice">Folgende(r) Benutzer konnten aufgrund von bestimmten Abhängigkeiten nicht gelöscht werden. Ausführliche Informationen finden Sie auf der Benutzerinformationsseite.</message>
@@ -835,7 +832,7 @@
 	<message key="xmlui.administrative.Navigation.administrative_control_panel">Systemdaten</message>
 	<message key="xmlui.administrative.Navigation.statistics">Statistiken</message>
 	<message key="xmlui.administrative.Navigation.administrative_import_metadata">Metadaten Importieren</message>
-	<message key="xmlui.administrative.Navigation.administrative_curation">Datenpflege - Aufgabens</message>
+	<message key="xmlui.administrative.Navigation.administrative_curation">Datenpflege/Aufgaben</message>
 
 	<!-- my account items -->
 	<message key="xmlui.administrative.Navigation.account_export">Meine Exporte</message>
@@ -848,17 +845,17 @@
 	<message key="xmlui.administrative.ItemExport.item.not.found">Das angeforderte Dokument wurde nicht gefunden.</message>
 	<message key="xmlui.administrative.ItemExport.collection.not.found">Die angeforderte Sammlung wurde nicht gefunden.</message>
 	<message key="xmlui.administrative.ItemExport.community.not.found">Der angeforderte Bereich wurde nicht gefunden.</message>
-		<message key="xmlui.administrative.ItemExport.item.success">Das Dokument wurde exportiert. Sie werden per E-Mail benachrichtigt, sobald das Archiv zum Herunterladen bereitsteht. Sie können auch den Link „Meine Exporte“ verwenden, um zu einer Auflistung aller Ihrer Exporte zu gelangen.</message>
-	<message key="xmlui.administrative.ItemExport.collection.success">Die Sammlung wurde exportiert.  Sie werden per E-Mail benachrichtigt, sobald das Archiv zum Herunterladen bereitsteht. Sie können auch den Link „Meine Exporte“ verwenden, um zu einer Auflistung aller Ihrer Exporte zu gelangen.</message>
-	<message key="xmlui.administrative.ItemExport.community.success">Der Bereich wurde exportiert.  Sie werden per E-Mail benachrichtigt, sobald das Archiv zum Herunterladen bereitsteht. Sie können auch den Link „Meine Exporte“ verwenden, um zu einer Auflistung aller Ihrer Exporte zu gelangen.</message>
+	<message key="xmlui.administrative.ItemExport.item.success">Das Dokument wurde exportiert. Sie werden per E-Mail benachrichtigt, sobald das Archiv zum Herunterladen bereitsteht. Sie können auch den Link „Meine Exporte“ verwenden, um zu einer Auflistung aller Ihrer Exporte zu gelangen.</message>
+	<message key="xmlui.administrative.ItemExport.collection.success">Die Sammlung wurde exportiert. Sie werden per E-Mail benachrichtigt, sobald das Archiv zum Herunterladen bereitsteht. Sie können auch den Link „Meine Exporte“ verwenden, um zu einer Auflistung aller Ihrer Exporte zu gelangen.</message>
+	<message key="xmlui.administrative.ItemExport.community.success">Der Bereich wurde exportiert. Sie werden per E-Mail benachrichtigt, sobald das Archiv zum Herunterladen bereitsteht. Sie können auch den Link „Meine Exporte“ verwenden, um zu einer Auflistung aller Ihrer Exporte zu gelangen.</message>
 	<message key="xmlui.administrative.ItemExport.available.head">Archive, die zum Herunterladen bereitstehen:</message>
 
 	<!-- org.dspace.app.xmlui.administrative.eperson.ManageEPeopleMain -->
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.title">Benutzeraccounts verwalten</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.title">Benutzerkontos verwalten</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.main_head">Benutzerverwaltung</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_head">Aktionen</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_create">Benutzer anlegen</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_create_link">Klicken Sie hier, um einen neuen Benutzeraccount anzulegen.</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_create_link">Klicken Sie hier, um einen neuen Benutzerkonto anzulegen.</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_browse">Benutzerliste</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_browse_link">Klicken Sie hier, um alle Benutzer anzuzeigen.</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_search">Benutzersuche</message>
@@ -869,30 +866,30 @@
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column2">ID</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column3">Name</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column4">E-Mail-Adresse</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.submit_delete">Benutzeraccount löschen</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.submit_delete">Benutzerkonto löschen</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.no_results">Ihre Suche führte zu keinem Treffer.</message>
 
 	<!-- org.dspace.app.xmlui.administrative.eperson.AddEPersonForm -->
 	<message key="xmlui.administrative.eperson.AddEPersonForm.title">Benutzer hinzufügen</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.trail">Benutzer hinzufügen</message>
-	<message key="xmlui.administrative.eperson.AddEPersonForm.head1">Benutzeraccount anlegen</message>
-	<message key="xmlui.administrative.eperson.AddEPersonForm.email_taken">Diese E-Mail-Adresse ist bereits einem Benutzeraccount zugeordnet. Die E-Mail-Adresse muss eindeutig sein. Sie kann nur für genau einen Benutzeraccount verwendet werden.</message>
-	<message key="xmlui.administrative.eperson.AddEPersonForm.head2">Angaben zum neuen Benutzeraccount:</message>
+	<message key="xmlui.administrative.eperson.AddEPersonForm.head1">Benutzerkonto anlegen</message>
+	<message key="xmlui.administrative.eperson.AddEPersonForm.email_taken">Diese E-Mail-Adresse ist bereits einem Benutzerkonto zugeordnet. Die E-Mail-Adresse muss eindeutig sein. Sie kann nur für genau einen Benutzerkonto verwendet werden.</message>
+	<message key="xmlui.administrative.eperson.AddEPersonForm.head2">Angaben zum neuen Benutzerkonto:</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.error_email_unique">Die E-Mail-Adresse muss eindeutig sein.</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.error_email">Die E-Mail-Adresse muss angegeben werden.</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.error_fname">Der Vorname muss angegeben werden.</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.error_lname">Der Nachname muss angegeben werden.</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.req_certs">Zertifikat erforderlich</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.can_log_in">Benutzer kann sich einloggen</message>
-	<message key="xmlui.administrative.eperson.AddEPersonForm.submit_create">Benutzeraccount anlegen</message>
+	<message key="xmlui.administrative.eperson.AddEPersonForm.submit_create">Benutzerkonto anlegen</message>
 
 	<!-- org.dspace.app.xmlui.administrative.eperson.EditEPersonForm -->
-	<message key="xmlui.administrative.eperson.EditEPersonForm.title">Benutzeraccount bearbeiten</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.trail">Benutzeraccount bearbeiten</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.head1">Benutzeraccount bearbeiten</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.email_taken">Diese E-Mail-Adresse ist bereits einem Benutzeraccount zugeordnet. Die E-Mail-Adresse muss eindeutig sein. Sie kann nur für genau einen Benutzeraccount verwendet werden.</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.title">Benutzerkonto bearbeiten</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.trail">Benutzerkonto bearbeiten</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.head1">Benutzerkonto bearbeiten</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.email_taken">Diese E-Mail-Adresse ist bereits einem Benutzerkonto zugeordnet. Die E-Mail-Adresse muss eindeutig sein und kann nur nur für genau einen Benutzerkonto verwendet werden.</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.head2">Angaben zu: {0}</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.error_email_unique">Die E-Mail-Adresse muss eindeutig sein. Sie kann nur für genau einen Benutzeraccount verwendet werden.</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.error_email_unique">Die E-Mail-Adresse muss eindeutig sein. Sie kann nur für genau einen Benutzerkonto verwendet werden.</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.error_email">Die E-Mail-Adresse muss angegeben werden.</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.error_fname">Der Vorname muss angegeben werden.</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.error_lname">Der Nachname muss angegeben werden.</message>
@@ -900,24 +897,24 @@
 	<message key="xmlui.administrative.eperson.EditEPersonForm.can_log_in">Benutzer kann sich einloggen</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_reset_password">Passwort neu setzen</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.special_help">Sie können diesen Benutzer auch dauerhaft löschen oder veranlassen, dass er ein neues Passwort setzen muss. Beim Neusetzen des Passworts wird dem Benutzer eine E-Mail mit den entsprechenden Informationen zugeschickt.</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_delete">Benutzeraccount löschen</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_delete">Benutzerkonto löschen</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_login_as">Anmelden als anderer Benutzer</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.member_head">Gruppen, denen der Benutzer zugeordnet ist:</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.indirect_member">(indirekt über die Gruppe: {0})</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.member_none">Keine</message>
 	
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint">Der Benutzeraccount konnte aufgrund folgender Abhängigkeiten nicht gelöscht werden:</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint">Der Benutzerkonto konnte aufgrund folgender Abhängigkeiten nicht gelöscht werden:</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.last_conjunction">und</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.item">unter dem Benutzeraccount wurden ein oder mehrere Dokumente veröffentlicht</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.item">unter dem Benutzerkonto wurden ein oder mehrere Dokumente veröffentlicht</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.workflowitem">der Benutzer hat eine noch im Geschäftsgang befindliche Veröffentlichung</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.tasklistitem">der Benutzer muss noch Aufgaben im Rahmen des Geschäftsganges erledigen</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.unknown">zu dem Benutzer gibt es eine sonstige Abhängigkeit im System</message>
 		
 	<!-- org.dspace.app.xmlui.administrative.eperson.DeleteEPeopleConfirm -->
-	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.title">Benutzeraccount löschen bestätigen</message>
+	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.title">Benutzerkonto löschen bestätigen</message>
 	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.trail">Löschung bestätigen</message>
 	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.confirm_head">Löschung bestätigen</message>
-	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.confirm_para">Der folgende Benutzeraccount wird gelöscht: </message>
+	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.confirm_para">Der folgende Benutzerkonto wird gelöscht: </message>
 	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.submit_confirm">Löschung durchführen</message>
 	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.head_id">ID</message>
 	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.head_name">Name</message>
@@ -1769,7 +1766,7 @@
 	<message key="xmlui.administrative.NotAuthorized.title">Keine Berechtigung</message>
 	<message key="xmlui.administrative.NotAuthorized.trail">Keine Berechtigung</message>
 	<message key="xmlui.administrative.NotAuthorized.head">Keine ausreichenden Rechte</message>
-	<message key="xmlui.administrative.NotAuthorized.para1a">Ihr Benutzeraccount hat nicht die erforderlichen Rechte für diese Aktion. Wenn Sie der Meinung sind, dabei handelte es sich um einen Fehler oder sonstige Fragen zu Rechten haben, wenden Sie sich an den Systemadministrator</message>
+	<message key="xmlui.administrative.NotAuthorized.para1a">Ihr Benutzerkonto hat nicht die erforderlichen Rechte für diese Aktion. Wenn Sie der Meinung sind, dabei handelte es sich um einen Fehler oder sonstige Fragen zu Rechten haben, wenden Sie sich an den Systemadministrator</message>
 	<message key="xmlui.administrative.NotAuthorized.para1b">Systemadministratoren</message>
 	<message key="xmlui.administrative.NotAuthorized.para1c">.</message>
 	<message key="xmlui.administrative.NotAuthorized.para2">Als anderer Benutzer einloggen.</message>
