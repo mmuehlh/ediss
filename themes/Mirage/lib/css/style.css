@@ -68,10 +68,10 @@ table {
 	outline: 0;
 }
 blockquote:before, blockquote:after, q:before, q:after {
-	content: ;
+	content: "";
 }
 blockquote, q {
-	quotes:  ;
+	quotes: "" "";
 }
 input,
 select {
@@ -98,6 +98,7 @@ h1, h2 {
 	margin-bottom: 18px;
 }
 h1, h2, h3, h4 {
+	clear: both;
 	margin-top: 18px;
 }
 h3, h4, h5, h6 {
@@ -122,15 +123,17 @@ h2 {
 }
 h3 {
 	margin-bottom: 7px;
-	font-size: 18px;
+	font-size: 17px;
 	top: 1px;
 }
 h4 {
-	font-size: 15px;
+	font-size: 13px;
+	font-weight: bold;
 	top: 2px;
 }
 h5, h6 {
 	font-size: 13px;
+	font-style: italic;
 	top: 5px;
 }
 h1:first-child,
@@ -152,8 +155,6 @@ code, kbd, samp, pre, tt, var {
 p {
 	margin-bottom: 13px;
 	word-spacing: 0.125em;
-	hyphenate: auto;
-	hyphenate-lines: 3;
 }
 p+p {
 	/*text-indent: 1.5em;*/
@@ -226,7 +227,6 @@ p, pre, address {
 	font-size: 13px;
 	line-height: 18px;
 	position: relative;
-	top: 10px;
 }
 small {
 	font-size: 11px;
@@ -261,6 +261,7 @@ form {
 	line-height: 18px; /* IE */
 	margin: 0 0 20px 0;
 	padding: 10px;
+	position: relative;
 }
 legend {
 	position: relative;
@@ -289,7 +290,7 @@ textarea,
 	background: #fff;
 	border-color: #ccc #818181 #818181 #ccc;
 	border-left: 5px solid #5C739F;
-	box-shadow: 0 0 2px #777 inset;
+	box-shadow: inset 0 0 2px #777;
 	border-radius: 3px;
 	font-size: 13px;
 	padding: 6px;
@@ -318,7 +319,7 @@ input[type=button],
 	border: 1px solid;
 	border-color: #163776 #163776 #434343;
 	background: #163776 url(../../images/button-bg.png) 0 0 repeat-x;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
 	text-align: center;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
 	color: #fff;
@@ -339,11 +340,11 @@ input[type=button]:active,
 .publish:active,
 .file-link:active,
 .browse li a:active,
-.customfile-hover .customfile-button,
-.customfile-focus .customfile-button {
+.customfile:hover .customfile-button,
+.customfile:active .customfile-button {
 	background-position: 0 -40px;
 	border-color: #5C739F #5C739F #163776;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px #5C739F;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px #5C739F;
 	text-decoration: none;
 	text-shadow: 0 0 5px #fff;
 }
@@ -353,10 +354,10 @@ input[type=button]:active,
 .publish:active,
 .file-link:active,
 .browse li a:active,
-.customfile-focus .customfile-button {
+.customfile:active .customfile-button {
 	background-position: 0 -80px;
 	border-color: #163776 #163776 #5C739F;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) inset;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.4);
 	position: relative;
 	top: 1px;
 }
@@ -371,8 +372,8 @@ input#upload:hover { background: #eee; color: #111; border-color:#777; }
 	background: transparent;
 	border: 0;
 	opacity: 0;
-	-moz-opacity: 0;
-	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+	/*-moz-opacity: 0;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);*/
 	z-index: 999;
 }
 .customfile {
@@ -414,7 +415,7 @@ table {
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 	position: relative;
-	margin-top: 18px;
+	margin: 18px 0;
 }
 th, td {
 	line-height: 18px;
@@ -461,7 +462,7 @@ body:before {
 	width: 0;
 }
 body:after {
-	content: .;
+	content: ".";
 	display: block;
 	height: 0;
 	clear: both;
@@ -640,7 +641,7 @@ input[name=query] {
 	right: 0;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
 	list-style-type: none;
-	overflow: show;
+	overflow: visible;
 	width: 746px;
 }
 /*#ds-trail-hint {
@@ -696,7 +697,7 @@ input[name=query] {
 	border-radius: 0 0 5px 5px;
 	color: #fff;
 	width: 208px;
-	overflow: show;
+	overflow: visible;
 	padding: 10px;
 	position: absolute;
 	top: 0;
@@ -724,24 +725,22 @@ input[name=query] {
 	width: 165px;
 }
 #topbox .ds-text-field:focus {
-	box-shadow: 0 0 2px #ddd inset;
+	box-shadow: inset 0 0 2px #ddd;
 }
 #topbox .ds-button-field {
-	background: url(../../images/search-submit.png) 4px 4px no-repeat;
+	background: url(../../images/search-submit.png) 0 0 no-repeat;
 	border: 0;
 	box-shadow: none;
-	color: none;
 	height: 28px;
 	min-width: 0;
 	position: absolute;
-	right: 10px;
+	right: 0;
 	text-indent: -9999px;
 	text-transform: capitalize; /* IE 7 */
-	top: 66px;
 	width: 28px;
 }
 #topbox .ds-button-field:hover {
-	background-position: 4px -24px;
+	background-position: 0 -28px;
 }
 #topbox label {
 	cursor: pointer;
@@ -755,10 +754,11 @@ input[name=query] {
 	line-height: 1;
 }
 #topbox a[href$="/advanced-search"],
+#localebox,
 form a[href$="/advanced-search"] {
-	background: #ccc;
+	background: #5172B0;
 	border-radius: 5px 0;
-	color: #163776 !important;
+	color: #fff !important;
 	float: right;
 	font-weight: bold;
 	float: right;
@@ -767,24 +767,30 @@ form a[href$="/advanced-search"] {
 	margin-right: -10px;
 	margin-top: 10px;
 	padding: 5px;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
 }
 #topbox a[href$="/advanced-search"]:hover,
 form a[href$="/advanced-search"]:hover {
-	background: #fff;
-	color: #163776 !important;
+	background: #6C97EB;
 	text-decoration: none;
+	text-shadow: 0 0 5px rgba(255,255,255,.5);
 }
-#localebox,
 #userbox {
 	height: 28px;
 	white-space: nowrap;
 }
+#localebox {
+	border-radius: 0 5px;
+	left: 0;
+	position: absolute;
+}
+
 #localebox .current {
 	background-color: #5C739F;
 	border-radius: 4px;
-	box-shadow: 0 1px 0 rgba(0, 0, 0, .5) inset, 0 -1px 0 rgba(255, 255, 255, .5) inset;
+	box-shadow: inset 0 1px 0 rgba(0,0,0,.5), inset 0 -1px 0 rgba(255,255,255,.5);
 	padding: 4px 5px;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
+	text-shadow: 0 1px 0 rgba(0,0,0,.5);
 }
 #userbox .login a {
 	background: none !important;
@@ -797,13 +803,15 @@ form a[href$="/advanced-search"]:hover {
 }
 #userbox ul {
 	background: #fff;
+	background: rgba(255,255,255,.9);
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	box-shadow: 0 0 2px #ccc;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5);
 	display: none;
 	padding: 0 5px 5px 0;
-	top: -5px;
+	margin: -10px 0 0 10px;
 	z-index: 999;
+	position: absolute;
 }
 #userbox:hover ul {
 	display: block;
@@ -844,12 +852,12 @@ form a[href$="/advanced-search"]:hover {
 form h2,
 #sidebar h2 {
 	background: none;
-	font-size: 18px;
+	font-size: 17px;
 	margin-bottom: .5em;
 	top: 2px;
 }
 form h3 {
-	font-size: 18px;
+	font-size: 17px;
 	padding: 18px 0;
 	top: 2px;
 }
@@ -859,7 +867,7 @@ form h3 {
 	margin-left: 0;
 	margin-bottom: 2em;
 }
-#sidebar li {
+#sidebar .ds-simple-list li {
 	background: url(../../images/sidebar-line.png) left bottom no-repeat;
 }
 #sidebar a {
@@ -867,7 +875,8 @@ form h3 {
 	display: block;
 	/* border-bottom: 1px solid #ccc; */
 	font-weight: bold;
-	padding: 7px 10px 8px 30px;
+	/* padding: 7px 10px 8px 30px; */
+	padding: 7px 10px 8px 34px;
 	white-space: nowrap;
 	width: 180px;
 }
@@ -937,240 +946,234 @@ a:hover {
 ---------------------------------------------------------------------------*/
 
 select.multiple {
-    height: auto;
+	height: auto;
 }
 #ds-user-box {
-    right: 0;
-    top: 10px;
-    position: absolute;
-    color: white;
+	right: 0;
+	top: 10px;
+	position: absolute;
+	color: white;
 }
 #ds-user-box a {
-    color: white;
+	color: white;
 }
 #ds-footer-left {
-    float: left;
+	float: left;
 }
 #ds-footer-right {
-    float:right;
+	float:right;
 }
 #ds-footer-right span.theme-by{
-    display: inline-block;
-    vertical-align: top;
+	display: inline-block;
+	vertical-align: top;
 }
 #ds-footer-logo-link {
-    text-decoration:none;
-    line-height: 40px;
-    cursor: pointer;
+	text-decoration:none;
+	line-height: 40px;
+	cursor: pointer;
 }
 #ds-footer-logo {
-    display: inline-block;
-    background: url('../../images/@mirelogo-small.png');
-    background-repeat: no-repeat;
-    width: 79px;
-    height: 40px;
+	display: inline-block;
+	background: url('../../images/@mirelogo-small.png');
+	background-repeat: no-repeat;
+	width: 79px;
+	height: 40px;
 }
 #ds-footer-links {
-    clear: left;
+	clear: left;
 }
 .ie6 #ds-footer-links {
-    display: inline;
+	display: inline;
 }
 /*make transparent PNGs invisible in IE6 until PNG-fix is applied*/
 .ie6 #ds-header-logo,
 .ie6 #ds-footer-logo {
-    visibility: hidden;
+	visibility: hidden;
 }
 div#ds-feed-option li {
-    padding-top: 4px;
+	padding-top: 4px;
 }
 div#ds-feed-option a {
-    padding: 0px 0px 2px 20px;
+	padding: 0px 0px 2px 20px;
 }
 .primary {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 ol {
-    margin: 0;
-    list-style: none;
+	margin: 0;
+	list-style: none;
 }
 th,
 td {
-    padding: 5px;
-    vertical-align: middle;
+	padding: 5px;
+	vertical-align: middle;
 }
 .ds-button-field[disabled="disabled"],
 .ds-button-field.disabled,
 li.button.disabled input {
-    opacity: 0.35;
-}
-.ie6 .disabled,
-.ie6 li.disabled input,
-.ie7 .ds-button-field.disabled,
-.ie7 li.button.disabled input,
-.ie8 .ds-button-field.disabled,
-.ie8 li.button.disabled input {
-    filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 50);
-    zoom: 1;
+	opacity: 0.35;
 }
 .ie6 ul.ds-progress-list li.arrow {
-    height: 25px;
-    width: 25px;
-    margin: 0;
+	height: 25px;
+	width: 25px;
+	margin: 0;
 }
 .ie6 input.ds-text-field,
 .ie6 input.ds-password-field {
-    font-size: 85%;
-    height: 22px;
+	font-size: 85%;
+	height: 22px;
 }
 .submission .ds-form-list input.ds-text-field,
 .administrative .ds-form-list input.ds-text-field,
 textarea.ds-textarea-field,
 .customfile {
-    width: 475px;
+	width: 475px;
 }
 table textarea.ds-textarea-field {
-    width: 400px;
+	width: 400px;
 }
 #aspect_administrative_item_EditItemMetadataForm_field_value {
-    width: 570px;
+	width: 570px;
 }
 #aspect_administrative_registries_EditMetadataSchema_list_edit-schema-new-field-form .ds-text-field,
 #aspect_administrative_item_EditItemMetadataForm_field_language,
 #aspect_administrative_registries_EditMetadataSchema_field_updateElement,
 #aspect_administrative_registries_EditMetadataSchema_field_updateQualifier,
 .ds-composite-component input.ds-text-field {
-    width: auto;
+	width: auto;
 }
 span.error {
-    clear: both;
-    display: block;
-    color: #c22121;
-    font-size: 0.9em;
-    margin-top: 3px;
+	clear: both;
+	display: block;
+	color: #c22121;
+	font-size: 0.9em;
+	margin-top: 3px;
 }
 textarea.ds-textarea-field.error,
 input.ds-text-field.error,
 input.ds-password-field.error {
-    border-color: #c22121;
-    background-color: #fff2f2;
+	border-color: #c22121;
+	background-color: #fff2f2;
 }
 /*
 .submission h2,
 .ds-form-list legend {
-    font-size: 182%;
-    margin-bottom: 15px;
-    color: #1F3F5E;
+	font-size: 182%;
+	margin-bottom: 15px;
+	color: #1F3F5E;
 }
 */
 .ds-form-item legend {
-    font-size: 100%;
-    margin:0;
-    color: inherit;
+	font-size: 100%;
+	margin: 0;
+	color: inherit;
 }
 fieldset ol {
-    margin: 0;
+	margin: 0;
+}
+form > fieldset > ol > li {
+	margin-bottom: 18px;
 }
 li.ds-form-item.last {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 li.ds-form-item .ds-form-label{
-    font-weight: bold;
+	font-weight: bold;
 }
 li.ds-form-item label.ds-composite-component {
-    display: block;
-    float: left;
-    font-size: 11px;
+	display: block;
+	float: left;
+	font-size: 11px;
 	line-height: 17px;
-    padding: 0 4px 0 0;
+	padding: 0 4px 0 0;
 }
 select#aspect_submission_submit_SelectCollectionStep_field_handle {
-    max-width: 350px;
+	max-width: 350px;
 }
 #aspect_submission_StepTransformer_field_dc_date_issued_year,
 #aspect_submission_StepTransformer_field_dc_date_issued_day {
-    width: 50px;
+	width: 50px;
 }
 #aspect_submission_StepTransformer_field_dc_identifier_value {
-    width: 130px;
-    margin-bottom: 0;
+	width: 130px;
+	margin-bottom: 0;
 }
 span.composite-help,
 span.field-help {
-    display: block;
+	display: block;
 	/*
 	font-size: 93%;
-    margin-top: 3px;
-    width: 506px;
-    text-align: justify;
+	margin-top: 3px;
+	width: 506px;
+	text-align: justify;
 	*/
 }
 .ds-checkbox-field input,
 .ds-radio-field input {
-    margin-left: 0;
+	margin-left: 0;
 }
 .ds-checkbox-field label,
 .ds-radio-field label {
-    display: inline-block;
+	display: inline-block;
 	margin-right: 18px;
 }
 /*hide the double label for checkboxes & radio buttons*/
 .ds-checkbox-field legend,
 .ds-radio-field legend {
-    display: none;
+	display: none;
 }
 .ds-previous-values {
-    margin-top: 10px;
-    clear: both;
+	margin-top: 10px;
+	clear: both;
 }
 .submission .ds-form-sublist li.ds-form-item {
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 .submission .ds-form-sublist .ds-form-label {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .administrative.tabbed ul.horizontal {
-    list-style: none;
-    margin: 15px 0 0;
-    border-bottom: 1px solid #5C739F;
+	list-style: none;
+	margin: 15px 0 0;
+	border-bottom: 1px solid #5C739F;
 }
 .administrative.tabbed ul.horizontal li {
-    float: left;
-    border: 1px solid #5C739F;
+	float: left;
+	border: 1px solid #5C739F;
 	border-radius: 5px 5px 0 0;
-    padding: 5px 7px;
-    margin-bottom: -1px;
-    margin-right: 7px;
-    border-bottom: none;
+	padding: 5px 7px;
+	margin-bottom: -1px;
+	margin-right: 7px;
+	border-bottom: none;
 }
 .administrative.tabbed ul.horizontal li.active-tab{
-    background-color: #fafafa;
-    z-index: 1;
-    font-weight: bold;
+	background-color: #fafafa;
+	z-index: 1;
+	font-weight: bold;
 }
 .pane {
-    padding: 10px;
-    clear: both;
-    background-color: #fafafa;
-    border: 1px solid #5C739F;
-    margin-bottom: 25px;
-    margin-top: 0;
+	padding: 10px;
+	clear: both;
+	background-color: #fafafa;
+	border: 1px solid #5C739F;
+	margin-bottom: 25px;
+	margin-top: 0;
 }
 .pane .ds-form-list {
-    margin-top: 0;
+	margin-top: 0;
 }
 .administrative.tabbed .pane {
-    border-top: none;
+	border-top: none;
 }
 #aspect_artifactbrowser_CommunityBrowser_div_comunity-browser .short-description,
 #aspect_discovery_SiteRecentSubmissions_div_site-home .short-description {
-    display: none;
+	display: none;
 }
 #aspect_artifactbrowser_SimpleSearch_div_search-results ul,
 #aspect_discovery_SimpleSearch_div_search-results ul,
 #aspect_artifactbrowser_AdvancedSearch_div_search-results ul {
-    margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 .artifact-title {
 	margin-bottom: 5px;
@@ -1179,46 +1182,46 @@ span.field-help {
    margin-top: 5px;
 }
 .artifact-abstract {
-    text-align: justify;
+	text-align: justify;
 }
 ul.alphabet {
-    list-style: none;
-    margin: 0;
+	list-style: none;
+	margin: 0;
 }
 ul.alphabet li {
-    display:inline;
+	display:inline;
 }
 td select.ds-select-field {
-    margin-left: 5px;
+	margin-left: 5px;
 }
 form.search label {
-    font-weight: bold;
+	font-weight: bold;
 }
 form.search p.ds-paragraph.button-list {
-    text-align: center;
-    margin: 0;
+	text-align: center;
+	margin: 0;
 }
 form.search fieldset {
-    margin: 0;
+	margin: 0;
 }
 form.search .ds-form-item {
-    margin: 0;
-    padding-bottom: 5px;
+	margin: 0;
+	padding-bottom: 5px;
 }
 form.search .ds-form-item select {
-    margin-top: 0;
+	margin-top: 0;
 }
 form.search .ds-form-content {
-    display: inline;
+	display: inline;
 }
 form.search table input.ds-text-field {
    margin: 0;
 }
 form.search .field-help {
-    margin: 3px 0;
+	margin: 3px 0;
 }
 .result-query {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 /*
 #aspect_administrative_registries_EditMetadataSchema_table_metadata-schema-edit-existing-fields,
@@ -1228,9 +1231,9 @@ form.search .field-help {
 #aspect_submission_Submissions_table_submissions-inprogress,
 #aspect_submission_Submissions_table_completed-submissions,
 table.detailtable {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-collapse: collapse;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-collapse: collapse;
 }
 #aspect_administrative_registries_EditMetadataSchema_table_metadata-schema-edit-existing-fields tr,
 #aspect_administrative_registries_MetadataRegistryMain_table_metadata-registry-main-table tr,
@@ -1239,8 +1242,8 @@ table.detailtable {
 #aspect_submission_Submissions_table_submissions-inprogress tr,
 #aspect_submission_Submissions_table_completed-submissions tr,
 table.detailtable tr {
-    line-height: 1.6em;
-    border: 1px solid #ebebeb;
+	line-height: 1.6em;
+	border: 1px solid #ebebeb;
 }
 #aspect_administrative_registries_EditMetadataSchema_table_metadata-schema-edit-existing-fields tr.even,
 #aspect_administrative_registries_MetadataRegistryMain_table_metadata-registry-main-table tr.even,
@@ -1249,7 +1252,7 @@ table.detailtable tr {
 #aspect_submission_Submissions_table_submissions-inprogress tr.even,
 #aspect_submission_Submissions_table_completed-submissions tr.even,
 table.detailtable tr.even {
-    background-color: #fafafa;
+	background-color: #fafafa;
 }
 #aspect_administrative_registries_EditMetadataSchema_table_metadata-schema-edit-existing-fields td,
 #aspect_administrative_registries_MetadataRegistryMain_table_metadata-registry-main-table td,
@@ -1258,10 +1261,10 @@ table.detailtable tr.even {
 #aspect_submission_Submissions_table_submissions-inprogress td,
 #aspect_submission_Submissions_table_completed-submissions td,
 table.detailtable td {
-    padding: 5px 10px;
-    text-align: justify;
-    border: 1px solid #ebebeb;
-    vertical-align: top;
+	padding: 5px 10px;
+	text-align: justify;
+	border: 1px solid #ebebeb;
+	vertical-align: top;
 }
 #aspect_administrative_registries_EditMetadataSchema_table_metadata-schema-edit-existing-fields tr.ds-table-header-row,
 #aspect_administrative_registries_MetadataRegistryMain_table_metadata-registry-main-table tr.ds-table-header-row,
@@ -1269,28 +1272,28 @@ table.detailtable td {
 #aspect_submission_Submissions_table_unfinished-submissions tr.ds-table-header-row,
 #aspect_submission_Submissions_table_submissions-inprogress tr.ds-table-header-row,
 #aspect_submission_Submissions_table_completed-submissions tr.ds-table-header-row {
-    border: none;
+	border: none;
 }
 */
 
 table.detailtable td.label-cell {
-    font-weight: bold;
-    text-align: left;
-    width: 100px;
+	font-weight: bold;
+	text-align: left;
+	width: 100px;
 }
 div.simple-item-view-authors {
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 11px;
+	font-size: 17px;
+	font-weight: bold;
+	margin-bottom: 11px;
 }
 .thumbnail-wrapper,
 .file-metadata,
 .file-link {
-    float: left;
-    margin-right: 15px;
+	float: left;
+	margin-right: 15px;
 }
 .item-metadata {
-    float: left;
+	float: left;
 }
 .metadata div {
 	clear: both;
@@ -1300,91 +1303,86 @@ div.simple-item-view-authors {
 	float: left;
 }
 .item-metadata span.content span {
-    float: none;
+	float: none;
 }
 .file-metadata span.bold,
 .metadata span.bold {
-    width: 110px;
-    clear: left;
+	width: 128px;
+	clear: left;
 }
 .file-metadata {
 	width: 247px;
 }
-.file-metadata span + span {
-	width: 128px;
-	float: right;
-}
 .metadata span + span {
-	width: 602px;
-	float: right;
+	width: 586px;
 }
 #ds-system-wide-alert,
 .notice {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #bfc221;
-    background-color: #fffff2;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #bfc221;
+	background-color: #fffff2;
 }
 .notice.success
 {
-    border-color: #21c221;
-    background-color: #f2fff2;
+	border-color: #21c221;
+	background-color: #f2fff2;
 }
 #ds-system-wide-alert,
 .notice.failure
 {
-    border-color: #c22121;
-    background-color: #fff2f2;
+	border-color: #c22121;
+	background-color: #fff2f2;
 }
 #ds-system-wide-alert p {
-    margin: 0;
+	margin: 0;
 }
 .ds-logo-wrapper {
-    display: block;
+	display: block;
 }
 #aspect_administrative_item_FindItemForm_list_find-item-form .ds-form-item {
-    margin: 0;
+	margin: 0;
 }
 #no-js-warning {
-    margin-top: 15px;
-    margin-bottom: 10px;
-    text-align: center;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	text-align: center;
 }
 li.search-filter-list,
 li.used-filters-list
 {
-    padding-top: 5px;
+	padding-top: 5px;
 }
 form.discover-sort-box select{
-    margin: 0 4px;
+	margin: 0 4px;
 }
 .hidden {
-    display:none;
-    visibility:hidden;
+	display:none;
+	visibility:hidden;
 }
 .icon-button{
-    padding:4px;
-    cursor: pointer;
-    margin: 2px;
-    background-color: #6D859C;
-    border: 1px solid #1F3F5E;
-    text-indent: -9999px;
-    width: 30px;
-    height: 30px;
-    display:block;
-    /*Required for IE*/
-    font-size: 0;
-    line-height: 0;
+	padding:4px;
+	cursor: pointer;
+	margin: 2px;
+	background-color: #6D859C;
+	border: 1px solid #1F3F5E;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	display:block;
+	/*Required for IE*/
+	font-size: 0;
+	line-height: 0;
 }
 .icon-button.arrowUp{
-    background-image: url(../../images/arrow_up_ffffff_16x16.png);
-    background-repeat: no-repeat;
-    background-position: center center;
+	background-image: url(../../images/arrow_up_ffffff_16x16.png);
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 .icon-button.arrowDown{
-    background-image: url(../../images/arrow_down_ffffff_16x16.png);
-    background-repeat: no-repeat;
-    background-position: center center;
+	background-image: url(../../images/arrow_down_ffffff_16x16.png);
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 /* FOR CC License */
 span.floatleft {
@@ -1576,7 +1574,7 @@ tr.odd {
 }
 .subtitle {
 	color: #818181;
-	font-size: 18px;
+	font-size: 17px;
 	top: 0;
 }
 .bold {
@@ -1606,10 +1604,10 @@ tr.odd {
 ---------------------------------------------------------------------------*/
 #file_news_div_news .ds-ordered-list {
 	color: #5C739F;
-	font-size: 18px;
+	font-size: 17px;
 	list-style: none;
 	margin-left: 0;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+	/*text-shadow: 0 1px 1px rgba(0, 0, 0, .15);*/
 }
 #file_news_div_news .ds-ordered-list li {
 	background: url(../../images/ol-bg.png) 0 0 no-repeat;
@@ -1636,13 +1634,13 @@ tr.odd {
 	color: #5C739F;
 	display: block;
 	height: 170px;
-	font-size: 18px;
+	font-size: 17px;
 	list-style: none;
 	margin-left: 0;
 	position: relative;
 }
 #file_news_div_news .ds-bulleted-list li {
-	background: url(../../images/todo-bg.jpg) 0 0 no-repeat;
+	background: url(../../images/todo-bg.png) 0 0 no-repeat;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 	border: 1px solid #ccc;
 	border-radius: 6px;
@@ -1668,7 +1666,7 @@ tr.odd {
 /* Common Form Styles
 ---------------------------------------------------------------------------*/
 .ds-form-item {
-    clear: both;
+	clear: both;
 	float: left;
 	position: relative;
 }
@@ -1698,7 +1696,7 @@ input[type=radio] {
 	background: none;
 	border: none;
 	margin-right: 7px;
-	padding: none;
+	padding: 0;
 	vertical-align: middle;
 }
 
@@ -1741,13 +1739,13 @@ form .ds-progress-list {
 	width: 696px;
 }
 .ds-progress-list li {
-    background: url(../../images/progress-arrow.png) 0 0 no-repeat;
+	background: url(../../images/progress-arrow.png) 0 0 no-repeat;
 	border: none;
 	display: block;
 	float: left;
 	font-weight: bold;
 	height: 28px;
-    line-height: 28px;
+	line-height: 28px;
 	padding: 0 6px 0 16px;
 	text-shadow: 0 1px 0 rgba(255,255,255,.5);
 }
@@ -1760,29 +1758,29 @@ form .ds-progress-list {
 	padding-right: 12px;
 }
 #aspect_eperson_StartRegistration_list_registration-progress li {
-    cursor: default;
+	cursor: default;
 }
 #aspect_eperson_StartRegistration_list_registration-progress li.arrow {
-    background-color: inherit;
-    border: none;
-    color: inherit;
-    font-weight: normal;
+	background-color: inherit;
+	border: none;
+	color: inherit;
+	font-weight: normal;
 }
 .ie6 #aspect_eperson_StartRegistration_list_registration-progress li.arrow,
 .ie7 #aspect_eperson_StartRegistration_list_registration-progress li.arrow {
-    background-color: #FFFFFF;
-    color: #444444;
+	background-color: #FFFFFF;
+	color: #444444;
 }
 .ie6 #aspect_eperson_StartRegistration_list_registration-progress li.arrow {
-    padding-top: 5px;
+	padding-top: 5px;
 }
 .ie6 ul.ds-progress-list li.button input.ds-button-field,
 .ie7 ul.ds-progress-list li.button input.ds-button-field {
-    padding-left: 0;
-    padding-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 .ds-progress-list .current {
-    color: #fff;
+	color: #fff;
 	background-color: #5C739F;
 	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
 }
@@ -1791,10 +1789,10 @@ form .ds-progress-list {
 }
 ul.ds-progress-list li.disabled input.ds-button-field
 #aspect_eperson_StartRegistration_list_registration-progress li.disabled {
-    background-color: #F0F2F5;
-    border: 1px solid #D8E8EB;
-    color: #444444;
-    cursor: default;
+	background-color: #F0F2F5;
+	border: 1px solid #D8E8EB;
+	color: #444444;
+	cursor: default;
 }
 
 /* Submission Form
@@ -1850,8 +1848,12 @@ ul.ds-progress-list li.disabled input.ds-button-field
 ---------------------------------------------------------------------------*/
 #aspect_artifactbrowser_CommunitySearch_div_community-search a[href$="/advanced-search"],
 #aspect_artifactbrowser_CollectionSearch_div_collection-search a[href$="/advanced-search"] {
-	border-color: #ccc;
-	margin-top: -18px;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	bottom: -1px;
+	position: absolute;
+	right: -1px;
+	box-shadow: inset 1px 5px rgba(0,0,0,.5);
 }
 
 /* Item View
@@ -1935,4 +1937,8 @@ input[size="6"] {
 /* replacement for the inline-block display (that only works due to incorrect rendering in IE7) */
 *:first-child+html .browse li {
 	display: inline;
+}
+/* breadcrumbs position too low */
+*:first-child+html #ds-trail {
+	bottom: 18px;
 }

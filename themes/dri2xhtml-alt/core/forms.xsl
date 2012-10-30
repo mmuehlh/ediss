@@ -955,10 +955,21 @@
                                 <xsl:attribute name="type">submit</xsl:attribute>
                             </xsl:if>
                             <xsl:attribute name="value">
+				
                                 <xsl:choose>
+				    <!-- M.M. set default author to authenticated user --> 
                                     <xsl:when test="./dri:value[@type='raw']">
                                         <xsl:value-of select="./dri:value[@type='raw']"/>
                                     </xsl:when>
+				    <xsl:when test="./@id='aspect.submission.StepTransformer.field.dc_contributor_author_first'">
+                                       <xsl:value-of select="normalize-space(/dri:document/dri:meta/dri:userMeta/dri:metadata[@qualifier='firstName'])"/> 
+                                   </xsl:when>
+                                    <xsl:when test="./@id='aspect.submission.StepTransformer.field.dc_contributor_author_last'">
+                                        <xsl:value-of select="normalize-space(/dri:document/dri:meta/dri:userMeta/dri:metadata[@qualifier='lastName'])"/> 
+                                   </xsl:when>
+				     <xsl:when test="./@id='aspect.submission.StepTransformer.field.dc_affiliation_address'">
+					<xsl:value-of select="normalize-space(/dri:document/dri:meta/dri:userMeta/dri:metadata[@qualifier='email'])"/>
+				    </xsl:when>
                                     <xsl:otherwise>
                                         <xsl:value-of select="./dri:value[@type='default']"/>
                                     </xsl:otherwise>

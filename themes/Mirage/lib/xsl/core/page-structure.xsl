@@ -338,34 +338,6 @@
 
 				<div id="topbox">
 
-					<div id="localebox">  
-						<p>                 
-							<i18n:text>xmlui.general.locale.language</i18n:text>:
-							<!-- NOT WORKING! TODO -->
-							<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='locale']"/>
-							<!--<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']" />-->
-							<xsl:for-each select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='xmlui-ml'][@qualifier='localeURL']">
-								<a>
-									<xsl:attribute name="href">
-										<xsl:value-of select="."/>
-									</xsl:attribute>
-									<xsl:attribute name="class">
-										<!--<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:[@element='page'][@qualifier='currentLocale']"/>-->
-									</xsl:attribute>
-									<i18n:text>xmlui.general.locale.<xsl:value-of select="substring-after(.,'locale-attribute=')" /></i18n:text>
-									<!--
-									<img>
-										<xsl:attribute name="src"><xsl:value-of select="$theme-path" />/images/<xsl:value-of select="." />.gif</xsl:attribute>
-									</img>
-									-->
-								</a>
-								<xsl:if test="position() != last()">
-									<xsl:text>&#160;|&#160;</xsl:text>
-								</xsl:if>
-							</xsl:for-each>                 
-						</p>
-					</div>
-
 					<div id="userbox">
 						<xsl:choose>
 							<xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
@@ -373,7 +345,7 @@
 									<!--<i18n:text>xmlui.dri2xhtml.structural.profile</i18n:text>-->
 									<span>
 										<xsl:choose>
-											<xsl:when test="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='firstName']">
+											<xsl:when test="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='firstName'] > ''">
 												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='firstName']"/>
 												<xsl:text> </xsl:text>
 												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='lastName']"/>
@@ -382,7 +354,6 @@
 												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='email']"/>
 											</xsl:otherwise>
 										</xsl:choose>
-										↓
 									</span>
 								</p>
 								<ul>
@@ -466,11 +437,11 @@
 							</input>
 							<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='container']">
 								<label>
-									<input id="ds-search-form-scope-all" type="radio" name="scope" value="" checked="checked"/>
+									<input id="ds-search-form-scope-all" class="search-scope" type="radio" name="scope" value="" checked="checked"/>
 									<i18n:text>xmlui.dri2xhtml.structural.search</i18n:text>
 								</label>
 								<label>
-									<input id="ds-search-form-scope-container" type="radio" name="scope">
+									<input id="ds-search-form-scope-container" class="search-scope" type="radio" name="scope">
 										<xsl:attribute name="value">
 											<xsl:value-of select="substring-after(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='container'],':')"/>
 										</xsl:attribute>
@@ -488,6 +459,34 @@
 						</fieldset>
 					</form>
 
+					<div id="localebox">                 
+						<!--<i18n:text>xmlui.general.locale.language</i18n:text>:-->
+						<!-- NOT WORKING! TODO -->
+						<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='locale']"/>
+						<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']" />
+						
+						<xsl:for-each select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='xmlui-ml'][@qualifier='localeURL']">
+							<a>
+								<xsl:attribute name="href">
+									<xsl:value-of select="."/>
+								</xsl:attribute>
+								<xsl:attribute name="class">
+									<!--<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:[@element='page'][@qualifier='currentLocale']"/>-->
+								</xsl:attribute>
+								<!--<i18n:text>xmlui.general.locale.<xsl:value-of select="substring-after(.,'locale-attribute=')" /></i18n:text>-->
+								<xsl:value-of select="substring-after(.,'locale-attribute=')" />
+								<!--
+								<img>
+									<xsl:attribute name="src"><xsl:value-of select="$theme-path" />/images/<xsl:value-of select="." />.gif</xsl:attribute>
+								</img>
+								-->
+							</a>
+							<xsl:if test="position() != last()">
+								<xsl:text>&#160;|&#160;</xsl:text>
+							</xsl:if>
+						</xsl:for-each>                 
+					</div>
+					
 					<!-- Only add if the advanced search url is different from the simple search -->
 					<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='advancedURL'] != /dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']">
 						<!-- The "Advanced search" link, to be perched underneath the search box -->
@@ -846,7 +845,6 @@
 					i = 0;
 					while ( $('#ds-trail').height() > 28 && i++ < 5) {
 						items.eq(i).text('…');
-						i++;
 					}
 					// Still too long!? Truncate second-to-last li, then last li; exit after 10 iterations each
 					i = -20
@@ -868,16 +866,17 @@
 					});
 					
 					/* Userbox */
-					while ( $('#userbox span').height() > 28) {
+					i = 0;
+					while ( $('#userbox span').height() > 28 && i++ < 99) {
 						$('#userbox span').text( $('#userbox span').text().replace(/.…*$/, '…') );
 					}
 					
-					/* Search */
+					/* Search form (top) */
 					var searchtext = $('#searchbox .ds-text-field').val();
 					var searchhover = false;
-					$('.search-extra').click(function() {
-						//$('#searchbox .ds-text-field').focus();
-					}).hide();
+					$('.search-scope').click(function() {
+						$('#searchbox .ds-text-field').focus();
+					});
 					$('#searchbox .ds-text-field').focus(function() {
 						if ( $(this).val() == searchtext ) $(this).val('');
 					}).blur(function() {
@@ -943,8 +942,6 @@
 					//apply events and styles for file input element
 					var fileInput = $(this)
 						.addClass('customfile-input') //add class for CSS
-						.mouseover(function(){ upload.addClass('customfile-hover'); })
-						.mouseout(function(){ upload.removeClass('customfile-hover'); })
 						.focus(function(){
 							upload.addClass('customfile-focus'); 
 							fileInput.data('val', fileInput.val());
@@ -999,7 +996,6 @@
 					if(fileInput.is('[disabled]')){
 						fileInput.trigger('disable');
 					}
-						
 					
 					//on mousemove, keep file input under the cursor to steal click
 					upload

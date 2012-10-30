@@ -185,6 +185,9 @@
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
                         </xsl:otherwise>
                     </xsl:choose>
+					<xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
+						– <xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" disable-output-escaping="yes"/>
+					</xsl:if>
                 </xsl:element>
                 <span class="Z3988">
                     <xsl:attribute name="title">

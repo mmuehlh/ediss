@@ -54,7 +54,7 @@
     <xsl:template match="dim:dim" mode="collectionDetailView-DIM">
         <xsl:if test="string-length(dim:field[@element='description'][not(@qualifier)])&gt;0">
             <p class="intro-text">
-                <xsl:copy-of select="dim:field[@element='description'][not(@qualifier)]/node()"/>
+                <xsl:copy-of select="dim:field[@element='description'][not(@qualifier)]/node()" />
             </p>
         </xsl:if>
 
