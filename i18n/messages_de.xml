@@ -143,7 +143,7 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_select">Gehe zu einem Punkt im Index: </message>	
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_month">(Monat)</message>	
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_year">(Jahr)</message>	
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_year">Oder geben Sie ein Jahr ein: </message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_year">Zum Jahr springen: </message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_year_help">Auflistung von Dokumenten eines bestimmten Jahres.</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.no_results">Für diese Browse-Ansicht gibt es keine Ergebnisse.</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.sort_by">Sortiert nach: </message>
@@ -160,20 +160,20 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.asc">aufsteigend</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.desc">absteigend</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Autorenname</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Autor/Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Schlagwort</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Auflistung {0} nach Autor {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Auflistung {0} nach Autor</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Dokumente {0} nach Autor/Gutachter {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Dokumente {0} nach Autor/Gutachter</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Auflistung {0} nach Schlagwort {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Auflistung {0} nach Schlagwort</message>
 	
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.title">Auflistung {0} nach Titel {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.title">Auflistung {0} nach Titel</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.title">Dokumente {0} nach Titel {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.title">Dokumente {0} nach Titel</message>
 	
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.dateissued">Auflistung {0} nach Erscheinungsdatum {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.dateissued">Auflistung {0} nach Erscheinungsdatum</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.dateissued">Dokumente {0} nach Erscheinungsdatum {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.dateissued">Dokumente {0} nach Erscheinungsdatum</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.dateaccessioned">Auflistung {0} nach Zugangsdatum {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.dateaccessioned">Auflistung {0} nach Zugangsdatum</message>
@@ -185,7 +185,7 @@
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.full_text_search">Volltextsuche:</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_browse">Auflistung nach</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Titel</message>
-	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_authors">Autoren</message>
+	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_authors">Autoren/Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_dates">Datum</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.advanced_search_link">Erweiterte Suche</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_recent_submissions">Neueste Zugänge</message>
@@ -202,7 +202,7 @@
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Volltextsuche:</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Durchsuche</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Titel</message>
-	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_authors">Autoren</message>
+	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_authors">Autoren/Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_dates">Datum</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.advanced_search_link">Erweiterte Suche</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_sub_communities">Teilbereiche in diesem Bereich</message>
@@ -251,7 +251,7 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Gesamter Bestand</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Bereiche &amp; Sammlungen</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titel</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Autoren</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Autoren/Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Schlagworte</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Erscheinungsdatum</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">Zugangsdatum</message>
@@ -396,9 +396,9 @@
 	<message key="xmlui.EPerson.PasswordLogin.password">Passwort</message>
 	<message key="xmlui.EPerson.PasswordLogin.forgot_link"> Haben Sie Ihr Passwort vergessen?</message>
 	<message key="xmlui.EPerson.PasswordLogin.submit">Einloggen</message>
-	<message key="xmlui.EPerson.PasswordLogin.head2">Einen neuen Benutzer registrieren</message>
+	<!-- <message key="xmlui.EPerson.PasswordLogin.head2">Einen neuen Benutzer registrieren</message>
 	<message key="xmlui.EPerson.PasswordLogin.para1">Legen Sie ein neues Benutzerkonto an, um selbst zu veröffentlichen oder Dienste wie Informationen über Neuerscheinungen nutzen zu können.</message>
-	<message key="xmlui.EPerson.PasswordLogin.register_link">Klicken Sie hier, um ein neues Benutzerkonto anzulegen.</message>
+	<message key="xmlui.EPerson.PasswordLogin.register_link">Klicken Sie hier, um ein neues Benutzerkonto anzulegen.</message> -->
 	
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
 	<message key="xmlui.EPerson.LDAPLogin.title">Einloggen</message>
@@ -558,7 +558,7 @@
 	<message key="xmlui.Submission.Submissions.submit_column2">Titel</message>
 	<message key="xmlui.Submission.Submissions.submit_column3">Sammlung</message>
 	<message key="xmlui.Submission.Submissions.submit_column4">Veröffentlicht von</message>
-	<message key="xmlui.Submission.Submissions.submit_head3">Autoren:</message>
+	<message key="xmlui.Submission.Submissions.submit_head3">Autoren/Gutachter:</message>
 	<message key="xmlui.Submission.Submissions.submit_info3">Es gibt keine unvollendeten Veröffentlichungen</message>
 	<message key="xmlui.Submission.Submissions.submit_head4">Supervision:</message>
 	<message key="xmlui.Submission.Submissions.submit_submit_remove">Ausgewählte löschen</message>
@@ -729,6 +729,18 @@
 	<message key="xmlui.Submission.submit.CompletedStep.info1">Ihre Veröffentlichung durchläuft nun den für diese Sammlung festgelegten Geschäftsgang. Sie werden per E-Mail benachrichtigt, sobald dieser abgeschlossen umd Ihr Dokument in der Sammlung archiviert wurde oder erhalten ggf. eine E-Mail mit Rückfragen des Bearbeiters. Den Bearbeitungsstand Ihrer Veröffentlichung können Sie über Ihre Veröffentlichungsseite einsehen.</message>	
 	<message key="xmlui.Submission.submit.CompletedStep.go_submission">Zur Veröffentlichungsseite</message>	
 	<message key="xmlui.Submission.submit.CompletedStep.submit_again">Ein weiteres Dokument veröffentlichen</message>		
+	
+	<!-- Translation for format box -->
+	<message key="xmlui.Submission.submit.format.more">mehr</message>
+	<message key="xmlui.Submission.submit.format.less">weniger</message>
+	<message key="xmlui.Submission.submit.format.bold">fett</message>
+	<message key="xmlui.Submission.submit.format.italic">kursiv</message>
+	<message key="xmlui.Submission.submit.format.latin">Lateinisch</message>
+	<message key="xmlui.Submission.submit.format.latinextended">Lateinisch erweitert</message>
+	<message key="xmlui.Submission.submit.format.symbols">Symbole</message>
+	<message key="xmlui.Submission.submit.format.greek">Griechisch</message>
+	<message key="xmlui.Submission.submit.format.cyrillic">Kyrillisch</message>
+	<message key="xmlui.Submission.submit.format.arabic">Arabisch</message>
 
 	<!-- org.dspace.app.xmlui.Submission.workflow.PerformTaskStep -->
 	<message key="xmlui.Submission.workflow.PerformTaskStep.info1">Aktionen, die Sie in diesem Bearbeitungsschritt durchführen können:</message>
@@ -1832,7 +1844,7 @@
 	<message key="xmlui.dri2xhtml.structural.search-in-collection">In dieser Sammlung</message>
 	
 	<message key="xmlui.dri2xhtml.structural.pagination-previous">Vorherige Seite</message>
-	<message key="xmlui.dri2xhtml.structural.pagination-info">Anzeige der Dokumente {0}-{1} von {2}</message>
+	<message key="xmlui.dri2xhtml.structural.pagination-info">Anzeige {0}-{1} von {2}</message>
 	<message key="xmlui.dri2xhtml.structural.pagination-next">Nächste Seite</message>
 	
 	<message key="xmlui.dri2xhtml.structural.link_cc">Creative Commons Lizenz</message>
@@ -2093,17 +2105,19 @@
 
 	<!-- Custom strings for eDiss -->
 	<message key="xmlui.general.publish_now">Jetzt veröffentlichen</message>
+	<message key="xmlui.general.publish_here">Hier veröffentlichen</message>
 	<message key="xmlui.general.locale.language">Sprache</message>
 	<message key="xmlui.lf"></message>
 	<message key="xmlui.home.head">Elektronische Dissertationen der Georg-August-Universität Göttingen</message>
 	<message key="xmlui.home.head2">Wir veröffentlichen Ihre elektronische Dissertation auf dem eDiss-Server der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB).</message>
 	<message key="xmlui.home.publication.process">Um den Online-Publikationsprozess für Ihre Doktorarbeit zu starten, gehen Sie bitte wie folgt vor:</message>
-	<message key="xmlui.home.publication.process.register"><a href="register">Registrieren</a> Sie ein Benutzerkonto bei eDiss.</message>
-	<message key="xmlui.home.publication.process.publish">Klicken Sie auf <a href="submit">„Jetzt veröffentlichen“</a>.</message>
-	<message key="xmlui.home.publication.process.finish">Laden Sie Ihre Arbeit als PDF hoch und folgen Sie dem Formular. Fertig!</message>
+	<message key="xmlui.home.publication.process.create_pdf">Erstellen Sie Ihre Dissertation als PDF Dokument. <a class="help" href="">mehr dazu...</a></message>
+	<message key="xmlui.home.publication.process.publish">Registrieren Sie sich auf eDiss und führen Sie den Publikationsworkflow durch. <a class="help" href="submit">mehr dazu...</a></message>
+	<message key="xmlui.home.publication.process.print_version">Liefern Sie uns zwei gedruckte Exemplare Ihrer Arbeit. <a class="help" href="">mehr dazu...</a></message>
+	<message key="xmlui.home.publication.process.finish">Bezahlen Sie die € 35,‒Publikationsgebühr. Fertig!<a class="help" href="">mehr dazu...</a></message>
 	<message key="xmlui.home.publication.process.upload">Laden Sie Ihre Arbeit als PDF hoch.</message>
 	<message key="xmlui.home.publication.process.metadata">Geben Sie Metadaten zu ihrer Arbeit an.</message>
-	<message key="xmlui.home.publication.process.notes">Bitte beachten Sie: Alle Angaben sind verbindlich!</message>
+	<message key="xmlui.home.publication.process.notes">Bitte beachten Sie: Ihre Publikation wird erst freigeschaltet, wenn die gedruckten Exemplare Ihrer Arbeit bei uns vorliegen!</message>
 	<message key="xmlui.home.publication.complete">Das Gänseliesel dürfen Sie erst küssen, wenn Sie uns die folgende Dokumente vorbeigebracht oder zugeschickt haben:</message>
 	<message key="xmlui.home.publication.complete.contract">Ausgefüllte Vertragsbedingungen</message>
 	<message key="xmlui.home.publication.complete.print">2 gedruckte Exemplare Ihrer Arbeit</message>
@@ -2122,5 +2136,26 @@
 
 	<message key="xmlui.general.language.de">Deutsch</message>
 	<message key="xmlui.general.language.en">Englisch</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.referee">Auflistung nach Gutachter</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.referee">Auflistung nach Gutachter</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_referee">Gutachter</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.referee.column_heading">Gutachter</message>
+
+        <message key="xmlui.EPerson.PasswordLogin.head2"></message>
+	<message key="xmlui.EPerson.PasswordLogin.para1"></message>
+        <message key="xmlui.EPerson.PasswordLogin.register_link">Sind Sie neu bei eDiss? Klicken Sie hier um sich zu registrieren!</message>
+	<message key="xmlui.navigation.help.header">Hilfe/Info</message>
+	<message key="xmlui.navigation.help.publication_process">Publikationsverfahren</message>
+	<message key="xmlui.navigation.help.pdf_howto">Dokument erstellen</message>
+	<message key="xmlui.navigation.help.cumulative_dissertation">Kumulative Dissertationen</message>
+	<message key="xmlui.navigation.help.general">Wissenswertes</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">GOK</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">GOK Classification</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter subjects</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.button">Filter</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Please wait while the controlled vocabulary is loading.</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.error">There was an issue when loading the controlled vocabulary, please try again later.</message>
+
+
 	
 </catalogue>

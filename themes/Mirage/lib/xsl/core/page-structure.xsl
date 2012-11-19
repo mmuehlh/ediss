@@ -461,34 +461,39 @@
 
 					<div id="localebox">                 
 						<!--<i18n:text>xmlui.general.locale.language</i18n:text>:-->
-						<!-- NOT WORKING! TODO -->
-						<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='locale']"/>
-						<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']" />
-						
-						<xsl:for-each select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='xmlui-ml'][@qualifier='localeURL']">
-							<a>
-								<xsl:attribute name="href">
-									<xsl:value-of select="."/>
-								</xsl:attribute>
-								<xsl:attribute name="class">
-									<!--<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:[@element='page'][@qualifier='currentLocale']"/>-->
-								</xsl:attribute>
-								<!--<i18n:text>xmlui.general.locale.<xsl:value-of select="substring-after(.,'locale-attribute=')" /></i18n:text>-->
-								<xsl:value-of select="substring-after(.,'locale-attribute=')" />
-								<!--
-								<img>
-									<xsl:attribute name="src"><xsl:value-of select="$theme-path" />/images/<xsl:value-of select="." />.gif</xsl:attribute>
-								</img>
-								-->
-							</a>
-							<xsl:if test="position() != last()">
-								<xsl:text>&#160;|&#160;</xsl:text>
-							</xsl:if>
-						</xsl:for-each>                 
+						<span class="current"><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='locale']"/></span>
+						<ul>
+							<xsl:for-each select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='xmlui-ml'][@qualifier='localeURL']">
+								<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='locale'] != substring-after(.,'locale-attribute=')">
+									<li>
+									<a>
+										<xsl:attribute name="href">
+											<xsl:value-of select="."/>
+										</xsl:attribute>
+										<xsl:attribute name="class">
+											<!--<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:[@element='page'][@qualifier='currentLocale']"/>-->
+										</xsl:attribute>
+										<!--<i18n:text>xmlui.general.locale.<xsl:value-of select="substring-after(.,'locale-attribute=')" /></i18n:text>-->
+										<xsl:value-of select="substring-after(.,'locale-attribute=')" />
+										<!--
+										<img>
+											<xsl:attribute name="src"><xsl:value-of select="$theme-path" />/images/<xsl:value-of select="." />.gif</xsl:attribute>
+										</img>
+										-->
+									</a>
+									</li>
+									<!--
+									<xsl:if test="position() != last()">
+										<xsl:text>&#160;|&#160;</xsl:text>
+									</xsl:if>
+									-->
+								</xsl:if>
+							</xsl:for-each>                 
+						</ul>
 					</div>
 					
 					<!-- Only add if the advanced search url is different from the simple search -->
-					<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='advancedURL'] != /dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']">
+					<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='advancedURL'] != /dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"> 
 						<!-- The "Advanced search" link, to be perched underneath the search box -->
 						<a class="advanced-search">
 							<xsl:attribute name="href">
@@ -496,7 +501,7 @@
 							</xsl:attribute>
 							<i18n:text>xmlui.dri2xhtml.structural.search-advanced</i18n:text>
 						</a>
-					</xsl:if>
+					</xsl:if> 
 
 				</div>
 
@@ -741,7 +746,7 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<script type="text/javascript" src="{concat($protocol, 'ajax.googleapis.com/ajax/libs/jquery/', $jqueryVersion ,'/jquery.min.js')}">&#160;</script>
+		<!--<script type="text/javascript" src="{concat($protocol, 'ajax.googleapis.com/ajax/libs/jquery/', $jqueryVersion ,'/jquery.min.js')}">&#160;</script>-->
 
 		<xsl:variable name="localJQuerySrc">
 			<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
@@ -750,12 +755,13 @@
 			<xsl:text>.min.js</xsl:text>
 		</xsl:variable>
 
+		<!--
 		<script type="text/javascript">
 			<xsl:text disable-output-escaping="yes">!window.jQuery &amp;&amp; document.write('&lt;script type="text/javascript" src="</xsl:text><xsl:value-of
 				select="$localJQuerySrc"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;\/script&gt;')</xsl:text>
 		</script>
-
-
+		-->
+		<script type="text/javascript" src="{$localJQuerySrc}">&#160;</script>
 
 		<!-- Add theme javascipt  -->
 		<xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='javascript'][not(@qualifier)]">
@@ -836,7 +842,7 @@
 						// If current item contains more than one word, replace last word with … (&hellip;). Otherwise, move to next item.
 						if ( item.text().indexOf(' ') >= 0 ) {
 							if ( !cut_items[i] ) cut_items[i] = item.text();
-							item.text( item.text().replace(/\s[^\s]+…*$/, '…') );
+							item.text( item.text().replace(/[\s,-]+[^\s]+…*$/, '…') );
 						} else {
 							i++;
 						}
@@ -847,12 +853,12 @@
 						items.eq(i).text('…');
 					}
 					// Still too long!? Truncate second-to-last li, then last li; exit after 10 iterations each
-					i = -20
+					i = -20;
 					while ( $('#ds-trail').height() > 28 && ++i < 0) {
 						key = parseInt(i / 10 - 1);
 						items = $('#ds-trail .ds-trail-link');
 						item_text = items.eq(key).text();
-						items.eq(key).text( items.eq(key).text().replace(/\s[^\s]+…*$/, '…') );
+						items.eq(key).text( items.eq(key).text().replace(/[\s,-]+[^\s]+…*$/, '…') );
 						if ( item_text != items.eq(key).text() && !cut_items[key] ) cut_items[key] = item_text;
 					}
 					// Add hint div for truncated/removed elements, fade in on hover
@@ -860,9 +866,9 @@
 						if (cut_items[i]) $('#ds-trail .ds-trail-link').eq(i).append('<div class="hint"><span>' + cut_items[i] + '</span></div>');
 					}
 					$('#ds-trail li').hover( function() {
-						$(this).find('.hint').css('opacity', 1).delay(500).fadeIn();
+						$(this).find('.hint').css('opacity', 1).delay(200).stop().fadeIn();
 					}, function() {
-						$(this).find('.hint').clearQueue().fadeOut();
+						$(this).find('.hint').clearQueue().stop().fadeOut();
 					});
 					
 					/* Userbox */

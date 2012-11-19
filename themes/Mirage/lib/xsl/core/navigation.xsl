@@ -46,14 +46,32 @@
 
 			<div class="publish">
 				<a>
-					<xsl:attribute name="href">
-						<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-						<xsl:text>/submit</xsl:text>
-					</xsl:attribute>
-					<i18n:text>xmlui.general.publish_now</i18n:text>
+					<xsl:choose>
+						<xsl:when test="//dri:div[contains(@id, 'CollectionViewer.div.collection-home')]">
+							<xsl:attribute name="href">
+								 <xsl:value-of select="concat(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)], '/', /dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI'], '/submit')"/>
+							 </xsl:attribute>
+							 <i18n:text>xmlui.general.publish_here</i18n:text>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:attribute name="href">
+								<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+								<xsl:text>/submit</xsl:text>
+							</xsl:attribute>
+							<i18n:text>xmlui.general.publish_now</i18n:text>
+						</xsl:otherwise>
+					</xsl:choose>
 				</a>
 			</div>
-			
+			<h1 class="ds-option-set-head"><i18n:text>xmlui.navigation.help.header</i18n:text></h1>	
+			<div class="ds-option-set">
+				<ul class="ds-simple-list">
+					<li><a href="#"><i18n:text>xmlui.navigation.help.publication_process</i18n:text></a></li>
+					<li><a href="#"><i18n:text>xmlui.navigation.help.pdf_howto</i18n:text></a></li>
+					<li><a href="#"><i18n:text>xmlui.navigation.help.cumulative_dissertation</i18n:text></a></li>
+					<li><a href="#"><i18n:text>xmlui.navigation.help.general</i18n:text></a></li>
+				</ul>
+			</div>
 			<!-- Once the search box is built, the other parts of the options are added -->
 			<xsl:apply-templates/>
 
