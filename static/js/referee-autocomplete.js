@@ -49,7 +49,7 @@ $(function () {
 	}
 	*/
 	
-	var url = "http://goedoc-dev.sub.uni-goettingen.de/ediss/JSON/discovery/search?q=";
+	var url = "/ediss/JSON/discovery/search?q=";
 	var params = "&facet=true&facet.limit=-1&facet.sort=count&facet.mincount=1&json.nl=map&facet.field=author&wt=&json.wrf=";
 	
 	/*
@@ -71,10 +71,13 @@ $(function () {
 		$.each(json.facet_counts.facet_fields.author_ac, function(name, count) { 
 			items.push(name.replace(/[^\s]+/g, function(str){ return str.substr(0,1).toUpperCase()+str.substr(1).toLowerCase() }) );
 		});
-		$( "#aspect_submission_StepTransformer_field_dc_contributor_referee_last, #aspect_submission_StepTransformer_field_dc_contributor_coReferee_last, #aspect_submission_StepTransformer_field_dc_contributor_thirdReferee_last" ).autocomplete({
+		$( "#aspect_submission_StepTransformer_field_dc_contributor_advisor_last,\
+				#aspect_submission_StepTransformer_field_dc_contributor_referee_last,\
+				#aspect_submission_StepTransformer_field_dc_contributor_coReferee_last,\
+				#aspect_submission_StepTransformer_field_dc_contributor_thirdReferee_last" ).autocomplete({
 			source: function(request, response) {
 				var results = $.ui.autocomplete.filter(items, request.term);
-				response(results.slice(0, 10));
+				response(results.slice(0, 8));
 			},
 			close: function(event, ui) {
 				var tokens = $(this).val().split(', ', 2);

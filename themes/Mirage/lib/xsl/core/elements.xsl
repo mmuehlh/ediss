@@ -43,6 +43,14 @@
                 <xsl:with-param name="class" select="$class"/>
             </xsl:call-template>
             <xsl:apply-templates />
+	    <xsl:if test="contains(parent::dri:div/@id, 'recent-submission')">
+               <span class="rss">
+                <a>
+                        <xsl:attribute name="href"><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed'][@qualifier='rss+xml'][2]" /></xsl:attribute>RSS Feed
+                </a>
+                </span>
+             </xsl:if>
+
         </xsl:element>
     </xsl:template>
 

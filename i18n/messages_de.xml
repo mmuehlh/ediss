@@ -220,10 +220,10 @@
 	<message key="xmlui.ArtifactBrowser.Contact.email">E-Mail</message>
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.FeedbackForm.java -->
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.title">Ihre Anregungen</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.trail">Ihre Anregungen</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.head">Ihre Anregungen/Meinung</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Danke für Ihre Anregungen zu eDiss. Ihre Kommentare sind jederzeit willkommen!</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.title">Kontaktformular</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.trail">Kontaktformular</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.head">Haben Sie fragen oder Anregungen?</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1"></message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email">Ihre E-Mail-Adresse</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email_help">Diese Adresse wird benutzt, um bei Bedarf mit Ihnen Rücksprache halten zu können.</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.comments">Kommentar</message>
@@ -233,7 +233,7 @@
 	<message key="xmlui.ArtifactBrowser.FeedbackSent.title">Ihre Anregungen</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackSent.trail">Ihre Anregungen</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackSent.head">Nachricht gesendet</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackSent.para1">Vielen Dank für Ihre Anregungen.</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackSent.para1">Vielen Dank für Ihre Frage/Anregung.</message>
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.FrontPageSearch.java -->
 	<message key="xmlui.ArtifactBrowser.FrontPageSearch.head">eDiss durchsuchen</message>
@@ -349,7 +349,7 @@
 	<message key="xmlui.EPerson.EditProfile.update_password_instructions">Sie können zudem ein neues Passwort setzen, indem Sie es in das Feld unten eingeben und dann noch mal bestätigen, indem Sie es in das zweite Feld eingeben. Passwörter sollten mindestens 6 Zeichen lang sein.</message>
 	<message key="xmlui.EPerson.EditProfile.create_password_instructions">Bitte geben Sie ein Passwort in das Feld unten ein und bestätigen Sie es durch eine zweite identische Eingabe. Das Passwort sollte mindestens 6 Zeichen lang sein.</message>
 	<message key="xmlui.EPerson.EditProfile.password">Passwort</message>
-	<message key="xmlui.EPerson.EditProfile.confirm_password">Erneute Eingabe zur Bestätigung</message>
+	<message key="xmlui.EPerson.EditProfile.confirm_password">Passwort bestätigen</message>
 	<message key="xmlui.EPerson.EditProfile.submit_update">Registrierung abgeschlossen</message>
 	<message key="xmlui.EPerson.EditProfile.submit_create">Benutzerdaten aktualisieren</message>
 	<message key="xmlui.EPerson.EditProfile.error_required">Dies ist ein Pflichtfeld</message>
@@ -511,7 +511,7 @@
 	<message key="xmlui.Submission.general.submission.previous">← Zurück</message>
 	<message key="xmlui.Submission.general.submission.save">Speichern und später fortsetzen</message>
 	<message key="xmlui.Submission.general.submission.next">Weiter →</message>
-	<message key="xmlui.Submission.general.submission.complete">Veröffentlichung abschließen</message>
+	<message key="xmlui.Submission.general.submission.complete">Veröffentlichung kostenpflichtig abschließen</message>
 	<message key="xmlui.Submission.general.workflow.title">Dokument veröffentlichen</message>
 	<message key="xmlui.Submission.general.workflow.trail">Dokument veröffentlichen</message>
 	<message key="xmlui.Submission.general.workflow.head">Dokument veröffentlichen</message>
@@ -551,7 +551,7 @@
 	<message key="xmlui.Submission.Submissions.submit_info1b">eine neue Veröffentlichung starten</message>
 	<message key="xmlui.Submission.Submissions.submit_info1c">Der Veröffentlichungsprozess beinhaltet die Beschreibung des Dokuments und das Hochladen der zugehörigen Dateien. Jeder Bereich oder Sammlung kann seine eigenen Veröffentlichungsbestimmungen haben.</message>
 	<message key="xmlui.Submission.Submissions.submit_head2">Unvollendete Veröffentlichungen</message>
-	<message key="xmlui.Submission.Submissions.submit_info2a">Dies sind Ihre unvollendeten Veröffentlichungen. Sie können statt dessen auch </message>
+	<message key="xmlui.Submission.Submissions.submit_info2a">Dies sind Ihre unvollendeten Veröffentlichungen. Sie können stattdessen auch </message>
 	<message key="xmlui.Submission.Submissions.submit_info2b">eine neue Veröffentlichung beginnen</message>
 	<message key="xmlui.Submission.Submissions.submit_info2c">.</message>
 	<message key="xmlui.Submission.Submissions.submit_column1"></message>
@@ -563,8 +563,8 @@
 	<message key="xmlui.Submission.Submissions.submit_head4">Supervision:</message>
 	<message key="xmlui.Submission.Submissions.submit_submit_remove">Ausgewählte löschen</message>
 	<!-- Same transformer, inprogress section -->
-	<message key="xmlui.Submission.Submissions.progress_head1">Ihre Veröffentlichungen im Geschäftsgang</message>
-	<message key="xmlui.Submission.Submissions.progress_info1">Dies sind von Ihnen abgeschlossene Veröffentlichungen, die sich noch im Geschäftsgang befinden.</message>
+	<message key="xmlui.Submission.Submissions.progress_head1">Ihre Veröffentlichungen zum Freischalten</message>
+	<message key="xmlui.Submission.Submissions.progress_info1">Dies sind von Ihnen abgeschlossene Veröffentlichungen zum Freischalten.</message>
 	<message key="xmlui.Submission.Submissions.progress_column1">Titel</message>
 	<message key="xmlui.Submission.Submissions.progress_column2">Sammlung</message>
 	<message key="xmlui.Submission.Submissions.progress_column3">Status</message>
@@ -646,14 +646,14 @@
 	<!-- org.dspace.app.xmlui.Submission.submit.UploadStep -->
 	<message key="xmlui.Submission.submit.UploadStep.head">Datei(en) hochladen</message>
 	<message key="xmlui.Submission.submit.UploadStep.file">Datei</message>
-	<message key="xmlui.Submission.submit.UploadStep.file_help">Bitte geben Sie den voll qualifizierten Pfad zu der Datei auf Ihrem Rechner an. Wenn Sie auf "Durchsuchen" klicken, öffnet sich ein neues Fenster, in welchem Sie die Datei auf Ihrem Rechner suchen und auswählen können.</message>
+	<message key="xmlui.Submission.submit.UploadStep.file_help">Klicken Sie auf "Durchsuchen" und wählen Sie auf Ihrem Rechner die Datei aus, die Sie hochladen wollen. Als erste Datei müssen Sie Ihre Dissertation in PDF-Format (mit anklickbarem Inhaltsverzeichnis, optimiert auf "schnelle Webanzeige" und ohne Sicherheitseinschränkungen) hochladen!</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_error">Ein Problem ist während des Hochladens Ihrer Datei aufgetreten. Dies kann verschiedene Gründe haben: der Dateiname war fehlerhaft, aufgrund eines Netzwerkproblems wurde die Datei nicht korrekt übertragen oder Sie haben versucht, eine Dateiformat hochzuladen, welches auf dem Repositorium nicht zugelassen ist. Bitte überprüfen Sie Ihre Eingaben und versuchen es noch einmal.</message>
 	<message key="xmlui.Submission.submit.UploadStep.virus_error">Die Datei wurde nich hochgeladen, da sie scheinbar einen Virus enthält. Bitte wenden Sie sich an den System-Administrator.</message>
 	<message key="xmlui.Submission.submit.UploadStep.virus_checker_error">Beim Virusscan der Datei ist ein technisches Problem aufgetreten. Bitte wenden Sie sich an den System-Administrator.</message>
 	<message key="xmlui.Submission.submit.UploadStep.file_error">Das Dokument muss mindestens eine Datei enthalten.</message>
 	<message key="xmlui.Submission.submit.UploadStep.description">Beschreibung</message>
-	<message key="xmlui.Submission.submit.UploadStep.description_help">Zusätzlich können Sie eine kurze Beschreibung der Datei eingeben, z. B. "<i>Hauptband</i>", oder "<i>Anhang</i>".</message>
-	<message key="xmlui.Submission.submit.UploadStep.submit_upload">Datei hochladen und/oder noch eine hinzufügen</message>
+	<message key="xmlui.Submission.submit.UploadStep.description_help">Falls Sie weitere Dateien (zusätzliche Graphiken, Tabellen oder Ihre Dissertation in anderen Formaten) hochladen wollen,geben Sie bitte eine kurze Beschreibung der Datei an, z. B. "<i>Dissertation</i>", oder "<i>Anhang</i>".</message>
+	<message key="xmlui.Submission.submit.UploadStep.submit_upload">Datei hochladen und/oder weitere hinzufügen</message>
 	<message key="xmlui.Submission.submit.UploadStep.head2">Hochgeladene Dateien</message>
 	<message key="xmlui.Submission.submit.UploadStep.column0">Primäre Datei</message>
 	<message key="xmlui.Submission.submit.UploadStep.column1"></message>
@@ -711,12 +711,12 @@
 	<message key="xmlui.Submission.submit.CCLicenseStep.select_change">Auswahl oder Änderung der Lizenz</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
-	<message key="xmlui.Submission.submit.LicenseStep.head">eDiss-Lizenz</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>Dies ist der letzte Schritt:</strong> Damit Ihr Dokument veröffentlicht werden kann, müssen Sie folgenden Bedingungen zustimmen.</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info2">Akzeptieren Sie die Standardlizenzbestimmungen, indem Sie „Ich akzeptiere die Lizenzbestimmungen“ selektieren und klicken Sie dann auf „Veröffentlichung abschließen“.</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info3">Wenn Sie Fragen zu den Lizenzbestimmungen haben, wenden Sie sich an den Administrator.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.head">Vertragsbedingungen für die Veröffentlichung auf dem Dissertationsserver der Georg-August-Universität Göttingen</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info1"></message>
+	<message key="xmlui.Submission.submit.LicenseStep.info2"></message>
+	<message key="xmlui.Submission.submit.LicenseStep.info3"></message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Lizenzbestimmung</message>
-	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">Ich akzeptiere die Lizenzbestimmungen</message>
+	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">Ich akzeptiere die Lizenzbestimmungen, werde die Kosten für die online Bereitstellung übernehmen und willige ein, dass mir eine Rechnung an meine Postadresse zugeschickt wird.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_error">Sie müssen die Lizenzbestimmung akzeptieren, um Ihre Veröffentlichung abzuschließen. Wenn Sie dies zum jetzigen Zeitpunkt nicht tun können, haben Sie die Möglichkeit Ihre Veröffentlichung zwischenzuspeichern, um sie später zu vollenden oder zu löschen, indem Sie auf „Speichern und später fortsetzen“ klicken.</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.RemovedStep -->
@@ -726,7 +726,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.CompletedStep -->
 	<message key="xmlui.Submission.submit.CompletedStep.head">Veröffentlichung abgeschlossen</message>	
-	<message key="xmlui.Submission.submit.CompletedStep.info1">Ihre Veröffentlichung durchläuft nun den für diese Sammlung festgelegten Geschäftsgang. Sie werden per E-Mail benachrichtigt, sobald dieser abgeschlossen umd Ihr Dokument in der Sammlung archiviert wurde oder erhalten ggf. eine E-Mail mit Rückfragen des Bearbeiters. Den Bearbeitungsstand Ihrer Veröffentlichung können Sie über Ihre Veröffentlichungsseite einsehen.</message>	
+	<message key="xmlui.Submission.submit.CompletedStep.info1">Ihre Veröffentlichung ist noch nicht öffentlich sichtbar. Sie liegt der eDiss Redaktion zum Freischalten vor. Sobald Sie uns zwei gedruckte Exemplare Ihrer Arbeit geliefert und die Publikationsgebühr bezahlt haben, wird Ihre Publikation veröffentlicht. Sie werden darüber per E-Mail informiert. Ggf. bekommen Sie eine E-Mail mit Rückfragen des Redateurs. Den Bearbeitungsstand Ihrer Veröffentlichung können Sie als angemeldeter Nutzer über Ihre Veröffentlichungsseite (unter "Mein Benutzerkonto" - "Veröffentlichungen") einsehen.</message>	
 	<message key="xmlui.Submission.submit.CompletedStep.go_submission">Zur Veröffentlichungsseite</message>	
 	<message key="xmlui.Submission.submit.CompletedStep.submit_again">Ein weiteres Dokument veröffentlichen</message>		
 	
@@ -912,8 +912,8 @@
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint">Der Benutzerkonto konnte aufgrund folgender Abhängigkeiten nicht gelöscht werden:</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.last_conjunction">und</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.item">unter dem Benutzerkonto wurden ein oder mehrere Dokumente veröffentlicht</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.workflowitem">der Benutzer hat eine noch im Geschäftsgang befindliche Veröffentlichung</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.tasklistitem">der Benutzer muss noch Aufgaben im Rahmen des Geschäftsganges erledigen</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.workflowitem">der Benutzer hat eine Veröffentlichung, die noch auf Freischaltung wartet.</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.tasklistitem">der Benutzer muss zum Freischalten der Publikation noch Aufgaben erledigen</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.unknown">zu dem Benutzer gibt es eine sonstige Abhängigkeit im System</message>
 		
 	<!-- org.dspace.app.xmlui.administrative.eperson.DeleteEPeopleConfirm -->
@@ -1830,7 +1830,7 @@
 		</p>
 	</message>
 	<message key="xmlui.dri2xhtml.structural.contact-link">Kontakt</message>
-	<message key="xmlui.dri2xhtml.structural.feedback-link">Feedback abschicken</message>
+	<message key="xmlui.dri2xhtml.structural.feedback-link">Kontaktformular</message>
 	
 	<message key="xmlui.dri2xhtml.structural.head-subtitle">eDiss Repositorium (Manakin basiert)</message>
 
@@ -1868,8 +1868,8 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-author">Autor</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Zusammenfassung</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Beschreibung</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Datum</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">Zum Verlinken/Bookmarken</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Erschienen</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Verlag</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Schlagwort</message>
 	
@@ -2042,7 +2042,7 @@
 
 
 	<message key="xmlui.Submission.submit.UploadStep.upload_pdf_accepted">Das Dokument erfüllt alle Anforderungen der Checkliste</message>
-	<message key="xmlui.Submission.submit.UploadStep.upload_pdf_metadata">Das Dokument enhält die folgende Beschreibung: (//TODO: Erklärung und Anleitung hinzufügen)</message>
+	<message key="xmlui.Submission.submit.UploadStep.upload_pdf_metadata">Das Dokument enhält die folgende Beschreibung: (Falls Ihre Dissertation später über eine google-Suche gefunden wird, verwendet google diese Angaben bei der Trefferanzeige. Wollen Sie die Daten ändern, löschen Sie Ihr Dokument, korrigieren Sie die Beschreibung und laden Sie die neue Version wieder hoch. Anleitunge zur Korrektur finden Sie <a href="help/good-to-know">hier</a>.)</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_linearized">Optimiert für schnelle Webanzeige</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_toc">Inhaltsverzeichnis vorhanden</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_print">Drucken zulässig</message>
@@ -2103,36 +2103,60 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.institute.column_heading">Institute</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subjecteng.column_heading">Schlagworte (englisch)</message>
 
+	<message key="xmlui.item-view.examination">Angenommen am</message>
+	<message key="xmlui.item-view.advisor">Betreuer</message>
+	<message key="xmlui.item-view.referee">Gutachter</message>
 	<!-- Custom strings for eDiss -->
 	<message key="xmlui.general.publish_now">Jetzt veröffentlichen</message>
+	
 	<message key="xmlui.general.publish_here">Hier veröffentlichen</message>
 	<message key="xmlui.general.locale.language">Sprache</message>
-	<message key="xmlui.lf"></message>
-	<message key="xmlui.home.head">Elektronische Dissertationen der Georg-August-Universität Göttingen</message>
-	<message key="xmlui.home.head2">Wir veröffentlichen Ihre elektronische Dissertation auf dem eDiss-Server der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB).</message>
-	<message key="xmlui.home.publication.process">Um den Online-Publikationsprozess für Ihre Doktorarbeit zu starten, gehen Sie bitte wie folgt vor:</message>
-	<message key="xmlui.home.publication.process.create_pdf">Erstellen Sie Ihre Dissertation als PDF Dokument. <a class="help" href="">mehr dazu...</a></message>
-	<message key="xmlui.home.publication.process.publish">Registrieren Sie sich auf eDiss und führen Sie den Publikationsworkflow durch. <a class="help" href="submit">mehr dazu...</a></message>
-	<message key="xmlui.home.publication.process.print_version">Liefern Sie uns zwei gedruckte Exemplare Ihrer Arbeit. <a class="help" href="">mehr dazu...</a></message>
-	<message key="xmlui.home.publication.process.finish">Bezahlen Sie die € 35,‒Publikationsgebühr. Fertig!<a class="help" href="">mehr dazu...</a></message>
-	<message key="xmlui.home.publication.process.upload">Laden Sie Ihre Arbeit als PDF hoch.</message>
-	<message key="xmlui.home.publication.process.metadata">Geben Sie Metadaten zu ihrer Arbeit an.</message>
-	<message key="xmlui.home.publication.process.notes">Bitte beachten Sie: Ihre Publikation wird erst freigeschaltet, wenn die gedruckten Exemplare Ihrer Arbeit bei uns vorliegen!</message>
-	<message key="xmlui.home.publication.complete">Das Gänseliesel dürfen Sie erst küssen, wenn Sie uns die folgende Dokumente vorbeigebracht oder zugeschickt haben:</message>
-	<message key="xmlui.home.publication.complete.contract">Ausgefüllte Vertragsbedingungen</message>
-	<message key="xmlui.home.publication.complete.print">2 gedruckte Exemplare Ihrer Arbeit</message>
-	<message key="xmlui.home.publication.complete.price">€ 25,‒ Gebühr für die Veröffentlichung*</message>
-	<message key="xmlui.home.publication.complete.price.footnote">* Bei postalischer Abwicklung teilen Sie uns bitte Ihre aktuelle Adresse mit ‒ Sie erhalten dann eine Rechnung.</message>
-	<message key="xmlui.home.contact.label">Bei Fragen können Sie sich gern an uns wenden:</message>
+	<message key="xmlui.notify"><strong>BITTE BEACHTEN SIE: </strong></message>
+	<message key="xmlui.home.head">eDissertationen der Georg-August-Universität Göttingen</message>
+	<message key="xmlui.home.head2">Veröffentlichen Sie Ihre elektronische Dissertation bei der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB).</message>
+	<message key="xmlui.home.publication.process">Und so geht es:</message>
+	<message key="xmlui.test">Button test</message>
+	<message key="xmlui.home.publication.process.step1">
+		<span class="help" id="step1"><span class="icon"> </span>Speichern Sie Ihre Dissertation als PDF.
+			<span>Erstellen Sie Ihre Dissertation als <strong>eine</strong> PDF Datei (nicht als mehrere Einzeldateien) ohne Sicherheitseinschränkungen mit anklickbarem Inhaltsverzeichnis und optimiert auf "schnelle Webanzeige".</span>
+		</span>
+	</message>
+	<message key="xmlui.home.publication.process.step2">
+		<span class="help" id="step2"><span class="icon"> </span>Loggen Sie sich bei eDiss ein.
+			<span>Beim ersten Mal ist eine einmalige kostenlose Registrierung notwendig.</span>
+		</span>
+	</message>
+	<message key="xmlui.home.publication.process.step3">
+		<span class="help" id="step3"><span class="icon"> </span>Klicken Sie auf „Jetzt veröffentlichen“ und folgen Sie dem Formular.
+			<span>Im letzten Schritt müssen Sie unseren Vertragsbedingungen zustimmen, die Sie auch <a href="help/deposit-license">hier</a> lesen und herunterladen können.</span>
+		</span>
+	</message>
+	<message key="xmlui.home.publication.process.step4">
+		<span class="help" id="step4"><span class="icon"> </span>Liefern Sie zwei gedruckte Exemplare Ihrer Arbeit bei uns in der SUB ab.
+			<span>Die Adresse finden Sie weiter unten.<br /><strong>Mediziner</strong> müssen ein Kopie Ihrer Einladung zur mündlichen Prüfung den Druckexemplaren beilegen!</span>
+		</span>
+	</message>
+	<message key="xmlui.home.publication.process.step5">
+		<span class="help" id="step5"><span class="icon"> </span>Bezahlen Sie die Publikationsgebühr in Höhe von € 35,00.
+			<span>Sie erhalten per Post eine Rechnung mit unseren Kontodaten.</span>
+		</span>
+	</message>
+	<message key="xmlui.home.publication.process.step6">
+		<span class="help" id="step6"><span class="icon"> </span>Fertig! Ihre Publikation wird von unseren Redakteuren freigeschaltet.
+			<span>Über die Veröffentlichung Ihrer Arbeit werden Sie per E-Mail benachrichtigt.</span>
+		</span>
+	</message>
+	<message key="xmlui.home.contact.label">Sie können sich gern an uns wenden:</message>
 	<message key="xmlui.home.library.name">Zentralbibliothek</message>
-	<message key="xmlui.home.epu.place">2. Etage links im LRC, Raum 2.19</message>
+	<message key="xmlui.home.epu.place">Elektronisches Publizieren</message>
+	<message key="xmlui.home.epu.room">2. Etage links im LRC, Raum 2.19</message>
 	<message key="xmlui.home.library.address">Platz der Göttinger Sieben 1</message>
 	<message key="xmlui.home.library.zipcode">37073 Göttingen</message>
 	<message key="xmlui.home.library.tel">Tel.: 0551 / 39-5383</message>
 	<message key="xmlui.home.library.email">E-Mail: eDiss@sub.uni-goettingen.de</message>
 	<message key="xmlui.home.contact.time.label">Unsere Öffnungszeiten:</message>
 	<message key="xmlui.home.epu.times">Montag bis Freitag jeweils von 10:00 bis 12:00 Uhr.</message>
-	<message key="xmlui.home.epu.freetime">Es können auch Termine vereinbart werden, die außerhalb der Öffnungszeiten liegen.</message>
+	<message key="xmlui.home.epu.freetime">Es können auch Termine außerhalb der Öffnungszeiten vereinbart werden.</message>
 
 	<message key="xmlui.general.language.de">Deutsch</message>
 	<message key="xmlui.general.language.en">Englisch</message>
@@ -2144,18 +2168,328 @@
         <message key="xmlui.EPerson.PasswordLogin.head2"></message>
 	<message key="xmlui.EPerson.PasswordLogin.para1"></message>
         <message key="xmlui.EPerson.PasswordLogin.register_link">Sind Sie neu bei eDiss? Klicken Sie hier um sich zu registrieren!</message>
-	<message key="xmlui.navigation.help.header">Hilfe/Info</message>
+	<message key="xmlui.navigation.help.header">Hilfe &amp; Info</message>
 	<message key="xmlui.navigation.help.publication_process">Publikationsverfahren</message>
-	<message key="xmlui.navigation.help.pdf_howto">Dokument erstellen</message>
+	<message key="xmlui.navigation.help.pdf_howto">PDF Anleitung</message>
 	<message key="xmlui.navigation.help.cumulative_dissertation">Kumulative Dissertationen</message>
-	<message key="xmlui.navigation.help.general">Wissenswertes</message>
+	<message key="xmlui.navigation.help.general">Häufige Fragen</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">GOK</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">GOK Classification</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter subjects</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.button">Filter</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Please wait while the controlled vocabulary is loading.</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.error">There was an issue when loading the controlled vocabulary, please try again later.</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Der Baum wird geladen.</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.error">Leider ist beim Laden des Baumes ein Fehler aufgetreten. Versuchen Sie es bitte später!</message>
 
 
+    <!-- org.dspace.app.xmlui.artifactbrowser.AdvancedSearch.java -->
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.contributor.author_filter">Autor</message>
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.subject_filter">Schlagwörter</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.type_filter">Content Type</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.date.issued">Erscheinungsdatum</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dateIssued">Erscheinungsdatum</message>
+
+
+    <!-- Site Leve Recently Added Content -->
+    <message key="xmlui.ArtifactBrowser.SiteViewer.head_recent_submissions">Neueste Publikationen</message>
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type_filter">Typ</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publisher_filter">Verlag</message>
+
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.ispartof">Parent</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by">Group Results By</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.none">None</message>
+
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.publication_grp">Publication</message>
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.comm">Community</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.coll">Collection</message>
+
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">Series</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.contributor.author_browse">Browsing nach: Authr</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.title_browse">Browsing nach: Titel</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.subject_browse">Browsing nach: Schlagwort</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.description.abstract_browse">Browsing nach: Zusammenfassung</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_series_browse">Browsing by: Series</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Autor</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Titel</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Schlagwort</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Erscheinungsdatum</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.selected">Ausgewählte Filter</message>
+
+
+
+    <message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Anzeige {0}-{1}</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.type_author">Filter nach: Author</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Autor</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author_filter">Autor</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_subject">Filter nach: Schlagwort</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Schlagwort</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Schlagwort</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Erscheinungsdatum</message>
+
+
+    <message key="xmlui.Discovery.AbstractSearch.startswith">Anfangsbuchstaben</message>
+    <message key="xmlui.Discovery.AbstractSearch.startswith.help">Or enter first few letters:</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dc.title_sort">Titel</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dc.date.issued_dt">Issue Date</message>
+
+    <message key="xmlui.discovery.SearchFacetFilter.no-results">No filter values found</message>
+
+    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.head">Filter</message>
+    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.view-more">... mehr</message>
+
+
+    <message key="xmlui.discovery.SimpleSearch.search_label">&#160;</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter_head">&#160;</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter_add">Filter hinzufügen</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter_help">&#160;</message>
+    <message key="xmlui.Discovery.SimpleSearch.sort_head">Sortieren nach</message>
+    <message key="xmlui.Discovery.SimpleSearch.sort_apply">Anwenden</message>
+
+	<message key="xmlui.administrative.Navigation.context_print_bill">Rechnung drucken</message>
+
+	        <!-- help sites -->
+	<message key="xmlui.deposit-license.download.link"><a href="/static/License_ediss_de.pdf">PDF</a></message>
+        <message key="xmlui.help.goodtoknow.head">Häufige Fragen</message>
+        <message key="xmlui.help.PDF-Creation.head">Hinweise zum PDF-Dokument</message>
+        <message key="xmlui.help.PDF-Creation1">Um das Erstellen von Textdateien, die sich problemlos in eine PDF-Datei umwandeln lassen, zu erleichtern, berücksichtigen Sie bitte die folgenden Informationen.</message>
+        <message key="xmlui.help.PDF-Creation2">Es ist notwendig, dass Ihre Arbeit als <strong>eine PDF-Datei</strong> (nicht in Einzeldateien) vorliegt.
+Bitte erstellen Sie eine PDF-Datei <strong>mit Navigationselementen</strong>, d. h. eine Datei entweder mit Lesezeichen (Bookmarks) oder mit anklickbarem Inhaltsverzeichnis. Achten Sie bitte unbedingt auch auf die <strong>„Optimierung für schnelle Web-Anzeige“</strong> und verzichten Sie bitte auf Sicherheitseinstellungen.</message>
+        <message key="xmlui.help.PDF-Creation3">Im <a href="http://www.sub.uni-goettingen.de/standorte-raumangebote/standorte-mit-oeffnungszeiten/zentralbibliothek/2-obergeschoss/#c762">Learning Resources Center (LRC)</a> können Sie Ihre Arbeit aus gängigen Textformaten unter Anleitung der Mitarbeiter von studit in ein PDF konvertieren.
+Falls Sie keine Möglichkeit haben, die PDF-Datei den Anforderungen entsprechend zu erstellen, können wir diese Bearbeitung Ihrer Datei gegen eine Gebühr von 15,00 Euro für Sie übernehmen. Bitte informieren Sie uns entsprechend.</message>
+        <message key="xmlui.help.PDF-Creation4">Wenn Sie Ihren Lebenslauf nicht in Ihrer elektronischen Dissertation veröffentlicht haben möchten, dann entfernen Sie diese Seite bitte aus Ihrer PDF-Datei, bevor Sie sie bei uns einreichen. Allein in diesem Punkt ist ein Unterschied zu der gedruckten Version Ihrer Dissertation erlaubt.</message>
+	<message key="xmlui.help.pdf-creation.recommendation">PDF Dokument erstellen</message>
+         <message key="xmlui.help.pdf-creation.textfile">Erstellen einer Textdatei</message>
+        <message key="xmlui.help.pdf-creation.textfile1">Die folgenden Links haben wir für Sie zusammengestellt, um Ihnen das Erstellen von Textdateien, die sich einwandfrei in das PDF-Format umwandeln lassen, zu erleichtern. Wir möchten, dass Sie ohne nachträgliche Korrekturen und Mehrarbeit an Ihr Ziel gelangen.</message>
+        <message key="xmlui.help.pdf-creation.textfile2">Arbeiten Sie mit Dokumentvorlagen, die der Strukturierung von Texten dienen. Damit stehen gleichartige Überschriften, Absätze, Einzüge usw. für die Arbeit zur Verfügung und müssen nicht jedesmal neu definiert werden.</message>
+         <message key="xmlui.help.pdf-creation.textfile2.list1">An der Humboldt-Universität zu Berlin ist zu diesem Zweck eine detaillierte <a href="http://edoc.hu-berlin.de/e_autoren/dokvorlage.php">Dokumentvorlage für Microsoft Word</a> erstellt worden. Sie können diese zusammen mit Installationshinweisen sowie Beschreibungen und Übungen herunterladen.</message>
+        <message key="xmlui.help.pdf-creation.textfile2.list2">Auch die Deutsche Nationalbibliothek (DNB) bietet auf Ihren Informationsseiten für Elektronische Dissertationen zu diesem Zweck Dokumentvorlagen für Word (Open Office) an: Dissonline.de</message>
+        <message key="xmlui.help.pdf-creation.pdffile">Erstellen einer PDF-Datei</message>
+         <message key="xmlui.help.pdf-creation.pdffile1">Bitte versehen Sie das Inhaltsverzeichnis entweder mit Lesezeichen (bookmarks) oder mit einem anklickbaren Inhaltsverzeichnis. Dazu benötigen Sie eine Vollversion von Adobe Professional.
+Die Datei sollten Sie „für schnelle Webanzeige optimieren“.</message>
+         <message key="xmlui.help.pdf-creation.pdffile2">Folgende Hinweise für das Erstellen von PDF-Dateien sind sehr hilfreich:</message>
+         <message key="xmlui.help.pdf-creation.pdffile2.list1"><a href="http://www.tubit.tu-berlin.de/menue/hilfe_beratung/dokumentationen/publizieren_mit_pdf/">Publizieren mit PDF</a> (K. J. Stüken, Zentraleinrichtung Rechenzentrum, TU Berlin)</message>
+         <message key="xmlui.help.pdf-creation.pdffile2.list2"><a href="http://www.dissonline.de/info/pdf/leitfaden_pdf.pdf">Leitfaden zum Erstellen von PDF-Dateien</a> (Angebot der Deutschen Nationalbibliothek DNB)</message>
+         <message key="xmlui.help.pdf-creation.pdffile2.list3"><a href="http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/makingWWWdocs.html">Producing HTML and PDF files with LaTeX</a> (Cambridge University)</message>
+         <message key="xmlui.help.pdf-creation.scan">Einscannen und Bearbeiten von Bildern</message>
+         <message key="xmlui.help.pdf-creation.scan1">Mit einem Bildbearbeitungsprogramm können Sie die beim Scannen entstandenen Grafikdateien bearbeiten. Die den Scannern häufig beiliegenden Programme sind in der Regel ausreichend.</message>
+         <message key="xmlui.help.pdf-creation.scan2">Bei der Bildbearbeitung nehmen Sie bitte die folgenden Schritte in jedem Fall vor:</message>
+         <message key="xmlui.help.pdf-creation.scan2.list1">Beschneiden Sie das Bild exakt, um unnötige Bereiche des Bildes oder versehentlich miteingescannten Hintergrund zu entfernen.</message>
+         <message key="xmlui.help.pdf-creation.scan2.list2">Verändern sie die tatsächliche Größe des Bildes, gemessen in Pixel oder Zentimeter, bevor Sie es in Ihr Dokument einfügen. Dies reduziert die Dateigröße des Bildes und des zu erstellenden Dokuments. Achten Sie bitte darauf, dass das Größenverhältnis zur Vorlage beibehalten wird, damit die Abbildung nach der Vergrößerung oder Verkleinerung nicht verzerrt erscheint.</message>
+         <message key="xmlui.help.pdf-creation.scan2.list3">Speichern Sie das Bild im JPG-Format ab, wenn es sich um ein Foto bzw. eine Grafik handelt, die sehr viele verschiedene Farbnuancen enthält. Wählen Sie dagegen das GIF-Format, wenn es sich um eine Grafik handelt, die nur wenige Farbabstufungen beinhaltet. Mit diesen Formaten erreichen Sie eine optimale Komprimierung der Bildgröße. Nur so kann gewährleistet werden, dass auch Dokumente, die viele Grafiken enthalten, in vertretbarem Zeitaufwand im Internet betrachtet werden können.</message>
+         <message key="xmlui.help.pdf-creation.scan2.list4">Fügen Sie das so bearbeitete Bild mit Hilfe Ihrer Textverarbeitung in die Dissertation ein. In Microsoft Word funktioniert dies über den Menüpunkt „Einfügen > Grafik > Aus Datei...“.</message>
+         <message key="xmlui.help.pdf-creation.rights">Rechtliche Bestimmungen bei der Wiedergabe von Abbildungen</message>
+         <message key="xmlui.help.pdf-creation.rights1">Bei einer Online-Veröffentlichung müssen Sie die gleichen urheberrechtlichen Bestimmungen beachten wie bei einer Print-Veröffentlichung.</message>
+         <message key="xmlui.help.pdf-creation.rights2">Um unnötige Schwierigkeiten mit Verlagen zu vermeiden, die möglicherweise die Rechteinhaber solcher Abbildungen sind, sollten Sie für diese Abdruckgenehmigungen einholen.<br />Dabei gilt:</message>
+         <message key="xmlui.help.pdf-creation.rights2.list1">für die Übernahme einer Abbildung, die nur der Illustration einer Arbeit dient, muß die Abdruckgenehmigung des Verlages eingeholt werden. Das Einholen dieser Genehmigung sollte man möglichst mit einer sogenannten „Verschweigefrist“ von 3 bis 4 Wochen verbinden.</message>
+         <message key="xmlui.help.pdf-creation.rights2.list2">für die Übernahme einer Abbildung, die dann im Text diskutiert wird, ist die Verwendung durch das „Zitatrecht“ abgedeckt.</message>
+         <message key="xmlui.help.pdf-creation.rights3">Weitere Information finden Sie unter:<br />
+<a href="https://eldorado.tu-dortmund.de/handle/2003/21358">Multimediarecht in der Hochschulpraxis</a> Centrum für eCompetence (CeC) in Hochschulen NRW</message>
+         <message key="xmlui.help.pdf-creation.latex">Konvertierung von LaTeX-Dokumenten in PDF</message>
+<message key="xmlui.help.pdf-creation.latex1">Die einfachste Methode bietet der TeXDocC-Service <a href="http://www.texdocc.de/cgi-bin/texdocc/webhandler3.pl?function=proceedlogin&amp;login=gast&amp;passwd=gast&amp;continue=pruefen">TeXDocC</a>. Dazu die TeX-Datei mit allen Komponenten in ein Zip-Archiv packen und dann hochladen. Das System kompiliert die Datei und schickt eine PDF-Datei zurück. Weitere Hinweise finden Sie im Informationsbereich vom <a href="http://www.texdocc.de/">TEX Document Center</a>.</message>
+        <message key="xmlui.help.pdf-creation.latex2">Mit <a href="http://www.tug.org/applications/hyperref/manual.html">Hyperref</a> können Sie Lesezeichen im Inhaltsverzeichnis erstellen.</message>	
+
+	<!-- static pages trails -->
+        <message key="xmlui.help.pdf-creation.trail">Hilfe &amp; Info: PDF Dokument erstellen</message>
+        <message key="xmlui.help.cumulative.diss.trail">Hilfe &amp; Info: Kumulative Dissertationen</message>
+	 <message key="xmlui.help.goodtoknow.trail">Hilfe &amp; Info: Häufige Fragen</message>
+
+	<message key="xmlui.contact.trail">Kontakt</message>
+	<message key="xmlui.workfow.trail">Hilfe &amp; Info: Online Publikationsprozess</message>
+	<message key="xmlui.help.publication.fullprocess.trail">Hilfe &amp; Info: Das Publikationsverfahren</message>
+	<message key="xmlui.deposit-license.trail">Hilfe &amp; Info: Vertragsbedingungen</message>
+	<message key="xmlui.deposit.license.title">Vertragsbedingungen</message>
+
+        <message key="xmlui.help.cumulative.diss.head">Was ist bei kumulativen Dissertationen zu beachten?</message>
+        <message key="xmlui.help.cumulative.diss1">Bei einer kumulativen Dissertation (mehrere eigenständige Artikel für Zeitschriften oder Sammelbände werden zu einer Dissertation zusammengefaßt) ist stets zu beachten, dass die Rechtesituation vom Doktoranden mit den entsprechenden Verlagen zu klären ist.</message>
+        <message key="xmlui.help.cumulative.diss2">Die Verbreitung und Akzeptanz dieser Form der Dissertation ist von Fakultät zu Fakultät verschieden. Bitte lesen Sie Ihre <a href="http://www.sub.uni-goettingen.de/elektronisches-publizieren/publizieren/dissertationen-abschlussarbeiten/promotionsordnungen-der-fakultaeten/">Promotionsordnung</a> aufmerksam und informieren Sie sich ggf. bei Ihrem Prüfungsamt.</message>
+        <message key="xmlui.help.cumulative.diss.requirements">Anforderungen an Abgabe-Exemplare</message>
+        <message key="xmlui.help.cumulative.diss.requirements1">Bei der SUB Göttingen müssen zwei gedruckte Exemplare und eine PDF-Datei abgeliefert werden.</message>
+         <message key="xmlui.help.cumulative.diss.requirements1.list"><b>Beide Versionen sollen enthalten</b></message>
+         <message key="xmlui.help.cumulative.diss.requirements1.list1">Titelblatt,</message>
+        <message key="xmlui.help.cumulative.diss.requirements1.list2">Inhaltsverzeichnis,</message>
+        <message key="xmlui.help.cumulative.diss.requirements1.list3">Einleitung,</message>
+        <message key="xmlui.help.cumulative.diss.requirements1.list4">übergreifende Diskussion mit Zusammenfassung aller Ergebnisse (Synopsis).</message>
+        <message key="xmlui.help.cumulative.diss.requirements2"><b>Inden gedruckten Exemplaren</b></message>
+        <message key="xmlui.help.cumulative.diss.requirements3">kommen die publizierten, eingereichten oder andere zugehörige Artikel hinzu. Die bereits publizierten Artikel sollen bitte als Abdruck des Verlags-PDF eingebunden werden. Wichtig ist bei jedem Artikel die genaue Quellenangabe.</message>
+        <message key="xmlui.help.cumulative.diss.requirements4">Dazu kommt eine Übersicht über die enthaltenen, evtl. bereits publizierten Beiträge.<br /><br /></message>
+        <message key="xmlui.help.cumulative.diss.requirements5"><b>Im PDF Dokument</b></message>
+        <message key="xmlui.help.cumulative.diss.requirements6">fügen Sie bitte zu allen bereits veröffentlichten Artikeln dauerhafte und eindeutige URLs in Ihr Dokument ein. Das kann z. B. der Digital Object Identifier (DOI) Ihres Artikels sein.</message>
+        <message key="xmlui.help.cumulative.diss.requirements7">Alle anderen Formalitäten zur Abgabe der <a href="http://www.sub.uni-goettingen.de/elektronisches-publizieren/publizieren/dissertationen-abschlussarbeiten/">elektronischen Dissertation</a> bei der SUB Göttingen sind identisch zu den monographischen elektronischen Dissertationen.</message>
+        <message key="xmlui.help.cumulative.diss.requirements8">Eine Verzögerung der Publikation Ihrer elektronischen Dissertation auf eDiss ist nicht mehr möglich. Damit würde gegen die Promotionsordnung verstoßen. Nur in besonderen Ausnahmefällen (patentrechtliches Verfahren anhängig) ist auf Sonderantrag eine Verzögerung der Publikation möglich.</message>
+
+
+         <message key="xmlui.help.benefits">Welche Vorteile bringt mir die elekronische Veröffentlichung meiner Dissertation?</message>
+        <message key="xmlui.help.benefits.list1">Ihre Abschlußarbeit steht rasch online zur Verfügung.</message>
+        <message key="xmlui.help.benefits.list2">Jede Dissertation oder Abschlussarbeit wird verschlüsselt, um die Authentizität der Arbeit sicherzustellen und prüfen zu können.</message>
+        <message key="xmlui.help.benefits.list3">Ihre Dissertation bekommt einen persistenten Identifier (einen sog. Handle), so dass Ihre Abschlussarbeit dauerhaft adressiert und zitiert werden kann.</message>
+        <message key="xmlui.help.benefits.list4">Wir nehmen Ihre Publikation in unsere elektronischen Zugangssysteme auf, d. h. sie wird über der Homepage der SUB und den Göttinger Universitätskatalog (GUK) schnell gefunden.</message>
+        <message key="xmlui.help.benefits.list5">Im Rahmen der technischen Möglichkeiten übernehmen wir eine dauerhafte Archivierung.</message>
+
+        <message key="xmlui.help.costs">Kosten</message>
+        <message key="xmlui.help.costs1">Die Integration Ihrer Dissertationsschrift oder Abschlussarbeit auf unserem Dokumentenserver kostet einmalig 25,00 Euro. Ihre Arbeit benötigt ein maschinenlesbares Inhaltsverzeichnis, über das die Leser bequem navigieren können (PDF-Lesezeichen). Wenn Sie dies nicht selbst erstellen können, bieten wir Ihnen diesen Service für 15,00 Euro an.</message>
+
+        <message key="xmlui.navigation.help.contract">Vertragsbedingunen</message>
+        <message key="xmlui.help.contract1">Wird im Online-Publikationsprozess im letzten Schritt unterschrieben.</message>
+        <message key="xmlui.help.contract2">PDF zum Herunterladen</message>
+
+        <message key="xmlui.help.dissrules">Promotionsordnungen</message>
+        <message key="xmlui.help.dissrules1">Link zu SUB</message>
+
+	<message key="xmlui.contact.head">Sie können uns auf verschiedenem Wege erreichen</message>
+	<message key="xmlui.home.contact.post">Per Post:</message>
+	<message key="xmlui.home.contact.life">Persönlich:</message>
+	<message key="xmlui.contact.special.head">Haben Sie besondere Wünsche bezüglich der Veröffentlichung Ihrer Dissertation?</message>
+	<message key="xmlui.contact.special">Sie haben die Möglichkeit, im Laufe des <a href="http://goedoc-dev.sub.uni-goettingen.de/ediss/help/fullpublication#special">Online Publikationsprozesses</a> unseren Redaktueren eine Nachricht mitzugeben. So können wir besondere Wünsche Ihrer Publikation direkt zuordnen.</message>
+	<message key="xmlui.contact.feedback">Haben Sie Fragen oder Anregungen?</message>
+	<message key="xmlui.contact.feedbackform">Benutzen Sie unseren <a href="feedback">Online Kontaktformular</a>.</message>
+	<message key="xmlui.contact.address">Telefonisch oder per E-mail</message>
+	<message key="xmlui.contact.degenhardt">Eileen Degenhardt-Witte</message>
+	<message key="xmlui.contact.degenhardt.phone">Tel: +49 551 39-5383</message>
+	<message key="xmlui.contact.degenhardt.fax">Fax: +49 551 39-22457</message>
+	<message key="xmlui.contact.email">E-Mail: <a mailto="ediss@sub.uni-goettingen.de">ediss@sub.uni-goettingen.de</a></message>
+	<message key="xmlui.contact.herre">Norbert Herre</message>
+	<message key="xmlui.contact.herre.phone">Tel: +49 551 39-14671 oder +49 551 39-5383</message>
+	<message key="xmlui.contact.herre.fax">Fax: +49 551 39-22457</message>
+	<message key="xmlui.contact.life">Persönlich</message>
+	<message key="xmlui.contact.technik">Technische Probleme</message>
+	<message key="xmlui.contact.admin">Mit technischen Problemen kontaktieren Sie bitte unseren <a mailto="mmuehlh@sub.uni-goettingen.de">Administrator</a> oder verwenden Sie unseren <a href="feedback">Online Kontakformular</a>!</message>
+	 <message key="xmlui.help.workflow.head">Online Publikationsprozess</message>
+
+	 <message key="xmlui.help.workflow.steps.intro">Um den Publikationsprozess zu starten, müssen Sie sich auf eDiss einloggen. Beim ersten Mal ist eine einmalige Registrierung erforderlich! Zwei Wege: <br />1. Login, dann "Jetzt veröffentlichen". In diesem Fall ist vor dem Dokument hochladen die Auswahl der Sammlung erforderlich.<br />2. Login, zur Sammlung navigieren und "Hier veröffentlichen".<br /> </message>
+	
+	<message key="xmlui.help.workflow.steps.head">Der Prozess besteht aus den folgenden Schritten</message>
+	<message key="xmlui.help.workflow.steps.list1">1. Dokument hochladen</message>
+	<message key="xmlui.help.workflow.steps.list2">2. Dokument beschreiben</message>
+	<message key="xmlui.help.workflow.steps.list3">3. Eingaben überprüfen</message>
+	<message key="xmlui.help.workflow.steps.list4">4. Spezielle Nutzungslizenz (CC-Lizenz) auswählen (optional)</message>
+	<message key="xmlui.help.workflow.steps.list5">5. Dem eDiss-Vertrag zustimmen</message>
+	<message key="xmlui.help.workflow.steps.text1">Solange der Publikationsprozess nicht abgeschlossen ist, können Sie jeder Zeit zu einem früheren Schritt zurückkehren und sowohl die eingegeben Daten ändern als auch Ihre Dokumente austauschen. Nach Abschluss des Prozesses sind <b>keine Änderungen</b> mehr an Ihrer Publikation möglich! <br />In Ausnahmefällen können Sie uns <a href="contact">kontaktieren</a> und begründete Änderungswünsche mitteilen.</message>
+	<message key="xmlui.help.workflow.step1.text1.1">Zum Hochladen Ihres Dokumentes wird Ihnen ein Formular angezeigt. Hier können Sie über das Button "Durchsuchen" Ihr Dokument auf Ihrem Rechner aussuchen und mit einem Klick auf "Datei hochladen und/oder noch eine hinzufügen" auf eDiss hochladen. <br /><br /> Sie können mehrere Dokumente (in beliebigen Formaten) nacheinander hochladen. Dies ist z.B. sinnvoll, wenn Sie Ihre Dissertation durch zusätzliche Graphiken, Tabellen, Umfrageergebnisse, Labordaten etc. ergänzen wollen, auf die Ihre Arbeit basiert. Auch die Veröffentlichungin Ihrer Arbeit in verschiedenen Formaten, z.B. zusätzlich für eBookReader wäre denkbar. In diesen Fällen geben Sie bitte zu den jeweiligen Dateien eine kurze Beschreibung im entsprechenden Formularfeld mit.</message>
+	<message key="xmlui.help.workflow.step1.text1.2">Als <strong>erstes</strong> muss immer Ihre Diplomarbeit als PDF-Datei hochgeladen werden. Erst dann akzeptiert eDiss weitere Dateien in anderen Formaten! </message>
+	<message key="xmlui.help.workflow.step1.text2">Beim Hochladen der ersten PDF-Datei wird automatisch geprüft, ob sie unseren Vorschriften genügt. Dieser Prozess kann, je nach Dateigröße einige Zeit in Anspruch nehmen. Bitte unterbrechen Sie diesen Prozess nicht! <br /><br />Anschliessend wird das Ergenis der Prüfung angezeigt. Falls eine der Anforderungen nicht erfüllt ist, wird Ihr Dokument <b>abgelehnt</b>. Bitte untebrechen Sie den Publikationsprozess in diesem Fall mit einem Klick auf "Speichern und später fortsetzen", korrigieren Sie Ihr PDF Dokument und nehmen Sie dann wieder den Publikationsprozess auf. <br />Ist Ihr PDF Dokument angenommen, können Sie mit dem hochladen weiterer Dokumente ebenso fortfahren oder mit Klick auf "Weiter" zum nächsten Schritt weitergehen.<br /><br />Beim Hochladen der ersten PDF Datei werden zusätzlich die Metadaten Titel, Autor und Schlagwörter angezeigt, die die Datei enthält. Falls Ihr Dokument später bei einer Google-Suche gefunden wird, werden von Google diese Daten ausgelesen und beim Treffer angzeigt. Wollen Sie die Daten ändern, löschen Sie bitte ihr hochgeladenes Dokument, indem Sie das Häckchen neben dem Dateinamen setzen und auf "Ausgewählte entfernen" klicken. Unterbrechen Sie zunächst den Prozess und speichern Sie die Daten.  Dann korrigieren Sie die Metadaten in Ihrem Dokument, nehmen Sie den online Publikationsprozess wieder auf und laden Sie die korrigierte Datei noch einmal hoch.<br />Da eDiss diese Daten nicht nutzt, sind Sie bei der Entscheidung ganz frei, ob sie hier Korrekturen vornehmen. </message>
+	<message key="xmlui.help.workflow.step2.text1.1">In diesem Schritt werden in einem Formular zunächst Ihre persönlichen Daten (Geburtsdatum, Adresse) abgefragt. Das Geburtdatum ist zur Identifikation Ihrer Person notwendig. Die angegebene Adresse verwenden wir als Rechnungsadresse für die Publikationsgebühr. </message>
+	<message key="xmlui.help.workflow.step2.text1.2">Die persönlichen Angaben, zusammen mit Ihrer E-Mail-Adresse werden <strong>vertraulich</strong> behandelt und für die Besucher des eDiss-Servers nicht sichtbar!</message>
+	<message key="xmlui.help.workflow.step2.text2">Weitere Felder des Formulars dienen dazu, Ihre Arbeit zu beschreiben. Geben Sie hier bitte die erforderlichen Informationen (Originaltitel, Untertitel, Zusammenfassung etc.) an. Titel, Schlüsselwörter und Zusammenfassung müssen auf jedem Fall englisch vorhanden sein. Falls Ihre Arbeit in einer anderen Sprache verfasst ist, werden Sie aufgefordert englische Übersetzungen zu diesen Angaben zu liefern.<br /><br /><a name="special">&#160;</a><br />Das letzte Formualfeld, "Nachricht für die Redakteure" ist optional und gibt Ihnen die Möglichkeit, eine Nachricht für die Redakteure zu hinterlassen. Beispielsweise können Sie hier einen <a href="#embargo">Sonderantrag zur Verzögerung</a> der Veröffentlichung Ihrer Publikation stellen. Der Inhalt dieses Feldes wird von unseren Redaktueren ausgewertet und nicht öffentlich sichtbar gemacht.
+<br /><br /> Pflichtfelder sind im Formular mit "*" gekennzeichnet. Sie können erst dann zum nächsten Schritt übergehen, wenn alle Pflichtfelder ausgefüllt sind.</message>
+	<message key="xmlui.help.workflow.step3.text">Hier werden Ihnen alle im vorherigen Schritt erfassten Angaben mit der Möglichkeit zur Korrektur angezeigt. Bitte gehen Sie die Daten sorgfältig durch und korrigieren sie, falls nötig!</message>
+ 	<message key="xmlui.help.workflow.step4.text">Um Ihre Dissertation auf eDiss zu veröffentlichen, müssen Sie im Schritt 5 einen Vertrag mit uns abschliessen. In diesem Vertrag erklären Sie sich unter anderem damit einverstanden, dass Nutzer von eDiss Ihre Publikation zum "privaten und sontigen Gebrauch herunterladen, speichern oder in kleinen Anzahl drucken" dürfen. (Den vollständigen Vertrag können Sie im Hilfe &amp; Info Menü einsehen.) <br /><br />Möchten Sie eDiss-Nutzern weitergehende Rechte (z.B. kommerzielle Nutzung, Veränderung des Dokumentes etc.) gestatten, so können Sie eine entsprechende CC-Lizenz (Creative Commons Lizenz) zu Ihrem Dokument einbinden. Wählen Sie dazu im Aufklappmenü den Punkt "CC-Lizenz" aus. Es erscheint ein Formular, indem Sie genau auswählen können, welche spezielle Rechte Sie auf Ihr Dokument gewähren. Mit einem Klick auf "weiter" wird dann das entsprechende CC-Lizenz zu Ihrer Publikation eingebunden und dem Nutzer angezeigt. <br /><br />Wünschen Sie keine zusätzliche Lizenz, gehen Sie einfach zum nächsten Schritt weiter ohne etwas auszuwählen. <br /><br/>  <a href="http://de.creativecommons.org/was-ist-cc/">Was ist Creative Commons Lizenz?</a></message>
+	<message key="xmlui.help.workflow.step5.text">Um Ihre Dissertation auf eDiss zu veröffentlichen, müssen Sie einen Vertrag mit uns abschliessen, indem die Rechte des Serverbetreibers und die Zugriffsrechte unserer Nutzer auf Ihre Publikation genau festgelegt sind. Der Vertrag gilt als abgeschossen, wenn Sie durch Einhacken des Checkboxes unter dem Vertragstext Ihre Zustimmung zum Vertrag geben und auf "Veröffentlichung ablschliessen" klicken. <br /><br /><a href="contract">Vertrag als PDF Dokument herunterladen.</a>  </message>
+	 <message key="xmlui.help.workflow.finished.head">Was danach?</message>
+	 <message key="xmlui.help.workflow.finished.text">Wir machen Sie an dieser Stelle noch einmal darauf aufmerksam, dass nach Abschluss des Online Publikationsporzesses <b>keine Änderungen</b> mehr an Ihrer Publikation möglich sind.</message>
+	<message key="xmlui.help.workflow.break.head">Publikationsprozess unterbrechen</message>
+	<message key="xmlui.help.workflow.break.text">Sie können den Online Publiaktionsprozess über den Knopf "Speichern und später fortsetzen" jeder Zeit abbrechen. Sie haben dann die Möglichkeit, Ihre bisherige Angaben zu speichern, um später damit fortzufahren oder die angefangene Publikation endgültig zu löschen.</message>
+	<message key="xmlui.help.workflow.resume.head">Abgebrochene Publikationen wieder aufnehmen</message>
+	<message key="xmlui.help.workflow.resume.text1">Als angemeldeter Nutzer steht Ihnen im linken Menü unter "Mein Benutzerkonto" der Punkt "Veröffentlichungen" zur Verfügung. Hier werden alle Ihre Veröffentlichungen, die schon abgeschlossen sind, abgebrochen wurden oder für die Redaktion zum Freischalten bereit stehen, aufgelistet. Veröffentlichungen, die von Ihnen abgebrochen bzw. von der Redaktion abgelehnt wurden, können Sie mit einem Klick auf den Titel bearbeiten. Sie landen im normalen Online Publikationsprozess und können sich über die, mit den einzelnen Schritten beschriftete Navigationsleiste im Prozess vor- und rückwärts bewegen. </message>
+	<message key="xmlui.help.workflow.resume.text1">Zum Navigieren innerhalb des Online Publikationsprozesses benutzen Sie bitte die, mit den einzelnen Schritten beschriftete Leiste unmittelbar über den Formularen. Bei der Nutzung des browsereigenen vor- und rückwärts-Knopfes können wir keinen fehlerfreien Ablauf garantieren. 
+</message>
+	<message key="xmlui.help.toc">Inhaltsverzeichnis</message>
+	<message key="xmlui.help.publication.process.head">Das Publikationsverfahren auf eDiss</message>
+<message key="xmlui.help.publication.process.unpatient.head">Das Publikationsverfahren für Ungeduldige</message>
+<message key="xmlui.help.publication.process.unpatient.text1">1. Erstellen Sie Ihre Dissertation als <b>eine</b> PDF Datei (nicht als mehrere Einzeldateien), die die folgenden Kriterien erfüllt.</message>
+	
+	<message key="xmlui.help.publication.process.unpatient.list">Die Datei</message>
+<message key="xmlui.help.publication.process.unpatient.list1">ist mit Navigationselementen, d.h. mit Lesezeichen (Bookmarks) oder mit anklickbarem Inhaltsverzeichnis versehen</message>
+<message key="xmlui.help.publication.process.unpatient.list2">ist auf "schnelle Webanzeige" optimiert</message>
+<message key="xmlui.help.publication.process.unpatient.list3">ist durch keine Sicherheitseinstellungen geschützt.</message>
+<message key="xmlui.help.publication.process.unpatient.text2">2. Loggen Sie sich bei eDiss ein. <br />Beim ersten Mal ist eine einmalige Registrierung notwendig.</message>
+<message key="xmlui.help.publication.process.unpatient.text3">3. Klicken Sie auf "Jetzt veröffentlichen" in der Linken Menüleiste oben. <br />Sie werden hier Schritt für Schritt durch einen fünfstufigen Online Publikationsprozess geführt. Im letzten Schritt müssen Sie unseren Vertragsbedingungen zustimmen, die Sie auch <a href="help/deposit-license">hier</a> lesen und herunterladen können.</message>
+<message key="xmlui.help.publication.process.unpatient.text4">4. Liefern Sie uns zwei gedruckte Exemplare Ihrer Dissertation (mit eingebundenem Lebenslauf).<br /> <b>Mediziner</b> müssen ein Kopie Ihrer Einladung zur mündlichen Prüfung den Druckexemplaren beilegen!</message>
+<message key="xmlui.help.publication.process.unpatient.text4.tail">Adresse:</message>
+<message key="xmlui.help.publication.process.unpatient.text5">5. Bezahlen Sie die 35 € Publikationsgebühr.<br />Sie erhalten per Post eine Rechnung mit unseren Kontodaten.</message>
+<message key="xmlui.help.publication.process.unpatient.text6">6. Ihre Arbeit wird von unserem Team freigeschaltet und ist veröffentlicht.<br />Darüber werden Sie per E-Mail benachrichtigt.</message>
+<message key="xmlui.help.publication.fullprocess.text1">Erstellen Sie Ihre Dissertation als PDF Datei</message>
+<message key="xmlui.help.publication.fullprocess.head">Das Publikationsverfahren: detaillierte Beschreibung</message>
+<message key="xmlui.help.publication.fullprocess.text1.intro">Die Dissertation muss als <b>eine</b> PDF Datei (nicht als mehrere Einzeldateien) vorliegen, die die folgenden Kriterien erfüllt.</message>
+<message key="xmlui.help.publication.process.unpatient.list1">ist mit Navigationselementen, d.h. mit Lesezeiche (Bookmarks) oder mit anklickbarem Inhaltsverzeichnis versehen</message>
+<message key="xmlui.help.publication.process.unpatient.list2">ist auf "schnelle Webanzeige" optimiert</message>
+<message key="xmlui.help.publication.process.unpatient.list3">ist durch keine Sicherheitseinstellungen geschützt.</message>
+<message key="xmlui.help.publication.fullprocess.text2.list">Der Verzicht auf Sicherheitseinschränkungen ist auf folgenden Gründen erforderlich</message>
+<message key="xmlui.help.publication.fullprocess.text2.list1">Als Open Access Publikationsserver garantiert eDiss seinen Nutzern, dass Sie die vorgefundene Dokumente lesen und in kleiner Anzahl für private Zwecke drucken können. Die Verschlüsselung oder ein Druckvebot des Dokumentes würde dies verhindern. </message>
+<message key="xmlui.help.publication.fullprocess.text2.list2">Damit Ihre Dissertation in unsere Volltextsuche eingebunden werden kann, müssen wir den Text extrahieren können.</message>
+<message key="xmlui.help.publication.fullprocess.text2.list3">Im Zuge der Archivierung kann es notwendig sein, Ihr Dokument in andere Formate zu konvertieren.</message>
+<message key="xmlui.help.publication.fullprocess.text3"><a href="pdf-howto">Anleitung / Hilfe zur Erstellung von PDF Dateien.</a><br /><br />
+Wenn Sie das navigierbare Inhaltsverzeichnis nicht selbst erstellen können, bieten wir Ihnen diesen Service für 15,00 Euro an. In diesem Fall schicken Sie uns bitte Ihre Arbeit als <a href="mailto:ediss@sub.uni-goettingen.de">E-Mail-Attachment</a>. Sie erhalten dann das fertige Dokument in Kürze ebenfalls per E-Mail. Die Servicekosten werden zusammen mit Veröffentlichungsgebühr abgerechnet.</message>
+<message key="xmlui.help.publication.fullprocess.text2.head">Registrieren bzw. loggen Sie sich bei eDiss ein</message>
+<message key="xmlui.help.publication.fullprocess.text3.tail">Wenn Sie das navigierbare Inhaltsverzeichnis nicht selbst erstellen können, bieten wir Ihnen diesen Service für 15,00 Euro an. In diesem Fall schicken Sie uns Ihre Arbeit als <a href="mailto:ediss@sub.uni-goettingen.de">E-Mail-Attachment</a>. Sie erhalten dann das fertige Dokument in Kürze ebenfalls per E-Mail.</message>
+<message key="xmlui.help.publication.fullprocess.text4">Für die erstmalige <b>Registrierung</b> klicken Sie bitte auf "Registrieren" im rechten oberen Kästchen im Kopf der Seite! <br />
+Es erscheint ein Formular, in dem Ihre E-Mail Adresse abgefragt wird. Nach Ausfüllen und Wegschicken des Formulars bekommen Sie eine Nachricht mit einem Link zu Ihrem zukünftigen Benutzerprofil. Geben Sie bitte dort Ihren Namen und Telefonnummer an. Durch die Sprachauswahl können Sie bestimmen, in welcher Sprache Sie Benachrichtigungen von uns erhalten wollen.<br /><br />
+Diese Prozedur stellt sicher, dass keine fremde Person ohne Ihr Wissen Sie auf eDiss registrieren kann. Unmittelbar nach der Registrierung sind Sie auf eDiss eingeloggt.</message>
+<message key="xmlui.help.publication.fullprocess.text5">Um sich bei eDiss <b>einzuloggen</b>, klicken Sie einfach auf "Einloggen" im rechten oberen Kästchen im Kopf der Seite und geben Sie Ihre E-Mail Adresse im erscheinenden Formular ein. Nach Wegschicken des Formulars sind Sie eingeloggt.
+<br /><br />Als authentifizierte Nutzer haben Sie die Möglichekit, auf eDIss zu publizieren, abgebrochene Publikationen wieder aufnehmen oder über "Benutzerdaten" (im linken Menü unter "Mein Benutzerkonto") automatische Benachrichtigung über Neuerscheinungen in einzelnen Sammlungen abonnieren.
+<br /><br />Aus Sicherheitgründen empfehlen wir Ihnen zum Schluss sich explizit auszuloggen (nicht nur den Browser zu schliessen). Gehen Sie dazu mit der Maus auf Ihren Namen im oberen Kästchen rechts im Kopf der Seite. Dort klappt ein Menü auf, in dem der Punkt "ausloggen" angeboten wird.</message>
+<message key="xmlui.help.publication.fullprocess.text6.head">Starten Sie den online Publikationsprozess</message>
+<message key="xmlui.help.publication.fullprocess.text6.list">Den Online Publikationsprozess können Sie auf zwei Wege starten</message>
+<message key="xmlui.help.publication.fullprocess.text6.list1">Sie klicken auf "Jetzt publizieren" im Linken Hauptmenü oben. In diesem Falle müssen Sie vor dem 1. Schritt (Dokument hochladen) zuncähst die Sammlung auswählen, in der Sie Ihre Arbeit veröffentlichen wollen. Dazu werden Ihnen in einem Aufklappmenü alle Sammlungen aufgelistet.</message>	
+<message key="xmlui.help.publication.fullprocess.text6.list2">Sie navigieren zuerst über den Punkt "Bereiche &amp; Sammlungen" im Linken Hauptmenü zur Sammlung, in der Sie publizieren wollen. Dann klicken Sie auf den Button "Hier veröffentlichen" im linken Hauptmenü oben. Sie landen dann beim 1. Schritt "Dokument hochladen".</message>
+<message key="xmlui.help.publication.fullprocess.text6.tail">Die Sammlungen entsprechen mit zwei Ausnahmen den Fakultäten der Universität Göttingen. Die Philosophische und die Sozialwissenschaftliche Fakultäten sind so umfangreich und heterogen, dass wir Sie in weitere Sammlungen untergliedert haben. Falls Sie den Online Publikationsprozess auf dem 1. Weg starten und Sie in einem dieser Bereiche promovieren, schauen Sie bitte zuerst diese Sammlungen an, um vorweg festzulegen, in welche Ihre Arbeit gehört! </message> 
+<message key="xmlui.help.publication.fullprocess.text7.head">Liefern Sie uns zwei gedruckte Exemplare Ihrer Dissertation</message>
+<message key="xmlui.help.publication.fullprocess.text7.1">Die gedruckten Exemplare Ihrer Arbeit müssen mit Ihrer elektrischen Dissertation identisch sein. In die gedruckte Version muss hinten Ihr Lebenslauf eingebunden sein.</message>
+<message key="xmlui.help.publication.fullprocess.text7.2">Sie können Ihren Lebenslauf in Ihrer elektronischen Dissertation weglassen. Allein in diesem Punkt ist ein Unterschied zu der gedruckten Version Ihrer Dissertation erlaubt. </message>
+<message key="xmlui.help.publication.fullprocess.text7.3">Falls Sie Mediziner sind, legen Sie uns bitte eine Kopie Ihrer Einladung zur Mündlichen Prüfung den gedruckten Exemplaren bei!
+<br /><br />
+Die Druckexemplare können Sie uns per Post zuschicken oder in den Öffnungszeiten persönlich bei uns vorbeibringen.
+</message>
+<message key="xmlui.help.publication.fullprocess.text7.tail">Sobald die gedruckte Versionen Ihrer Arbeit bei uns angekommen sind, prüft die Redaktion Ihre elektronische Publikation und (sofern die Publikationsgebühr bezahlt ist) schalten wir sie frei. Ab dem Moment wird Ihre Dissertation öffentlich sichtbar und Sie werden über die Freischaltung in einer E-Mail informiert.
+<br /><br />In einzelnen Fällen (z.B. das PDF Dokument enhält ein fehlerhaftes Inhaltsverzeichnis oder die Rechnung konnte wegen falsche Angaben nicht verschickt werden) kann es vorkommen, dass die Redaktion eine Publikation ablehnt. In diesem Fall erhalten Sie eine E-Mail mit der Begründung der Ablehnung.</message>
+
+<message key="xmlui.help.publication.fullprocess.text8.head">Bezahlen Sie die 35 € Publikationsgebühr.</message>
+<message key="xmlui.help.publication.fullprocess.text8">Unmittelbar nach Abschluss des online Publikationsprozesses erhalten Sie per Port eine Rechnung mit unseren Kontodaten zur Publikationsgebühr. Wir empfehlen Ihnen die 25 € möglichst bald zu überweisen, damit wir bei Ankunft der Druckexemplaren Ihre Arbeit gleich öffentlich machen können!<br /><br />
+</message>
+<message key="xmlui.help.publication.fullprocess.text9.head">Meine Publikation wurde abgelehnt</message>
+<message key="xmlui.help.publication.fullprocess.text9.1">Dies kann an zwei Stellen passieren</message>
+<message key="xmlui.help.publication.fullprocess.text9.list1">Im Online Publikationsporzess beim Schritt "Dokument hochladen" wird Ihr PDF Dokument nicht hochgeladen.</message>
+<message key="xmlui.help.publication.fullprocess.text9.list2">Nach Abschluss des Online Publikationsprozesses lehnt die Redaktion die Freischaltung Ihrer Publikation ab. In diesem Fall bekommen Sie eine Nachricht von der Redaktion, in der der genaue Grund für die Ablehnung mitgeteilt wird. </message>
+<message key="xmlui.help.publication.fullprocess.text9.2">Sind Korrekturen an Ihrem PDF Dokument erwünscht, erledigen Sie diese zuerst und nehmen Sie dann den Online Publikationsprozess wieder auf. Wurde die Publikation auf Grund von Beschreibungsdaten abgelehnt, so können Sie gleich den Publikationsprozess wieder aufnehmen und die Angaben korrigieren. Die Vorgehensweise zum Wiederaufnehmen des Online Publikationsprozesses ist dieselbe, wie bei den abgebrochenen Publikationen. Sehen Sie dazu <a href="#resume">den entsprechnden Abschnitt!</a> </message>
+<message key="xmlui.help.publication.fullprocess.text9.3">Ihr(e) Dokument(e) und alle früheren Eingaben sind gespeichert, so dass Sie keine Daten wiederholt eingeben müssen. Es ist jedoch notwendig, nach den Korrekturen im letzten Schritt dem eDiss-Vertrag wieder zuzustimmen. Dann steht Ihre Publikation uneren Redakteuren wieder zum Freischalten bereit.</message>
+
+	<message key="xmlui.help.publication.fullprocess.before.head">Voraussetzungen zur Publikation</message>
+	<message key="xmlui.help.publication.fullprocess.before.list">Bevor Sie mit der Veröffentlichung Ihrer Arbeit anfangen, vergewissern Sie sich, dass die folgenden Bedingung erfüllt sind:</message>
+	<message key="xmlui.help.publication.fullprocess.before.list2">Zwei gedruckte Exemplare Ihrer Arbeit sind vorhanden.</message>
+	<message key="xmlui.help.publication.fullprocess.before.list1">Sie haben die einschlägige Promotionsordnung zur Kenntnis genommen.</message>
+	<message key="xmlui.help.publication.fullprocess.before.list3">Nur für Mediziner: Ihre Einladung zur mündlichen Prüfung liegt vor.</message>
+	
+	 <message key="xmlui.help.pdfhowto.word2010.head">PDF-Dateien unter Word 2010 erstellen</message>
+         <message key="xmlui.help.pdfhowto.word2010.list">Zunächst müssen die Überschriften in dem Word Dokument gekennzeichnet werden.</message>
+	 <message key="xmlui.help.pdfhowto.word2010.list1">Registerkarte "Starte" anklicken</message>
+	 <message key="xmlui.help.pdfhowto.word2010.list1">Den Curser hinter die jeweilige Überschriftzeile setzen und im Menü im Feld "FORMATFORLAGE" wahlweise "Überschrift 1" oder "Überschrift 2" oder "Überschrift 3" auswählen.</message>
+	<message key="xmlui.help.pdfhowto.word2010.text2"><strong>Zum Abspeichern</strong> der Datei rufen Sie bitte unter der Registerkarte "Datei" den Punkt "Speichern unter" auf.<br />Geben Sie dort den Dateinamen an, wenn dies noch nicht geschehen ist.</message>
+	<message key="xmlui.help.pdfhowto.word2010.text2.tail2">Als "Dateityp" wählen Sie aus dem Aufkalppmenü "PDF". Klicken Sie noch nicht auf "Speichern"</message>
+	<message key="xmlui.help.pdfhowto.word2010.text3">Klicken Sie nun auf den Knopf "Optionen" und wählen Sie bitte die Einstellungen genau so wie auf dem Bild zu sehen ist.</message>
+	<message key="xmlui.help.pdfhowto.word2010.text3.screenshot"><image class="screenshot" src="../themes/Mirage/images/word10.jpg"/></message>
+	<message key="xmlui.help.pdfhowto.word2010.text4">Anschliessend "OK" klicken und "Speichern". Fertig!</message>
+	 
+	<message key="xmlui.deposit-license.head">Vertragsbedingungen für die Veröffentlichung auf dem Dokumentenserver der
+Georg-August-Universität Göttingen</message>
+	<message key="xmlui.deposit-license.intro">Hiermit gestatte ich der Georg-August-Universität, vertreten durch die Niedersächsische Staats- und Universitätsbibliothek Göttingen (SUB), meine Arbeit in elektronischer Form zu den unten genannten Vertragsbedingungen zu publizieren und zur freien Nutzung im Internet anzubieten.</message>
+	<message key="xmlui.deposit-license.post1"><strong>Der Veröffentlichende versichert, dass die gelieferte Datei und die ausgedruckten Exemplare der vom Fachbereich genehmigten Druckfassung entsprechen und die zuständige Einrichtung der Veröffentlichung der Dokumente zugestimmt hat.</strong></message>
+	<message key="xmlui.deposit-license.post2"><strong>Enthält die zur Publikation eingereichte elektronische Version (PDF) der Qualifikationsarbeit  einen Lebenslauf, ist der Veröffentlichende damit einverstanden, dass auch dieser mit der Arbeit im Netz einsehbar ist.</strong></message>	
+	<message key="xmlui.deposit-license.med.head"><hr /><strong>Doktoranden der Medizin</strong></message>
+	<message key="xmlui.deposit-license.med1">Ich habe die Einladung zur mündlichen Prüfung erhalten. Ich sichere hiermit verbindlich zu, daß ich Terminänderungen oder Korrekturauflagen seitens der Prüfer umgehend an  die Mitarbeiter von EDiss bei der SUB melden werde.</message>
+	<message key="xmlui.deposit-license.med2">Sofern ich meine Staatsexamenprüfung noch nicht absolviert habe, verpflichte ich mich die Mitarbeiter von eDiss umgehend zu informieren, sobald ich die Prüfung abgelegt und bestanden habe.</message>
+	<message key="xmlui.deposit-license1.head"><em>1. Online-Bereitstellung</em></message>
+	<message key="xmlui.deposit-license1">Der Universität Göttingen wird das nicht-ausschließliche (einfache) Recht zur freien elektronischen Publikation im Internet und zur Archivierung auf ihrem Dokumentenserver eingeräumt. Im Rahmen der einfachen Nutzung ist es der Universität erlaubt, durch die SUB ergänzend eine kostendeckende Print-on-Demand Möglichkeit anzubieten, soweit diese nicht mit den Verwertungsrechten Dritter am Werk des Autors kollidiert. Alle weiteren Rechte für die Verwertung der Arbeit verbleiben beim Autor. Mit der Anmeldung ist kein rechtlich verbindlicher Anspruch auf die Online-Bereitstellung eines Dokumentes verbunden. <br />
+	Im Rahmen der öffentlichen Bereitstellung sind Nutzer berechtigt, Dokumente zum privaten und sonstigen eigenen Gebrauch herunterzuladen, zu speichern oder in kleiner Anzahl zu drucken (<a href="http://www.bundesrecht.juris.de/urhg">§ 53 UrhG</a>).<br />
+	Gleichzeitig gestattet der Veröffentlichende die Lizenzierung seines Werks unter einer <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/de/">Creative-Commons-Lizenz 3.0</a> (Namensnennung - Keine kommerzielle Nutzung - Keine Bearbeitung), die den Nutzern erlaubt, das Werk in unveränderter Form zu vervielfältigen, zu verbreiten und öffentlich zugänglich zu machen, insofern er als Autor genannt wird. </message>
+	<message key="xmlui.deposit-license2.head"><i>2. Rechte Dritter</i></message>
+	<message key="xmlui.deposit-license2">Der Veröffentlichende erklärt, dass mit der Veröffentlichung des Dokumentes und jedem seiner Bestandteile, z.B. bei kumulativen Dissertationsschriften, keine Rechte Dritter verletzt werden. Der Veröffentlichende stellt die Universität Göttingen von etwaigen Ansprüchen Dritter frei. Die Universität Göttingen ist berechtigt, den Zugriff auf eine Publikation zu sperren, soweit konkrete Anhaltspunkte für eine Verletzung von Rechten Dritter bestehen. Die Universität Göttingen wird den Veröffentlichenden in einem solchen Fall unverzüglich über die Sperrung informieren.</message>
+	<message key="xmlui.deposit-license3.head"><i>3. Langzeitarchivierung und Transformation in andere Formate</i></message>
+	<message key="xmlui.deposit-license3">Der Universität Göttingen wird das Recht eingeräumt, das Dokument durch die Bibliothek in einem Langzeitarchiv zu speichern und bei Bedarf (z.B. Migration, Barrierefreiheit, bessere Zugänglichkeit, Erschließung) in andere elektronische und physische Formate zu überführen und diese gemäß Nr. 1 zu verwerten.</message>
+	<message key="xmlui.deposit-license4.head"><i>4. Weitergabe an Bibliotheken mit einem nationalen Sammelauftrag</i></message>
+ <message key="xmlui.deposit-license4">Der Universität ist es gestattet, über die SUB die elektronische Version der Deutschen Nationalbibliothek (DNB) im Rahmen der Pflichtabgabe nach dem Gesetz über die Deutsche Nationalbibliothek zur Verfügung zu stellen. Darüber hinaus ist es der SUB gestattet, die Dokumente fachspezifischen Bibliotheken mit einem nationalen Sammelauftrag, wie den <a href="http://webis.sub.uni-hamburg.de/ssg/">Sondersammelgebietsbibliotheken des Förderprogramms der Deutschen Forschungsgemeinschaft</a>, zur Verfügung zu stellen. Diesen Einrichtungen werden die gleichen Rechte wie der Universität Göttingen eingeräumt.</message>
+	<message key="xmlui.deposit-license5.head"><i>5. Rücknahme der Einverständniserklärung</i></message>
+	<message key="xmlui.deposit-license5">ine Rücknahme dieser Einverständniserklärung ist nur unter Berufung auf § 42 UrhG (Werk entspricht nicht mehr der Überzeugung des Autors) möglich. Die Universität Göttingen ist berechtigt, dem Veröffentlichenden den hierdurch entstandenen zusätzlichen Aufwand in Rechnung zu stellen.</message>
+	<message key="xmlui.deposit-license.footnote1"><hr /><a name="1">[1]</a><a href="http://www.bundesrecht.juris.de/urhg">Gesetz über Urheberrecht und verwandte Schutzrechte</a></message>
+	<message key="xmlui.deposit-license.footnote2"><a name="2">[2]</a><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/de/">Gesetz über Urheberrecht und verwandte Schutzrechte</a></message>
+	
 	
 </catalogue>

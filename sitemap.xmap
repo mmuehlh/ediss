@@ -170,6 +170,7 @@
                                 <browser name="konqueror" useragent="Konqueror/"/>
                         </map:selector>
                         <map:selector name="parameter" src="org.apache.cocoon.selection.ParameterSelector"/>
+			<map:selector name="AuthenticatedSelector" src="org.dspace.app.xmlui.aspect.general.AuthenticatedSelector"/>
                         <map:selector logger="sitemap.selector.exception" name="exception" src="org.apache.cocoon.selection.ExceptionSelector">
                                 <exception name="not-found" class="org.apache.cocoon.ResourceNotFoundException"/>
                                 <exception name="invalid-continuation" class="org.apache.cocoon.components.flow.InvalidContinuationException"/>
@@ -206,6 +207,10 @@
                 </map:pipes>
         </map:components>
 
+	<map:flow language="javascript">
+        	<map:script src="static/js/upload.js"/>
+        </map:flow>
+
         <map:resources>
 
 
@@ -222,7 +227,21 @@
 
         <!-- =========================== Pipelines ================================= -->
         <map:pipelines>
+		<map:pipeline>
+			                        <!-- bill for special person -->
 
+                        <map:select type="AuthenticatedSelector">
+                                <map:when test="eperson">
+                                        <map:match pattern="bill/handle/*/*/">
+                                                <map:generate type="DSpaceMETSGenerator">
+                                                        <map:parameter name="handle" value="{1}/{2}"/>
+                                                <!--<map:parameter name="extra" value="{3}"/>-->
+                                                </map:generate>
+                                                <map:serialize type="xml"/>
+                                        </map:match>
+                                </map:when>
+                        </map:select>
+		</map:pipeline>
 
                 <!-- Bitstream pipeline -->
                 <map:pipeline type="noncaching">
@@ -373,7 +392,11 @@
                                 </map:read>
                         </map:match>
 
-		
+			<!--<map:match pattern="upload">
+				<map:call function="upload"/>
+			</map:match> -->
+
+
 			<!-- GVK export -->
 
 			<map:match pattern="gvk-export">
@@ -406,7 +429,7 @@
  
 
 			<!-- generate zip for docs of item by handle -->
-			<map:match pattern="*/*.zip">
+			<map:match pattern="download/*/*.zip">
 				<map:generate type="DSpaceMETSGenerator">
                                         <map:parameter name="handle" value="{1}/{2}"/>
                                 </map:generate>
@@ -475,6 +498,17 @@
                         <map:mount check-reload="no" src="aspects/aspects.xmap" uri-prefix="DRI/"/>
                     </map:match>
 
+                    <map:select type="AuthenticatedSelector">
+                                <map:when test="eperson">
+                                        <map:match pattern="bill/handle/*/*">
+                                                <map:generate type="DSpaceMETSGenerator">
+                                                        <map:parameter name="handle" value="{1}/{2}"/>
+                                                </map:generate>
+						<map:transform src="file://opt/dspace/ediss/config/crosswalks/bill.xsl"/>
+		                                 <map:serialize type="xhtml"/>
+                                        </map:match>
+                                </map:when>
+                    </map:select>
 
                     <map:match pattern="metadata/**">
                         <map:match pattern="metadata/handle/*/*/mets.xml">
@@ -603,6 +637,11 @@
                                 <map:parameter name="requestQueryString" value="{request:queryString}"/>
                             </map:read>
                     </map:match>
+		    <!-- handle pdf to -->
+		    <map:match pattern="static/*.pdf">
+                            <map:read src="static/{1}.pdf"/>
+                    </map:match>
+
 
 
                     <!-- handle common theme resources, such as dri2xhtml -->

@@ -1700,6 +1700,19 @@
             <xsl:apply-templates />
         </span>
     </xsl:template>
+
+    <xsl:template match="dri:move">
+	<button>
+            <xsl:if test="@rend">
+                <xsl:attribute name="class"><xsl:value-of select="@rend"/></xsl:attribute>
+            </xsl:if>
+	    <xsl:if test="@id">
+                <xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute>
+            </xsl:if>
+	    <span class="icon">&#160;</span>
+            <xsl:apply-templates />
+	</button>
+    </xsl:template>
     
     <xsl:template match="dri:xref">
         <a>

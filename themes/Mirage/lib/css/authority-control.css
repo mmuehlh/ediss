@@ -38,7 +38,7 @@ ul.ui-menu li a {
     display: block;
 }
 ul.ui-menu li a.ui-state-hover {
-    background-color: #ffb;
+    background-color: #163776;
 }
 /* this magic gets the 16x16 icon to show up.. setting height/width didn't
    do it, but adding padding actually made it show up. */

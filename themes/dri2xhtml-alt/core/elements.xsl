@@ -326,9 +326,9 @@
             <xsl:call-template name="standardAttributes">
                 <xsl:with-param name="class">ds-ordered-list</xsl:with-param>
             </xsl:call-template>
-            <xsl:apply-templates select="*[not(name()='head')]" mode="nested">
-                <xsl:sort select="dri:item/@n"/>
-            </xsl:apply-templates>
+            <xsl:apply-templates select="*[not(name()='head')]" mode="nested"/>
+            <!--    <xsl:sort select="dri:item/@n"/>
+            </xsl:apply-templates> -->
         </ol>
     </xsl:template>
 
@@ -632,6 +632,7 @@
         </span>
     </xsl:template>
 
+
     <xsl:template match="dri:xref">
         <a>
             <xsl:if test="@target">
@@ -645,6 +646,10 @@
             <xsl:if test="@n">
                 <xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute>
             </xsl:if>
+            <xsl:if test="@name">
+                <xsl:attribute name="name"><xsl:value-of select="@name"/></xsl:attribute>
+            </xsl:if>
+
 
             <xsl:apply-templates />
         </a>

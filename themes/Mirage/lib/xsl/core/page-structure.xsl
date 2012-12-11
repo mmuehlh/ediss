@@ -78,19 +78,9 @@
 				<xsl:otherwise>
 				
 					<div id="page-wrapper">
-					
+						
 						<!--The header div, complete with title, subtitle and trail -->
 						<xsl:call-template name="buildHeader"/>
-
-						<!--javascript-disabled warning, will be invisible if javascript is enabled-->
-						<div id="no-js-warning-wrapper" class="hidden">
-							<div id="no-js-warning">
-								<div class="notice failure">
-									<xsl:text>JavaScript is disabled for your browser. Some features of this site may not work without it.</xsl:text>
-								</div>
-							</div>
-						</div>
-
 
 						<!--ds-content is a groups ds-body and the navigation together and used to put the clearfix on, center, etc.
 							ds-content-wrapper is necessary for IE6 to allow it to center the page content-->
@@ -335,15 +325,71 @@
 						<i18n:text>xmlui.dri2xhtml.structural.head-subtitle</i18n:text>
 					</a>
 				</h1>
+				
+				<noscript><p>JavaScript is disabled for your browser. Some features of this site may not work without it.</p></noscript>
 
 				<div id="topbox">
 
-					<div id="userbox">
+					<form id="searchbox" method="post">
+						<xsl:attribute name="action">
+							<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
+							<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
+						</xsl:attribute>
+						<fieldset>
+							<input class="ds-text-field " type="text" i18n:attr="value" value="xmlui.ArtifactBrowser.SimpleSearch.full_text_search">
+								<xsl:attribute name="name">
+									<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='queryField']"/>
+								</xsl:attribute>
+							</input>
+							<input class="ds-button-field " name="submit" type="submit" i18n:attr="value" value="xmlui.general.go">
+								<xsl:attribute name="onclick">
+									<xsl:text>
+									var radio = document.getElementById(&quot;ds-search-form-scope-container&quot;);
+									if (radio != undefined &amp;&amp; radio.checked) {
+										var form = document.getElementById(&quot;ds-search-form&quot;);
+										form.action=
+									</xsl:text>
+									<xsl:text>&quot;</xsl:text>
+									<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
+									<xsl:text>/handle/&quot; + radio.value + &quot;</xsl:text>
+									<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
+									<xsl:text>&quot; ; </xsl:text>
+									<xsl:text>
+									}
+									</xsl:text>
+								</xsl:attribute>
+							</input>
+							<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='container']">
+								<label>
+									<input id="ds-search-form-scope-container" class="search-scope" type="radio" name="scope">
+										<xsl:attribute name="value">
+											<xsl:value-of select="substring-after(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='container'],':')"/>
+										</xsl:attribute>
+									</input>
+									<xsl:choose>
+										<xsl:when test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='containerType']/text() = 'type:community'">
+											<i18n:text>xmlui.dri2xhtml.structural.search-in-community</i18n:text>
+										</xsl:when>
+										<xsl:otherwise>
+											<i18n:text>xmlui.dri2xhtml.structural.search-in-collection</i18n:text>
+										</xsl:otherwise>
+									</xsl:choose>
+								</label>
+								<label>
+									<input id="ds-search-form-scope-all" class="search-scope" type="radio" name="scope" value="" checked="checked"/>
+									<i18n:text>xmlui.dri2xhtml.structural.search</i18n:text>
+								</label>
+							</xsl:if>
+						</fieldset>
+					</form>
+					
+					<div id="userbox" class="hover">
 						<xsl:choose>
 							<xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
 								<p class="profile">
+									<span class="profileicon">&#160;</span>
 									<!--<i18n:text>xmlui.dri2xhtml.structural.profile</i18n:text>-->
-									<span>
+									<span class="username">
 										<xsl:choose>
 											<xsl:when test="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='firstName'] > ''">
 												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='firstName']"/>
@@ -355,22 +401,23 @@
 											</xsl:otherwise>
 										</xsl:choose>
 									</span>
+									<span class="profilemore">&#160;</span>
 								</p>
 								<ul>
-									<li>
-										<a>
-											<xsl:attribute name="href">
-												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='url']"/>
-											</xsl:attribute>
-											<i18n:text>xmlui.EPerson.Navigation.profile</i18n:text>
-										</a>
-									</li>
 									<li>
 										<a>
 											<xsl:attribute name="href">
 												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='logoutURL']"/>
 											</xsl:attribute>
 											<i18n:text>xmlui.EPerson.Navigation.logout</i18n:text>
+										</a>
+									</li>
+									<li>
+										<a>
+											<xsl:attribute name="href">
+												<xsl:value-of select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='url']"/>
+											</xsl:attribute>
+											<i18n:text>xmlui.EPerson.Navigation.profile</i18n:text>
 										</a>
 									</li>
 									<li>
@@ -405,62 +452,9 @@
 						</xsl:choose>
 					</div>
 
-					<form id="searchbox" method="post">
-						<xsl:attribute name="action">
-							<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
-							<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
-						</xsl:attribute>
-						<fieldset>
-							<input class="ds-text-field " type="text" i18n:attr="value" value="xmlui.ArtifactBrowser.SimpleSearch.full_text_search">
-								<xsl:attribute name="name">
-									<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='queryField']"/>
-								</xsl:attribute>
-							</input>
-							<input class="ds-button-field " name="submit" type="submit" i18n:attr="value" value="xmlui.general.go">
-								<xsl:attribute name="onclick">
-									<xsl:text>
-									var radio = document.getElementById(&quot;ds-search-form-scope-container&quot;);
-									if (radio != undefined &amp;&amp; radio.checked) {
-										var form = document.getElementById(&quot;ds-search-form&quot;);
-										form.action=
-									</xsl:text>
-									<xsl:text>&quot;</xsl:text>
-									<xsl:value-of
-													select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
-									<xsl:text>/handle/&quot; + radio.value + &quot;</xsl:text>
-									<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
-									<xsl:text>&quot; ; </xsl:text>
-									<xsl:text>
-									}
-									</xsl:text>
-								</xsl:attribute>
-							</input>
-							<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='container']">
-								<label>
-									<input id="ds-search-form-scope-all" class="search-scope" type="radio" name="scope" value="" checked="checked"/>
-									<i18n:text>xmlui.dri2xhtml.structural.search</i18n:text>
-								</label>
-								<label>
-									<input id="ds-search-form-scope-container" class="search-scope" type="radio" name="scope">
-										<xsl:attribute name="value">
-											<xsl:value-of select="substring-after(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='container'],':')"/>
-										</xsl:attribute>
-									</input>
-									<xsl:choose>
-										<xsl:when test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='containerType']/text() = 'type:community'">
-											<i18n:text>xmlui.dri2xhtml.structural.search-in-community</i18n:text>
-										</xsl:when>
-										<xsl:otherwise>
-											<i18n:text>xmlui.dri2xhtml.structural.search-in-collection</i18n:text>
-										</xsl:otherwise>
-									</xsl:choose>
-								</label>
-							</xsl:if>
-						</fieldset>
-					</form>
-
 					<div id="localebox">                 
 						<!--<i18n:text>xmlui.general.locale.language</i18n:text>:-->
+						<!--
 						<span class="current"><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='locale']"/></span>
 						<ul>
 							<xsl:for-each select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='xmlui-ml'][@qualifier='localeURL']">
@@ -471,30 +465,63 @@
 											<xsl:value-of select="."/>
 										</xsl:attribute>
 										<xsl:attribute name="class">
-											<!--<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:[@element='page'][@qualifier='currentLocale']"/>-->
+											<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:[@element='page'][@qualifier='currentLocale']"/>-->
+						<!--
 										</xsl:attribute>
+						-->
 										<!--<i18n:text>xmlui.general.locale.<xsl:value-of select="substring-after(.,'locale-attribute=')" /></i18n:text>-->
+						<!--
 										<xsl:value-of select="substring-after(.,'locale-attribute=')" />
+						-->
 										<!--
 										<img>
 											<xsl:attribute name="src"><xsl:value-of select="$theme-path" />/images/<xsl:value-of select="." />.gif</xsl:attribute>
 										</img>
 										-->
+						<!--
 									</a>
 									</li>
+						-->
 									<!--
 									<xsl:if test="position() != last()">
 										<xsl:text>&#160;|&#160;</xsl:text>
 									</xsl:if>
 									-->
+						<!--						
+									</xsl:if>
+							</xsl:for-each>                 
+						</ul>
+						-->
+						
+						<ul>
+							<xsl:for-each select="/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='xmlui-ml'][@qualifier='localeURL']">
+								<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='locale'] != substring-after(.,'locale-attribute=')">
+									<li>
+										<a>
+											<xsl:attribute name="href">
+												<xsl:value-of select="."/>
+											</xsl:attribute>
+											<xsl:attribute name="class">
+												<!--<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:[@element='page'][@qualifier='currentLocale']"/>-->
+											</xsl:attribute>
+											<!--<i18n:text>xmlui.general.locale.<xsl:value-of select="substring-after(.,'locale-attribute=')" /></i18n:text>-->
+											<xsl:value-of select="substring-after(.,'locale-attribute=')" />
+											<!--
+											<img>
+												<xsl:attribute name="src"><xsl:value-of select="$theme-path" />/images/<xsl:value-of select="." />.gif</xsl:attribute>
+											</img>
+											-->
+										</a>
+									</li>
 								</xsl:if>
 							</xsl:for-each>                 
 						</ul>
+						
 					</div>
 					
 					<!-- Only add if the advanced search url is different from the simple search -->
+					<!-- The "Advanced search" link, to be perched underneath the search box
 					<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='advancedURL'] != /dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"> 
-						<!-- The "Advanced search" link, to be perched underneath the search box -->
 						<a class="advanced-search">
 							<xsl:attribute name="href">
 								<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='advancedURL']"/>
@@ -502,6 +529,7 @@
 							<i18n:text>xmlui.dri2xhtml.structural.search-advanced</i18n:text>
 						</a>
 					</xsl:if> 
+					-->
 
 				</div>
 
@@ -525,6 +553,7 @@
 
 			</div>
 		</div>
+
 	</xsl:template>
 
 	<xsl:template match="dri:trail">
@@ -755,13 +784,14 @@
 			<xsl:text>.min.js</xsl:text>
 		</xsl:variable>
 
-		<!--
+		<!--	
 		<script type="text/javascript">
 			<xsl:text disable-output-escaping="yes">!window.jQuery &amp;&amp; document.write('&lt;script type="text/javascript" src="</xsl:text><xsl:value-of
 				select="$localJQuerySrc"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;\/script&gt;')</xsl:text>
-		</script>
+		</script> 
 		-->
-		<script type="text/javascript" src="{$localJQuerySrc}">&#160;</script>
+		<!-- Diese Zeile macht die HTML-Darstellung der Collection-Description kaput! -->
+		<script type="text/javascript" src="{$localJQuerySrc}">&#160;</script> 
 
 		<!-- Add theme javascipt  -->
 		<xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='javascript'][not(@qualifier)]">
@@ -836,7 +866,7 @@
 					var i = 1;
 					var items = $('#ds-trail a');
 					var cut_items = [];
-					// Cut trail if too long and there are still untruncated items
+					// Cut trail if too long and if there are still untruncated items
 					while ( $('#ds-trail').height() > 28 && i < items.length) {
 						var item = items.eq(i);
 						// If current item contains more than one word, replace last word with … (&hellip;). Otherwise, move to next item.
@@ -849,10 +879,8 @@
 					}
 					// If still too long, remove items completely
 					i = 0;
-					while ( $('#ds-trail').height() > 28 && i++ < 5) {
-						items.eq(i).text('…');
-					}
-					// Still too long!? Truncate second-to-last li, then last li; exit after 10 iterations each
+					while ( $('#ds-trail').height() > 28 && i++ < 5) items.eq(i).text('…');
+					// Still too long? Truncate second-to-last li, then last li; exit after 10 iterations each
 					i = -20;
 					while ( $('#ds-trail').height() > 28 && ++i < 0) {
 						key = parseInt(i / 10 - 1);
@@ -872,10 +900,22 @@
 					});
 					
 					/* Userbox */
-					i = 0;
-					while ( $('#userbox span').height() > 28 && i++ < 99) {
-						$('#userbox span').text( $('#userbox span').text().replace(/.…*$/, '…') );
-					}
+					while ( $('#userbox').height() > 28 && ++i < 99) {
+						$('.username').text( $('.username').text().replace(/.…*$/, '…') );
+					};
+					$('#userbox').removeClass('hover');
+					$('#userbox').has('.profile').click( function() {
+						$(this).toggleClass('open')
+						$('#userbox ul').toggle();
+					});
+					
+					/* Sidebar: truncate items */
+					$('#sidebar a').each( function() {
+						i = 0;
+						while ( $(this).height() > 28 && i++ < 99 ) {
+							$(this).text( $(this).text().replace(/\.*.…*\s(\(\d+\))$/, '… $1') );
+						}
+					});
 					
 					/* Search form (top) */
 					var searchtext = $('#searchbox .ds-text-field').val();
@@ -904,6 +944,12 @@
 						searchhover = false;
 					});
 					
+					/* Main page 6 step help */
+					// $('.help span + span').hide();
+					// $('.help').click( function() {
+					// 	$(this).find('span + span').slideToggle();
+					// });
+					
 					/* Submission form */
 					// If selected language is english, hide fields that are only needed for non-english publications
 					$('#aspect_submission_StepTransformer_field_dc_language_iso').change(function() {
@@ -928,11 +974,14 @@
 					
 					/* Remove leading and trailing line breaks */
 					$('.detail-view').each( function() {
-						$(this).text( $.trim( $(this).text() ) );
+						$(this).html( $(this).html().replace(/(&nbsp;)*/g,"") );
 					});
 					
+					/* Remove certain elements if empty */
+					$('.ds-head, .composite-help').filter(function() { return $.trim($(this).text()) === '' && $(this).children().length == 0 }).remove();
+					
 					/* Style file input */
-					$('.ds-file-field').customFileInput();	
+					$('.ds-file-field').customFileInput();
 					
 				});
 				

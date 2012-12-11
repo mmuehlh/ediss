@@ -37,8 +37,7 @@
 
     <xsl:output indent="yes"/>
 
-    <!-- A community rendered in the summaryList pattern. Encountered on the community-list and on
-        on the front page. -->
+    <!-- A community rendered in the summaryList pattern. Encountered on the community-list and on the front page. -->
     <xsl:template name="communitySummaryList-DIM">
         <xsl:variable name="data" select="./mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim"/>
         <div class="artifact-description">

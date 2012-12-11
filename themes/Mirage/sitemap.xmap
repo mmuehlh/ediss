@@ -14,9 +14,13 @@
         <map:readers>
             <map:reader name="ConcatenationReader" src="org.dspace.app.xmlui.cocoon.ConcatenationReader"/>
         </map:readers>
+	<map:selectors>
+		<map:selector name="AuthenticatedSelector" src="org.dspace.app.xmlui.aspect.general.AuthenticatedSelector"/>
+	</map:selectors>
     </map:components>
 
     <map:pipelines>
+		
 
 		<!--
 			Define global theme variables that are used later in this
@@ -34,9 +38,11 @@
         </map:component-configurations>
 
 
+
 		<map:pipeline>
 			<!-- Allow the browser to cache static content for an hour -->
 			<map:parameter name="expires" value="access plus 1 hours"/>
+
 
 
             <!-- handle static js and css -->

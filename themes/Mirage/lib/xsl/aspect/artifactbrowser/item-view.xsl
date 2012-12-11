@@ -45,23 +45,24 @@
 		
 		<div class="metadata">
 			
-			<xsl:apply-templates select="$dim" mode="itemAuthors-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemTitleTranslated-DIM"/>
+			<xsl:apply-templates select="$dim" mode="itemAuthors-DIM"/>
+			<xsl:call-template name="itemType"/>	
+			<xsl:apply-templates select="$dim" mode="itemExamination-DIM"/>
 			<!--<xsl:apply-templates select="$dim" mode="itemCitation-DIM"/>-->
-			<xsl:apply-templates select="$dim" mode="itemURI-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemDate-DIM"/>
 			<!--<xsl:apply-templates select="$dim" mode="itemPublisher-DIM"/>-->
-			<xsl:apply-templates select="$dim" mode="itemPURL-DIM"/>
-			<xsl:apply-templates select="$dim" mode="itemExamination-DIM"/> 
+			<!-- <xsl:apply-templates select="$dim" mode="itemPURL-DIM"/> -->
 			<!--<xsl:apply-templates select="$dim" mode="itemEmail-DIM"/>-->
 			<!--<xsl:apply-templates select="$dim" mode="itemBirth-DIM"/>-->
-			<xsl:apply-templates select="$dim" mode="itemInstitut-DIM"/>
-			<xsl:apply-templates select="$dim" mode="itemURN-DIM"/> 
+			<!-- <xsl:apply-templates select="$dim" mode="itemInstitute-DIM"/> -->
+			<!-- <xsl:apply-templates select="$dim" mode="itemURN-DIM"/> -->
 			<xsl:apply-templates select="$dim" mode="itemAdvisor-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemReferee-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemCoreferee-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemThirdreferee-DIM"/> 
-			
+		
+			<xsl:apply-templates select="$dim" mode="itemURI-DIM"/>	
 			<!--<xsl:apply-templates select="$dim" mode="itemType-DIM"/>-->
 			<!--<xsl:apply-templates select="$dim" mode="itemLanguage-DIM"/>-->
 			<!--<xsl:apply-templates select="$dim" mode="itemSeries-DIM"/>-->
@@ -69,7 +70,8 @@
 				<p class="ds-paragraph item-view-toggle item-view-toggle-bottom">
 					<a>
 						<xsl:attribute name="href"><xsl:value-of select="$ds_item_view_toggle_url"/></xsl:attribute>
-						<i18n:text>xmlui.ArtifactBrowser.ItemViewer.show_full</i18n:text>
+						<!-- <i18n:text>xmlui.ArtifactBrowser.ItemViewer.show_full</i18n:text> -->
+						<xsl:text>&#160;</xsl:text>
 					</a>
 				</p>
 			</xsl:if>
@@ -110,7 +112,7 @@
 		<!-- Generate the Creative Commons license information from the file section (DSpace deposit license hidden by default)-->
 		<xsl:apply-templates select="./mets:fileSec/mets:fileGrp[@USE='CC-LICENSE']"/>
 		<xsl:apply-templates select="$dim" mode="itemLicense-DIM" />
-		
+		<hr />
 		<h2><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h2>
 		<div class="metadata">
 			<xsl:apply-templates select="$dim" mode="itemAbstractGer-DIM"/>
@@ -213,6 +215,7 @@
 				</h1>
 			</xsl:otherwise>
 		</xsl:choose>
+	
 	</xsl:template>
 	
 	<xsl:template match="dim:dim" mode="itemAuthors-DIM">
@@ -480,7 +483,7 @@
         <xsl:template match="dim:dim" mode="itemExamination-DIM">
                 <xsl:if test="dim:field[@element='date' and @qualifier='examination']">
 			<div class="simple-item-view-other">
-                                <span class="bold">Prüfung:</span>
+                                <span class="bold"><i18n:text>xmlui.item-view.examination</i18n:text>:</span>
                                 <span>
                                 	<xsl:value-of select="dim:field[@element='date' and @qualifier='examination']" />
                                 </span>
@@ -508,12 +511,12 @@
                 </xsl:if>
         </xsl:template>
 
-	<xsl:template match="dim:dim" mode="itemInstitut-DIM">
-                <xsl:if test="dim:field[@element='affiliation' and @qualifier='institut']">
+	<xsl:template match="dim:dim" mode="itemInstitute-DIM">
+                <xsl:if test="dim:field[@element='affiliation' and @qualifier='institute']">
                         <div class="simple-item-view-other">
                                 <span class="bold">Institut:</span>
                                 <span>
-                                        <xsl:value-of select="dim:field[@element='affiliation' and @qualifier='institut']" />
+                                        <xsl:value-of select="dim:field[@element='affiliation' and @qualifier='institute']" />
                                 </span>
                         </div>
                 </xsl:if>
@@ -534,7 +537,7 @@
 	<xsl:template match="dim:dim" mode="itemAdvisor-DIM">
                 <xsl:if test="dim:field[@element='contributor' and @qualifier='advisor']">
                         <div class="simple-item-view-other">
-                                <span class="bold">Advisor:</span>
+                                <span class="bold"><i18n:text>xmlui.item-view.advisor</i18n:text>:</span>
                                 <span>
                                         <xsl:value-of select="dim:field[@element='contributor' and @qualifier='advisor']" />
                                 </span>
@@ -545,7 +548,7 @@
         <xsl:template match="dim:dim" mode="itemReferee-DIM">
                 <xsl:if test="dim:field[@element='contributor' and @qualifier='referee']">
                         <div class="simple-item-view-other">
-                                <span class="bold">Referee:</span>
+                                <span class="bold"><i18n:text>xmlui.item-view.referee</i18n:text>:</span>
                                 <span>
                                         <xsl:value-of select="dim:field[@element='contributor' and @qualifier='referee']" />
                                 </span>
@@ -556,7 +559,7 @@
         <xsl:template match="dim:dim" mode="itemCoreferee-DIM">
                 <xsl:if test="dim:field[@element='contributor' and @qualifier='coReferee']">
                         <div class="simple-item-view-other">
-                                <span class="bold">coReferee:</span>
+                                <span class="bold"><i18n:text>xmlui.item-view.referee</i18n:text>:</span>
                                 <span>
                                         <xsl:value-of select="dim:field[@element='contributor' and @qualifier='coReferee']" />
                                 </span>
@@ -567,7 +570,7 @@
         <xsl:template match="dim:dim" mode="itemThirdreferee-DIM">
                 <xsl:if test="dim:field[@element='contributor' and @qualifier='thirdReferee']">
                         <div class="simple-item-view-other">
-                                <span class="bold">thirdReferee:</span>
+                                <span class="bold"><i18n:text>xmlui.item-view.referee</i18n:text>:</span>
                                 <span>
                                         <xsl:value-of select="dim:field[@element='contributor' and @qualifier='thirdReferee']" />
                                 </span>
@@ -575,14 +578,26 @@
                 </xsl:if>
         </xsl:template>
 
-        <xsl:template match="dim:dim" mode="itemTitleTranslated-DIM">
+        <!-- <xsl:template match="dim:dim" mode="itemTitleTranslated-DIM">
                 <xsl:if test="dim:field[@element='title' and @qualifier='translated']">
                         <div class="simple-item-view-other">
                                 <span class="bold">Übersetzter Titel:</span>
                                 <span>
-                                        <xsl:value-of select="dim:field[@element='title' and @qualifier='translated']" disable-output-escaping="yes"/>
+                                        <xsl:value-of select="dim:field[@element='title' and @qualifier='translated']" />
                                 </span>
                         </div>
+                </xsl:if>
+        </xsl:template> -->
+
+	<xsl:template match="dim:dim" mode="itemTitleTranslated-DIM">
+                <xsl:if test="dim:field[@element='title' and @qualifier='translated']">
+                        <h2>
+                        	<xsl:value-of select="dim:field[@element='title' and @qualifier='translated']" disable-output-escaping="yes"/>
+                        </h2>
+                        <xsl:if test="dim:field[@element='title'][@qualifier='alternativeTranslated']">
+	                        <p class="subtitle"><xsl:value-of select="dim:field[@element='title'][@qualifier='alternativeTranslated']" disable-output-escaping="yes"/></p>
+                        </xsl:if>
+
                 </xsl:if>
         </xsl:template>
 
@@ -625,6 +640,12 @@
 			</td>
 			<td><xsl:value-of select="./@language"/></td>
 		</tr>
+	</xsl:template>
+
+	<xsl:template name="itemType">
+		<span class="bold">
+			Dissertation
+		</span>
 	</xsl:template>
 
 	<!--dont render the item-view-toggle automatically in the summary view, only when it get's called-->
@@ -693,7 +714,9 @@
 					</span>
 					<span>
 						<xsl:attribute name="title"><xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:title"/></xsl:attribute>
-						<xsl:value-of select="util:shortenString(mets:FLocat[@LOCTYPE='URL']/@xlink:title, 17, 5)"/>
+						<!-- TS: Why is the string shortened? Long strings don't break the layout -->
+						<!--<xsl:value-of select="util:shortenString(mets:FLocat[@LOCTYPE='URL']/@xlink:title, 17, 5)"/>-->
+						<xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:title"/>
 					</span>
 				</div>
 				<!-- File size always comes in bytes and thus needs conversion -->

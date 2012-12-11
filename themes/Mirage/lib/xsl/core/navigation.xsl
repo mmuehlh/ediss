@@ -45,38 +45,54 @@
         <div id="sidebar">
 
 			<div class="publish">
-				<a>
-					<xsl:choose>
-						<xsl:when test="//dri:div[contains(@id, 'CollectionViewer.div.collection-home')]">
-							<xsl:attribute name="href">
-								 <xsl:value-of select="concat(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)], '/', /dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI'], '/submit')"/>
-							 </xsl:attribute>
-							 <i18n:text>xmlui.general.publish_here</i18n:text>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:attribute name="href">
-								<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-								<xsl:text>/submit</xsl:text>
-							</xsl:attribute>
+				<xsl:choose>
+					<xsl:when test="contains(//dri:metadata[@element='request'][@qualifier='URI'], 'submit')">
+						<a href="#">
 							<i18n:text>xmlui.general.publish_now</i18n:text>
-						</xsl:otherwise>
-					</xsl:choose>
-				</a>
+						</a>
+					</xsl:when>
+					<xsl:otherwise>
+						<!--<xsl:variable name="container">
+							<xsl:choose>
+								<xsl:when test="//dri:metadata[@qualifier='container'] and not(//dri:metadata[@qualifier='object'])">
+									<xsl:value-of select="concat('/handle/', substring-after(//dri:metadata[@qualifier='container'], 'hdl:'), '/')"/>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:text>/</xsl:text>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:variable> -->
+						<a href="{$context-path}/submit">
+	                                                        <i18n:text>xmlui.general.publish_now</i18n:text>
+						</a>				
+					</xsl:otherwise>
+				</xsl:choose>
+					
 			</div>
-			<h1 class="ds-option-set-head"><i18n:text>xmlui.navigation.help.header</i18n:text></h1>	
+			<!-- <h1 class="ds-option-set-head"><i18n:text>xmlui.navigation.help.header</i18n:text></h1>	
 			<div class="ds-option-set">
 				<ul class="ds-simple-list">
-					<li><a href="#"><i18n:text>xmlui.navigation.help.publication_process</i18n:text></a></li>
-					<li><a href="#"><i18n:text>xmlui.navigation.help.pdf_howto</i18n:text></a></li>
-					<li><a href="#"><i18n:text>xmlui.navigation.help.cumulative_dissertation</i18n:text></a></li>
-					<li><a href="#"><i18n:text>xmlui.navigation.help.general</i18n:text></a></li>
+					<li><a href="{$context-path}/help/fullpublication"><i18n:text>xmlui.navigation.help.publication_process</i18n:text></a></li>
+					<li><a href="{$context-path}/help/pdf-howto"><i18n:text>xmlui.navigation.help.pdf_howto</i18n:text></a></li>
+					<li><a href="{$context-path}/help/deposit-license"><i18n:text>xmlui.deposit.license.title</i18n:text></a></li>
+					<li><a href="{$context-path}/help/good-to-know"><i18n:text>xmlui.navigation.help.general</i18n:text></a></li>
 				</ul>
-			</div>
+			</div> -->
 			<!-- Once the search box is built, the other parts of the options are added -->
 			<xsl:apply-templates/>
+			<h1 class="ds-option-set-head"><i18n:text>xmlui.navigation.help.header</i18n:text></h1>
+                        <div id="static.help" class="ds-option-set">
+                                <ul class="ds-simple-list">
+                                        <li><a href="{$context-path}/help/fullpublication"><i18n:text>xmlui.navigation.help.publication_process</i18n:text></a></li>
+                                        <li><a href="{$context-path}/help/pdf-howto"><i18n:text>xmlui.navigation.help.pdf_howto</i18n:text></a></li>
+                                        <!--<li><a href="{$context-path}/help/cumulative-diss"><i18n:text>xmlui.navigation.help.cumulative_dissertation</i18n:text></a></li> -->
+                                        <li><a href="{$context-path}/help/deposit-license"><i18n:text>xmlui.deposit.license.title</i18n:text></a></li>
+                                        <li><a href="{$context-path}/help/good-to-know"><i18n:text>xmlui.navigation.help.general</i18n:text></a></li>
+                                </ul>
+                        </div>
 
 			<!-- DS-984 Add RSS Links to Options Box -->
-			<xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']) != 0">
+			<!-- <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']) != 0">
 				<h1 id="ds-feed-option-head" class="ds-option-set-head">
 					<i18n:text>xmlui.feed.header</i18n:text>
 				</h1>
@@ -85,13 +101,13 @@
 						<xsl:call-template name="addRSSLinks"/>
 					</ul>
 				</div>
-			</xsl:if>
+			</xsl:if> -->
 
         </div>
     </xsl:template>
 
     <!-- Add each RSS feed from meta to a list -->
-    <xsl:template name="addRSSLinks">
+   <!-- <xsl:template name="addRSSLinks">
         <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']">
             <li>
                 <a>
@@ -122,7 +138,7 @@
                 </a>
             </li>
         </xsl:for-each>
-    </xsl:template>
+    </xsl:template> -->
 
     <!--give nested navigation list the class sublist-->
     <xsl:template match="dri:options/dri:list/dri:list" priority="3" mode="nested">

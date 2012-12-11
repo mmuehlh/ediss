@@ -646,13 +646,13 @@
 	<!-- org.dspace.app.xmlui.Submission.submit.UploadStep -->
 	<message key="xmlui.Submission.submit.UploadStep.head">Datei(en) hochladen</message>
 	<message key="xmlui.Submission.submit.UploadStep.file">Datei</message>
-	<message key="xmlui.Submission.submit.UploadStep.file_help">Bitte geben Sie den voll qualifizierten Pfad zu der Datei auf Ihrem Rechner an. Wenn Sie auf "Durchsuchen" klicken, öffnet sich ein neues Fenster, in welchem Sie die Datei auf Ihrem Rechner suchen und auswählen können.</message>
+	<message key="xmlui.Submission.submit.UploadStep.file_help">Klicken Sie auf "Durchsuchen" und wählen Sie auf Ihrem Rechner die Datei aus, die Sie hochladen wollen. Als erste Datei müssen Sie Ihre Dissertation in PDF-Format nach den Kriterien <a href="ediss/checklist">der Checkliste</a> hochladen!</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_error">Ein Problem ist während des Hochladens Ihrer Datei aufgetreten. Dies kann verschiedene Gründe haben: der Dateiname war fehlerhaft, aufgrund eines Netzwerkproblems wurde die Datei nicht korrekt übertragen oder Sie haben versucht, eine Dateiformat hochzuladen, welches auf dem Repositorium nicht zugelassen ist. Bitte überprüfen Sie Ihre Eingaben und versuchen es noch einmal.</message>
 	<message key="xmlui.Submission.submit.UploadStep.virus_error">Die Datei wurde nich hochgeladen, da sie scheinbar einen Virus enthält. Bitte wenden Sie sich an den System-Administrator.</message>
 	<message key="xmlui.Submission.submit.UploadStep.virus_checker_error">Beim Virusscan der Datei ist ein technisches Problem aufgetreten. Bitte wenden Sie sich an den System-Administrator.</message>
 	<message key="xmlui.Submission.submit.UploadStep.file_error">Das Dokument muss mindestens eine Datei enthalten.</message>
 	<message key="xmlui.Submission.submit.UploadStep.description">Beschreibung</message>
-	<message key="xmlui.Submission.submit.UploadStep.description_help">Zusätzlich können Sie eine kurze Beschreibung der Datei eingeben, z. B. "<i>Hauptband</i>", oder "<i>Anhang</i>".</message>
+	<message key="xmlui.Submission.submit.UploadStep.description_help">Falls Sie weitere Dateien (zusätzliche Graphiken, Tabellen oder Ihre Dissertation in anderen Formaten) hochladen wollen,geben Sie bitte eine kurze Beschreibung der Datei an, z. B. "<i>Dissertation</i>", oder "<i>Anhang</i>".</message>
 	<message key="xmlui.Submission.submit.UploadStep.submit_upload">Datei hochladen und/oder noch eine hinzufügen</message>
 	<message key="xmlui.Submission.submit.UploadStep.head2">Hochgeladene Dateien</message>
 	<message key="xmlui.Submission.submit.UploadStep.column0">Primäre Datei</message>
@@ -2112,7 +2112,7 @@
 	<message key="xmlui.home.head2">Wir veröffentlichen Ihre elektronische Dissertation auf dem eDiss-Server der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB).</message>
 	<message key="xmlui.home.publication.process">Um den Online-Publikationsprozess für Ihre Doktorarbeit zu starten, gehen Sie bitte wie folgt vor:</message>
 	<message key="xmlui.home.publication.process.create_pdf">Erstellen Sie Ihre Dissertation als PDF Dokument. <a class="help" href="">mehr dazu...</a></message>
-	<message key="xmlui.home.publication.process.publish">Registrieren Sie sich auf eDiss und führen Sie den Publikationsworkflow durch. <a class="help" href="submit">mehr dazu...</a></message>
+	<message key="xmlui.home.publication.process.publish">Registrieren Sie sich auf eDiss und führen Sie den Online-Publikationsprozess durch. <a class="help" href="submit">mehr dazu...</a></message>
 	<message key="xmlui.home.publication.process.print_version">Liefern Sie uns zwei gedruckte Exemplare Ihrer Arbeit. <a class="help" href="">mehr dazu...</a></message>
 	<message key="xmlui.home.publication.process.finish">Bezahlen Sie die € 35,‒Publikationsgebühr. Fertig!<a class="help" href="">mehr dazu...</a></message>
 	<message key="xmlui.home.publication.process.upload">Laden Sie Ihre Arbeit als PDF hoch.</message>
@@ -2144,9 +2144,9 @@
         <message key="xmlui.EPerson.PasswordLogin.head2"></message>
 	<message key="xmlui.EPerson.PasswordLogin.para1"></message>
         <message key="xmlui.EPerson.PasswordLogin.register_link">Sind Sie neu bei eDiss? Klicken Sie hier um sich zu registrieren!</message>
-	<message key="xmlui.navigation.help.header">Hilfe/Info</message>
-	<message key="xmlui.navigation.help.publication_process">Publikationsverfahren</message>
-	<message key="xmlui.navigation.help.pdf_howto">Dokument erstellen</message>
+	<message key="xmlui.navigation.help.header">Hilfe &amp; Info</message>
+	<message key="xmlui.navigation.help.publication_process">Online-Publikationsprozess</message>
+	<message key="xmlui.navigation.help.pdf_howto">PDF Dokument erstellen</message>
 	<message key="xmlui.navigation.help.cumulative_dissertation">Kumulative Dissertationen</message>
 	<message key="xmlui.navigation.help.general">Wissenswertes</message>
 
@@ -2157,5 +2157,88 @@
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Please wait while the controlled vocabulary is loading.</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.error">There was an issue when loading the controlled vocabulary, please try again later.</message>
 
+	<message key="xmlui.administrative.Navigation.context_print_bill">Rechnung drucken</message>	
+
+	<!-- help sites -->
+	<message key="xmlui.deposit-license.download.link"><a href="/static/License_ediss_de.pdf">PDF</a></message>
+	<message key="xmlui.help.goodtoknow.head">Wissenswertes</message>
+	<message key="xmlui.help.PDF-Creation.head">Hinweise zum PDF-Dokument</message>
+	<message key="xmlui.help.PDF-Creation1">Um das Erstellen von Textdateien, die sich problemlos in eine PDF-Datei umwandeln lassen, zu erleichtern, berücksichtigen Sie bitte die folgenden Informationen.</message>
+	<message key="xmlui.help.PDF-Creation2">Es ist notwendig, dass Ihre Arbeit als <strong>eine PDF-Datei</strong> (nicht in Einzeldateien) vorliegt.
+Bitte erstellen Sie eine PDF-Datei <strong>mit Navigationselementen</strong>, d. h. eine Datei entweder mit Lesezeichen (Bookmarks) oder mit anklickbarem Inhaltsverzeichnis. Achten Sie bitte unbedingt auch auf die <strong>„Optimierung für schnelle Web-Anzeige“</strong> und verzichten Sie bitte auf Sicherheitseinstellungen.</message>
+	<message key="xmlui.help.PDF-Creation3">Im <a href="http://www.sub.uni-goettingen.de/standorte-raumangebote/standorte-mit-oeffnungszeiten/zentralbibliothek/2-obergeschoss/#c762">Learning Resources Center (LRC)</a> können Sie Ihre Arbeit aus gängigen Textformaten unter Anleitung der Mitarbeiter von studit in ein PDF konvertieren. 
+Falls Sie keine Möglichkeit haben, die PDF-Datei den Anforderungen entsprechend zu erstellen, können wir diese Bearbeitung Ihrer Datei gegen eine Gebühr von 15,00 Euro für Sie übernehmen. Bitte informieren Sie uns entsprechend.</message>
+	<message key="xmlui.help.PDF-Creation4"><strong>BITTE BEACHTEN SIE</strong>: Wenn Sie Ihren Lebenslauf nicht in Ihrer elektronischen Dissertation veröffentlicht haben möchten, dann entfernen Sie diese Seite bitte aus Ihrer PDF-Datei, bevor Sie sie bei uns einreichen. Allein in diesem Punkt ist ein Unterschied zu der gedruckten Version Ihrer Dissertation erlaubt.</message>
+	<message key="xmlui.help.pdf-creation.recommendation">PDF Dokument erstellen</message>
+	 <message key="xmlui.help.pdf-creation.textfile">Erstellen einer Textdatei</message>
+	<message key="xmlui.help.pdf-creation.textfile1">Die folgenden Links haben wir für Sie zusammengestellt, um Ihnen das Erstellen von Textdateien, die sich einwandfrei in das PDF-Format umwandeln lassen, zu erleichtern. Wir möchten, dass Sie ohne nachträgliche Korrekturen und Mehrarbeit an Ihr Ziel gelangen.</message>
+	<message key="xmlui.help.pdf-creation.textfile2">Arbeiten Sie mit Dokumentvorlagen, die der Strukturierung von Texten dienen. Damit stehen gleichartige Überschriften, Absätze, Einzüge usw. für die Arbeit zur Verfügung und müssen nicht jedesmal neu definiert werden.</message>
+	 <message key="xmlui.help.pdf-creation.textfile2.list1">An der Humboldt-Universität zu Berlin ist zu diesem Zweck eine detaillierte <a href="http://edoc.hu-berlin.de/e_autoren/dokvorlage.php">Dokumentvorlage für Microsoft Word</a> erstellt worden. Sie können diese zusammen mit Installationshinweisen sowie Beschreibungen und Übungen herunterladen.</message>
+	<message key="xmlui.help.pdf-creation.textfile2.list2">Auch die Deutsche Nationalbibliothek (DNB) bietet auf Ihren Informationsseiten für Elektronische Dissertationen zu diesem Zweck Dokumentvorlagen für Word (Open Office) an: Dissonline.de</message>
+	<message key="xmlui.help.pdf-creation.pdffile">Erstellen einer PDF-Datei</message>
+	 <message key="xmlui.help.pdf-creation.pdffile1">Bitte versehen Sie das Inhaltsverzeichnis entweder mit Lesezeichen (bookmarks) oder mit einem anklickbaren Inhaltsverzeichnis. Dazu benötigen Sie eine Vollversion von Adobe Professional.
+Die Datei sollten Sie „für schnelle Webanzeige optimieren“.</message>
+	 <message key="xmlui.help.pdf-creation.pdffile2">Folgende Hinweise für das Erstellen von PDF-Dateien sind sehr hilfreich:</message>
+	 <message key="xmlui.help.pdf-creation.pdffile2.list1"><a href="http://www.tubit.tu-berlin.de/menue/hilfe_beratung/dokumentationen/publizieren_mit_pdf/">Publizieren mit PDF</a> (K. J. Stüken, Zentraleinrichtung Rechenzentrum, TU Berlin)</message>
+	 <message key="xmlui.help.pdf-creation.pdffile2.list2"><a href="http://www.dissonline.de/info/pdf/leitfaden_pdf.pdf">Leitfaden zum Erstellen von PDF-Dateien</a> (Angebot der Deutschen Nationalbibliothek DNB)</message>
+	 <message key="xmlui.help.pdf-creation.pdffile2.list3"><a href="http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/makingWWWdocs.html">Producing HTML and PDF files with LaTeX</a> (Cambridge University)</message>
+	 <message key="xmlui.help.pdf-creation.scan">Einscannen und Bearbeiten von Bildern</message>
+	 <message key="xmlui.help.pdf-creation.scan1">Mit einem Bildbearbeitungsprogramm können Sie die beim Scannen entstandenen Grafikdateien bearbeiten. Die den Scannern häufig beiliegenden Programme sind in der Regel ausreichend.</message>
+	 <message key="xmlui.help.pdf-creation.scan2">Bei der Bildbearbeitung nehmen Sie bitte die folgenden Schritte in jedem Fall vor:</message>
+	 <message key="xmlui.help.pdf-creation.scan2.list1">Beschneiden Sie das Bild exakt, um unnötige Bereiche des Bildes oder versehentlich miteingescannten Hintergrund zu entfernen.</message>
+	 <message key="xmlui.help.pdf-creation.scan2.list2">Verändern sie die tatsächliche Größe des Bildes, gemessen in Pixel oder Zentimeter, bevor Sie es in Ihr Dokument einfügen. Dies reduziert die Dateigröße des Bildes und des zu erstellenden Dokuments. Achten Sie bitte darauf, dass das Größenverhältnis zur Vorlage beibehalten wird, damit die Abbildung nach der Vergrößerung oder Verkleinerung nicht verzerrt erscheint.</message>
+	 <message key="xmlui.help.pdf-creation.scan2.list3">Speichern Sie das Bild im JPG-Format ab, wenn es sich um ein Foto bzw. eine Grafik handelt, die sehr viele verschiedene Farbnuancen enthält. Wählen Sie dagegen das GIF-Format, wenn es sich um eine Grafik handelt, die nur wenige Farbabstufungen beinhaltet. Mit diesen Formaten erreichen Sie eine optimale Komprimierung der Bildgröße. Nur so kann gewährleistet werden, dass auch Dokumente, die viele Grafiken enthalten, in vertretbarem Zeitaufwand im Internet betrachtet werden können.</message>
+	 <message key="xmlui.help.pdf-creation.scan2.list4">Fügen Sie das so bearbeitete Bild mit Hilfe Ihrer Textverarbeitung in die Dissertation ein. In Microsoft Word funktioniert dies über den Menüpunkt „Einfügen > Grafik > Aus Datei...“.</message>
+	 <message key="xmlui.help.pdf-creation.rights">Rechtliche Bestimmungen bei der Wiedergabe von Abbildungen</message>
+	 <message key="xmlui.help.pdf-creation.rights1">Bei einer Online-Veröffentlichung müssen Sie die gleichen urheberrechtlichen Bestimmungen beachten wie bei einer Print-Veröffentlichung.</message>
+	 <message key="xmlui.help.pdf-creation.rights2">Um unnötige Schwierigkeiten mit Verlagen zu vermeiden, die möglicherweise die Rechteinhaber solcher Abbildungen sind, sollten Sie für diese Abdruckgenehmigungen einholen.<br />Dabei gilt:</message>
+	 <message key="xmlui.help.pdf-creation.rights2.list1">für die Übernahme einer Abbildung, die nur der Illustration einer Arbeit dient, muß die Abdruckgenehmigung des Verlages eingeholt werden. Das Einholen dieser Genehmigung sollte man möglichst mit einer sogenannten „Verschweigefrist“ von 3 bis 4 Wochen verbinden.</message>
+	 <message key="xmlui.help.pdf-creation.rights2.list2">für die Übernahme einer Abbildung, die dann im Text diskutiert wird, ist die Verwendung durch das „Zitatrecht“ abgedeckt.</message>
+	 <message key="xmlui.help.pdf-creation.rights3">Weitere Information finden Sie unter:<br />
+<a href="https://eldorado.tu-dortmund.de/handle/2003/21358">Multimediarecht in der Hochschulpraxis</a> Centrum für eCompetence (CeC) in Hochschulen NRW</message>
+	 <message key="xmlui.help.pdf-creation.latex">Konvertierung von LaTeX-Dokumenten in PDF</message>
+	 <message key="xmlui.help.pdf-creation.latex1">Die einfachste Methode bietet der TeXDocC-Service <a href="http://www.texdocc.de/cgi-bin/texdocc/webhandler3.pl?function=proceedlogin&#38;login=gast&#38;passwd=gast&#38;continue=pruefen">TeXDocC</a>. Dazu die TeX-Datei mit allen Komponenten in ein Zip-Archiv packen und dann hochladen. Das System kompiliert die Datei und schickt eine PDF-Datei zurück. Weitere Hinweise finden Sie im Informationsbereich vom <a href="http://www.texdocc.de/">TEX Document Center</a>.</message>
+	<message key="xmlui.help.pdf-creation.latex2">Mit <a href="http://www.tug.org/applications/hyperref/manual.html">Hyperref</a> können Sie Lesezeichen im Inhaltsverzeichnis erstellen.</message>
+
+	<message key="xmlui.help.pdf-creation.trail">Hilfe: PDF Dokument erstellen</message>
+	<message key="xmlui.help.cumulative.diss.trail">Hilfe: Kumulative Dissertationen</message>
+	<message key="xmlui.help.goodtoknow.trail">Hilfe: Wissenswertes</message>
+
+	<message key="xmlui.help.cumulative.diss.head">Kumulative Dissertationen</message>
+	<message key="xmlui.help.cumulative.diss1">Grundsätzlich besteht die Möglichkeit, mit einer „kumulativen Dissertation“ zu promovieren. Das bedeutet, dass der Doktorand mehrere eigenständige Artikel für Zeitschriften oder Sammelbände als Dissertation publizieren möchte.</message>
+	<message key="xmlui.help.cumulative.diss2">Bei einer kumulativen Dissertation ist stets zu beachten, dass die Rechtesituation mit den entsprechenden Verlagen zu klären ist.</message>
+	<message key="xmlui.help.cumulative.diss3">Die Verbreitung und Akzeptanz dieser Form der Dissertation ist von Fakultät zu Fakultät verschieden. Es kann auch unterschiedliche Anforderungen geben bezüglich der Anzahl der Artikel, Einzel- bzw. Co-Autorenschaft, oder ob beispielsweise der Artikel bereits veröffentlicht sein muss, oder ob der Nachweis ausreicht, dass der Artikel von einem Verlag zur Publikation „angenommen“ wurde. Auch die Vorgaben für die Publikation an sich können variieren.</message>
+	<message key="xmlui.help.cumulative.diss4">Alle diese Punkte bedürfen der Klärung mit dem zuständigen Prüfungsamt, bevor eine kumulative Dissertation abgegeben werden kann.</message>
+	<message key="xmlui.help.cumulative.diss.requirements">Anforderungen an Abgabe-Exemplare</message>
+	<message key="xmlui.help.cumulative.diss.requirements1">Bei der SUB Göttingen müssen zwei gedruckte Exemplare und eine PDF-Datei abgeliefert werden.</message>
+	 <message key="xmlui.help.cumulative.diss.requirements1.list">Die gedruckten Exemplare enthalten</message>
+	 <message key="xmlui.help.cumulative.diss.requirements1.list1">Titelblatt,</message>
+	<message key="xmlui.help.cumulative.diss.requirements1.list2">Inhaltsverzeichnis,</message>
+	<message key="xmlui.help.cumulative.diss.requirements1.list3">Einleitung,</message>
+	<message key="xmlui.help.cumulative.diss.requirements1.list4">übergreifende Diskussion mit Zusammenfassung aller Ergebnisse (Synopsis).</message>
+	<message key="xmlui.help.cumulative.diss.requirements2">Hinzu kommen die publizierten, eingereichten oder andere zugehörige Artikel. Die bereits publizierten Artikel sollen bitte als Abdruck des Verlags-PDF eingebunden werden.</message>
+	<message key="xmlui.help.cumulative.diss.requirements3">Wichtig ist bei jedem Artikel die genaue Quellenangabe.</message>
+	<message key="xmlui.help.cumulative.diss.requirements3.list">Die PDF-Datei enthält genau wie die gedruckten Exemplare</message>
+	<message key="xmlui.help.cumulative.diss.requirements4">Dazu kommt eine Übersicht über die enthaltenen, evtl. bereits publizierten Beiträge.</message>
+	<message key="xmlui.help.cumulative.diss.requirements5">Zu allen bereits veröffentlichten Artikeln fügen Sie bitte dauerhafte und eindeutige URLs in Ihr Dokument. Das kann z. B. der Digital Object Identifier (DOI) Ihres Artikels sein.</message>
+	<message key="xmlui.help.cumulative.diss.requirements6">Wenn es der Verlag gestattet, sollten Sie Ihre veröffentlichten Artikel auf dem Dokumentenserver der Universität Göttingen GoeScholar archivieren und auf diese frei verfügbare Version verlinken. Auf <a href="http://goedoc.uni-goettingen.de/goescholar">GoeScholar</a> ist der Ort der Erstveröffentlichung genau vermerkt. Die bis dato eingereichten oder zur Einreichung vorgesehenen Artikel sind im Volltext beizufügen. Sie gelten damit gegenüber dem Verlag, bei dem sie erscheinen sollen, als veröffentlichtes Preprint.</message>
+	<message key="xmlui.help.cumulative.diss.requirements7">Alle anderen Formalitäten zur Abgabe der <a href="http://www.sub.uni-goettingen.de/elektronisches-publizieren/publizieren/dissertationen-abschlussarbeiten/">elektronischen Dissertation</a> bei der SUB Göttingen sind identisch zu den monographischen elektronischen Dissertationen. Bitte beachten Sie daher unsere aktuellen Hinweise (z. B. <a href="">Checkliste</a>) dazu.</message>
+	<message key="xmlui.help.cumulative.diss.requirements8"><strong>Bitte beachten Sie:</strong> Eine Verzögerung der Publikation Ihrer elektronischen Dissertation auf dem Server der SUB Göttingen ist nicht mehr möglich. Damit würde gegen die Promotionsordnung verstoßen. Nur in besonderen Ausnahmefällen (patentrechtliches Verfahren anhängig) ist auf Sonderantrag eine Verzögerung der Publikation möglich.</message>
+
+	 <message key="xmlui.help.benefits">Leistungen</message>
+	<message key="xmlui.help.benefits.list1">Wir erstellen eine Einstiegsseite (= Indexseite) über die man Zugang zu der Arbeit erhält.</message>
+	<message key="xmlui.help.benefits.list2">Jede Dissertation oder Abschlussarbeit wird verschlüsselt, um die Authentizität der Arbeit sicherzustellen und prüfen zu können.</message>
+	<message key="xmlui.help.benefits.list3">Wir vergeben einen persistenten Identifier (Handle), um Ihre Dissertation bzw. Abschlussarbeit dauerhaft zu adressieren.</message>
+	<message key="xmlui.help.benefits.list4">Zugleich nehmen wir die Publikation in unsere elektronischen Zugangssysteme auf, d. h. in die Liste für elektronische Dissertationen oder Abschlussarbeiten sowie in den Göttinger Universitätskatalog (GUK).</message>
+	<message key="xmlui.help.benefits.list5">Im Rahmen der technischen Möglichkeiten übernehmen wir eine dauerhafte Archivierung.</message>
 	
+	<message key="xmlui.help.costs">Kosten</message>
+	<message key="xmlui.help.costs1">Die Integration Ihrer Dissertationsschrift oder Abschlussarbeit auf unserem Dokumentenserver kostet einmalig 25,00 Euro. Ihre Arbeit benötigt ein maschinenlesbares Inhaltsverzeichnis, über das die Leser bequem navigieren können (PDF-Lesezeichen). Wenn Sie dies nicht selbst erstellen können, bieten wir Ihnen diesen Service für 15,00 Euro an.</message>
+
+	<message key="xmlui.help.contract">Vertragsbedingunen</message>
+	<message key="xmlui.help.contract1">Wird im Online-Publikationsprozess im letzten Schritt unterschrieben.</message>
+	<message key="xmlui.help.contract2">PDF zum Herunterladen</message>
+
+	<message key="xmlui.help.dissrules">Promotionsordnungen</message>
+	<message key="xmlui.help.dissrules1">Link zu SUB</message>
 </catalogue>

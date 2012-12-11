@@ -116,6 +116,9 @@
 
             <!-- Once the search box is built, the other parts of the options are added -->
             <xsl:apply-templates />
+           <!--     <xsl:sort select="dri:list/@n" order="ascending"/>
+	    </xsl:apply-templates> -->
+
         </div>
     </xsl:template>
 
@@ -124,16 +127,22 @@
         them. Each list underneath the matched one becomes an option-set and is handled by the appropriate
         list templates. -->
     <xsl:template match="dri:options/dri:list[dri:list]" priority="4">
-        <xsl:apply-templates select="dri:head"/>
-        <div>
-            <xsl:call-template name="standardAttributes">
-                <xsl:with-param name="class">ds-option-set</xsl:with-param>
-            </xsl:call-template>
-            <ul class="ds-options-list">
-                <xsl:apply-templates select="*[not(name()='head')]" mode="nested"/>
-            </ul>
-        </div>
+	<!-- do not show facets on homepage -->
+	<xsl:if test="not(./@id ='aspect.discovery.Navigation.list.discovery' and (string-length(//dri:metadata[@qualifier='URI']) = 0))"> 
+	<!--<xsl:if test="not(./@id ='aspect.eperson.Navigation.list.account' and (count(//dri:item) &lt; 3))"> -->
+	        <xsl:apply-templates select="dri:head"/>
+        	<div>
+	            <xsl:call-template name="standardAttributes">
+        	        <xsl:with-param name="class">ds-option-set</xsl:with-param>
+	            </xsl:call-template>
+        	    <ul class="ds-options-list">
+                	<xsl:apply-templates select="*[not(name()='head')]" mode="nested"/>
+	            </ul>
+        	</div>
+	<!-- </xsl:if> -->
+	</xsl:if>
     </xsl:template>
+
 
     <!-- Special case for nested options lists -->
     <xsl:template match="dri:options/dri:list/dri:list" priority="3" mode="nested">
@@ -163,6 +172,22 @@
     <xsl:template match="dri:options//dri:list[count(child::*)=0]" priority="5">
     </xsl:template>
 
+   <!-- do not show account options if not authenticated -->
+     <xsl:template match="dri:options//dri:list[@id='aspect.eperson.Navigation.list.account']" priority="3">
+        <xsl:if test="//dri:userMeta/@authenticated='yes'">
+	  <xsl:apply-templates select="dri:head"/>
+	    <div>
+            <xsl:call-template name="standardAttributes">
+                <xsl:with-param name="class">ds-option-set</xsl:with-param>
+            </xsl:call-template>
+            <ul class="ds-simple-list">
+                <xsl:apply-templates select="dri:item" mode="nested"/>
+            </ul>
+        </div>
+
+	</xsl:if>
+     </xsl:template>
+	
 
     <xsl:template match="dri:options/dri:list/dri:head" priority="3">
         <h3>
