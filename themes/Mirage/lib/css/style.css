@@ -275,11 +275,12 @@ caption {
 	position: relative;
 }
 hr {
-	position: relative;
+	clear: both;
 	height: 1px;
 	left: -20px;
-	margin: 22px 0 -5px;
-	width: 740px;
+	margin: 0 -20px -5px 0;
+	position: relative;
+	width: auto;
 }
 #header p {
 	margin: 2px 0;
@@ -484,7 +485,7 @@ body:after {
 */
 img  {
 	border: 0;
-	max-width: 720px;
+	max-width: 100%;
 }
 br {
 	line-height: 7px;
@@ -498,9 +499,10 @@ br {
 	float: right;
 }
 .hidden {
+	display: none !important;
+}
+.navlink {
 	display: none;
-	margin: 0;
-	padding: 0;
 }
 #page-wrapper {
 	background: url(../../images/content-bg.png) center top repeat-y;
@@ -909,32 +911,33 @@ form a[href$="/advanced-search"]:hover,
 
 /* Sidebar & Userbox
 ---------------------------------------------------------------------------*/
-#sidebar {
+#nav {
 	/*float: left;*/
+	/*background: #e6e9ee;*/
 	overflow: hidden;
 	padding: 27px 0 60px 20px;
 	width: 219px;
 }
-#sidebar h1 {
+#nav h1 {
 	font-size: 22px;
 	margin: 0;
 	top: -3px;
 }
-#sidebar h2 {
+#nav h2 {
 	background: none;
 	font-size: 16px;
 	margin-bottom: 0;
 	top: -1px;
 }
-#sidebar ul {
+#nav ul {
 	list-style: none;
 	margin: 0 0 18px 0;
 }
-#sidebar .ds-simple-list li {
-	/*background: url(../../images/sidebar-line.png) left bottom no-repeat;*/
+#nav .ds-simple-list li {
+	/*background: url(../../images/nav-line.png) left bottom no-repeat;*/
 	border-bottom: 1px solid #ccc;
 }
-#sidebar a,
+#nav a,
 #userbox ul a {
 	background: url(../../images/icons.png) 7px -500px no-repeat;
 	display: block;
@@ -945,46 +948,46 @@ form a[href$="/advanced-search"]:hover,
 #userbox ul a {
 	width: auto;
 }
-#sidebar a:hover,
+#nav a:hover,
 #userbox a:hover {
 	text-decoration: none;
 }
-#sidebar a[href$="/community-list"] {
+#nav a[href$="/community-list"] {
 	background-position: 7px -86px;
 }
-#sidebar a[href$="?type=dateissued"] {
+#nav a[href$="?type=dateissued"] {
 	background-position: 7px -150px;
 }
-#sidebar a[href$="?type=author"] {
+#nav a[href$="?type=author"] {
 	background-position: 7px -22px;
 }
-#sidebar a[href$="?type=title"] {
+#nav a[href$="?type=title"] {
 	background-position: 7px -182px;
 }
-#sidebar a[href$="?type=subject"] {
+#nav a[href$="?type=subject"] {
 	background-position: 7px -54px;
 }
-#sidebar a[href$="/login"] {
+#nav a[href$="/login"] {
 	background-position: 7px 10px;
 }
-#sidebar a[href$="/logout"],
+#nav a[href$="/logout"],
 #userbox a[href$="/logout"] {
 	background-position: 7px -214px;
 }
-#sidebar a[href$="/profile"],
+#nav a[href$="/profile"],
 #userbox a[href$="/profile"] {
 	background-position: 7px -310px;
 }
-#sidebar a[href$="/submissions"],
+#nav a[href$="/submissions"],
 #userbox a[href$="/submissions"] {
 	background-position: 7px -342px;
 }
-#sidebar a[href$="/register"] {
+#nav a[href$="/register"] {
 	background-position: 7px -118px;
 }
-#sidebar .ds-simple-list li:hover,
-#sidebar #aspect_eperson_Navigation_list_administrative a:hover {
-	/*background: url(../../images/sidebar-hover-bg.png) left top repeat-y;*/
+#nav .ds-simple-list li:hover,
+#nav #aspect_eperson_Navigation_list_administrative a:hover {
+	/*background: url(../../images/nav-hover-bg.png) left top repeat-y;*/
 	background-color: #ddd;
 }
 .ds-simple-list .ds-simple-list {
@@ -1319,9 +1322,12 @@ table.detailtable td {
 	width: 100%; /* IE 7 */
 }
 .thumbnail-wrapper,
-.file-metadata,
-.file-link {
+.file-metadata {
 	float: left;
+}
+.file-link {
+	float: right;
+	margin-bottom: 29px;
 }
 .item-metadata {
 	float: left;
@@ -1335,18 +1341,14 @@ table.detailtable td {
 .file-metadata span.bold,
 .metadata span.bold {
 	clear: left;
+	float: left;
 	width: 200px;
 }
 .file-metadata {
-	margin-bottom: 18px;
-	width: 520px;
+	margin: 0 20px 18px 0;
 }
 .file-metadata span.bold {
 	float: left;
-}
-.metadata span + span {
-	float: right;
-	width: 520px;
 }
 #ds-system-wide-alert,
 .notice {
@@ -1382,10 +1384,6 @@ table.detailtable td {
 }
 form.discover-sort-box select{
 	margin: 0 4px;
-}
-.hidden {
-	display:none;
-	visibility:hidden;
 }
 .icon-button {
 	padding:4px;
@@ -1530,7 +1528,6 @@ tr.odd {
 	margin: 0 150px !important;
 	text-align: center;
 	top: -2px;
-	width: 420px;
 }
 .previous-page-link,
 .next-page-link {
@@ -2129,9 +2126,12 @@ input[size="6"] {
 /* Addons by MH (unsorted) ;p
 ---------------------------------------------------------------------------*/
 #aspect_discovery_SimpleSearch_div_search-controls,
-#aspect_artifactbrowser_ConfigurableBrowse_div_browse-controls,
-#aspect_artifactbrowser_ConfigurableBrowse_div_browse-navigation p:nth-child(2) {
+#aspect_artifactbrowser_ConfigurableBrowse_div_browse-controls {
 	display: none;
+}
+
+#aspect_artifactbrowser_ConfigurableBrowse_div_browse-navigation p:nth-child(2) {
+	display: none; /* Does not work in IE7 (and maybe 8), please check */
 }
 
 #aspect_artifactbrowser_CommunityViewer_div_community-browse h2,
@@ -2149,8 +2149,8 @@ input[size="6"] {
 	padding: 4px 6px;
 	text-shadow: 0 1px 0 #fff;
 }
-.simple-item-view-bookmark span + span {
-	width: 513px;
+.simple-item-view-bookmark span.bold {
+	width: 193px;
 }
 
 #aspect_eperson_EditProfile_list_memberships {

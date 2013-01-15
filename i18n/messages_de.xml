@@ -509,7 +509,7 @@
 	<message key="xmlui.Submission.Submissions.title">Veröffentlichungen und Geschäftsgänge</message>
 	<message key="xmlui.Submission.Submissions.trail">Veröffentlichungen</message>
 	<message key="xmlui.Submission.Submissions.head">Veröffentlichungen und übernommene Aufgaben</message>
-	<message key="xmlui.Submission.Submissions.untitled"><i>Ohne Titel</i></message>
+	<message key="xmlui.Submission.Submissions.untitled"><i>Ohne Titel</i>&#160;</message>
 	<message key="xmlui.Submission.Submissions.email">E-Mail: </message>
 	<!-- Same transformer, workflow section -->
 	<message key="xmlui.Submission.Submissions.workflow_head1">Aufgaben aus Geschäftsgängen</message>
@@ -602,7 +602,7 @@
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.open_set"> (</message>
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.close_set">)</message>
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.multiple_titles">Weitere Titel</message>
-	<message key="xmlui.Submission.submit.InitialQuestionsStep.multiple_titles_help">Das Dokument hat mehrere Titel <i>z. B.: eine Übersetzung</i></message>
+	<message key="xmlui.Submission.submit.InitialQuestionsStep.multiple_titles_help">Das Dokument hat mehrere Titel, z. B. eine Übersetzung</message>
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.multiple_titles_note">Wenn das obere Kästchen nicht angehakt ist, werden folgende Titel entfernt: </message>
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.published_before">Bereits veröffentlicht</message>
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.published_before_help">Das Dokument wurde bereits veröffentlicht oder öffentlich zugänglich gemacht.</message>
@@ -2160,7 +2160,7 @@
 	<message key="xmlui.help.goodtoknow.trail">Hilfe &amp; Info: Häufige Fragen</message>
 
 	<message key="xmlui.contact.trail">Kontakt</message>
-	<message key="xmlui.workfow.trail">Hilfe &amp; Info: Online Publikationsprozess</message>
+	<message key="xmlui.workfow.trail">Hilfe &amp; Info: Online-Publikationsprozess</message>
 	<message key="xmlui.help.publication.fullprocess.trail">Hilfe &amp; Info: Publizieren auf eDiss</message>
 	<message key="xmlui.deposit-license.trail">Hilfe &amp; Info: Vertragsbedingungen</message>
 	<message key="xmlui.deposit-license.head">Vertragsbedingungen</message>
@@ -2268,7 +2268,7 @@
 					<a href="#before">Voraussetzungen</a>
 				</li>
 				<li>
-					<a href="#content">Anforderungen</a>
+					<a href="#requirements">Anforderungen</a>
 					<ul>
 						<li><a href="#normal">Nicht-Kumulative Abschlussarbeiten</a></li>
 						<li><a href="#cumulative">Kumulative Dissertationen</a></li>
@@ -2321,8 +2321,7 @@
 					<a href="#rejected">Meine Publikation wurde abgelehnt</a>
 				</li>
 			</ul>
-			<h2 class="ds-div-head">Voraussetzungen</h2>
-			<a name="before">&#160;</a>
+			<h2 id="before" class="ds-div-head">Voraussetzungen</h2>
 			<p class="ds-paragraph">Bevor Sie mit der Veröffentlichung Ihrer Arbeit anfangen, vergewissern Sie sich bitte, dass </p>
 			<ul class="ds-bulleted-list">
 				<li>Sie die <a href="http://www.sub.uni-goettingen.de/elektronisches-publizieren/publizieren/dissertationen-abschlussarbeiten/promotionsordnungen-der-fakultaeten/">einschlägige Promotionsordnung</a> zur Kenntnis genommen haben,</li>
@@ -2330,7 +2329,7 @@
 				<li>falls Sie Mediziner sind, Ihre Einladung zur mündlichen Prüfung vorliegt.</li>
 			</ul>
 
-			<h2 class="ds-div-head"><a name="content">&#160;</a>Anforderungen</h2>
+			<h2 id="requirements" class="ds-div-head">Anforderungen</h2>
 			<p class="ds-paragraph">Bei der SUB Göttingen müssen <strong>zwei gedruckte gebundene Exemplare</strong> und <strong>eine elektronische Version</strong> (PDF-Datei) Ihrer Arbeit abgeliefert werden.
 				Die PDF Version muss als <strong>eine</strong> Datei (nicht als mehrere Einzeldateien) vorliegen, die die folgenden Kriterien erfüllt.
 				Die Datei</p>
@@ -2340,12 +2339,12 @@
 				<li>ist durch keine Sicherheitseinstellungen geschützt.</li>
 			</ul>
 
-			<h3><a name="normal">&#160;</a>Nicht-kumulative Dissertationen</h3>
+			<h3 id="normal">Nicht-kumulative Dissertationen</h3>
 			<p class="ds-paragraph">
 				Die gedruckten Exemplare Ihrer Arbeit müssen mit Ihrer elektronischen Dissertation <strong>identisch</strong> sein. <br />	
 				In die gedruckte Version muss hinten Ihr Lebenslauf eingebunden sein. Den Lebenslauf können Sie in der elektronischen Dissertation weglassen. Allein in diesem Punkt ist ein Unterschied zwischen gedruckten und elektronischen Version erlaubt. 
 			</p>
-			<h3><a name="cumulative">&#160;</a>Kumulative Dissertationen</h3>
+			<h3 id="cumulative">Kumulative Dissertationen</h3>
 			<p class="ds-paragraph">Die Verbreitung und Akzeptanz dieser Form der Dissertation ist von Fakultät zu Fakultät verschieden. Bitte lesen Sie Ihre <a href="http://www.sub.uni-goettingen.de/elektronisches-publizieren/publizieren/dissertationen-abschlussarbeiten/promotionsordnungen-der-fakultaeten/">Promotionsordnung</a> aufmerksam und informieren Sie sich ggf. bei Ihrem Prüfungsamt.
 			</p>
 
@@ -2371,8 +2370,8 @@
 				<li>fügen Sie bitte zu allen bereits veröffentlichten Artikeln dauerhafte und eindeutige URLs in Ihr Dokument ein. Das kann z. B. der Digital Object Identifier (DOI) Ihres Artikels sein.</li>
 			</ul>
 
-			<h2 class="ds-div-head"><a name="detailed">&#160;</a>Das Publikationsverfahren</h2>
-			<h3 class="ds-head"><a name="pdfCreate">&#160;</a>Erstellen Sie Ihre Dissertation als PDF Datei</h3>
+			<h2 class="ds-div-head" id="detailed">Das Publikationsverfahren</h2>
+			<h3 class="ds-head" id="pdfCreate">Erstellen Sie Ihre Dissertation als PDF Datei</h3>
 			<p class="ds-paragraph"><a href="pdf-howto">Anleitung / Hilfe</a> zur Erstellung Ihrer elektronischen Dissertation als <strong>eine</strong> PDF Datei (nicht als mehrere Einzeldateien), so dass sie
 			</p>
 			<ul class="ds-bulleted-list">
@@ -2386,8 +2385,7 @@
 				<li>Damit Ihre Dissertation in unsere Volltextsuche eingebunden werden kann, müssen wir den Text extrahieren können.</li>
 				<li>Im Zuge der Archivierung kann es notwendig sein, Ihr Dokument in andere Formate zu konvertieren.</li>
 			</ul>
-			<a name="register">&#160;</a>
-			<h3 class="ds-head">Registrieren bzw. loggen Sie sich bei eDiss ein</h3>
+			<h3 class="ds-head" id="register">Registrieren bzw. loggen Sie sich bei eDiss ein</h3>
 			<p class="ds-paragraph">Für die erstmalige <b>Registrierung</b> klicken Sie bitte auf "Registrieren" im rechten oberen Kästchen im Kopf der Seite! <br />
 				Es erscheint ein Formular, in dem Ihre E-Mail Adresse abgefragt wird. Nach Ausfüllen und Wegschicken des Formulars bekommen Sie eine Nachricht mit einem Link zu Ihrem zukünftigen Benutzerprofil. Geben Sie bitte dort Ihren Namen und Telefonnummer an. Durch die Sprachauswahl können Sie bestimmen, in welcher Sprache Sie Benachrichtigungen von uns erhalten wollen.<br />
 				<br />
@@ -2397,21 +2395,17 @@
 				<br />Als authentifizierte Nutzer haben Sie die Möglichkeit, auf eDIss zu publizieren, abgebrochene Publikationen wieder aufnehmen oder über "Benutzerdaten" (im linken Menü unter "Mein Benutzerkonto") automatische Benachrichtigung über Neuerscheinungen in einzelnen Sammlungen abonnieren.
 				<br />
 				<br />Aus Sicherheitsgründen empfehlen wir Ihnen zum Schluss sich explizit auszuloggen (nicht nur den Browser zu schließen). Gehen Sie dazu mit der Maus auf Ihren Namen im oberen Kästchen rechts im Kopf der Seite. Dort klappt ein Menü auf, in dem der Punkt "ausloggen" angeboten wird.</p>
-			<a name="workflow">&#160;</a>
-			<h3 class="ds-head">Starten Sie den online Publikationsprozess</h3>
+			<h3 class="ds-head" id="workflow">Starten Sie den online Publikationsprozess</h3>
 			<p class="ds-paragraph">Den Online-Publikationsprozess können Sie auf zwei Wege starten:</p>
 			<ol class="ds-ordered-list">
 				<li>Sie klicken auf "Jetzt publizieren" im Linken Hauptmenü oben. In diesem Falle müssen Sie vor dem 1. Schritt (Dokument hochladen) zunächst die Sammlung auswählen, in der Sie Ihre Arbeit veröffentlichen wollen. Dazu werden Ihnen in einem Aufklappmenü alle Sammlungen aufgelistet.</li>
 				<li>Sie navigieren zuerst über den Punkt "Bereiche &amp; Sammlungen" im Linken Hauptmenü zur Sammlung, in der Sie publizieren wollen. Dann klicken Sie auf den Button "Hier veröffentlichen" im linken Hauptmenü oben. Sie landen dann beim 1. Schritt "Dokument hochladen".</li>
 			</ol>
 			<p class="ds-paragraph">
-				<strong>BITTE BEACHTEN SIE: </strong>Die Sammlungen entsprechen mit zwei Ausnahmen den Fakultäten der Universität Göttingen. Die Philosophische und die Sozialwissenschaftliche Fakultäten sind so umfangreich und heterogen, dass wir Sie in weitere Sammlungen untergliedert haben. Falls Sie den Online Publikationsprozess auf dem 1. Weg starten und Sie in einem dieser Bereiche promovieren, schauen Sie bitte zuerst diese Sammlungen an, um vorweg festzulegen, in welche Ihre Arbeit gehört! </p>
+				<strong>BITTE BEACHTEN SIE: </strong>Die Sammlungen entsprechen mit zwei Ausnahmen den Fakultäten der Universität Göttingen. Die Philosophische und die Sozialwissenschaftliche Fakultäten sind so umfangreich und heterogen, dass wir Sie in weitere Sammlungen untergliedert haben. Falls Sie den Online-Publikationsprozess auf dem 1. Weg starten und Sie in einem dieser Bereiche promovieren, schauen Sie bitte zuerst diese Sammlungen an, um vorweg festzulegen, in welche Ihre Arbeit gehört! </p>
 			<p class="ds-paragraph">
 				<strong>BITTE BEACHTEN SIE: </strong>Solange der Publikationsprozess nicht abgeschlossen ist, können Sie jeder Zeit zu einem früheren Schritt zurückkehren und sowohl die eingegeben Daten ändern als auch Ihre Dokumente austauschen. Nach Abschluss des Prozesses sind <b>keine Änderungen</b> mehr an Ihrer Publikation möglich! <br />In Ausnahmefällen können Sie uns <a href="contact">kontaktieren</a> und begründete Änderungswünsche mitteilen.</p>
-			<a name="upload">&#160;</a>
-			<p class="ds-paragraph">
-			</p><h3 class="ds-head">1. Dokument hochladen</h3>
-			<p></p>
+			<h3 class="ds-head" id="upload">1. Dokument hochladen</h3>
 			<p class="ds-paragraph">Zum Hochladen Ihres Dokumentes wird Ihnen ein Formular angezeigt. Hier können Sie über das Button "Durchsuchen" Ihr Dokument auf Ihrem Rechner aussuchen und mit einem Klick auf "Datei hochladen und/oder noch eine hinzufügen" auf eDiss hochladen. <br />
 				<br /> Sie können mehrere Dokumente (in beliebigen Formaten) nacheinander hochladen. Dies ist z.B. sinnvoll, wenn Sie Ihre Dissertation durch zusätzliche Graphiken, Tabellen, Umfrageergebnisse, Labordaten etc. ergänzen wollen, auf die Ihre Arbeit basiert. Auch die Veröffentlichung Ihrer Arbeit in verschiedenen Formaten, z.B. zusätzlich für eBookReader wäre denkbar. In diesen Fällen geben Sie bitte zu den jeweiligen Dateien eine kurze Beschreibung im entsprechenden Formularfeld mit.</p>
 			<p class="ds-paragraph">
@@ -2419,31 +2413,24 @@
 			<p class="ds-paragraph">Beim Hochladen der ersten PDF-Datei wird automatisch geprüft, ob sie unseren Vorschriften genügt. Dieser Prozess kann, je nach Dateigröße einige Zeit in Anspruch nehmen. Bitte unterbrechen Sie diesen Prozess nicht! <br />
 				<br />Anschließend wird das Ergeibnis der Prüfung angezeigt. Falls eine der Anforderungen nicht erfüllt ist, wird Ihr Dokument <b>abgelehnt</b>. Bitte unterbrechen Sie den Publikationsprozess in diesem Fall mit einem Klick auf "Speichern und später fortsetzen", korrigieren Sie Ihr PDF Dokument und nehmen Sie dann wieder den Publikationsprozess auf. <br />Ist Ihr PDF Dokument angenommen, können Sie mit dem hochladen weiterer Dokumente ebenso fortfahren oder mit Klick auf "Weiter" zum nächsten Schritt weitergehen.<br />
 				<br />Beim Hochladen der ersten PDF Datei werden zusätzlich die Metadaten Titel, Autor und Schlagwörter angezeigt, die die Datei enthält. Falls Ihr Dokument später bei einer Google-Suche gefunden wird, werden von Google diese Daten ausgelesen und beim Treffer angezeigt. Wollen Sie die Daten ändern, löschen Sie bitte ihr hochgeladenes Dokument, indem Sie das Häckchen neben dem Dateinamen setzen und auf "Ausgewählte entfernen" klicken. Unterbrechen Sie zunächst den Prozess und speichern Sie die Daten.  Dann korrigieren Sie die Metadaten in Ihrem Dokument, nehmen Sie den online Publikationsprozess wieder auf und laden Sie die korrigierte Datei noch einmal hoch.<br />Da eDiss diese Daten nicht nutzt, sind Sie bei der Entscheidung ganz frei, ob sie hier Korrekturen vornehmen. </p>
-			<a name="describe">&#160;</a>
-			<p class="ds-paragraph">
-			</p><h3 class="ds-head">2. Dokument beschreiben</h3>
+			<h3 id="describe" class="ds-head">2. Dokument beschreiben</h3>
 			<p>
 				In diesem Schritt werden in einem Formular zunächst Ihre persönlichen Daten (Geburtsdatum, Adresse) abgefragt. Das Geburtsdatum ist zur Identifikation Ihrer Person notwendig. Die angegebene Adresse verwenden wir als Rechnungsadresse für die Publikationsgebühr. <br />
 				Die persönlichen Angaben, zusammen mit Ihrer E-Mail-Adresse werden <strong>vertraulich</strong> behandelt und für die Besucher des eDiss-Servers nicht sichtbar!</p>
-			<p class="ds-paragraph">Weitere Felder des Formulars dienen dazu, Ihre Arbeit zu beschreiben. Geben Sie hier bitte die erforderlichen Informationen (Originaltitel, Untertitel, Zusammenfassung etc.) an. Titel, Schlüsselwörter und Zusammenfassung müssen auf jedem Fall englisch vorhanden sein. Falls Ihre Arbeit in einer anderen Sprache verfasst ist, werden Sie aufgefordert englische Übersetzungen zu diesen Angaben zu liefern.<br />
+			<p id="special" class="ds-paragraph">Weitere Felder des Formulars dienen dazu, Ihre Arbeit zu beschreiben. Geben Sie hier bitte die erforderlichen Informationen (Originaltitel, Untertitel, Zusammenfassung etc.) an. Titel, Schlüsselwörter und Zusammenfassung müssen auf jedem Fall englisch vorhanden sein. Falls Ihre Arbeit in einer anderen Sprache verfasst ist, werden Sie aufgefordert englische Übersetzungen zu diesen Angaben zu liefern.<br />
 				<br />
-				<a name="special">&#160;</a>
 				<br />Das letzte Formularfeld, "Nachricht für die Redakteure" ist optional und gibt Ihnen die Möglichkeit, eine Nachricht für die Redakteure zu hinterlassen. Beispielsweise können Sie hier einen <a href="#embargo">Sonderantrag zur Verzögerung</a> der Veröffentlichung Ihrer Publikation stellen. Der Inhalt dieses Feldes wird von unseren Redakteuren ausgewertet und nicht öffentlich sichtbar gemacht.
 				<br />
 				<br /> Pflichtfelder sind im Formular mit "*" gekennzeichnet. Sie können erst dann zum nächsten Schritt übergehen, wenn alle Pflichtfelder ausgefüllt sind.</p>
-			<a name="proof">&#160;</a>
-			<p class="ds-paragraph">
-			</p><h3 class="ds-head">3. Eingaben überprüfen</h3>
+			<h3 id="proof" class="ds-head">3. Eingaben überprüfen</h3>
 			<p class="ds-paragraph">Hier werden Ihnen alle im vorherigen Schritt erfassten Angaben mit der Möglichkeit zur Korrektur angezeigt. Bitte gehen Sie die Daten sorgfältig durch und korrigieren sie, falls nötig!</p>
-			<a name="ccLicense">&#160;</a>
-			<h3 class="ds-head">4. Spezielle Nutzungslizenz (CC-Lizenz) auswählen (optional)</h3>
+			<h3 id="ccLicense" class="ds-head">4. Spezielle Nutzungslizenz (CC-Lizenz) auswählen (optional)</h3>
 			<p class="ds-paragraph">Um Ihre Dissertation auf eDiss zu veröffentlichen, müssen Sie im Schritt 5 einen Vertrag mit uns abschließen. In diesem Vertrag erklären Sie sich unter anderem damit einverstanden, dass Nutzer von eDiss Ihre Publikation zum "privaten und sonstigen Gebrauch herunterladen, speichern oder in kleinen Anzahl drucken" dürfen. (Den vollständigen Vertrag können Sie im Hilfe &amp; Info Menü einsehen.) <br />
 				<br />Möchten Sie eDiss-Nutzern weitergehende Rechte (z.B. kommerzielle Nutzung, Veränderung des Dokumentes etc.) gestatten, so können Sie eine entsprechende CC-Lizenz (Creative Commons Lizenz) zu Ihrem Dokument einbinden. Wählen Sie dazu im Aufklappmenü den Punkt "CC-Lizenz" aus. Es erscheint ein Formular, indem Sie genau auswählen können, welche spezielle Rechte Sie auf Ihr Dokument gewähren. Mit einem Klick auf "weiter" wird dann das entsprechende CC-Lizenz zu Ihrer Publikation eingebunden und dem Nutzer angezeigt. <br />
 				<br />Wünschen Sie keine zusätzliche Lizenz, gehen Sie einfach zum nächsten Schritt weiter ohne etwas auszuwählen. <br />
 				<br />  <a href="http://de.creativecommons.org/was-ist-cc/">Was ist Creative Commons Lizenz?</a>
 			</p>
-			<a name="depositLicense">&#160;</a>
-			<h3 class="ds-head">5. Dem eDiss-Vertrag zustimmen</h3>
+			<h3 id="depositLicense" class="ds-head">5. Dem eDiss-Vertrag zustimmen</h3>
 			<p class="ds-paragraph">
 				Um Ihre Dissertation auf eDiss zu veröffentlichen, müssen Sie einen Vertrag mit uns
 				abschliessen, indem die Rechte des Serverbetreibers und die Zugriffsrechte unserer Nutzer auf Ihre Publikation
@@ -2454,9 +2441,7 @@
 			</p>
 			<p class="ds-paragraph">
 				<strong>BITTE BEACHTEN SIE: </strong>Wir machen Sie an dieser Stelle noch einmal darauf aufmerksam, dass nach Abschluss des Online Publikationsporzesses <b>keine Änderungen</b> mehr an Ihrer Publikation möglich sind.</p>
-			<a name="print">&#160;</a>
-			<p class="ds-paragraph">
-			</p><h3 class="ds-head">Liefern Sie uns zwei gedruckte Exemplare Ihrer Dissertation</h3>
+			<h3 id="print" class="ds-head">Liefern Sie uns zwei gedruckte Exemplare Ihrer Dissertation</h3>
 			<p class="ds-paragraph">Die gedruckten Exemplare Ihrer Arbeit müssen mit Ihrer elektrischen Dissertation identisch sein. In die gedruckte Version muss hinten Ihr Lebenslauf eingebunden sein.</p>
 			<p class="ds-paragraph">
 				<strong>BITTE BEACHTEN SIE: </strong>Sie können Ihren Lebenslauf in Ihrer elektronischen Dissertation weglassen. Allein in diesem Punkt ist ein Unterschied zu der gedruckten Version Ihrer Dissertation erlaubt. </p>
@@ -2476,36 +2461,32 @@
 			Sobald die gedruckte Versionen Ihrer Arbeit bei uns angekommen sind, prüft die Redaktion Ihre elektronische Publikation und (sofern die Publikationsgebühr bezahlt ist) schalten wir sie frei. Ab dem Moment wird Ihre Dissertation öffentlich sichtbar und Sie werden über die Freischaltung in einer E-Mail informiert.
 				<br />
 				In einzelnen Fällen (z.B. das PDF Dokument enthält ein fehlerhaftes Inhaltsverzeichnis oder die Rechnung konnte wegen falsche Angaben nicht verschickt werden) kann es vorkommen, dass die Redaktion eine Publikation ablehnt. In diesem Fall erhalten Sie eine E-Mail mit der Begründung der Ablehnung.</p>
-			<a name="bill">&#160;</a>
-			<p class="ds-paragraph">
-			</p><h3 class="ds-head">Bezahlen Sie die 45,00 € Publikationsgebühr.</h3>
+			<h3 id="bill" class="ds-head">Bezahlen Sie die 45,00 € Publikationsgebühr.</h3>
 			<p class="ds-paragraph">Unmittelbar nach Abschluss des online Publikationsprozesses erhalten Sie per Port eine Rechnung mit unseren Kontodaten zur Publikationsgebühr. Wir empfehlen Ihnen die 45 € möglichst bald zu überweisen, damit wir bei Ankunft der Druckexemplare Ihre Arbeit gleich öffentlich machen können!<br />
 				<br />
 			</p>
-			<a name="embargo">&#160;</a>
-			<p class="ds-paragraph">
+			<p id="embargo" class="ds-paragraph">
 				<strong>BITTE BEACHTEN SIE: </strong>Eine Verzögerung der Publikation Ihrer elektronischen Dissertation auf eDiss ist nicht mehr möglich. Damit würde gegen die Promotionsordnung verstoßen. Nur in besonderen Ausnahmefällen (patentrechtliches Verfahren anhängig) ist auf Sonderantrag eine Verzögerung der Publikation möglich.
 			</p>
-			<h2 class="ds-div-head">Publikationsprozess unterbrechen</h2>
-			<a name="break">&#160;</a>
+			<h2 id="break" class="ds-div-head">Publikationsprozess unterbrechen</h2>
 			<p class="ds-paragraph">Sie können den Online Publiaktionsprozess über den Knopf "Speichern und später fortsetzen" jeder Zeit abbrechen. Sie haben dann die Möglichkeit, Ihre bisherige Angaben zu speichern, um später damit fortzufahren oder die angefangene Publikation endgültig zu löschen.</p>
-			<a name="resume">&#160;</a>
-			<h2 class="ds-div-head">Abgebrochene Publikationen wieder aufnehmen</h2>
+			<h2 id="resume" class="ds-div-head">Abgebrochene Publikationen wieder aufnehmen</h2>
 			<div class="ds-static-div">
-				<p class="ds-paragraph">xmlui.help.workflow.resume.text2 
+				<p class="ds-paragraph">
+					Um eine Publikation wieder aufzunehmen, klicken Sie unter <em>Mein Benutzerkonto</em> auf <em><a href="/submissions">Veröffentlichungen</a></em>.
+					Es erscheint eine Liste Ihrer unvollendeten Veröffentlichungen. Klicken Sie die zu bearbeitende Publikation an und dann die Schaltfläche <em>Wiederaufnehmen</em>, um mit dem Publikationsprozess fortzufahren.
 				</p>
 				<p class="ds-paragraph">
-					<strong>BITTE BEACHTEN SIE: </strong>Zum Navigieren innerhalb des Online Publikationsprozesses benutzen Sie bitte die, mit den einzelnen Schritten beschriftete Leiste unmittelbar über den Formularen. Bei der Nutzung des browsereigenen vor- und rückwärts-Knopfes können wir keinen fehlerfreien Ablauf garantieren.</p>
+					<strong>BITTE BEACHTEN SIE: </strong>Zum Navigieren innerhalb des Online-Publikationsprozesses benutzen Sie bitte die, mit den einzelnen Schritten beschriftete Leiste unmittelbar über den Formularen. Bei der Nutzung des browsereigenen vor- und rückwärts-Knopfes können wir keinen fehlerfreien Ablauf garantieren.</p>
 			</div>
-			<h2 class="ds-div-head">Meine Publikation wurde abgelehnt</h2>
+			<h2 id="rejected" class="ds-div-head">Meine Publikation wurde abgelehnt</h2>
 			<div class="ds-static-div">
-				<a name="rejected">&#160;</a>
 				<p class="ds-paragraph">Dies kann an zwei Stellen passieren</p>
 				<ol class="ds-ordered-list">
 					<li>Im Online Publikationsporzess beim Schritt "Dokument hochladen" wird Ihr PDF Dokument nicht hochgeladen.</li>
-					<li>Nach Abschluss des Online Publikationsprozesses lehnt die Redaktion die Freischaltung Ihrer Publikation ab. In diesem Fall bekommen Sie eine Nachricht von der Redaktion, in der der genaue Grund für die Ablehnung mitgeteilt wird. </li>
+					<li>Nach Abschluss des Online-Publikationsprozesses lehnt die Redaktion die Freischaltung Ihrer Publikation ab. In diesem Fall bekommen Sie eine Nachricht von der Redaktion, in der der genaue Grund für die Ablehnung mitgeteilt wird. </li>
 				</ol>
-				<p class="ds-paragraph">Sind Korrekturen an Ihrem PDF Dokument erwünscht, erledigen Sie diese zuerst und nehmen Sie dann den Online Publikationsprozess wieder auf. Wurde die Publikation auf Grund von Beschreibungsdaten abgelehnt, so können Sie gleich den Publikationsprozess wieder aufnehmen und die Angaben korrigieren. Die Vorgehensweise zum Wiederaufnehmen des Online Publikationsprozesses ist dieselbe, wie bei den abgebrochenen Publikationen. Sehen Sie dazu <a href="#resume">den entsprechenden Abschnitt!</a> </p>
+				<p class="ds-paragraph">Sind Korrekturen an Ihrem PDF Dokument erwünscht, erledigen Sie diese zuerst und nehmen Sie dann den Online-Publikationsprozess wieder auf. Wurde die Publikation auf Grund von Beschreibungsdaten abgelehnt, so können Sie gleich den Publikationsprozess wieder aufnehmen und die Angaben korrigieren. Die Vorgehensweise zum Wiederaufnehmen des Online-Publikationsprozesses ist dieselbe, wie bei den abgebrochenen Publikationen. Sehen Sie dazu <a href="#resume">den entsprechenden Abschnitt!</a> </p>
 				<p class="ds-paragraph">
 					<strong>BITTE BEACHTEN SIE: </strong>Ihr(e) Dokument(e) und alle früheren Eingaben sind gespeichert, so dass Sie keine Daten wiederholt eingeben müssen. Es ist jedoch notwendig, nach den Korrekturen im letzten Schritt dem eDiss-Vertrag wieder zuzustimmen. Dann steht Ihre Publikation unseren Redakteuren wieder zum Freischalten bereit.</p>
 			</div>
@@ -2515,7 +2496,7 @@
 					<a href="#before">Voraussetzungen</a>
 				</li>
 				<li>
-					<a href="#content">Inhaltliche Anforderungen</a>
+					<a href="#requirements">Inhaltliche Anforderungen</a>
 				</li>
 				<li>
 					<a href="#detailed">Das Publikationsverfahren</a>
@@ -2747,13 +2728,13 @@
 			</div>
 
 			<div class="ds-static-div">
-				<h2 class="ds-div-head"><a name="parallel">&#160;</a>Darf ich meine Dissertation neben der Veröffentlichung auf eDiss auch anderswo online stellen oder publizieren?</h2>
+				<h2 class="ds-div-head" id="parallel">Darf ich meine Dissertation neben der Veröffentlichung auf eDiss auch anderswo online stellen oder publizieren?</h2>
 				<p class="ds-paragraph"><strong>Ja</strong>, Sie dürfen Ihre Dissertation zugleich auf anderen Websites (z.B. auf der eigenen Homepage) online stellen. Zum Herunterladen ist es zu empfehlen, mittels der persistenten Identifiers, die Ihre Dissertation auf eDiss bekommt, auf Ihr Dokument zu verlinken.
 				</p>
 				<p class="ds-paragraph">Da Sie im Rahmen des eDiss-Vertrages uns nur ein einfaches (nicht-ausschliessliches) Nutzungrecht übertragen, können Sie weiteren Personen oder Institutionen Nutzungsrechte einräumen. Bei einer späteren Verlagsveröffentlichung infomieren Sie bitte den Verlag darüber, dass Ihre Arbeit bereits auf eDiss open access erschienen ist.
 				</p>
 			</div>
-			<h2><a name="benefits">&#160;</a>Welche Vorteile bringt mir die elekronische Veröffentlichung meiner Dissertation?</h2>
+			<h2 id="benefits">Welche Vorteile bringt mir die elekronische Veröffentlichung meiner Dissertation?</h2>
 			<div class="ds-static-div">
 				<ul class="ds-bulleted-list">
 					<li>Wir bürgen für die Integrität Ihres Dokumentes. Jede Dissertation oder Abschlussarbeit wird verschlüsselt, um die Authentizität der Arbeit sicherzustellen und prüfen zu können.</li>
@@ -2762,14 +2743,14 @@
 					<li>Im Rahmen der technischen Möglichkeiten übernehmen wir eine dauerhafte Archivierung.</li>
 				</ul>
 			</div>
-			<h2><a name="change">&#160;</a>Kann ich meine Publikation auf eDiss nach der Veröffentlichung ändern?</h2>
+			<h2 id="change">Kann ich meine Publikation auf eDiss nach der Veröffentlichung ändern?</h2>
 			<div class="ds-static-div">
 				<p class="ds-paragraph">
 					<strong>Nein</strong>. Um die Authentizität, Zitierbarkeit und dauerhafte Erreichbarkeit Ihrer Dissertation zu sichern, können Publikationen auf eDiss nach ihrer Freischaltung nicht mehr verändert werden.
 
 				</p>
 				<p class="ds-paragraph">
-					Ist eine Korrektur notwendig und kann der Verfasser dies plausibel begründen, wenden Sie sich bite an <a href="/contact">unsere Redakteure</a>. Nur sie sind berechtigt, Änderungen an den Angaben zur Dissertation durchzuführen bzw. eine korrigierte Version des Dokuments neu einzustellen. <br />Das Zurückziehen eines bereits publizierten Dokumentes ist nur möglich, wenn es lizenz- bzw. patentrechtliche Probleme gibt. Das Zurückziehen wird im System dokumentiert. Zusätzlich wird eine Informationsseite mit dem Hinweis „Dieses Dokument wurde zurückgezogen“ erstellt und über die permanente URL-Adresse angezeigt.
+					Ist eine Korrektur notwendig und kann der Verfasser dies plausibel begründen, wenden Sie sich bite an <a href="ediss/contact">unsere Redakteure</a>. Nur sie sind berechtigt, Änderungen an den Angaben zur Dissertation durchzuführen bzw. eine korrigierte Version des Dokuments neu einzustellen. <br />Das Zurückziehen eines bereits publizierten Dokumentes ist nur möglich, wenn es lizenz- bzw. patentrechtliche Probleme gibt. Das Zurückziehen wird im System dokumentiert. Zusätzlich wird eine Informationsseite mit dem Hinweis „Dieses Dokument wurde zurückgezogen“ erstellt und über die permanente URL-Adresse angezeigt.
 				</p>
 
 			</div>        
@@ -2848,7 +2829,7 @@
 	<message key="xmlui.home.contact.post">Per Post:</message>
 	<message key="xmlui.home.contact.life">Persönlich:</message>
 	<message key="xmlui.contact.special.head">Haben Sie besondere Wünsche bezüglich der Veröffentlichung Ihrer Dissertation?</message>
-	<message key="xmlui.contact.special">Sie haben die Möglichkeit, im Laufe des <a href="http://ediss.uni-goettingen.de/help/fullpublication#workflow">Online Publikationsprozesses</a> unseren Redaktueren eine Nachricht mitzugeben. So können wir besondere Wünsche Ihrer Publikation direkt zuordnen.</message>
+	<message key="xmlui.contact.special">Sie haben die Möglichkeit, im Laufe des <a href="/help/fullpublication#workflow">Online-Publikationsprozesses</a> unseren Redaktueren eine Nachricht mitzugeben. So können wir besondere Wünsche Ihrer Publikation direkt zuordnen.</message>
 	<message key="xmlui.contact.feedback">Haben Sie Fragen oder Anregungen?</message>
 	<message key="xmlui.contact.feedbackform">Benutzen Sie unseren <a href="feedback">Online Kontaktformular</a>.</message>
 	<message key="xmlui.contact.address">Telefonisch oder per E-mail</message>
@@ -2862,7 +2843,7 @@
 	<message key="xmlui.contact.life">Persönlich</message>
 	<message key="xmlui.contact.technik">Technische Probleme</message>
 	<message key="xmlui.contact.admin">Mit technischen Problemen kontaktieren Sie bitte unseren <a mailto="mmuehlh@sub.uni-goettingen.de">Administrator</a> oder verwenden Sie unseren <a href="feedback">Online Kontakformular</a>!</message>
-	<message key="xmlui.help.workflow.head">Online Publikationsprozess</message>
+	<message key="xmlui.help.workflow.head">Online-Publikationsprozess</message>
 
 	<!-- ENGLISH CATALOGUE ENDS HERE - LINES BELOW ONLY AVAILABLE IN GERMAN -->
 	

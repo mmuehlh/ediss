@@ -42,7 +42,7 @@
     -->
     <!-- TODO: figure out why i18n tags break the go button -->
     <xsl:template match="dri:options">
-        <div id="sidebar">
+        <div id="nav">
 
 			<div class="publish">
 				<xsl:choose>

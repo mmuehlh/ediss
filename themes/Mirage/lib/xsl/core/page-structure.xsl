@@ -327,6 +327,8 @@
 						<i18n:text>xmlui.dri2xhtml.structural.head-subtitle</i18n:text>
 					</a>
 				</h1>
+				
+				<div class="navlink"><a class="left" href="#content">xmlui.dri2xhtml.structural.content-link</a><a class="right" href="#nav">xmlui.dri2xhtml.structural.nav-link</a></div>
 
 				<div id="topbox">
 
