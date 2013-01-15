@@ -325,7 +325,18 @@
             <xsl:apply-templates select="dri:field" mode="compositeComponent"/>
             <xsl:if test="contains(dri:params/@operations,'add')">
                 <!-- Add buttons should be named "submit_[field]_add" so that we can ignore errors from required fields when simply adding new values-->
-               <input type="submit" value="Add" name="{concat('submit_',@n,'_add')}" class="ds-button-field ds-add-button">
+               <input type="submit" name="{concat('submit_',@n,'_add')}" class="ds-button-field ds-add-button">
+              <xsl:attribute name="value">
+                <xsl:choose>    
+                        <xsl:when test="//dri:pageMeta/dri:metadata[@element='locale'] = 'en'">
+                                Add
+                        </xsl:when>
+                        <xsl:otherwise>
+                                Hinzufügen
+                        </xsl:otherwise>
+                </xsl:choose>   
+              </xsl:attribute>
+
                   <!-- Make invisible if we have choice-lookup operation that provides its own Add. -->
                   <xsl:if test="dri:params/@choicesPresentation = 'lookup'">
                     <xsl:attribute name="style">
@@ -404,7 +415,17 @@
             entering more than one value for this field. -->
         <xsl:if test="contains(dri:params/@operations,'add')">
             <!-- Add buttons should be named "submit_[field]_add" so that we can ignore errors from required fields when simply adding new values-->
-            <input type="submit" value="Add" name="{concat('submit_',@n,'_add')}" class="ds-button-field ds-add-button">
+            <input type="submit" name="{concat('submit_',@n,'_add')}" class="ds-button-field ds-add-button">
+              <xsl:attribute name="value">
+                <xsl:choose>    
+                        <xsl:when test="//dri:pageMeta/dri:metadata[@element='locale'] = 'en'">
+                                Add
+                        </xsl:when>
+                        <xsl:otherwise>
+                                Hinzufügen
+                        </xsl:otherwise>
+                </xsl:choose>   
+              </xsl:attribute>
               <!-- Make invisible if we have choice-lookup popup that provides its own Add. -->
               <xsl:if test="dri:params/@choicesPresentation = 'lookup'">
                 <xsl:attribute name="style">
@@ -518,7 +539,17 @@
 
         <xsl:if test="contains(dri:params/@operations,'add')">
             <!-- Add buttons should be named "submit_[field]_add" so that we can ignore errors from required fields when simply adding new values-->
-           <input type="submit" value="Add" name="{concat('submit_',@n,'_add')}" class="ds-button-field ds-add-button">
+           <input type="submit" name="{concat('submit_',@n,'_add')}" class="ds-button-field ds-add-button">
+	      <xsl:attribute name="value">
+		<xsl:choose>
+			<xsl:when test="//dri:pageMeta/dri:metadata[@element='locale'] = 'en'">
+				Add
+			</xsl:when>
+			<xsl:otherwise>
+				Hinzufügen
+			</xsl:otherwise>
+		</xsl:choose>	
+	      </xsl:attribute>
               <!-- Make invisible if we have choice-lookup popup that provides its own Add. -->
               <xsl:if test="dri:params/@choicesPresentation = 'lookup'">
                 <xsl:attribute name="style">
@@ -862,7 +893,7 @@
                                     </xsl:choose>
                                     <xsl:if  test="string-length(./dri:value) &lt; 1">
                                        <i18n:text>xmlui.dri2xhtml.default.textarea.value</i18n:text>
-                                    </xsl:if>
+                                    </xsl:if> 
                                 </textarea>
 
 

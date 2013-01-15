@@ -149,12 +149,14 @@ p {
 	margin-bottom: 13px;
 	word-spacing: 0.125em;
 }
+/*
 p+p {
-	/*text-indent: 1.5em;*/
+	text-indent: 1.5em;
 }
 p+p.no-indent {
 	text-indent: 0;
 }
+*/
 pre {
 	white-space: pre;
 }
@@ -198,7 +200,7 @@ blockquote {
 }
 hr {
 	border: none;
-	background: #ddd;
+	background: #ccc;
 	width: 100%;
 }
 ol {
@@ -210,7 +212,7 @@ input, select, button {
 }
 input[type=text], input[type=password], textarea {
 	cursor: text;
-	width: 240px;
+	width: 236px;
 }
 p, pre, address {
 	font-size: 13px;
@@ -245,15 +247,20 @@ form {
 	border-radius: 0 5px 5px 0;
 	font-size: 13px; /* IE */
 	line-height: 18px; /* IE */
-	margin: 0 -21px 16px -20px;
-	padding: 17px 20px;
+	/*margin: 0 -21px 16px -20px;*/
+	margin: 0 -21px 18px -20px;
+	padding: 12px 20px;
 	position: relative;
 }
 form p {
 	margin: 0;
 }
 p + fieldset {
-	margin-top: 18px;
+	margin-top: 13px;
+}
+form h2 {
+  margin-bottom: 5px;
+  top: -7px;
 }
 form + h2 {
 	margin-top: 4px;
@@ -269,8 +276,10 @@ caption {
 }
 hr {
 	position: relative;
-	height: 4px;
-	margin: 18px 0 14px 0;
+	height: 1px;
+	left: -20px;
+	margin: 22px 0 -5px;
+	width: 740px;
 }
 #header p {
 	margin: 2px 0;
@@ -317,7 +326,7 @@ input[type=button],
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
 	color: #fff;
 	font-weight: bold;
-	min-width: 4em;
+	min-width: 50px;
 	padding: 4px;
 	text-align: center;
 }
@@ -395,14 +404,12 @@ article, aside, header, hgroup,
 nav, figure, section, footer {
 	display: block;
 }
-noscript {
+noscript div {
 	background: #ccc;
 	display: block;
 	font-weight: bold;
+	text-align: center;
 	padding: 5px;
-	position: absolute;
-	top: 150px;
-	right: 0;
 }
 
 /* Tables
@@ -417,13 +424,17 @@ table {
 	margin: 9px 0 9px -20px;
 	width: 740px;
 }
-tr {
-	padding: 9px 0 9px 20px;
+form table {
+	border-bottom: 1px solid #ccc;
 }
 th, td {
 	line-height: 18px;
 	padding: 9px 0 9px 20px;
 	vertical-align: top;
+}
+th + th,
+td + td {
+	padding-left: 9px;
 }
 thead th, thead td {
 	padding-top: 7px;
@@ -462,6 +473,7 @@ body:before {
 	margin-top: -32767px;
 	width: 0;
 }
+/*
 body:after {
 	content: ".";
 	display: block;
@@ -469,8 +481,10 @@ body:after {
 	clear: both;
 	visibility: hidden;
 }
+*/
 img  {
 	border: 0;
+	max-width: 720px;
 }
 br {
 	line-height: 7px;
@@ -530,32 +544,13 @@ br {
 #ediss-logo {
 	margin-left: 50px;
 }
-#goescholar-logo {
-	margin-left: 7px;
-}
-#top {
-	background: url(../../images/top-shade.png) repeat-x;
-	height: 10px;
-	min-width: 1000px;
-	position: absolute;
-	top: 233px;
-	width: 100%;
-}
-#bottom {
-	background: url(../../images/bottom-shade.png) repeat-x;
-	height: 10px;
-	margin-top: -10px;
-	min-width: 1000px;
-	position: relative;
-	width: 100%;
-}
 #footer-wrapper {
 	background: #163776;
 	border-top: 5px solid #5C739F;
 	box-shadow: 0 0 5px #000;
 	clear: both;
 	height: 40px;
-	margin-top: -26px;
+	margin-top: -45px;
 	min-width: 1000px;
 	position: absolute;
 	width: 100%;
@@ -600,9 +595,10 @@ input[name=starts_with] {
 	width: 8em;
 }
 .rss {
+	border-radius: 5px;
 	display: inline-block;
-	vertical-align: middle;
 	margin-left: 10px;
+	vertical-align: middle;
 }
 .rss a {
 	background: url(../../images/rss.png) 5px 5px no-repeat;
@@ -747,6 +743,7 @@ input[name=starts_with] {
 	right: 0;
 	text-indent: -9999px;
 	text-transform: capitalize; /* IE 7 */
+	top: 0; /* Chrome and others */
 	width: 28px;
 }
 #topbox .ds-button-field:hover {
@@ -839,7 +836,7 @@ form a[href$="/advanced-search"]:hover,
 }
 #userbox ul {
 	display: none;
-	padding: 7px 0 0 15px;
+	padding: 5px 0 0;
 }
 #userbox.hover:hover ul {
 	display: block;
@@ -872,8 +869,7 @@ form a[href$="/advanced-search"]:hover,
 	height: 6px;
 	width: 10px;
 	margin-left: 6px;
-	top: 8px;
-	position: relative;
+	vertical-align: middle;
 }
 #userbox.open .profilemore {
 	background-position: 0 -7px;
@@ -883,12 +879,11 @@ form a[href$="/advanced-search"]:hover,
 	border-top: 1px solid #ccc;
 	color: #163776;
 	display: block;
-	margin: 0 -6px 0 0;
+	margin: 0 -6px 0;
 	padding: 9px 10px 9px 30px;
 }
 #userbox li a:hover {
-	background-color: #eee;
-	background-color: rgba(255,255,255,.9);
+	background-color: #ddd;
 }
 #userbox .profile:hover {
 	text-shadow: 0 0 5px rgba(255,255,255,.8);
@@ -902,19 +897,22 @@ form a[href$="/advanced-search"]:hover,
 }
 #content {
 	float: right;
-	padding: 20px 20px 60px;
+	padding: 27px 20px 60px;
 	width: 720px;
 }
+/*
 #content > div {
-	margin-bottom: 20px;
+	margin: -11px 0 20px;
+	position: relative;
 }
+*/
 
-/* Sidebar
+/* Sidebar & Userbox
 ---------------------------------------------------------------------------*/
 #sidebar {
-	float: left;
+	/*float: left;*/
 	overflow: hidden;
-	padding: 20px 0 60px 20px;
+	padding: 27px 0 60px 20px;
 	width: 219px;
 }
 #sidebar h1 {
@@ -936,66 +934,58 @@ form a[href$="/advanced-search"]:hover,
 	/*background: url(../../images/sidebar-line.png) left bottom no-repeat;*/
 	border-bottom: 1px solid #ccc;
 }
-#sidebar a {
-	background-repeat: no-repeat;
+#sidebar a,
+#userbox ul a {
+	background: url(../../images/icons.png) 7px -500px no-repeat;
 	display: block;
 	font-weight: bold;
-	padding: 9px 10px 8px 6px;
+	padding: 9px 10px 8px 34px;
 	width: 176px;
 }
-#sidebar a:hover {
+#userbox ul a {
+	width: auto;
+}
+#sidebar a:hover,
+#userbox a:hover {
 	text-decoration: none;
 }
 #sidebar a[href$="/community-list"] {
-	background: url(../../images/icons.png) 7px -86px no-repeat;
-	padding-left: 34px;
+	background-position: 7px -86px;
 }
 #sidebar a[href$="?type=dateissued"] {
-	background: url(../../images/icons.png) 7px -150px no-repeat;
-	padding-left: 34px;
+	background-position: 7px -150px;
 }
 #sidebar a[href$="?type=author"] {
-	background: url(../../images/icons.png) 7px -22px no-repeat;
-	padding-left: 34px;
+	background-position: 7px -22px;
 }
 #sidebar a[href$="?type=title"] {
-	background: url(../../images/icons.png) 7px -182px no-repeat;
-	padding-left: 34px;
+	background-position: 7px -182px;
 }
 #sidebar a[href$="?type=subject"] {
-	background: url(../../images/icons.png) 7px -54px no-repeat;
-	padding-left: 34px;
+	background-position: 7px -54px;
 }
-#sidebar a[href$="/login"],
-#userbox a[href$="/login"] {
-	background: url(../../images/icons.png) 7px 10px no-repeat;
-	padding-left: 34px;
+#sidebar a[href$="/login"] {
+	background-position: 7px 10px;
 }
 #sidebar a[href$="/logout"],
 #userbox a[href$="/logout"] {
-	background: url(../../images/icons.png) 7px -214px no-repeat;
-	padding-left: 34px;
+	background-position: 7px -214px;
 }
 #sidebar a[href$="/profile"],
 #userbox a[href$="/profile"] {
-	background: url(../../images/icons.png) 7px -310px no-repeat;
-	padding-left: 34px;
+	background-position: 7px -310px;
 }
 #sidebar a[href$="/submissions"],
 #userbox a[href$="/submissions"] {
-	background: url(../../images/icons.png) 7px -342px no-repeat;
-	padding-left: 34px;
+	background-position: 7px -342px;
 }
-#sidebar a[href$="/register"],
-#userbox a[href$="/register"] {
-	background: url(../../images/icons.png) 7px -118px no-repeat;
-	padding-left: 34px;
+#sidebar a[href$="/register"] {
+	background-position: 7px -118px;
 }
 #sidebar .ds-simple-list li:hover,
 #sidebar #aspect_eperson_Navigation_list_administrative a:hover {
 	/*background: url(../../images/sidebar-hover-bg.png) left top repeat-y;*/
-	background: #eee;
-	background: rgba(255,255,255,.9);
+	background-color: #ddd;
 }
 .ds-simple-list .ds-simple-list {
 	margin-left: 18px;
@@ -1089,7 +1079,7 @@ li.button.disabled input {
 .administrative .ds-form-list input.ds-text-field,
 textarea.ds-textarea-field,
 .customfile {
-	width: 501px;
+	width: 503px;
 }
 table textarea.ds-textarea-field {
 	width: 426px;
@@ -1110,6 +1100,7 @@ span.error {
 	color: #c22121;
 	font-size: 11px;
 	margin-top: 3px;
+	max-width: 512px;
 }
 textarea.ds-textarea-field.error,
 input.ds-text-field.error,
@@ -1124,6 +1115,9 @@ input.ds-password-field.error {
 fieldset ol {
 	margin: 0;
 }
+fieldset h2 + ol {
+	margin-top: -5px;
+}
 li.ds-form-item.last {
 	margin-bottom: 0;
 }
@@ -1137,7 +1131,7 @@ li.ds-form-item label.ds-composite-component {
 	float: left;
 }
 label.ds-composite-component + label.ds-composite-component {
-	margin-left: 5px;
+	margin-left: 6px;
 }
 select#aspect_submission_submit_SelectCollectionStep_field_handle {
 	max-width: 350px;
@@ -1153,7 +1147,11 @@ select#aspect_submission_submit_SelectCollectionStep_field_handle {
 span.composite-help,
 span.field-help {
 	display: block;
-	max-width: 577px;
+	margin-bottom: 5px;
+	max-width: 575px;
+}
+span.field-help {
+	margin-top: 5px;
 }
 .ds-checkbox-field input,
 .ds-radio-field input {
@@ -1165,8 +1163,14 @@ span.field-help {
 	display: none;
 }
 .ds-previous-values {
-	margin-top: 10px;
+	padding-top: 13px;
 	clear: both;
+}
+.ds-previous-values .ds-button-field {
+	margin-top: 13px;
+}
+.ds-interpreted-field {
+	font-style: italic;
 }
 .submission .ds-form-sublist li.ds-form-item {
 	margin-bottom: 5px;
@@ -1229,10 +1233,10 @@ span.field-help {
 }
 ul.alphabet {
 	list-style: none;
-	margin: -1px 0 10px 0;
+	margin: 4px 0 10px -3px;
 }
 ul.alphabet li {
-	display:inline;
+	display: inline;
 }
 td select.ds-select-field {
 	margin-left: 5px;
@@ -1297,13 +1301,22 @@ table.detailtable td {
 	text-align: left;
 	width: 100px;
 }
-div.simple-item-view-authors {
+.ds-table-header-row {
+	border-bottom: 1px solid #ccc;
+}
+.ds-table-header-row th {
+	padding-bottom: 8px;
+}
+.simple-item-view-authors {
 	font-size: 16px;
 	font-weight: bold;
 	line-height: 18px;
 	margin-bottom: 18px;
 	position: relative;
 	top: -1px;
+}
+.simple-item-view-other {
+	width: 100%; /* IE 7 */
 }
 .thumbnail-wrapper,
 .file-metadata,
@@ -1316,24 +1329,24 @@ div.simple-item-view-authors {
 .metadata div {
 	clear: both;
 }
-.file-metadata span.bold,
-.metadata span.bold {
-	float: left;
-}
 .item-metadata span.content span {
 	float: none;
 }
 .file-metadata span.bold,
 .metadata span.bold {
-	width: 128px;
 	clear: left;
+	width: 200px;
 }
 .file-metadata {
-	width: 518px;
+	margin-bottom: 18px;
+	width: 520px;
+}
+.file-metadata span.bold {
+	float: left;
 }
 .metadata span + span {
 	float: right;
-	width: 592px;
+	width: 520px;
 }
 #ds-system-wide-alert,
 .notice {
@@ -1374,7 +1387,7 @@ form.discover-sort-box select{
 	display:none;
 	visibility:hidden;
 }
-.icon-button{
+.icon-button {
 	padding:4px;
 	cursor: pointer;
 	margin: 2px;
@@ -1464,7 +1477,7 @@ div.vocabulary-container li.error {
 /* DSpace Specific Styles
 ---------------------------------------------------------------------------*/
 .browse ul {
-	margin-top: -18px;
+	margin: -9px 0 14px;
 }
 .browse li {
 	display: inline;
@@ -1509,6 +1522,7 @@ tr.odd {
 .pagination,
 .pagination-masked {
 	font-size: 11px;
+	margin: 21px 0 0;
 	position: relative;
 }
 .pagination-info {
@@ -1609,10 +1623,10 @@ tr.odd {
 	width: 147px !important;
 }
 .publish a {
-	background: url(../../images/icons.png) no-repeat scroll 10px -249px transparent;
+	background: url(../../images/icons.png) no-repeat scroll 10px -249px transparent !important;
 }
 .file-link a {
-	background: url(../../images/icons.png) no-repeat scroll 10px -281px transparent;
+	background: url(../../images/icons.png) no-repeat scroll 10px -281px transparent !important;
 }
 .publish a:hover,
 .file-link a:hover {
@@ -1628,6 +1642,15 @@ tr.odd {
 }
 .subtitle {
 	color: #818181;
+	font-size: 22px;
+	top: -3px;
+}
+.title.translated {
+	color: #5C739F;
+	font-size: 18px;
+	top: -2px;
+}
+.subtitle.translated {
 	font-size: 16px;
 	top: -1px;
 }
@@ -1640,6 +1663,7 @@ tr.odd {
 p, 
 .ds-bulleted-list,
 .ds-ordered-list {
+	clear: both;
 	margin: 7px 0 18px;
 }
 .ds-bulleted-list {
@@ -1667,7 +1691,7 @@ p,
 	font-size: 16px;
 	/*line-height: 18px;*/
 	min-height: 36px;
-	padding: 16px 10px 17px 80px;
+	padding: 17px 10px 18px 80px;
 	position: relative;
 	/*text-align: left;
 	width: 100%;*/
@@ -1683,7 +1707,6 @@ p,
 	position: absolute;
 	height: 70px;
 	width: 72px;
-	top: 0 !important;
 }
 .help#step2 .icon {
 	background-position: 0 -72px;
@@ -1748,9 +1771,10 @@ p,
 /* Common Form Styles
 ---------------------------------------------------------------------------*/
 .ds-form-item {
-	clear: both;
 	float: left;
+	clear: both;
 	position: relative;
+	width: 100%;
 }
 .ds-form-item + .ds-form-item {
 	margin-top: 9px;
@@ -1774,10 +1798,7 @@ input[type=radio] {
 	margin-right: 7px;
 	padding: 0;
 	top: 0;
-}
-input[type=checkbox] + span,
-input[type=radio] + span {
-	top: -4px;
+	vertical-align: middle;
 }
 form .title {
 	margin-top: 11px;
@@ -1785,30 +1806,14 @@ form .title {
 fieldset + h2 {
 	margin-top: 22px;
 }
+fieldset + p {
+	margin-top: 20px;
+}
 
 /* Login Form
 ---------------------------------------------------------------------------*/
-#aspect_eperson_PasswordLogin_div_login .ds-form-item {
-	margin: 0;
-}
-#aspect_eperson_PasswordLogin_div_login input {
-	float: right;
-	margin: 0 0 10px 0;
-}
-#aspect_eperson_PasswordLogin_div_login .ds-form-content {
-	width: 257px;
-}
-#aspect_eperson_PasswordLogin_item_login-in {
-	top: 10px;
-}
 #aspect_eperson_PasswordLogin_div_register a {
 	font-weight: bold;
-}
-li + li h3 {
-	margin-top: 18px;
-}
-fieldset + div {
-	margin-top: 9px;
 }
 
 /* User Data Form
@@ -1820,10 +1825,10 @@ fieldset + div {
 /* Register Progress Form
 ---------------------------------------------------------------------------*/
 .ds-progress-list {
-	background: none repeat scroll 0 0 #DDDDDD;
-	border-bottom: 1px solid #CCCCCC;
+	background: #ddd;
+	border-bottom: 1px solid #ccc;
 	float: left;
-	margin: -17px 0 6px -20px;
+	margin: -12px 0 6px -20px;
 	width: 760px;
 }
 .ds-progress-list li {
@@ -1843,6 +1848,13 @@ fieldset + div {
 }
 .ds-progress-list .last {
 	padding-right: 12px;
+}
+.ds-progress-list + p {
+	clear: both;
+	padding-top: 18px;
+}
+.ds-progress-list + fieldset {
+	padding-top: 13px;
 }
 #aspect_eperson_StartRegistration_list_registration-progress li {
 	cursor: default;
@@ -1884,6 +1896,14 @@ ul.ds-progress-list li.disabled input.ds-button-field
 
 /* Submission Form
 ---------------------------------------------------------------------------*/
+#aspect_submission_StepTransformer_table_submit-upload-summary tbody tr th:first-child,
+#aspect_submission_StepTransformer_table_submit-upload-summary tbody tr td:first-child {
+	display: none;
+}
+#aspect_submission_StepTransformer_table_submit-upload-summary tbody tr td:nth-child(2),
+#aspect_submission_StepTransformer_table_submit-upload-summary tbody tr th:nth-child(2) {
+	padding-left: 20px;
+}
 #aspect_submission_StepTransformer_div_submit-describe label.ds-composite-component {
 	font-size: 11px;
 }
@@ -1941,6 +1961,26 @@ ul.ds-progress-list li.disabled input.ds-button-field
 	margin-top: 9px;
 	padding: 9px;
 }
+#aspect_submission_submit_CompletedStep_div_submit-complete p {
+	margin: 7px 0 18px;
+}
+#overlay {
+	background: url(../../images/white-80.png);
+	border-radius: 0 5px 5px 0;
+	height: 100%;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+#overlay img {
+	background: url(../../images/loader.gif) center center no-repeat;
+	position: relative;
+	left: 364px;
+	top: 180px;
+}
 
 /* Item View
 ---------------------------------------------------------------------------*/
@@ -1976,6 +2016,12 @@ a[href ^="http://creativecommons.org/licenses/by-sa/"] {
 	font-weight: bold;
 	text-align: right;
 }
+.item-view-toggle-bottom {
+	font-weight: bold;
+	margin-top: -18px;
+	position: absolute;
+	right: 0;
+}
 
 /* Community List
 ---------------------------------------------------------------------------*/
@@ -1992,6 +2038,14 @@ a[href ^="http://creativecommons.org/licenses/by-sa/"] {
 #aspect_discovery_SimpleSearch_list_primary-search .ds-form-item {
 	clear: none;
 }
+#aspect_discovery_SimpleSearch_field_query,
+#aspect_discovery_SimpleSearch_field_submit {
+	float: left;
+}
+#aspect_discovery_SimpleSearch_field_submit,
+#aspect_discovery_SearchFacetFilter_field_starts_with {
+	margin-left: 5px;
+}
 #aspect_discovery_SimpleSearch_list_primary-search .ds-form-content {
 	width: auto;
 }
@@ -2003,11 +2057,12 @@ a[href ^="http://creativecommons.org/licenses/by-sa/"] {
 #aspect_discovery_SimpleSearch_field_filtertype {
 	width: 250px;
 }
-#aspect_discovery_SimpleSearch_field_submit,
+/*
 .ds-add-button {
 	float: right;
 	margin-left: 5px;
 }
+*/
 #aspect_artifactbrowser_CommunitySearch_div_community-search a[href$="/advanced-search"],
 #aspect_artifactbrowser_CollectionSearch_div_collection-search a[href$="/advanced-search"] {
 	border-left: 1px solid #ccc;
@@ -2042,9 +2097,6 @@ form.search .ds-form-content {
 form.search table input.ds-text-field {
    margin: 0;
 }
-form.search .field-help {
-	margin: 3px 0;
-}
 .result-query {
 	margin-bottom: 30px;
 }
@@ -2061,18 +2113,6 @@ input[size="6"] {
 
 /* IE 7 Fixes
 ---------------------------------------------------------------------------*/
-/* IE7 puts a white background on <a> on hover without this hack */
-*:first-child+html .ds-artifact-item a:hover {
-	position: relative;
-}
-/* enhance visibility of input fields by putting a border around them */
-*:first-child+html input[type=text],
-*:first-child+html input[type=password],
-*:first-child+html textarea {
-	border-top: 1px solid #bbb;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ddd;
-}
 /* min-width cuts buttons in IE7, so remove it */
 *:first-child+html input[type=submit] {
 	min-width: auto;
@@ -2083,7 +2123,7 @@ input[size="6"] {
 }
 /* breadcrumbs position too low */
 *:first-child+html #ds-trail {
-	bottom: 18px;
+	bottom: 7px;
 }
 
 /* Addons by MH (unsorted) ;p
@@ -2099,16 +2139,20 @@ input[size="6"] {
 #aspect_artifactbrowser_CollectionViewer_div_collection-browse h2,
 #aspect_artifactbrowser_CollectionViewer_list_collection-browse {
 	display: block;
-
 }
 
-.screenshot 
-{
-	width: 500px;
+.simple-item-view-bookmark {
+	background: url(../../images/noise.png);
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 13px 0 -5px;
+	padding: 4px 6px;
+	text-shadow: 0 1px 0 #fff;
+}
+.simple-item-view-bookmark span + span {
+	width: 513px;
 }
 
-.simple-item-view-bookmark 
-{
-	margin-top:20px;
+#aspect_eperson_EditProfile_list_memberships {
+	display: none;
 }
-

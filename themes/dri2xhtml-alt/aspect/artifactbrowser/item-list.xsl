@@ -146,7 +146,7 @@
         <xsl:apply-templates select="./mets:fileSec" mode="artifact-preview"/>
     </xsl:template>
 
-    <!-- Generate the thunbnail, if present, from the file section -->
+    <!-- Generate the thumbnail, if present, from the file section -->
     <xsl:template match="mets:fileSec" mode="artifact-preview">
         <xsl:if test="mets:fileGrp[@USE='THUMBNAIL']">
             <div class="artifact-preview">

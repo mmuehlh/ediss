@@ -10,7 +10,7 @@
  *
  * print styles
  */
-* { background: transparent !important; color: #444 !important; text-shadow: none; }
+* { background: transparent !important; color: black !important; text-shadow: none; }
 
 a, a:visited { color: #444 !important; text-decoration: underline; }
 

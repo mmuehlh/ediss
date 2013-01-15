@@ -207,9 +207,6 @@
                 </map:pipes>
         </map:components>
 
-	<map:flow language="javascript">
-        	<map:script src="static/js/upload.js"/>
-        </map:flow>
 
         <map:resources>
 
@@ -392,9 +389,6 @@
                                 </map:read>
                         </map:match>
 
-			<!--<map:match pattern="upload">
-				<map:call function="upload"/>
-			</map:match> -->
 
 
 			<!-- GVK export -->
@@ -639,7 +633,7 @@
                     </map:match>
 		    <!-- handle pdf to -->
 		    <map:match pattern="static/*.pdf">
-                            <map:read src="static/{1}.pdf"/>
+                            <map:read type="ConcatenationReader" src="static/{1}.pdf"/>
                     </map:match>
 
 
@@ -694,7 +688,21 @@
                                         <map:serialize type="xhtml" status-code="404"/>
                                 </map:when>
 
-                                <map:when test="invalid-continuation">
+                                <!--<map:when test="invalid-continuation">
+                                        <map:generate type="exception"/>
+                                        <map:transform src="exception2html.xslt">
+                                                <map:parameter name="contextPath" value="{request:contextPath}"/>
+                                                <map:parameter name="pageTitle" value="Your Session has Expired"/>
+                                        </map:transform>
+                                        <map:act type="locale">
+                                            <map:transform type="i18n">
+                                                    <map:parameter name="locale" value="{locale}"/>
+                                            </map:transform>
+                                        </map:act>
+                                        <map:serialize type="xhtml" status-code="404"/>
+                                </map:when>-->
+				
+				<map:when test="invalid-continuation">
                                         <map:generate type="exception"/>
                                         <map:transform src="exception2html.xslt">
                                                 <map:parameter name="contextPath" value="{request:contextPath}"/>

@@ -78,6 +78,8 @@
 				<xsl:otherwise>
 				
 					<div id="page-wrapper">
+					
+						<noscript><div><i18n:text>xmlui.dri2xhtml.structural.script-warning</i18n:text></div></noscript>
 						
 						<!--The header div, complete with title, subtitle and trail -->
 						<xsl:call-template name="buildHeader"/>
@@ -325,8 +327,6 @@
 						<i18n:text>xmlui.dri2xhtml.structural.head-subtitle</i18n:text>
 					</a>
 				</h1>
-				
-				<noscript><p>JavaScript is disabled for your browser. Some features of this site may not work without it.</p></noscript>
 
 				<div id="topbox">
 
@@ -852,224 +852,16 @@
 		</script>
 		<xsl:text disable-output-escaping="yes" >&lt;![endif]--&gt;</xsl:text>
 
-
 		<script type="text/javascript">
 			runAfterJSImports.execute();
 		</script>
-
-		<!-- TODO: Move to file -->
-		<xsl:text disable-output-escaping="yes"><![CDATA[
-			<script type="text/javascript">
-				$(function() {
-					
-					/* Trail */
-					var i = 1;
-					var items = $('#ds-trail a');
-					var cut_items = [];
-					// Cut trail if too long and if there are still untruncated items
-					while ( $('#ds-trail').height() > 28 && i < items.length) {
-						var item = items.eq(i);
-						// If current item contains more than one word, replace last word with … (&hellip;). Otherwise, move to next item.
-						if ( item.text().indexOf(' ') >= 0 ) {
-							if ( !cut_items[i] ) cut_items[i] = item.text();
-							item.text( item.text().replace(/[\s,-]+[^\s]+…*$/, '…') );
-						} else {
-							i++;
-						}
-					}
-					// If still too long, remove items completely
-					i = 0;
-					while ( $('#ds-trail').height() > 28 && i++ < 5) items.eq(i).text('…');
-					// Still too long? Truncate second-to-last li, then last li; exit after 10 iterations each
-					i = -20;
-					while ( $('#ds-trail').height() > 28 && ++i < 0) {
-						key = parseInt(i / 10 - 1);
-						items = $('#ds-trail .ds-trail-link');
-						item_text = items.eq(key).text();
-						items.eq(key).text( items.eq(key).text().replace(/[\s,-]+[^\s]+…*$/, '…') );
-						if ( item_text != items.eq(key).text() && !cut_items[key] ) cut_items[key] = item_text;
-					}
-					// Add hint div for truncated/removed elements, fade in on hover
-					for (i = -2; i < cut_items.length; i++) {
-						if (cut_items[i]) $('#ds-trail .ds-trail-link').eq(i).append('<div class="hint"><span>' + cut_items[i] + '</span></div>');
-					}
-					$('#ds-trail li').hover( function() {
-						$(this).find('.hint').css('opacity', 1).delay(200).stop().fadeIn();
-					}, function() {
-						$(this).find('.hint').clearQueue().stop().fadeOut();
-					});
-					
-					/* Userbox */
-					while ( $('#userbox').height() > 28 && ++i < 99) {
-						$('.username').text( $('.username').text().replace(/.…*$/, '…') );
-					};
-					$('#userbox').removeClass('hover');
-					$('#userbox').has('.profile').click( function() {
-						$(this).toggleClass('open')
-						$('#userbox ul').toggle();
-					});
-					
-					/* Sidebar: truncate items */
-					$('#sidebar a').each( function() {
-						i = 0;
-						while ( $(this).height() > 28 && i++ < 99 ) {
-							$(this).text( $(this).text().replace(/\.*.…*\s(\(\d+\))$/, '… $1') );
-						}
-					});
-					
-					/* Search form (top) */
-					var searchtext = $('#searchbox .ds-text-field').val();
-					var searchhover = false;
-					$('.search-scope').click(function() {
-						$('#searchbox .ds-text-field').focus();
-					});
-					$('#searchbox .ds-text-field').focus(function() {
-						if ( $(this).val() == searchtext ) $(this).val('');
-					}).blur(function() {
-						if ( $(this).val() == '' ) $(this).val(searchtext);
-						if ( !searchhover ) {
-							//$(this).animate({width:'140px'});
-							$('.search-extra').slideUp();
-						}
-					});
-					$('#searchbox').mouseenter(function() {
-						//$('#searchbox .ds-text-field').animate({width:'220px'});
-						$('.search-extra').slideDown();
-						searchhover = true;
-					}).mouseleave(function() {
-						if ( !$('#searchbox .ds-text-field').is(':focus') ) {
-							//$('#searchbox .ds-text-field').animate({width:'140px'});
-							$('.search-extra').slideUp();
-						}
-						searchhover = false;
-					});
-					
-					/* Main page 6 step help */
-					// $('.help span + span').hide();
-					// $('.help').click( function() {
-					// 	$(this).find('span + span').slideToggle();
-					// });
-					
-					/* Submission form */
-					// If selected language is english, hide fields that are only needed for non-english publications
-					$('#aspect_submission_StepTransformer_field_dc_language_iso').change(function() {
-						var elements = [
-							'#aspect_submission_StepTransformer_field_dc_title_translated',
-							'#aspect_submission_StepTransformer_field_dc_title_alternativeTranslated',
-							'#aspect_submission_StepTransformer_field_dc_description_abstract'
-						];
-						if ( $(this).val() == 'eng' ) {
-							$.each(elements, function(key, value) { $('.ds-form-item').has(value).hide(); });
-						} else {
-							$.each(elements, function(key, value) { $('.ds-form-item').has(value).show(); });
-						}
-					});
-					$('#aspect_submission_StepTransformer_field_dc_language_iso').change();
-					
-					/* Community/collection search form */
-					$('#aspect_artifactbrowser_ConfigurableBrowse_div_browse-controls select').change(function() {
-						$('#aspect_artifactbrowser_ConfigurableBrowse_field_update').click();
-					});
-					$('#aspect_artifactbrowser_ConfigurableBrowse_field_update').hide();
-					
-					/* Remove leading and trailing line breaks */
-					$('.detail-view').each( function() {
-						$(this).html( $(this).html().replace(/(&nbsp;)*/g,"") );
-					});
-					
-					/* Remove certain elements if empty */
-					$('.ds-head, .composite-help').filter(function() { return $.trim($(this).text()) === '' && $(this).children().length == 0 }).remove();
-					
-					/* Style file input */
-					$('.ds-file-field').customFileInput();
-					
-				});
-				
-				/**
-				 * --------------------------------------------------------------------
-				 * jQuery customfileinput plugin
-				 * Author: Scott Jehl, scott@filamentgroup.com
-				 * Copyright (c) 2009 Filament Group 
-				 * licensed under MIT (filamentgroup.com/examples/mit-license.txt)
-				 * --------------------------------------------------------------------
-				 */
-				$.fn.customFileInput = function(){
-					//apply events and styles for file input element
-					var fileInput = $(this)
-						.addClass('customfile-input') //add class for CSS
-						.focus(function(){
-							upload.addClass('customfile-focus'); 
-							fileInput.data('val', fileInput.val());
-						})
-						.blur(function(){ 
-							upload.removeClass('customfile-focus');
-							$(this).trigger('checkChange');
-						 })
-						 .bind('disable',function(){
-							fileInput.attr('disabled',true);
-							upload.addClass('customfile-disabled');
-						})
-						.bind('enable',function(){
-							fileInput.removeAttr('disabled');
-							upload.removeClass('customfile-disabled');
-						})
-						.bind('checkChange', function(){
-							if(fileInput.val() && fileInput.val() != fileInput.data('val')){
-								fileInput.trigger('change');
-							}
-						})
-						.bind('change',function(){
-							//get file name
-							var fileName = $(this).val().split(/\\/).pop();
-							//get file extension
-							var fileExt = 'customfile-ext-' + fileName.split('.').pop().toLowerCase();
-							//update the feedback
-							uploadFeedback
-								.text(fileName) //set feedback text to filename
-								.removeClass(uploadFeedback.data('fileExt') || '') //remove any existing file extension class
-								.addClass(fileExt) //add file extension class
-								.data('fileExt', fileExt) //store file extension for class removal on next change
-								.addClass('customfile-feedback-populated'); //add class to show populated state
-							//change text of button	
-							uploadButton.text('Ändern');	
-						})
-						.click(function(){ //for IE and Opera, make sure change fires after choosing a file, using an async callback
-							fileInput.data('val', fileInput.val());
-							setTimeout(function(){
-								fileInput.trigger('checkChange');
-							},100);
-						});
-						
-					//create custom control container
-					var upload = $('<div class="customfile"></div>');
-					//create custom control button
-					var uploadButton = $('<span class="customfile-button" aria-hidden="true">Durchsuchen</span>').appendTo(upload);
-					//create custom control feedback
-					var uploadFeedback = $('<span class="customfile-feedback" aria-hidden="true">Keine Datei ausgewählt...</span>').appendTo(upload);
-					
-					//match disabled state
-					if(fileInput.is('[disabled]')){
-						fileInput.trigger('disable');
-					}
-					
-					//on mousemove, keep file input under the cursor to steal click
-					upload
-						.mousemove(function(e){
-							fileInput.css({
-								'left': e.pageX - upload.offset().left - fileInput.outerWidth() + 20, //position right side 20px right of cursor X)
-								'top': e.pageY - upload.offset().top - $(window).scrollTop() - 3
-							});	
-						})
-						.insertAfter(fileInput); //insert after the input
-					
-					fileInput.appendTo(upload);
-						
-					//return jQuery
-					return $(this);
-				};
-				
-			</script>
-		]]></xsl:text>
+		
+		<xsl:variable name="addOnScriptsSrc">
+			<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+			<xsl:text>/static/js/addon.js</xsl:text>
+		</xsl:variable>
+		
+		<script type="text/javascript" charset="utf-8" src="{$addOnScriptsSrc}">&#160;</script>
 
 		<!-- Add a google analytics script if the key is present -->
 		<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">

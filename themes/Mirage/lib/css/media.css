@@ -10,20 +10,31 @@
  */
 
 @media all and (orientation:portrait) {
-  /* Style adjustments for portrait mode goes here */
-
+	/* Style adjustments for portrait mode goes here */
 }
 
 @media all and (orientation:landscape) {
-  /* Style adjustments for landscape mode goes here */
-
+	/* Style adjustments for landscape mode goes here */
 }
+
+/*
+@media screen and (max-width: 999px) {
+	body,
+	#header-wrapper,
+	#header,
+	#footer-wrapper,
+	#footer,
+	#content-wrapper,
+	#content {
+		min-width: 100%;
+		width: 100%;
+	}
+}
+*/
 
 /* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)
    Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
 @media screen and (max-device-width: 480px) {
-
-
-  /* Prevent iOS, WinMobile from adjusting font size */
-  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
+	/* Prevent iOS, WinMobile from adjusting font size */
+	html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
 }

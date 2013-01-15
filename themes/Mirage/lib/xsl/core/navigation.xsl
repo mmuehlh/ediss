@@ -52,6 +52,16 @@
 						</a>
 					</xsl:when>
 					<xsl:otherwise>
+						<xsl:choose>
+							<xsl:when test="//dri:head/i18n:text = 'xmlui.ArtifactBrowser.Navigation.head_this_collection'" >
+								<xsl:variable name="container">
+									<xsl:value-of select="concat('handle/', substring-after(//dri:metadata[@qualifier='container'], 'hdl:'))"/>
+
+								</xsl:variable>
+								<a href="{$context-path}/{$container}/submit">
+									<i18n:text>xmlui.general.publish_here</i18n:text>
+								</a>
+							</xsl:when>
 						<!--<xsl:variable name="container">
 							<xsl:choose>
 								<xsl:when test="//dri:metadata[@qualifier='container'] and not(//dri:metadata[@qualifier='object'])">
@@ -62,9 +72,12 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:variable> -->
-						<a href="{$context-path}/submit">
+						<xsl:otherwise>
+							<a href="{$context-path}/submit">
 	                                                        <i18n:text>xmlui.general.publish_now</i18n:text>
-						</a>				
+							</a>				
+						</xsl:otherwise>
+						</xsl:choose>
 					</xsl:otherwise>
 				</xsl:choose>
 					
