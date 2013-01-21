@@ -366,8 +366,8 @@
 	<message key="xmlui.EPerson.InvalidToken.title">Ungültige Kennung</message>
 	<message key="xmlui.EPerson.InvalidToken.trail">Ungültige Kennung</message>
 	<message key="xmlui.EPerson.InvalidToken.head">Ungültige Kennung</message>
-	<message key="xmlui.EPerson.InvalidToken.para1">Die URL, welche Sie angegeben haben ist ungültig. Gegebenenfalls gab es einen Zeilenumbruch durch ihr E-Mail-Programm, wie hier z. B.:</message>
-	<message key="xmlui.EPerson.InvalidToken.para2">Wenn dem der Fall ist, so kopieren Sie die gesamte URL und fügen Sie sie direkt in ihren Browser ein anstatt nur auf den Link in der E-Mail zu klicken. Die Adressleiste Ihres Browsers sollte dann etwas in dieser Art enthalten:</message>
+	<message key="xmlui.EPerson.InvalidToken.para1">Die URL, die Sie angegeben haben, ist ungültig. Gegebenenfalls gab es einen Zeilenumbruch durch ihr E-Mail-Programm, wie hier z. B.:</message>
+	<message key="xmlui.EPerson.InvalidToken.para2">Wenn dies der Fall ist, so kopieren Sie die gesamte URL und fügen Sie sie direkt in ihren Browser ein anstatt nur auf den Link in der E-Mail zu klicken. Die Adressleiste Ihres Browsers sollte dann etwas in dieser Art enthalten:</message>
 
 	<!-- org.dspace.app.xmlui.eperson.Navigation.java -->
 	<message key="xmlui.EPerson.Navigation.my_account">Mein Benutzerkonto</message>
@@ -460,7 +460,7 @@
 	<!-- org.dspace.app.xmlui.eperson.StartRegistration.java -->
 	<message key="xmlui.EPerson.StartRegistration.title">Registrierung neuer Benutzer</message>
 	<message key="xmlui.EPerson.StartRegistration.head1">Die E-Mail-Adresse wird bereits von einem Benutzer verwendet.</message>
-	<message key="xmlui.EPerson.StartRegistration.para1">Die E-Mail-Adresse wird bereits von einem Benutzer verwendet. Wenn Sie Ihr Passwort vergessen haben, Klicken Sie bitte auf „Passwort vergessen“.</message>
+	<message key="xmlui.EPerson.StartRegistration.para1">Die E-Mail-Adresse wird bereits von einem Benutzer verwendet. Wenn Sie Ihr Passwort vergessen haben, klicken Sie bitte auf „Passwort vergessen“.</message>
 	<message key="xmlui.EPerson.StartRegistration.reset_password_for">Passwort neu setzen für: </message>
 	<message key="xmlui.EPerson.StartRegistration.submit_reset">Passwort neu setzen</message>
 	<message key="xmlui.EPerson.StartRegistration.head2">Registrierung neuer Benutzer</message>
@@ -509,11 +509,11 @@
 	<message key="xmlui.Submission.Submissions.title">Veröffentlichungen und Geschäftsgänge</message>
 	<message key="xmlui.Submission.Submissions.trail">Veröffentlichungen</message>
 	<message key="xmlui.Submission.Submissions.head">Veröffentlichungen und übernommene Aufgaben</message>
-	<message key="xmlui.Submission.Submissions.untitled"><i>Ohne Titel</i>&#160;</message>
+	<message key="xmlui.Submission.Submissions.untitled"><i>Ohne Titel</i></message>
 	<message key="xmlui.Submission.Submissions.email">E-Mail: </message>
 	<!-- Same transformer, workflow section -->
 	<message key="xmlui.Submission.Submissions.workflow_head1">Aufgaben aus Geschäftsgängen</message>
-	<message key="xmlui.Submission.Submissions.workflow_info1">Dies sind Dokumente, die sich noch im Geschäftsgang befinden. Es gibt zwei Bearbeitungskategorien, eine für Aufgaben, die Sie persönlich übernommen haben, eine andere für Aufgaben, die noch keine Bearbeiter übernommen hat.</message>
+	<message key="xmlui.Submission.Submissions.workflow_info1">Dies sind Dokumente, die sich noch im Geschäftsgang befinden. Es gibt zwei Bearbeitungskategorien, eine für Aufgaben, die Sie persönlich übernommen haben, eine andere für Aufgaben, die noch kein Bearbeiter übernommen hat.</message>
 	<message key="xmlui.Submission.Submissions.workflow_head2">Ihre eigenen Aufgaben</message>
 	<message key="xmlui.Submission.Submissions.workflow_column1">&#160;</message>
 	<message key="xmlui.Submission.Submissions.workflow_column2">Aufgabe</message>
@@ -574,7 +574,6 @@
 	<message key="xmlui.Submission.submit.progressbar.upload">Hochladen</message>
 	<message key="xmlui.Submission.submit.progressbar.verify">Überprüfen</message>
 	<message key="xmlui.Submission.submit.progressbar.creative-commons">Creative-Commons-Lizenz</message>
-	<message key="xmlui.Submission.submit.progressbar.CClicense">CC-Lizenz</message>
 	<message key="xmlui.Submission.submit.progressbar.license">eDiss-Lizenz</message>
 	<message key="xmlui.Submission.submit.progressbar.complete">Fertig</message>
 
@@ -602,7 +601,7 @@
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.open_set"> (</message>
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.close_set">)</message>
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.multiple_titles">Weitere Titel</message>
-	<message key="xmlui.Submission.submit.InitialQuestionsStep.multiple_titles_help">Das Dokument hat mehrere Titel, z. B. eine Übersetzung</message>
+	<message key="xmlui.Submission.submit.InitialQuestionsStep.multiple_titles_help">Das Dokument hat mehrere Titel, z. B.: eine Übersetzung</message>
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.multiple_titles_note">Wenn das obere Kästchen nicht angehakt ist, werden folgende Titel entfernt: </message>
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.published_before">Bereits veröffentlicht</message>
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.published_before_help">Das Dokument wurde bereits veröffentlicht oder öffentlich zugänglich gemacht.</message>
@@ -626,13 +625,13 @@
 	<!-- org.dspace.app.xmlui.Submission.submit.UploadStep -->
 	<message key="xmlui.Submission.submit.UploadStep.head">Datei(en) hochladen</message>
 	<message key="xmlui.Submission.submit.UploadStep.file">Datei</message>
-	<message key="xmlui.Submission.submit.UploadStep.file_help">Klicken Sie auf "Durchsuchen" und wählen Sie auf Ihrem Rechner die Datei aus, die Sie hochladen wollen. Klicken Sie dann auf "Datei hochladen". Achtung: Ihre Arbeit in PDF-Format (mit anklickbarem Inhaltsverzeichnis, optimiert auf "schnelle Webanzeige" und ohne Sicherheitseinschränkungen) muss die erste Datei sein! <a href="/help/pdf-howto">Anleitung zur PDF-Erstellung.</a></message>
-	<message key="xmlui.Submission.submit.UploadStep.upload_error">Ein Problem ist während des Hochladens Ihrer Datei aufgetreten. Dies kann verschiedene Gründe haben: der Dateiname war fehlerhaft, aufgrund eines Netzwerkproblems wurde die Datei nicht korrekt übertragen oder Sie haben versucht, eine Dateiformat hochzuladen, welches auf dem Repositorium nicht zugelassen ist. Bitte überprüfen Sie Ihre Eingaben und versuchen es noch einmal.</message>
-	<message key="xmlui.Submission.submit.UploadStep.virus_error">Die Datei wurde nich hochgeladen, da sie scheinbar einen Virus enthält. Bitte wenden Sie sich an den System-Administrator.</message>
+	<message key="xmlui.Submission.submit.UploadStep.file_help">Klicken Sie auf „Durchsuchen“ und wählen Sie auf Ihrem Rechner die Datei aus, die Sie hochladen wollen. Klicken Sie dann auf „Datei hochladen“. Achtung: Ihre Arbeit in PDF-Format (mit Lesezeichen [bookmarks] oder anklickbarem Inhaltsverzeichnis, optimiert auf „schnelle Webanzeige“ und ohne Sicherheitseinschränkungen) muss die erste Datei sein! <a href="/ediss/help/pdf-howto">Anleitung zur PDF-Erstellung.</a></message>
+	<message key="xmlui.Submission.submit.UploadStep.upload_error">Ein Problem ist während des Hochladens Ihrer Datei aufgetreten. Dies kann verschiedene Gründe haben: der Dateiname war fehlerhaft, aufgrund eines Netzwerkproblems wurde die Datei nicht korrekt übertragen oder Sie haben versucht, ein Dateiformat hochzuladen, welches auf dem Repositorium nicht zugelassen ist. Bitte überprüfen Sie Ihre Eingaben und versuchen es noch einmal.</message>
+	<message key="xmlui.Submission.submit.UploadStep.virus_error">Die Datei wurde nicht hochgeladen, da sie scheinbar einen Virus enthält. Bitte wenden Sie sich an den System-Administrator.</message>
 	<message key="xmlui.Submission.submit.UploadStep.virus_checker_error">Beim Virusscan der Datei ist ein technisches Problem aufgetreten. Bitte wenden Sie sich an den System-Administrator.</message>
 	<message key="xmlui.Submission.submit.UploadStep.file_error">Das Dokument muss mindestens eine Datei enthalten.</message>
 	<message key="xmlui.Submission.submit.UploadStep.description">Beschreibung</message>
-	<message key="xmlui.Submission.submit.UploadStep.description_help">Falls Sie weitere Dateien (zusätzliche Graphiken, Tabellen oder Ihre Dissertation in anderen Formaten) hochladen wollen,geben Sie bitte eine kurze Beschreibung der Datei an, z. B. "<i>Dissertation</i>", oder "<i>Anhang</i>".</message>
+	<message key="xmlui.Submission.submit.UploadStep.description_help">Falls Sie weitere Dateien (zusätzliche Graphiken, Tabellen oder Ihre Dissertation in anderen Formaten) hochladen wollen,geben Sie bitte eine kurze Beschreibung der Datei an, z. B. <i>Dissertation</i>, oder <i>Anhang</i>.</message>
 	<message key="xmlui.Submission.submit.UploadStep.submit_upload">Datei hochladen</message>
 	<message key="xmlui.Submission.submit.UploadStep.head2">Hochgeladene Dateien</message>
 	<message key="xmlui.Submission.submit.UploadStep.column0">Primäre Datei</message>
@@ -655,7 +654,7 @@
 	<message key="xmlui.Submission.submit.EditFileStep.head">Datei bearbeiten</message>
 	<message key="xmlui.Submission.submit.EditFileStep.file">Datei</message>
 	<message key="xmlui.Submission.submit.EditFileStep.description">Beschreibung</message>
-	<message key="xmlui.Submission.submit.EditFileStep.description_help">Zusätzlich können Sie ein kurze Beschreibung der Datei eingeben, z. B. <i>Hauptband</i>, oder <i>Anhang</i>.</message>
+	<message key="xmlui.Submission.submit.EditFileStep.description_help">Zusätzlich können Sie eine kurze Beschreibung der Datei eingeben, z. B. <i>Hauptband</i>, oder <i>Anhang</i>.</message>
 	<message key="xmlui.Submission.submit.EditFileStep.info1">Wählen Sie das entsprechende Dateiformat aus der Liste, z. B. <i>Adobe PDF</i> oder <i>Microsoft Word</i>. <strong>Wenn das Format nicht in der Liste enthalten ist, geben Sie bitte eine kurze Beschreibung in das Feld unten ein.</strong></message>
 	<message key="xmlui.Submission.submit.EditFileStep.format_detected">Erkanntes Format</message>
 	<message key="xmlui.Submission.submit.EditFileStep.format_selected">Gewähltes Format</message>
@@ -679,17 +678,6 @@
 	<message key="xmlui.Submission.submit.ReviewStep.unknown">unbekannt</message>
 	<message key="xmlui.Submission.submit.ReviewStep.known">bekannt</message>
 	<message key="xmlui.Submission.submit.ReviewStep.supported">unterstützt</message>
-
-	<!-- org.dspace.app.xmlui.Submission.submit.CCLicenseStep -->
-	<message key="xmlui.Submission.submit.CCLicenseStep.ccws_error">Ein Fehler ist aufgetreten: {0}</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.head">Creative-Commons-Lizenz</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.info1"><strong>Creative-Commons-Lizenzen legen fest, wie ihr Werk genutzt werden kann.</strong> Wenn Sie eine <a href="http://creativecommons.org/licenses/?lang=de">Creative-Commons-Lizenz</a> zu Ihrem Dokument hinzufügen möchten, klicken sie auf die untere Schaltfläche. Sie werden dann zu einer Seite weitergeleitet, auf der Sie aus verschiedenen Lizenzmodellen auswählen können. Danach kehren Sie zu dieser Seite zurück.</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.submit_choose_creative_commons">Wählen Sie eine Lizenz</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.submit_to_creative_commons">Weiter zur Creative-Commons-Seite, um eine Lizenz auszuwählen.</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.license">Lizenz</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.no_license">Keine Creative-Commons-Lizenz ausgewählt</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.save_changes">Klicken Sie auf „Weiter“, um Ihre Ändeurngen zu speichern.</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.select_change">Auswahl oder Änderung der Lizenz</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
 	<message key="xmlui.Submission.submit.LicenseStep.head">Vertragsbedingungen für die Veröffentlichung auf dem Dissertationsserver der Georg-August-Universität Göttingen</message>
@@ -1275,7 +1263,7 @@
 	<message key="xmlui.administrative.item.EditBitstreamForm.user_help">Die Anwendung mit der die Datei erstellt wurde und die Versionsnummer, z. B.: "<i>ACMESoft SuperApp version 1.5</i>".</message>
 	<message key="xmlui.administrative.item.EditBitstreamForm.name_label">Dateiname:</message>
 	<message key="xmlui.administrative.item.EditBitstreamForm.name_help">Datei umbenennen. Dies führt zu einer Änderung in der angezeigten URL aber alte Links werden solange sich die Sequence ID nicht ändert korrekt aufgelöst.</message>
-	<message key="xmlui.administrative.item.EditItemBitstreamsForm.previous_order">Zurück:</message>
+	<message key="xmlui.administrative.item.EditItemBitstreamsForm.previous_order">Vorherige:</message>
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.order_up">Nach oben</message>
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.order_down">Nach unten</message>
 
@@ -1290,7 +1278,7 @@
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.column5">Anzeige</message>
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.column6">Sortierung</message>
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.column7"> </message>
-	<message key="xmlui.administrative.item.EditItemBitstreamsForm.bundle_label"><strong>Bündle: {0}</strong></message>
+	<message key="xmlui.administrative.item.EditItemBitstreamsForm.bundle_label"><strong>Bündel: {0}</strong></message>
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.primary_label"> (primär) </message>
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.view_link">anzeigen</message>
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.submit_add">Eine neue Datei hochladen</message>
@@ -1307,7 +1295,7 @@
 	<message key="xmlui.administrative.item.EditItemMetadataForm.value_label">Wert</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.lang_label">Sprache</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.submit_add">Metadatum hinzufügen</message>
-	<message key="xmlui.administrative.item.EditItemMetadataForm.para1">Bitte beachten Sie: Diese Änderungen werden in keiner Weise validiert. Sie sind dafür verantwortlich die korrekten Daten im korrekten Format einzugeben.</message>
+	<message key="xmlui.administrative.item.EditItemMetadataForm.para1">Bitte beachten Sie: Diese Änderungen werden in keiner Weise validiert. Sie sind dafür verantwortlich, die korrekten Daten im korrekten Format einzugeben.</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.head2">Metadaten</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.column1">Entfernen</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.column2">Name</message>
@@ -1401,13 +1389,13 @@
 	<message key="xmlui.administrative.metadataimport.MetadataImportUpload.item_reinstate">Ressource wieder veröffentlichen</message>
 
 	<!-- general mapper messages -->
-	<message key="xmlui.administrative.mapper.general.mapper_trail">Dokumente Spiegeln</message>
+	<message key="xmlui.administrative.mapper.general.mapper_trail">Dokumente spiegeln</message>
 
 	<!-- org.dspace.app.xmlui.administrative.mapper.MapperMain -->
 	<message key="xmlui.administrative.mapper.MapperMain.title">Dokumente spiegeln</message>
 	<message key="xmlui.administrative.mapper.MapperMain.head1">Dokumente spiegeln - Dokumente von anderen Sammlungen spiegeln</message>
 	<message key="xmlui.administrative.mapper.MapperMain.para1">Sammlung: "<strong>{0}</strong>"</message>
-	<message key="xmlui.administrative.mapper.MapperMain.para2">Dieses Werkzeug erlaubt es Administratoren und Sammlungsadministratoren Dokumente von einer Sammlung in eine andere zu spiegeln. Sie können nach Dokumente suchen, um diese zu spiegeln oder sich die Liste der aktuell gespiegelten Dokumente anzeigen lassen.</message>
+	<message key="xmlui.administrative.mapper.MapperMain.para2">Dieses Werkzeug erlaubt es Administratoren und Sammlungsadministratoren Dokumente von einer Sammlung in eine andere zu spiegeln. Sie können nach Dokumente suchen, um diese zu spiegeln oder sich die Liste der aktuell gespiegelten Dokumente anzeigen zu lassen.</message>
 	<message key="xmlui.administrative.mapper.MapperMain.stat_label">Statistik</message>
 	<message key="xmlui.administrative.mapper.MapperMain.stat_info"><strong>{0} von {1}</strong> Dokument(en) in dieser Sammlung ist/sind aus anderen gespiegelt</message>
 	<message key="xmlui.administrative.mapper.MapperMain.search_label">Suche</message>
@@ -1520,7 +1508,7 @@
 	<message key="xmlui.administrative.collection.CreateCollectionForm.trail">Sammlung anlegen</message>
 	<message key="xmlui.administrative.collection.CreateCollectionForm.main_head">Geben Sie die Informationen zur Sammlung: {0} ein</message>
 	<message key="xmlui.administrative.collection.CreateCollectionForm.submit_save">Anlegen</message>
-	
+
 	<!-- General to the harvesting options under collection -->
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.title">Harvesting-Einstellungen für Sammlungen</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.trail">Harvesting</message>
@@ -1758,7 +1746,7 @@
 					 Statistics Aspect
 
 		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-		
+
 	<message key="xmlui.statistics.title">Statistik</message>
 	<message key="xmlui.statistics.visits.total">Gesamtzahl der Zugriffe</message>
 	<message key="xmlui.statistics.visits.month">Gesamtzahl der Zugriffe pro Monat</message>
@@ -1778,21 +1766,21 @@
 
 	<!-- structural.xsl -->
 	<message key="xmlui.dri2xhtml.structural.footer-promotional">
-		<a href="http://di.tamu.edu" id="ds-logo-link">							
+		<a target="_blank" href="http://di.tamu.edu" id="ds-logo-link">							
 			<span id="ds-footer-logo">&#160;</span>
 		</a>
 		<p>
 			Diese Seite verwendet Manakin, das neue eDiss Front-End, welches von den Texas A&amp;M University 
 			Libraries entwickelt wurde. Das Front-End ist extrem flexibel und kann über Manakin Aspekte und XLS basierte Themen angepasst werden. 
 			Weiterführende Informationen finden Sie unter:
-			<a href="http://di.tamu.edu">http://di.tamu.edu</a> und
-			<a href="http://dspace.org">http://dspace.org</a>							
+			<a target="_blank" href="http://di.tamu.edu">http://di.tamu.edu</a> und
+			<a target="_blank" href="http://dspace.org">http://dspace.org</a>							
 		</p>
 	</message>
 	<message key="xmlui.dri2xhtml.structural.contact-link">Kontakt</message>
 	<message key="xmlui.dri2xhtml.structural.feedback-link">Kontaktformular</message>
 
-	<message key="xmlui.dri2xhtml.structural.head-subtitle">eDiss Repositorium (Manakin basiert)</message>
+	<message key="xmlui.dri2xhtml.structural.head-subtitle">eDiss-Repositorium</message>
 
 	<message key="xmlui.dri2xhtml.structural.profile">Profil: </message>
 	<message key="xmlui.dri2xhtml.structural.logout">Ausloggen</message>
@@ -1809,6 +1797,9 @@
 
 	<message key="xmlui.dri2xhtml.structural.link_cc">Creative Commons Lizenz</message>
 	<message key="xmlui.dri2xhtml.structural.link_original_license">Originallizenz</message>
+	
+	<message key="xmlui.dri2xhtml.structural.content-link">Zum Inhalt</message>
+	<message key="xmlui.dri2xhtml.structural.nav-link">Zur Navigation</message>
 
 	<!-- DS-METS-1.0-MODS.xsl -->
 	<!-- DS-METS-1.0-DIM.xsl -->
@@ -1821,7 +1812,7 @@
 		Sie können entweder die allgemeingültige Schablone in dri2xhtml überschreiben oder ihre eigene Schablone 
 		anlegen, um Ihrem Profil gerecht zu werden.
 	</message>
-	
+
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-preview">Vorschau</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-title">Titel</message>
@@ -1998,7 +1989,7 @@
 	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Lokaler Wert "@1@" (nicht in Referenzdatenbank)</message>
 
 	<message key="xmlui.Submission.submit.UploadStep.upload_pdf_accepted">Das Dokument erfüllt alle Anforderungen</message>
-	<message key="xmlui.Submission.submit.UploadStep.upload_pdf_metadata">Das Dokument enthält die folgende Beschreibung: (Falls Ihre Dissertation später über eine Google-Suche gefunden wird, verwendet google diese Angaben bei der Trefferanzeige. Wollen Sie die Daten ändern, löschen Sie Ihr Dokument, korrigieren Sie die Beschreibung und laden Sie die neue Version wieder hoch. Anleitungen zur Korrektur finden Sie <a href="help/pdf-howto">hier</a>.)</message>
+	<message key="xmlui.Submission.submit.UploadStep.upload_pdf_metadata">Das Dokument enthält die folgende Beschreibung: (Falls Ihre Dissertation später über eine Google-Suche gefunden wird, verwendet Google diese Angaben bei der Trefferanzeige. Wollen Sie die Daten ändern, löschen Sie Ihr Dokument, korrigieren Sie die Beschreibung und laden Sie die neue Version wieder hoch. Anleitungen zur Korrektur finden Sie <a href="help/pdf-howto">hier</a>.)</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_linearized">Optimiert für schnelle Webanzeige</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_toc">Inhaltsverzeichnis vorhanden</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_pdfcheck_print">Drucken zulässig</message>
@@ -2031,7 +2022,7 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.lang">Dokumente nach Sprache</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.titletranslated">Dokumente nach übersetztem Titel</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.examen">Dokumente nach Tag der Prüfung</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.institute">Dokumente nach Institute</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.institute">Dokumente nach Institut</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subjecteng">Dokumente nach Schlagworten (englisch)</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.advisor">Dokumente {0} nach Gutatchter {1}</message>
@@ -2055,32 +2046,32 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.examen.column_heading">Tag der Prüfung</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.institute.column_heading">Institute</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subjecteng.column_heading">Schlagworte (englisch)</message>
-	
+
 	<message key="xmlui.general.language.de">Deutsch</message>
 	<message key="xmlui.general.language.en">Englisch</message>
-	
+
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.referee">Auflistung nach Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.referee">Auflistung nach Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_referee">Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.referee.column_heading">Gutachter</message>
-	
+
 	<message key="xmlui.item-view.examination">Angenommen am</message>
 	<message key="xmlui.item-view.advisor">Betreuer</message>
 	<message key="xmlui.item-view.referee">Gutachter</message>
-	
+
 	<message key="xmlui.general.publish_now">Jetzt veröffentlichen</message>
 	<message key="xmlui.general.publish_here">Hier veröffentlichen</message>
-	
+
 	<message key="xmlui.EPerson.PasswordLogin.head2">&#160;</message>
 	<message key="xmlui.EPerson.PasswordLogin.para1">&#160;</message>
 	<message key="xmlui.EPerson.PasswordLogin.register_link">Sind Sie neu bei eDiss? Klicken Sie hier um sich zu registrieren!</message>
-	
+
 	<message key="xmlui.navigation.help.header">Hilfe &amp; Info</message>
 	<message key="xmlui.navigation.help.publication_process">Publizieren auf eDiss</message>
 	<message key="xmlui.navigation.help.pdf_howto">PDF richtig erstellen</message>
 	<message key="xmlui.navigation.help.cumulative_dissertation">Kumulative Dissertationen</message>
 	<message key="xmlui.navigation.help.general">Häufige Fragen</message>
-	
+
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">GOK</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">GOK Classification</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter subjects</message>
@@ -2097,85 +2088,76 @@
 
 	<message key="xmlui.administrative.Navigation.context_print_bill">Rechnung drucken</message>
 	<message key="xmlui.inputform.add.button">Hinzufügen</message>
-	
+
 	<message key="xmlui.ArtifactBrowser.SiteViewer.head_recent_submissions">Neueste Publikationen</message>
 
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type_filter">Typ</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publisher_filter">Verlag</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.ispartof">Parent</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.group_by">Group Results By</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.none">None</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.publication_grp">Publication</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.comm">Community</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.coll">Collection</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">Series</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.contributor.author_browse">Browsing nach: Authr</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.title_browse">Browsing nach: Titel</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.subject_browse">Browsing nach: Schlagwort</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.description.abstract_browse">Browsing nach: Zusammenfassung</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.type_series_browse">Browsing by: Series</message>
-	
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.ispartof">Teil von</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.group_by">Ergebnisse gruppieren nach</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.none">kein</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.publication_grp">Publikation</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.comm">Bereich</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.coll">Sammlung</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">Reihe</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.contributor.author_browse">Auflistung nach Autor</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.title_browse">Auflistung nach Titel</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.subject_browse">Auflistung nach Schlagwort</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.description.abstract_browse">Auflistung nach Zusammenfassung</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.type_series_browse">Auflistung nach Reihe</message>
+
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Autor</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Titel</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Schlagwort</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Erscheinungsdatum</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.selected">Ausgewählte Filter</message>
 
-
-
-	<message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Anzeige {0}-{1}</message>
-
-	<message key="xmlui.Discovery.AbstractSearch.type_author">Filter nach: Author</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dc.date.issued_dt">Erscheinungsdatum</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dc.title_sort">Titel</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Autor</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author_filter">Autor</message>
-	<message key="xmlui.Discovery.AbstractSearch.type_subject">Filter nach: Schlagwort</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Erscheinungsdatum</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Schlagwort</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Schlagwort</message>
-	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Erscheinungsdatum</message>
-
 
 	<message key="xmlui.Discovery.AbstractSearch.startswith">Anfangsbuchstaben</message>
-	<message key="xmlui.Discovery.AbstractSearch.startswith.help">Or enter first few letters:</message>
+	<message key="xmlui.Discovery.AbstractSearch.startswith.help">Oder geben Sie die ersten Buchstaben ein:</message>
+	<message key="xmlui.Discovery.AbstractSearch.type_author">Filtern nach Autor</message>
+	<message key="xmlui.Discovery.AbstractSearch.type_subject">Filtern nach Schlagwort</message>
 
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dc.title_sort">Titel</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dc.date.issued_dt">Issue Date</message>
-
-	<message key="xmlui.discovery.SearchFacetFilter.no-results">No filter values found</message>
+	<message key="xmlui.Discovery.SimpleSearch.filter_add">Filter hinzufügen</message>
+	<message key="xmlui.Discovery.SimpleSearch.filter_head">&#160;</message>
+	<message key="xmlui.Discovery.SimpleSearch.filter_help">&#160;</message>
+	<message key="xmlui.Discovery.SimpleSearch.sort_apply">Anwenden</message>
+	<message key="xmlui.Discovery.SimpleSearch.sort_head">Sortieren nach</message>
 
 	<message key="xmlui.discovery.AbstractFiltersTransformer.filters.head">Filter</message>
 	<message key="xmlui.discovery.AbstractFiltersTransformer.filters.view-more">... mehr</message>
-
-
+	<message key="xmlui.discovery.SearchFacetFilter.no-results">Keine Ergebnisse gefunden</message>
 	<message key="xmlui.discovery.SimpleSearch.search_label">&#160;</message>
-	<message key="xmlui.Discovery.SimpleSearch.filter_head">&#160;</message>
-	<message key="xmlui.Discovery.SimpleSearch.filter_add">Filter hinzufügen</message>
-	<message key="xmlui.Discovery.SimpleSearch.filter_help">&#160;</message>
-	<message key="xmlui.Discovery.SimpleSearch.sort_head">Sortieren nach</message>
-	<message key="xmlui.Discovery.SimpleSearch.sort_apply">Anwenden</message>
-
+	<message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Anzeige {0}-{1}</message>
 
 	<!-- static pages trails and navigations -->
-	<message key="xmlui.help.pdf-creation.trail">Hilfe &amp; Info: PDF Dokument erstellen</message>
-	<message key="xmlui.help.cumulative.diss.trail">Hilfe &amp; Info: Kumulative Dissertationen</message>
-	<message key="xmlui.help.goodtoknow.trail">Hilfe &amp; Info: Häufige Fragen</message>
-
 	<message key="xmlui.contact.trail">Kontakt</message>
-	<message key="xmlui.workfow.trail">Hilfe &amp; Info: Online-Publikationsprozess</message>
-	<message key="xmlui.help.publication.fullprocess.trail">Hilfe &amp; Info: Publizieren auf eDiss</message>
-	<message key="xmlui.deposit-license.trail">Hilfe &amp; Info: Vertragsbedingungen</message>
 	<message key="xmlui.deposit-license.head">Vertragsbedingungen</message>
-	<message key="xmlui.help.publication.process.head">Publizieren auf eDiss</message>
+	<message key="xmlui.deposit-license.trail">Hilfe &amp; Info: Vertragsbedingungen</message>
 	<message key="xmlui.deposit.license.title">Vertragsbedingungen</message>
-	<message key="xmlui.navigation.help.contract">Vertragsbedingungen</message>
-	<message key="xmlui.navigation.cumulative.dissertations">Kumulative Dissertationen</message>
-	<message key="xmlui.help.cumulative.diss.head">Kumulative Dissertationen</message>
-	<message key="xmlui.help.goodtoknow.head">Häufige Fragen</message>
-	<message key="xmlui.impressum.head">Impressum</message>
-	<message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
 	<message key="xmlui.dri2xhtml.default.textarea.value">&#160;</message>	
-	
+	<message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
+	<message key="xmlui.help.cumulative.diss.head">Kumulative Dissertationen</message>
+	<message key="xmlui.help.cumulative.diss.trail">Hilfe &amp; Info: Kumulative Dissertationen</message>
+	<message key="xmlui.help.goodtoknow.head">Häufige Fragen</message>
+	<message key="xmlui.help.goodtoknow.trail">Hilfe &amp; Info: Häufige Fragen</message>
+	<message key="xmlui.help.pdf-creation.trail">Hilfe &amp; Info: PDF Dokument erstellen</message>
+	<message key="xmlui.help.publication.fullprocess.trail">Hilfe &amp; Info: Publizieren auf eDiss</message>
+	<message key="xmlui.help.publication.process.head">Publizieren auf eDiss</message>
+	<message key="xmlui.impressum.head">Impressum</message>
+	<message key="xmlui.navigation.cumulative.dissertations">Kumulative Dissertationen</message>
+	<message key="xmlui.navigation.help.contract">Vertragsbedingungen</message>
+	<message key="xmlui.workfow.trail">Hilfe &amp; Info: Online-Publikationsprozess</message>
+
 	<message key="xmlui.dri2xhtml.structural.script-warning">Um diese Website vollständig nutzen zu können, aktivieren Sie bitte JavaScript in Ihrem Browser</message>
-	
+
 	<!-- static page: home -->
 	<message key="xmlui.static.home">
 		<div>
@@ -2186,7 +2168,7 @@
 			<ol class="ds-ordered-list">
 				<li>
 					<span class="help" id="step1">
-						<span class="icon"> </span>
+						<span class="icon">1</span>
 						<a href="/help/pdf-howto">Erstellen Sie Ihre Dissertation als PDF.</a>
 						<span>Ihre Arbeit muss als <strong>eine</strong> PDF Datei (nicht als mehrere Einzeldateien) ohne Sicherheitseinschränkungen mit anklickbarem Inhaltsverzeichnis und optimiert auf „schnelle Webanzeige“ vorliegen. <br />
 							<a href="/help/fullpublication#cumulative">Für kumulative Dissertationen gelten spezielle Vorschriften!</a></span>
@@ -2194,21 +2176,21 @@
 				</li>
 				<li>
 					<span class="help" id="step2">
-						<span class="icon"> </span>
+						<span class="icon">2</span>
 						<a href="/login">Loggen Sie sich bei eDiss ein.</a> 
 						<span>Beim ersten Mal ist eine kostenlose <a href="/register">Registrierung</a> notwendig.</span>
 					</span>
 				</li>
 				<li>
 					<span class="help" id="step3">
-						<span class="icon"> </span>
+						<span class="icon">3</span>
 						Klicken Sie auf <a href="/submit">„Jetzt veröffentlichen“</a> und folgen Sie dem Formular.
 						<span>Im letzten Schritt müssen Sie <a href="help/deposit-license">unseren Vertragsbedingungen</a> zustimmen.</span>
 					</span>
 				</li>
 				<li>
 					<span class="help" id="step4">
-						<span class="icon"> </span>
+						<span class="icon">4</span>
 						<a href="/help/fullpublication#print">Liefern Sie zwei gedruckte Exemplare Ihrer Arbeit bei uns in der SUB ab.</a>
 						<span>Die Adresse finden Sie weiter unten.<br />
 							Mediziner müssen eine Kopie Ihrer Einladung zur mündlichen Prüfung den Druckexemplaren beilegen!</span>
@@ -2216,14 +2198,15 @@
 				</li>
 				<li>
 					<span class="help" id="step5">
-						<span class="icon"> </span>
-						<a href="/help/fullpublication#bill">Bezahlen Sie die Publikationsgebühr in Höhe von € 45,00.</a>
+						<span class="icon">5</span>
+						<a href="/help/fullpublication#bill">Bezahlen Sie die Publikationsgebühr in Höhe von € 25,00.</a>
 						<span>Sie erhalten per Post eine Rechnung mit unseren Kontodaten.</span>
 					</span>
 				</li>
 				<li>
 					<span class="help" id="step6">
-						<span class="icon"> </span>Fertig! Ihre Publikation wird von unseren Redakteuren freigeschaltet.
+						<span class="icon">6</span>
+						Fertig! Ihre Publikation wird von unseren Redakteuren freigeschaltet.
 						<span>Über die Veröffentlichung Ihrer Arbeit werden Sie per E-Mail benachrichtigt.</span>
 					</span>
 				</li>
@@ -2236,7 +2219,7 @@
 			</p>
 			<ul class="ds-simple-list">
 				<li>Zentralbibliothek</li>
-				<li>Elektronisches Publizieren</li>
+				<li>eDiss – Raum 2.19</li>
 				<li>Platz der Göttinger Sieben 1</li>
 				<li>37073 Göttingen</li>
 			</ul>
@@ -2258,7 +2241,7 @@
 			</ul>
 		</div>
 	</message>
-	
+
 	<!-- static page: publishing on eDiss -->
 	<message key="xmlui.static.help.publishing">
 		<div>
@@ -2296,10 +2279,7 @@
 									<a href="#proof">3. Eingaben überprüfen</a>
 								</li>
 								<li>
-									<a href="#ccLicense">4. Spezielle Nutzungslizenz (CC-Lizenz) auswählen (optional)</a>
-								</li>
-								<li>
-									<a href="#depositLicense">5. Dem eDiss-Vertrag zustimmen</a>
+									<a href="#depositLicense">4. Dem eDiss-Vertrag zustimmen</a>
 								</li>
 							</ul>
 						</li>
@@ -2307,7 +2287,7 @@
 							<a href="#print">Liefern Sie uns zwei gedruckte Exemplare Ihrer Dissertation</a>
 						</li>
 						<li>
-							<a href="#bill">Bezahlen Sie die 45 € Publikationsgebühr.</a>
+							<a href="#bill">Bezahlen Sie die 25,00 € Publikationsgebühr.</a>
 						</li>
 					</ul>
 				</li>
@@ -2324,17 +2304,17 @@
 			<h2 id="before" class="ds-div-head">Voraussetzungen</h2>
 			<p class="ds-paragraph">Bevor Sie mit der Veröffentlichung Ihrer Arbeit anfangen, vergewissern Sie sich bitte, dass </p>
 			<ul class="ds-bulleted-list">
-				<li>Sie die <a href="http://www.sub.uni-goettingen.de/elektronisches-publizieren/publizieren/dissertationen-abschlussarbeiten/promotionsordnungen-der-fakultaeten/">einschlägige Promotionsordnung</a> zur Kenntnis genommen haben,</li>
-				<li>zwei gebundene gedruckte Exemplare Ihrer Arbeit vorliegen und</li>
+				<li>Sie die <a target="_blank" href="http://www.sub.uni-goettingen.de/elektronisches-publizieren/publizieren/dissertationen-abschlussarbeiten/promotionsordnungen-der-fakultaeten/">einschlägige Promotionsordnung</a> zur Kenntnis genommen haben,</li>
+				<li>zwei gedruckte und gebundene Exemplare Ihrer Arbeit vorliegen und</li>
 				<li>falls Sie Mediziner sind, Ihre Einladung zur mündlichen Prüfung vorliegt.</li>
 			</ul>
 
 			<h2 id="requirements" class="ds-div-head">Anforderungen</h2>
-			<p class="ds-paragraph">Bei der SUB Göttingen müssen <strong>zwei gedruckte gebundene Exemplare</strong> und <strong>eine elektronische Version</strong> (PDF-Datei) Ihrer Arbeit abgeliefert werden.
+			<p class="ds-paragraph">Bei der SUB Göttingen müssen <strong>zwei gedruckte und gebundene Exemplare</strong> und <strong>eine elektronische Version</strong> (PDF-Datei) Ihrer Arbeit abgeliefert werden.
 				Die PDF Version muss als <strong>eine</strong> Datei (nicht als mehrere Einzeldateien) vorliegen, die die folgenden Kriterien erfüllt.
 				Die Datei</p>
 			<ul class="ds-bulleted-list">
-				<li>ist mit Navigationselementen, d.h. mit Lesezeichen (Bookmarks) oder mit anklickbarem Inhaltsverzeichnis versehen</li>
+				<li>ist mit Navigationselementen, d. h. mit Lesezeichen (Bookmarks) oder mit anklickbarem Inhaltsverzeichnis versehen</li>
 				<li>ist auf "schnelle Webanzeige" optimiert</li>
 				<li>ist durch keine Sicherheitseinstellungen geschützt.</li>
 			</ul>
@@ -2342,14 +2322,14 @@
 			<h3 id="normal">Nicht-kumulative Dissertationen</h3>
 			<p class="ds-paragraph">
 				Die gedruckten Exemplare Ihrer Arbeit müssen mit Ihrer elektronischen Dissertation <strong>identisch</strong> sein. <br />	
-				In die gedruckte Version muss hinten Ihr Lebenslauf eingebunden sein. Den Lebenslauf können Sie in der elektronischen Dissertation weglassen. Allein in diesem Punkt ist ein Unterschied zwischen gedruckten und elektronischen Version erlaubt. 
+				In die gedruckte Version muss am Ende Ihr Lebenslauf eingebunden sein. Den Lebenslauf können Sie in der elektronischen Dissertation weglassen. Allein in diesem Punkt ist ein Unterschied zwischen gedruckten und elektronischen Version erlaubt. 
 			</p>
 			<h3 id="cumulative">Kumulative Dissertationen</h3>
-			<p class="ds-paragraph">Die Verbreitung und Akzeptanz dieser Form der Dissertation ist von Fakultät zu Fakultät verschieden. Bitte lesen Sie Ihre <a href="http://www.sub.uni-goettingen.de/elektronisches-publizieren/publizieren/dissertationen-abschlussarbeiten/promotionsordnungen-der-fakultaeten/">Promotionsordnung</a> aufmerksam und informieren Sie sich ggf. bei Ihrem Prüfungsamt.
+			<p class="ds-paragraph">Die Verbreitung und Akzeptanz dieser Form der Dissertation ist von Fakultät zu Fakultät verschieden. Bitte lesen Sie Ihre <a target="_blank" href="http://www.sub.uni-goettingen.de/elektronisches-publizieren/publizieren/dissertationen-abschlussarbeiten/promotionsordnungen-der-fakultaeten/">Promotionsordnung</a> aufmerksam und informieren Sie sich ggf. bei Ihrem Prüfungsamt.
 			</p>
 
 			<p>In einer kumulativen Dissertation werden mehrere eigenständige Artikel für Zeitschriften oder Sammelbände zu einer Dissertation zusammengefasst. 
-				Sind bereits erschienene Artikel darunter, klären Sie bitte unbedingt die Rechtesituation mit dem jeweiligen Verlag. Falls Sie die sog. exklusive Nutztungsrechte einem Verlag übertragen haben, dürfen Sie Text des betreffenden Artikels nicht in die elektronische Dissertation einbinden.  </p>
+				Sind bereits erschienene Artikel darunter, klären Sie bitte unbedingt die Rechtesituation mit dem jeweiligen Verlag. Falls Sie die sog. exklusiven Nutztungsrechte einem Verlag übertragen haben, dürfen Sie Text des betreffenden Artikels nicht in die elektronische Dissertation einbinden.</p>
 
 			<p class="ds-paragraph">
 				<strong>Beide Versionen sollen enthalten</strong>
@@ -2375,78 +2355,72 @@
 			<p class="ds-paragraph"><a href="pdf-howto">Anleitung / Hilfe</a> zur Erstellung Ihrer elektronischen Dissertation als <strong>eine</strong> PDF Datei (nicht als mehrere Einzeldateien), so dass sie
 			</p>
 			<ul class="ds-bulleted-list">
-				<li>mit Navigationselementen, d.h. mit Lesezeichen (Bookmarks) oder mit anklickbarem Inhaltsverzeichnis versehen ist,</li>
-				<li>auf "schnelle Webanzeige" optimiert ist und</li>
+				<li>mit Navigationselementen, d. h. mit Lesezeichen (Bookmarks) oder mit anklickbarem Inhaltsverzeichnis versehen ist,</li>
+				<li>auf „schnelle Webanzeige“ optimiert ist und</li>
 				<li>durch keine Sicherheitseinstellungen geschützt ist.</li>
 			</ul>
-			<p class="ds-paragraph">Der Verzicht auf Sicherheitseinschränkungen ist auf folgenden Gründen erforderlich</p>
+			<p class="ds-paragraph">Der Verzicht auf Sicherheitseinschränkungen ist aus folgenden Gründen erforderlich:</p>
 			<ul class="ds-bulleted-list">
 				<li>Als Open Access Publikationsserver garantiert eDiss seinen Nutzern, dass Sie die vorgefundene Dokumente lesen und in kleiner Anzahl für private Zwecke drucken können. Die Verschlüsselung oder ein Druckvebot des Dokumentes würde dies verhindern. </li>
 				<li>Damit Ihre Dissertation in unsere Volltextsuche eingebunden werden kann, müssen wir den Text extrahieren können.</li>
 				<li>Im Zuge der Archivierung kann es notwendig sein, Ihr Dokument in andere Formate zu konvertieren.</li>
 			</ul>
-			<h3 class="ds-head" id="register">Registrieren bzw. loggen Sie sich bei eDiss ein</h3>
-			<p class="ds-paragraph">Für die erstmalige <b>Registrierung</b> klicken Sie bitte auf "Registrieren" im rechten oberen Kästchen im Kopf der Seite! <br />
+			<h3 class="ds-head" id="register">Registrieren Sie sich bzw. loggen Sie sich bei eDiss ein</h3>
+			<p class="ds-paragraph">Für die erstmalige Nutzung klicken Sie bitte auf <b>"Registrieren"</b> im rechten oberen Kästchen im Kopf der Seite! <br />
 				Es erscheint ein Formular, in dem Ihre E-Mail Adresse abgefragt wird. Nach Ausfüllen und Wegschicken des Formulars bekommen Sie eine Nachricht mit einem Link zu Ihrem zukünftigen Benutzerprofil. Geben Sie bitte dort Ihren Namen und Telefonnummer an. Durch die Sprachauswahl können Sie bestimmen, in welcher Sprache Sie Benachrichtigungen von uns erhalten wollen.<br />
 				<br />
-				Diese Prozedur stellt sicher, dass keine fremde Person ohne Ihr Wissen Sie auf eDiss registrieren kann. Unmittelbar nach der Registrierung sind Sie auf eDiss eingeloggt.</p>
+				Dieser Vorgang stellt sicher, dass keine fremde Person Sie ohne Ihr Wissen auf eDiss registrieren kann. Unmittelbar nach der Registrierung sind Sie auf eDiss eingeloggt.</p>
 			<p class="ds-paragraph">Um sich bei eDiss <b>einzuloggen</b>, klicken Sie einfach auf "Einloggen" im rechten oberen Kästchen im Kopf der Seite und geben Sie Ihre E-Mail Adresse im erscheinenden Formular ein. Nach Wegschicken des Formulars sind Sie eingeloggt.
 				<br />
-				<br />Als authentifizierte Nutzer haben Sie die Möglichkeit, auf eDIss zu publizieren, abgebrochene Publikationen wieder aufnehmen oder über "Benutzerdaten" (im linken Menü unter "Mein Benutzerkonto") automatische Benachrichtigung über Neuerscheinungen in einzelnen Sammlungen abonnieren.
+				<br />Als authentifizierte Nutzer haben Sie die Möglichkeit, auf eDiss zu publizieren, eine abgebrochene Publikation wieder aufzunehmen oder über "Benutzerdaten" (im linken Menü unter "Mein Benutzerkonto") automatische Benachrichtigung über Neuerscheinungen in einzelnen Sammlungen zu abonnieren.
 				<br />
-				<br />Aus Sicherheitsgründen empfehlen wir Ihnen zum Schluss sich explizit auszuloggen (nicht nur den Browser zu schließen). Gehen Sie dazu mit der Maus auf Ihren Namen im oberen Kästchen rechts im Kopf der Seite. Dort klappt ein Menü auf, in dem der Punkt "ausloggen" angeboten wird.</p>
-			<h3 class="ds-head" id="workflow">Starten Sie den online Publikationsprozess</h3>
-			<p class="ds-paragraph">Den Online-Publikationsprozess können Sie auf zwei Wege starten:</p>
+				<br />Aus Sicherheitsgründen empfehlen wir Ihnen sich zum Schluss explizit auszuloggen (nicht nur den Browser zu schließen). Gehen Sie dazu mit der Maus auf Ihren Namen im oberen Kästchen rechts im Kopf der Seite. Dort klappt ein Menü auf, in dem der Punkt "ausloggen" angeboten wird.</p>
+			<h3 class="ds-head" id="workflow">Starten Sie den Online-Publikationsprozess</h3>
+			<p class="ds-paragraph">Den Online-Publikationsprozess können Sie auf zwei Wegen starten:</p>
 			<ol class="ds-ordered-list">
-				<li>Sie klicken auf "Jetzt publizieren" im Linken Hauptmenü oben. In diesem Falle müssen Sie vor dem 1. Schritt (Dokument hochladen) zunächst die Sammlung auswählen, in der Sie Ihre Arbeit veröffentlichen wollen. Dazu werden Ihnen in einem Aufklappmenü alle Sammlungen aufgelistet.</li>
-				<li>Sie navigieren zuerst über den Punkt "Bereiche &amp; Sammlungen" im Linken Hauptmenü zur Sammlung, in der Sie publizieren wollen. Dann klicken Sie auf den Button "Hier veröffentlichen" im linken Hauptmenü oben. Sie landen dann beim 1. Schritt "Dokument hochladen".</li>
+				<li>Sie klicken auf „Jetzt publizieren“ im Menü links oben. In diesem Falle müssen Sie vor dem 1. Schritt (Dokument hochladen) zunächst die Sammlung auswählen, in der Sie Ihre Arbeit veröffentlichen wollen. Dazu werden Ihnen in einem Aufklappmenü alle Sammlungen aufgelistet.</li>
+				<li>Sie navigieren zuerst über den Punkt „Bereiche &amp; Sammlungen“ im Menü links zur Sammlung, in der Sie publizieren wollen. Dann klicken Sie auf den Button "Hier veröffentlichen" im linken Hauptmenü oben. Sie landen dann beim 1. Schritt "Dokument hochladen".</li>
 			</ol>
 			<p class="ds-paragraph">
-				<strong>BITTE BEACHTEN SIE: </strong>Die Sammlungen entsprechen mit zwei Ausnahmen den Fakultäten der Universität Göttingen. Die Philosophische und die Sozialwissenschaftliche Fakultäten sind so umfangreich und heterogen, dass wir Sie in weitere Sammlungen untergliedert haben. Falls Sie den Online-Publikationsprozess auf dem 1. Weg starten und Sie in einem dieser Bereiche promovieren, schauen Sie bitte zuerst diese Sammlungen an, um vorweg festzulegen, in welche Ihre Arbeit gehört! </p>
+				<strong>BITTE BEACHTEN SIE: </strong>Die Sammlungen entsprechen mit zwei Ausnahmen den Fakultäten der Universität Göttingen. Die Philosophische und die Sozialwissenschaftliche Fakultäten sind so umfangreich und heterogen, dass wir Sie in weitere Sammlungen untergliedert haben. Falls Sie den Online Publikationsprozess auf dem 1. Weg starten und Sie in einem dieser Bereiche promovieren, schauen Sie bitte zuerst diese Sammlungen an, um vorweg festzulegen, in welche Ihre Arbeit gehört! </p>
 			<p class="ds-paragraph">
 				<strong>BITTE BEACHTEN SIE: </strong>Solange der Publikationsprozess nicht abgeschlossen ist, können Sie jeder Zeit zu einem früheren Schritt zurückkehren und sowohl die eingegeben Daten ändern als auch Ihre Dokumente austauschen. Nach Abschluss des Prozesses sind <b>keine Änderungen</b> mehr an Ihrer Publikation möglich! <br />In Ausnahmefällen können Sie uns <a href="contact">kontaktieren</a> und begründete Änderungswünsche mitteilen.</p>
 			<h3 class="ds-head" id="upload">1. Dokument hochladen</h3>
-			<p class="ds-paragraph">Zum Hochladen Ihres Dokumentes wird Ihnen ein Formular angezeigt. Hier können Sie über das Button "Durchsuchen" Ihr Dokument auf Ihrem Rechner aussuchen und mit einem Klick auf "Datei hochladen und/oder noch eine hinzufügen" auf eDiss hochladen. <br />
-				<br /> Sie können mehrere Dokumente (in beliebigen Formaten) nacheinander hochladen. Dies ist z.B. sinnvoll, wenn Sie Ihre Dissertation durch zusätzliche Graphiken, Tabellen, Umfrageergebnisse, Labordaten etc. ergänzen wollen, auf die Ihre Arbeit basiert. Auch die Veröffentlichung Ihrer Arbeit in verschiedenen Formaten, z.B. zusätzlich für eBookReader wäre denkbar. In diesen Fällen geben Sie bitte zu den jeweiligen Dateien eine kurze Beschreibung im entsprechenden Formularfeld mit.</p>
+			<p class="ds-paragraph">Zum Hochladen Ihres Dokumentes wird Ihnen ein Formular angezeigt. Hier können Sie über den Button "Durchsuchen" Ihr Dokument auf Ihrem Rechner aussuchen und mit einem Klick auf "Datei hochladen und/oder noch eine hinzufügen" auf eDiss hochladen. <br />
+				<br /> Sie können mehrere Dokumente (in beliebigen Formaten) nacheinander hochladen. Dies ist z.B. sinnvoll, wenn Sie Ihre Dissertation durch zusätzliche Graphiken, Tabellen, Umfrageergebnisse, Labordaten etc. ergänzen wollen. Auch die Veröffentlichung Ihrer Arbeit in verschiedenen Formaten, z.B. zusätzlich für eBookReader wäre denkbar. In diesen Fällen geben Sie bitte zu den jeweiligen Dateien eine kurze Beschreibung im entsprechenden Formularfeld mit.</p>
 			<p class="ds-paragraph">
-				<strong>BITTE BEACHTEN SIE: </strong>Als <strong>erstes</strong> muss immer Ihre Diplomarbeit als PDF-Datei hochgeladen werden. Erst dann akzeptiert eDiss weitere Dateien in anderen Formaten! </p>
-			<p class="ds-paragraph">Beim Hochladen der ersten PDF-Datei wird automatisch geprüft, ob sie unseren Vorschriften genügt. Dieser Prozess kann, je nach Dateigröße einige Zeit in Anspruch nehmen. Bitte unterbrechen Sie diesen Prozess nicht! <br />
-				<br />Anschließend wird das Ergeibnis der Prüfung angezeigt. Falls eine der Anforderungen nicht erfüllt ist, wird Ihr Dokument <b>abgelehnt</b>. Bitte unterbrechen Sie den Publikationsprozess in diesem Fall mit einem Klick auf "Speichern und später fortsetzen", korrigieren Sie Ihr PDF Dokument und nehmen Sie dann wieder den Publikationsprozess auf. <br />Ist Ihr PDF Dokument angenommen, können Sie mit dem hochladen weiterer Dokumente ebenso fortfahren oder mit Klick auf "Weiter" zum nächsten Schritt weitergehen.<br />
-				<br />Beim Hochladen der ersten PDF Datei werden zusätzlich die Metadaten Titel, Autor und Schlagwörter angezeigt, die die Datei enthält. Falls Ihr Dokument später bei einer Google-Suche gefunden wird, werden von Google diese Daten ausgelesen und beim Treffer angezeigt. Wollen Sie die Daten ändern, löschen Sie bitte ihr hochgeladenes Dokument, indem Sie das Häckchen neben dem Dateinamen setzen und auf "Ausgewählte entfernen" klicken. Unterbrechen Sie zunächst den Prozess und speichern Sie die Daten.  Dann korrigieren Sie die Metadaten in Ihrem Dokument, nehmen Sie den online Publikationsprozess wieder auf und laden Sie die korrigierte Datei noch einmal hoch.<br />Da eDiss diese Daten nicht nutzt, sind Sie bei der Entscheidung ganz frei, ob sie hier Korrekturen vornehmen. </p>
+				<strong>BITTE BEACHTEN SIE: </strong>Als <strong>erstes</strong> muss immer Ihre Dissertation als PDF-Datei hochgeladen werden. Erst dann akzeptiert eDiss weitere Dateien in anderen Formaten! </p>
+			<p class="ds-paragraph">Beim Hochladen der ersten PDF-Datei wird automatisch geprüft, ob sie unseren Vorschriften genügt. Dieser Prozess kann, je nach Dateigröße, einige Zeit in Anspruch nehmen. Bitte unterbrechen Sie diesen Prozess nicht! <br />
+				<br />Anschließend wird das Ergebnis der Prüfung angezeigt. Falls eine der Anforderungen nicht erfüllt ist, wird Ihr Dokument <b>abgelehnt</b>. Bitte unterbrechen Sie den Publikationsprozess in diesem Fall mit einem Klick auf "Speichern und später fortsetzen", korrigieren Sie Ihr PDF Dokument und nehmen Sie dann wieder den Publikationsprozess auf. <br />Ist Ihr PDF Dokument angenommen, können Sie mit dem hochladen weiterer Dokumente ebenso fortfahren oder mit Klick auf "Weiter" zum nächsten Schritt weitergehen.<br />
+				<br />Beim Hochladen der ersten PDF Datei werden zusätzlich die Metadaten Titel, Autor und Schlagwörter angezeigt, die die Datei enthält. Falls Ihr Dokument später bei einer Google-Suche gefunden wird, werden von Google diese Daten ausgelesen und beim Treffer angezeigt. Wollen Sie die Daten ändern, löschen Sie bitte ihr hochgeladenes Dokument, indem Sie das Häkchen neben dem Dateinamen setzen und auf "Ausgewählte entfernen" klicken. Unterbrechen Sie zunächst den Prozess und speichern Sie die Daten.  Dann korrigieren Sie die Metadaten in Ihrem Dokument, nehmen Sie den online Publikationsprozess wieder auf und laden Sie die korrigierte Datei noch einmal hoch.<br />Da eDiss diese Daten nicht nutzt, sind Sie bei der Entscheidung ganz frei, ob sie hier Korrekturen vornehmen. </p>
 			<h3 id="describe" class="ds-head">2. Dokument beschreiben</h3>
 			<p>
 				In diesem Schritt werden in einem Formular zunächst Ihre persönlichen Daten (Geburtsdatum, Adresse) abgefragt. Das Geburtsdatum ist zur Identifikation Ihrer Person notwendig. Die angegebene Adresse verwenden wir als Rechnungsadresse für die Publikationsgebühr. <br />
 				Die persönlichen Angaben, zusammen mit Ihrer E-Mail-Adresse werden <strong>vertraulich</strong> behandelt und für die Besucher des eDiss-Servers nicht sichtbar!</p>
-			<p id="special" class="ds-paragraph">Weitere Felder des Formulars dienen dazu, Ihre Arbeit zu beschreiben. Geben Sie hier bitte die erforderlichen Informationen (Originaltitel, Untertitel, Zusammenfassung etc.) an. Titel, Schlüsselwörter und Zusammenfassung müssen auf jedem Fall englisch vorhanden sein. Falls Ihre Arbeit in einer anderen Sprache verfasst ist, werden Sie aufgefordert englische Übersetzungen zu diesen Angaben zu liefern.<br />
+			<p id="special" class="ds-paragraph">Weitere Felder des Formulars dienen dazu, Ihre Arbeit zu beschreiben. Geben Sie hier bitte die erforderlichen Informationen (Originaltitel, Untertitel, Zusammenfassung etc.) an. Titel, Schlüsselwörter und Zusammenfassung müssen in jedem Fall auf Englisch vorhanden sein. Falls Ihre Arbeit in einer anderen Sprache verfasst ist, werden Sie aufgefordert, englische Übersetzungen zu diesen Angaben zu liefern.<br />
 				<br />
 				<br />Das letzte Formularfeld, "Nachricht für die Redakteure" ist optional und gibt Ihnen die Möglichkeit, eine Nachricht für die Redakteure zu hinterlassen. Beispielsweise können Sie hier einen <a href="#embargo">Sonderantrag zur Verzögerung</a> der Veröffentlichung Ihrer Publikation stellen. Der Inhalt dieses Feldes wird von unseren Redakteuren ausgewertet und nicht öffentlich sichtbar gemacht.
 				<br />
 				<br /> Pflichtfelder sind im Formular mit "*" gekennzeichnet. Sie können erst dann zum nächsten Schritt übergehen, wenn alle Pflichtfelder ausgefüllt sind.</p>
 			<h3 id="proof" class="ds-head">3. Eingaben überprüfen</h3>
-			<p class="ds-paragraph">Hier werden Ihnen alle im vorherigen Schritt erfassten Angaben mit der Möglichkeit zur Korrektur angezeigt. Bitte gehen Sie die Daten sorgfältig durch und korrigieren sie, falls nötig!</p>
-			<h3 id="ccLicense" class="ds-head">4. Spezielle Nutzungslizenz (CC-Lizenz) auswählen (optional)</h3>
-			<p class="ds-paragraph">Um Ihre Dissertation auf eDiss zu veröffentlichen, müssen Sie im Schritt 5 einen Vertrag mit uns abschließen. In diesem Vertrag erklären Sie sich unter anderem damit einverstanden, dass Nutzer von eDiss Ihre Publikation zum "privaten und sonstigen Gebrauch herunterladen, speichern oder in kleinen Anzahl drucken" dürfen. (Den vollständigen Vertrag können Sie im Hilfe &amp; Info Menü einsehen.) <br />
-				<br />Möchten Sie eDiss-Nutzern weitergehende Rechte (z.B. kommerzielle Nutzung, Veränderung des Dokumentes etc.) gestatten, so können Sie eine entsprechende CC-Lizenz (Creative Commons Lizenz) zu Ihrem Dokument einbinden. Wählen Sie dazu im Aufklappmenü den Punkt "CC-Lizenz" aus. Es erscheint ein Formular, indem Sie genau auswählen können, welche spezielle Rechte Sie auf Ihr Dokument gewähren. Mit einem Klick auf "weiter" wird dann das entsprechende CC-Lizenz zu Ihrer Publikation eingebunden und dem Nutzer angezeigt. <br />
-				<br />Wünschen Sie keine zusätzliche Lizenz, gehen Sie einfach zum nächsten Schritt weiter ohne etwas auszuwählen. <br />
-				<br />  <a href="http://de.creativecommons.org/was-ist-cc/">Was ist Creative Commons Lizenz?</a>
-			</p>
-			<h3 id="depositLicense" class="ds-head">5. Dem eDiss-Vertrag zustimmen</h3>
+			<p class="ds-paragraph">Hier werden Ihnen alle im vorherigen Schritt erfassten Angaben mit der Möglichkeit zur Korrektur angezeigt. Bitte gehen Sie die Daten sorgfältig durch und korrigieren Sie sie, falls nötig.</p>
+			<h3 id="depositLicense" class="ds-head">4. Dem eDiss-Vertrag zustimmen</h3>
 			<p class="ds-paragraph">
 				Um Ihre Dissertation auf eDiss zu veröffentlichen, müssen Sie einen Vertrag mit uns
-				abschliessen, indem die Rechte des Serverbetreibers und die Zugriffsrechte unserer Nutzer auf Ihre Publikation
+				abschließen, indem die Rechte des Serverbetreibers und die Zugriffsrechte unserer Nutzer auf Ihre Publikation
 				genau festgelegt sind. Der Vertrag gilt als abgeschossen, wenn Sie durch Einhacken des Checkboxes unter dem
-				Vertragstext Ihre Zustimmung zum Vertrag geben und auf "Veröffentlichung ablschliessen" klicken.
+				Vertragstext Ihre Zustimmung zum Vertrag geben und auf „Veröffentlichung abschließen“ klicken.
 				<br />
 				<a href="/static/License_ediss_de.pdf">Vertrag als PDF Dokument herunterladen.</a>
 			</p>
 			<p class="ds-paragraph">
-				<strong>BITTE BEACHTEN SIE: </strong>Wir machen Sie an dieser Stelle noch einmal darauf aufmerksam, dass nach Abschluss des Online Publikationsporzesses <b>keine Änderungen</b> mehr an Ihrer Publikation möglich sind.</p>
+				<strong>BITTE BEACHTEN SIE: </strong>Wir machen Sie an dieser Stelle noch einmal darauf aufmerksam, dass nach Abschluss des Online-Publikationsprozesses <b>keine Änderungen</b> mehr an Ihrer Publikation möglich sind.</p>
 			<h3 id="print" class="ds-head">Liefern Sie uns zwei gedruckte Exemplare Ihrer Dissertation</h3>
-			<p class="ds-paragraph">Die gedruckten Exemplare Ihrer Arbeit müssen mit Ihrer elektrischen Dissertation identisch sein. In die gedruckte Version muss hinten Ihr Lebenslauf eingebunden sein.</p>
+			<p class="ds-paragraph">Die gedruckten Exemplare Ihrer Arbeit müssen mit Ihrer elektronischen Dissertation identisch sein. In die gedruckte Version muss am Ende Ihr Lebenslauf eingebunden sein.</p>
 			<p class="ds-paragraph">
 				<strong>BITTE BEACHTEN SIE: </strong>Sie können Ihren Lebenslauf in Ihrer elektronischen Dissertation weglassen. Allein in diesem Punkt ist ein Unterschied zu der gedruckten Version Ihrer Dissertation erlaubt. </p>
 			<p class="ds-paragraph">
-				<strong>BITTE BEACHTEN SIE: </strong>Falls Sie Mediziner sind, legen Sie uns bitte eine Kopie Ihrer Einladung zur Mündlichen Prüfung den gedruckten Exemplaren bei!
+				<strong>BITTE BEACHTEN SIE: </strong>Falls Sie Mediziner sind, legen Sie uns bitte eine Kopie Ihrer Einladung zur mündlichen Prüfung den gedruckten Exemplaren bei!
 				<br />
 				Die Druckexemplare können Sie uns per Post zuschicken oder in den Öffnungszeiten persönlich bei uns vorbeibringen.
 			</p>
@@ -2457,19 +2431,24 @@
 				<li>Platz der Göttinger Sieben 1</li>
 				<li>37073 Göttingen</li>
 			</ul>
+			<p class="ds-paragraph">Sobald die gedruckte Versionen Ihrer Arbeit bei uns angekommen sind, prüft die Redaktion Ihre elektronische Publikation und (sofern die Publikationsgebühr bezahlt ist) schalten wir sie frei. Ab dem Moment wird Ihre Dissertation öffentlich sichtbar und Sie werden über die Freischaltung in einer E-Mail informiert.
+				<br />
+				<br />In einzelnen Fällen (z.B. das PDF Dokument enthält ein fehlerhaftes Inhaltsverzeichnis oder die Rechnung konnte wegen falscher Angaben nicht verschickt werden) kann es vorkommen, dass die Redaktion eine Publikation ablehnt. In diesem Fall erhalten Sie eine E-Mail mit der Begründung der Ablehnung.</p>
+			<h3 id="bill" class="ds-head">Bezahlen Sie die 25,00 € Publikationsgebühr.</h3>
 			<p class="ds-paragraph">
-			Sobald die gedruckte Versionen Ihrer Arbeit bei uns angekommen sind, prüft die Redaktion Ihre elektronische Publikation und (sofern die Publikationsgebühr bezahlt ist) schalten wir sie frei. Ab dem Moment wird Ihre Dissertation öffentlich sichtbar und Sie werden über die Freischaltung in einer E-Mail informiert.
-				<br />
-				In einzelnen Fällen (z.B. das PDF Dokument enthält ein fehlerhaftes Inhaltsverzeichnis oder die Rechnung konnte wegen falsche Angaben nicht verschickt werden) kann es vorkommen, dass die Redaktion eine Publikation ablehnt. In diesem Fall erhalten Sie eine E-Mail mit der Begründung der Ablehnung.</p>
-			<h3 id="bill" class="ds-head">Bezahlen Sie die 45,00 € Publikationsgebühr.</h3>
-			<p class="ds-paragraph">Unmittelbar nach Abschluss des online Publikationsprozesses erhalten Sie per Port eine Rechnung mit unseren Kontodaten zur Publikationsgebühr. Wir empfehlen Ihnen die 45 € möglichst bald zu überweisen, damit wir bei Ankunft der Druckexemplare Ihre Arbeit gleich öffentlich machen können!<br />
-				<br />
+				Nach Abschluss des online Publikationsprozesses erhalten Sie per Post eine
+				Rechnung mit unseren Kontodaten. Wir empfehlen Ihnen die 25,00 € möglichst bald zu überweisen,
+				damit wir bei Ankunft der Druckexemplare Ihre Arbeit gleich öffentlich zugänglich machen können!
+				Wenn Sie persönlich vorbeikommen ist auch eine bargeldlose Zahlung an unseren Kassensystemen möglich.
+			</p>
+			<p class="ds-paragraph">
+				<strong>Ab 01.04.2013 wird die Publikationsgebühr auf 45 € erhöht!</strong>
 			</p>
 			<p id="embargo" class="ds-paragraph">
 				<strong>BITTE BEACHTEN SIE: </strong>Eine Verzögerung der Publikation Ihrer elektronischen Dissertation auf eDiss ist nicht mehr möglich. Damit würde gegen die Promotionsordnung verstoßen. Nur in besonderen Ausnahmefällen (patentrechtliches Verfahren anhängig) ist auf Sonderantrag eine Verzögerung der Publikation möglich.
 			</p>
 			<h2 id="break" class="ds-div-head">Publikationsprozess unterbrechen</h2>
-			<p class="ds-paragraph">Sie können den Online Publiaktionsprozess über den Knopf "Speichern und später fortsetzen" jeder Zeit abbrechen. Sie haben dann die Möglichkeit, Ihre bisherige Angaben zu speichern, um später damit fortzufahren oder die angefangene Publikation endgültig zu löschen.</p>
+			<p class="ds-paragraph">Sie können den Online-Publiaktionsprozess über den Knopf „Speichern und später fortsetzen“ jeder Zeit abbrechen. Sie haben dann die Möglichkeit, Ihre bisherige Angaben zu speichern, um später damit fortzufahren oder die angefangene Publikation zu löschen.</p>
 			<h2 id="resume" class="ds-div-head">Abgebrochene Publikationen wieder aufnehmen</h2>
 			<div class="ds-static-div">
 				<p class="ds-paragraph">
@@ -2477,18 +2456,19 @@
 					Es erscheint eine Liste Ihrer unvollendeten Veröffentlichungen. Klicken Sie die zu bearbeitende Publikation an und dann die Schaltfläche <em>Wiederaufnehmen</em>, um mit dem Publikationsprozess fortzufahren.
 				</p>
 				<p class="ds-paragraph">
-					<strong>BITTE BEACHTEN SIE: </strong>Zum Navigieren innerhalb des Online-Publikationsprozesses benutzen Sie bitte die, mit den einzelnen Schritten beschriftete Leiste unmittelbar über den Formularen. Bei der Nutzung des browsereigenen vor- und rückwärts-Knopfes können wir keinen fehlerfreien Ablauf garantieren.</p>
+					Zum Navigieren innerhalb des Online-Publikationsprozesses benutzen Sie bitte die, mit den einzelnen Schritten beschriftete Leiste unmittelbar über den Formularen. Bei der Nutzung des browsereigenen Vor- und Zurückknopfes können wir keinen fehlerfreien Ablauf garantieren.
+				</p>
 			</div>
 			<h2 id="rejected" class="ds-div-head">Meine Publikation wurde abgelehnt</h2>
 			<div class="ds-static-div">
 				<p class="ds-paragraph">Dies kann an zwei Stellen passieren</p>
 				<ol class="ds-ordered-list">
-					<li>Im Online Publikationsporzess beim Schritt "Dokument hochladen" wird Ihr PDF Dokument nicht hochgeladen.</li>
+					<li>Im Online-Publikationsprozess wird Ihr PDF Dokument beim Schritt „Dokument hochladen“ nicht hochgeladen.</li>
 					<li>Nach Abschluss des Online-Publikationsprozesses lehnt die Redaktion die Freischaltung Ihrer Publikation ab. In diesem Fall bekommen Sie eine Nachricht von der Redaktion, in der der genaue Grund für die Ablehnung mitgeteilt wird. </li>
 				</ol>
-				<p class="ds-paragraph">Sind Korrekturen an Ihrem PDF Dokument erwünscht, erledigen Sie diese zuerst und nehmen Sie dann den Online-Publikationsprozess wieder auf. Wurde die Publikation auf Grund von Beschreibungsdaten abgelehnt, so können Sie gleich den Publikationsprozess wieder aufnehmen und die Angaben korrigieren. Die Vorgehensweise zum Wiederaufnehmen des Online-Publikationsprozesses ist dieselbe, wie bei den abgebrochenen Publikationen. Sehen Sie dazu <a href="#resume">den entsprechenden Abschnitt!</a> </p>
+				<p class="ds-paragraph">Sind Korrekturen an Ihrem PDF-Dokument erwünscht, erledigen Sie diese zuerst und nehmen Sie dann den Online-Publikationsprozess wieder auf. Wurde die Publikation auf Grund von Beschreibungsdaten abgelehnt, so können Sie gleich den Publikationsprozess wieder aufnehmen und die Angaben korrigieren. Die Vorgehensweise zum Wiederaufnehmen des Online-Publikationsprozesses ist <a href="#resume">dieselbe wie bei den abgebrochenen Publikationen</a>.</p>
 				<p class="ds-paragraph">
-					<strong>BITTE BEACHTEN SIE: </strong>Ihr(e) Dokument(e) und alle früheren Eingaben sind gespeichert, so dass Sie keine Daten wiederholt eingeben müssen. Es ist jedoch notwendig, nach den Korrekturen im letzten Schritt dem eDiss-Vertrag wieder zuzustimmen. Dann steht Ihre Publikation unseren Redakteuren wieder zum Freischalten bereit.</p>
+					<strong>BITTE BEACHTEN SIE: </strong>Ihr(e) Dokument(e) und alle früheren Eingaben sind gespeichert, so dass Sie keine Daten wiederholt eingeben müssen. Es ist jedoch notwendig, nach den Korrekturen im letzten Schritt dem eDiss-Vertrag erneut zuzustimmen. Dann steht Ihre Publikation unseren Redakteuren wieder zum Freischalten bereit.</p>
 			</div>
 			<h2 class="ds-head">Inhaltsverzeichnis</h2>
 			<ul class="ds-simple-list">
@@ -2522,10 +2502,7 @@
 									<a href="#proof">3. Eingaben überprüfen</a>
 								</li>
 								<li>
-									<a href="#ccLicense">4. Spezielle Nutzungslizenz (CC-Lizenz) auswählen (optional)</a>
-								</li>
-								<li>
-									<a href="#depositLicense">5. Dem eDiss-Vertrag zustimmen</a>
+									<a href="#depositLicense">4. Dem eDiss-Vertrag zustimmen</a>
 								</li>
 							</ul>
 						</li>
@@ -2533,7 +2510,7 @@
 							<a href="#print">Liefern Sie uns zwei gedruckte Exemplare Ihrer Dissertation</a>
 						</li>
 						<li>
-							<a href="#bill">Bezahlen Sie die 45,00 € Publikationsgebühr.</a>
+							<a href="#bill">Bezahlen Sie die 25,00 € Publikationsgebühr.</a>
 						</li>
 					</ul>
 				</li>
@@ -2552,112 +2529,109 @@
 
 	<!-- static page: PDF Guide -->
 	<message key="xmlui.static.help.pdf-guide">
-		<div id="file_help" class="ds-static-div primary">
-			<h2 class="ds-div-head">Hinweise zum Erstellen von PDF-Dokumenten</h2>
+		<h2 class="ds-div-head">Hinweise zum Erstellen von PDF-Dokumenten</h2>
+		<div class="ds-static-div">
+			<p class="ds-paragraph">Ihre Arbeit muss als <strong>eine</strong> PDF-Datei (nicht in Einzeldateien) vorliegen.
+				Bitte erstellen Sie die PDF-Datei <strong>mit Navigationselementen</strong>, also entweder mit Lesezeichen (Bookmarks) oder mit anklickbarem Inhaltsverzeichnis. Achten Sie bitte unbedingt auch auf die <strong>„Optimierung für schnelle Web-Anzeige“</strong> und verzichten Sie auf Sicherheitseinstellungen. <br />Dateien, die diese Anforderungen nicht erfüllen, können nicht bei eDiss eingestellt werden.</p>
+			<p class="ds-paragraph">
+				<strong>BITTE BEACHTEN SIE: </strong>Wenn Sie Ihren Lebenslauf nicht in Ihrer elektronischen Dissertation veröffentlicht haben möchten, dann entfernen Sie diese Seite bitte aus Ihrer PDF-Datei, bevor Sie sie bei uns einreichen. Allein in diesem Punkt ist ein Unterschied zu der gedruckten Version Ihrer Dissertation erlaubt.</p>
+		</div>
+		<h2 class="ds-div-head">PDF in Word erstellen</h2>
+		<div class="ds-static-div">
+			<h3 class="ds-div-head">Mindestanforderungen an das Word-Dokument</h3>
 			<div class="ds-static-div">
-				<p class="ds-paragraph">Ihre Arbeit muss als <strong>eine</strong> PDF-Datei (nicht in Einzeldateien) vorliegen.
-					Bitte erstellen Sie die PDF-Datei <strong>mit Navigationselementen</strong>, also entweder mit Lesezeichen (Bookmarks) oder mit anklickbarem Inhaltsverzeichnis. Achten Sie bitte unbedingt auch auf die <strong>„Optimierung für schnelle Web-Anzeige“</strong> und verzichten Sie auf Sicherheitseinstellungen. <br />Dateien, die diese Anforderungen nicht erfüllen, können nicht bei eDiss eingestellt werden.</p>
+				<p class="ds-paragraph">Damit Ihr Dokument nach der Konvertierung ins PDF-Format ein anlkickbares Inhaltsverzeichnis hat, müssen alle Überschriften im Word-Dokument als solche gekennzeichnet werden. Dazu gehen Sie bitte so vor:</p>
+				<p class="ds-paragraph">Setzen Sie den Textcursor in die jeweilige Überschriftzeile und wählen Sie dann „Überschrift <em>n</em>“ im Bereich „Formatvorlage“ aus, wobei n die hierarhische Position bezeichnet.</p>
 				<p class="ds-paragraph">
-					<strong>BITTE BEACHTEN SIE: </strong>Wenn Sie Ihren Lebenslauf nicht in Ihrer elektronischen Dissertation veröffentlicht haben möchten, dann entfernen Sie diese Seite bitte aus Ihrer PDF-Datei, bevor Sie sie bei uns einreichen. Allein in diesem Punkt ist ein Unterschied zu der gedruckten Version Ihrer Dissertation erlaubt.</p>
+					Bei kumulativen Dissertationen bietet es sich an, zumindest das Inhaltsverzeichnis, die Einleitung und die Zusammenfassung der übergreifenden Diskussion mit entsprechenden Überschriften zu versehen und als solche zu markieren.
+					<a href="/help/good-to-know#cumulative">Mehr dazu im Abschnitt „Kumulative Dissertationen“.</a>
+				</p>
 			</div>
-			<h2 class="ds-div-head">PDF in Word erstellen</h2>
+			<h3 class="ds-div-head">Erstellen von PDF-Dokumenten</h3>
 			<div class="ds-static-div">
-				<h3 class="ds-div-head">Mindestanforderungen an das Word-Dokument</h3>
+				<h4 class="ds-div-head">Mit Adobe Acrobat X Pro</h4>
 				<div class="ds-static-div">
-					<p class="ds-paragraph">Damit Ihr Dokument nach der Konvertierung ins PDF-Format ein anlkickbares Inhaltsverzeichnis hat, müssen alle Überschriften im Word-Dokument als solche gekennzeichnet werden. Dazu gehen Sie bitte so vor:</p>
-					<p class="ds-paragraph">Setzen Sie den Textcursor in die jeweilige Überschriftzeile und wählen Sie dann „Überschrift <em>n</em>“ im Bereich „Formatvorlage“ aus, wobei n die hierarhische Position bezeichnet.</p>
+					<p class="ds-paragraph">Falls Sie Zugang zum (kostenpflichtigen) Adobe Acrobat X Pro haben, empfehlen wir Ihnen, Ihr PDF-Dokument damit zu erstellen. Diese Software steht Ihnen in unserem <a target="_blank" href="http://www.sub.uni-goettingen.de/standorte-raumangebote/standorte-mit-oeffnungszeiten/zentralbibliothek/2-obergeschoss/#c762">Learning Resources Center (LRC)</a> an allen Rechnern zur Verfügung. Dort können Sie Ihr PDF – auf Wunsch auch unter Anleitung der Mitarbeiter von studIT – aus allen gängigen Textformaten erstellen.</p>
+					<ul class="ds-bulleted-list">
+						<li>Öffnen Sie Adobe Acrobat Pro.</li>
+						<li>Rufen Sie unter „PDF erstellen“ den Punkt „Aus Datei...“ auf, wählen Sie Ihre Dissertation aus und klicken Sie auf „Öffnen“.</li>
+						<li>Gehen Sie in der oberen Menüleiste zum „Bearbeiten“ und wählen Sie bitte den untersten Punkt „Grundeinstellungen“ bzw. „Voreinstellungen...“. Klicken Sie im Dialogfenster links unter „Kategorien“ auf „Dokumente“. Stellen Sie sicher, dass in der rechten Auswahlliste „‚Speichern unter‘ optimiert für schnelle Webanzeige“ markiert ist. Klicken Sie dann auf „OK“.</li>
+						<li>Rufen Sie in der oberen Menüleiste unter „Datei“ den Punkt „Eigenschaften...“ auf. Der Reiter „Beschreibung“ bietet Ihnen die Möglichkeit, Titel, Verfasser, Stichwörter etc. für Ihr Dokument anzugeben. Diese Daten werden u.&#160;a. in der Trefferanzeige einer Google-Suche angezeigt.</li>
+						<li>Wählen Sie schließlich den Reiter „Sicherheit“ und stellen Sie als Sicherheitssystem „keine Sicherheit“ ein.</li>
+						<li>Sichern Sie die Einstellungen mit „OK“.</li>
+						<li>Speichern Sie nun Ihr Dokument. Fertig!</li>
+					</ul>
+				</div>
+				<h4 class="ds-div-head">Mit kostenloser PDF-Software</h4>
+				<div class="ds-static-div">
 					<p class="ds-paragraph">
-						Bei kumulativen Dissertationen bietet es sich an, zumindest das Inhaltsverzeichnis, die Einleitung und die Zusammenfassung der übergreifenden Diskussion mit entsprechenden Überschriften zu versehen und als solche zu markieren.
-						<a href="/help/good-to-know#cumulative">Mehr dazu im Abschnitt „Kumulative Dissertationen“.</a>
+						Alternativ können Sie die kostenlose Open-Source-Software <a target="_blank" href="http://www.pdfforge.org/products/pdfcreator">PDFCreator</a> installieren und verwenden. Mit diesen Programmen können Sie PDF Dokumente erstellen, die alle Anforderungen von eDiss erfüllen.
 					</p>
 				</div>
-				<h3 class="ds-div-head">Erstellen von PDF-Dokumenten</h3>
+				<h4 class="ds-div-head">Mit Microsoft Word</h4>
 				<div class="ds-static-div">
-					<h4 class="ds-div-head">Mit Adobe Acrobat X Pro</h4>
-					<div class="ds-static-div">
-						<p class="ds-paragraph">Falls Sie Zugang zum (kostenpflichtigen) Adobe Acrobat X Pro haben, empfehlen wir Ihnen, Ihr PDF-Dokument damit zu erstellen. Diese Software steht Ihnen in unserem <a href="http://www.sub.uni-goettingen.de/standorte-raumangebote/standorte-mit-oeffnungszeiten/zentralbibliothek/2-obergeschoss/#c762">Learning Resources Center (LRC)</a> an allen Rechnern zur Verfügung. Dort können Sie Ihr PDF – auf Wunsch auch unter Anleitung der Mitarbeiter von studIT – aus allen gängigen Textformaten erstellen.</p>
-						<ul class="ds-bulleted-list">
-							<li>Öffnen Sie Adobe Acrobat Pro.</li>
-							<li>Rufen Sie unter „PDF erstellen“ den Punkt „Aus Datei...“ auf, wählen Sie Ihre Dissertation aus und klicken Sie auf „Öffnen“.</li>
-							<li>Gehen Sie in der oberen Menüleiste zum „Bearbeiten“ und wählen Sie bitte den untersten Punkt „Grundeinstellungen“ bzw. „Voreinstellungen...“. Klicken Sie im Dialogfenster links unter „Kategorien“ auf „Dokumente“. Stellen Sie sicher, dass in der rechten Auswahlliste „‚Speichern unter‘ optimiert für schnelle Webanzeige“ markiert ist. Klicken Sie dann auf „OK“.</li>
-							<li>Rufen Sie in der oberen Menüleiste unter „Datei“ den Punkt „Eigenschaften...“ auf. Der Reiter „Beschreibung“ bietet Ihnen die Möglichkeit, Titel, Verfasser, Stichwörter etc. für Ihr Dokument anzugeben. Diese Daten werden u.&#160;a. in der Trefferanzeige einer Google-Suche angezeigt.</li>
-							<li>Wählen Sie schließlich den Reiter „Sicherheit“ und stellen Sie als Sicherheitssystem „keine Sicherheit“ ein.</li>
-							<li>Sichern Sie die Einstellungen mit „OK“.</li>
-							<li>Speichern Sie nun Ihr Dokument. Fertig!</li>
-						</ul>
-					</div>
-					<h4 class="ds-div-head">Mit kostenloser PDF-Software</h4>
-					<div class="ds-static-div">
-						<p class="ds-paragraph">
-							Alternativ können Sie die kostenlose Open-Source-Software <a href="http://www.pdfforge.org/products/pdfcreator">PDFCreator</a> installieren und verwenden. Mit diesen Programmen können Sie PDF Dokumente erstellen, die alle Anforderungen von eDiss erfüllen.
-						</p>
-					</div>
-					<h4 class="ds-div-head">Mit Microsoft Word</h4>
-					<div class="ds-static-div">
-						<p class="ds-paragraph">Microsoft Word bietet zwar ab Version 2007 die Möglichkeit, PDF-Dokumente direkt zu erstellen, sie werden dabei jedoch nicht für „schnelle Webanzeige“ optimiert. In diesem Fall gehen Sie bitte wie folgt vor.</p>
-					</div>
+					<p class="ds-paragraph">Microsoft Word bietet zwar ab Version 2007 die Möglichkeit, PDF-Dokumente direkt zu erstellen, sie werden dabei jedoch nicht für „schnelle Webanzeige“ optimiert. In diesem Fall gehen Sie bitte wie folgt vor.</p>
 				</div>
 			</div>
-			<div class="ds-static-div">
-				<ul class="ds-bulleted-list">
-					<li>Öffnen Sie Ihr Word Dokument und rufen Sie bitte unter der Registerkarte "Datei" den Punkt "Speichern unter" auf.</li>
-					<li>Als "Dateityp" wählen Sie aus dem Aufklappmenü "PDF". Noch nicht speichern!</li>
-					<li>Klicken Sie nun auf den Knopf "Optionen" und wählen Sie bitte die Einstellungen genau so wie auf dem Bild zu sehen ist.</li>
-				</ul>
-				<p class="ds-paragraph">
-					<img class="screenshot" src="../themes/Mirage/images/word10.jpg" />
-				</p>
-				<ul class="ds-bulleted-list">
-					<li>Anschließend „OK“ klicken und dann auf „Speichern“.</li>
-				</ul>
-				<p>Nun muss Ihr PDF noch für schnelle Webanzeige optimiert werden.<br />
-					Am einfachsten geht dies, wenn Sie den kostenlosen <a href="http://get.adobe.com/de/reader/">Adobe Reader</a> installiert haben.</p>
-				<ul class="ds-bulleted-list">
-					<li>Öffnen Sie Ihr PDF einfach mit dem Adobe Reader.</li>
-					<li>Vergewissern Sie sich, dass die Optimierung auf „schnelle Webanzeige“ voreingestellt ist: 
-						<ul class="ds-bulleted-list">	
-							<li>Wählen Sie im Menü „Bearbeiten“ den untersten Punkt „Voreinstellungen...“ aus.</li>
-							<li>Klicken Sie im Dialogfenster links unter „Kategorien“ auf „Dokumente“.</li>
-							<li>In der rechten Auswahlliste „‚Speichern unter‘ optimiert für schnelle Webanzeige“ muss aktiviert sein.</li>
-							<li>Klicken Sie auf „OK“, um die Einstellungen zu speichern.</li>
-						</ul>
-					</li>
-					<li>Wählen Sie dann im Menü „Datei“ den Punkt „Speichern unter...“ und speichern Sie Ihr Dokument. <br />
-						Das resultierende PDF-Dokument ist automatisch für „schnelle Webanzeige“ optimiert!</li>
+		</div>
+		<div class="ds-static-div">
+			<ul class="ds-bulleted-list">
+				<li>Öffnen Sie Ihr Word Dokument und rufen Sie bitte unter der Registerkarte "Datei" den Punkt "Speichern unter" auf.</li>
+				<li>Als "Dateityp" wählen Sie aus dem Aufklappmenü "PDF". Noch nicht speichern!</li>
+				<li>Klicken Sie nun auf den Knopf "Optionen" und wählen Sie bitte die Einstellungen genau so wie auf dem Bild zu sehen ist.</li>
+			</ul>
+			<p class="ds-paragraph">
+				<img class="screenshot" src="../themes/Mirage/images/word10.jpg" alt="Screenshot Word" />
+			</p>
+			<ul class="ds-bulleted-list">
+				<li>Anschließend „OK“ klicken und dann auf „Speichern“.</li>
+			</ul>
+			<p>Nun muss Ihr PDF noch für schnelle Webanzeige optimiert werden.<br />
+				Am einfachsten geht dies, wenn Sie den kostenlosen <a target="_blank" href="http://get.adobe.com/de/reader/">Adobe Reader</a> installiert haben.</p>
+			<ul class="ds-bulleted-list">
+				<li>Öffnen Sie Ihr PDF einfach mit dem Adobe Reader.</li>
+				<li>Vergewissern Sie sich, dass die Optimierung auf „schnelle Webanzeige“ voreingestellt ist: 
+					<ul class="ds-bulleted-list">	
+						<li>Wählen Sie im Menü „Bearbeiten“ den untersten Punkt „Voreinstellungen...“ aus.</li>
+						<li>Klicken Sie im Dialogfenster links unter „Kategorien“ auf „Dokumente“.</li>
+						<li>In der rechten Auswahlliste „‚Speichern unter‘ optimiert für schnelle Webanzeige“ muss aktiviert sein.</li>
+						<li>Klicken Sie auf „OK“, um die Einstellungen zu speichern.</li>
+					</ul>
+				</li>
+				<li>Wählen Sie dann im Menü „Datei“ den Punkt „Speichern unter...“ und speichern Sie Ihr Dokument. <br />
+					Das resultierende PDF-Dokument ist automatisch für „schnelle Webanzeige“ optimiert!</li>
 
-				</ul>
-			</div>
-			<h2 class="ds-div-head">PDF aus LaTeX-Dokumenten</h2>
-			<div class="ds-static-div">
-				<p class="ds-paragraph">Die einfachste Methode bietet der TeXDocC-Service <a href="http://www.texdocc.de/cgi-bin/texdocc/webhandler3.pl?function=proceedlogin&amp;login=gast&amp;passwd=gast&amp;continue=pruefen">TeXDocC</a>. Dazu die TeX-Datei mit allen Komponenten in ein Zip-Archiv packen und dann hochladen. Das System kompiliert die Datei und schickt eine PDF-Datei zurück. Weitere Hinweise finden Sie im Informationsbereich vom <a href="http://www.texdocc.de/">TEX Document Center</a>.</p>
-				<p class="ds-paragraph">Mit <a href="http://www.tug.org/applications/hyperref/manual.html">Hyperref</a> können Sie Lesezeichen im Inhaltsverzeichnis erstellen.</p>
-				<p class="ds-paragraph">Weitere Hilfe zum Umgang mit LaTeX-Dateien finden Sie <a href="http://www.ub.tum.de/technische-hinweise">auf dieser Seite</a> weiter unten.</p>
-			</div>
-			<h2 class="ds-div-head">Einscannen und Bearbeiten von Bildern</h2>
-			<div class="ds-static-div">
-				<p class="ds-paragraph">Mit einem Bildbearbeitungsprogramm können Sie die beim Scannen entstandenen Grafikdateien bearbeiten. Die den Scannern häufig beiliegenden Programme sind in der Regel ausreichend.</p>
-				<p class="ds-paragraph">Bei der Bildbearbeitung nehmen Sie bitte die folgenden Schritte in jedem Fall vor:</p>
-				<ol class="ds-ordered-list">
-					<li>Beschneiden Sie das Bild exakt, um unnötige Bereiche des Bildes oder versehentlich miteingescannten Hintergrund zu entfernen.</li>
-					<li>Verändern sie die tatsächliche Größe des Bildes, gemessen in Pixel oder Zentimeter, bevor Sie es in Ihr Dokument einfügen. Dies reduziert die Dateigröße des Bildes und des zu erstellenden Dokuments. Achten Sie bitte darauf, dass das Größenverhältnis zur Vorlage beibehalten wird, damit die Abbildung nach der Vergrößerung oder Verkleinerung nicht verzerrt erscheint.</li>
-					<li>Speichern Sie das Bild im JPG-Format ab, wenn es sich um ein Foto bzw. eine Grafik handelt, die sehr viele verschiedene Farbnuancen enthält. Wählen Sie dagegen das GIF-Format, wenn es sich um eine Grafik handelt, die nur wenige Farbabstufungen beinhaltet. Mit diesen Formaten erreichen Sie eine optimale Komprimierung der Bildgröße. Nur so kann gewährleistet werden, dass auch Dokumente, die viele Grafiken enthalten, in vertretbarem Zeitaufwand im Internet betrachtet werden können.</li>
-					<li>Fügen Sie das so bearbeitete Bild mit Hilfe Ihrer Textverarbeitung in die Dissertation ein. In Microsoft Word funktioniert dies über den Menüpunkt „Einfügen &gt; Grafik &gt; Aus Datei...“.</li>
-				</ol>
-			</div>
-			<h2 class="ds-div-head">Rechtliche Bestimmungen bei der Wiedergabe von Abbildungen</h2>
-			<div class="ds-static-div">
-				<p class="ds-paragraph">Bei einer Online-Veröffentlichung müssen Sie die gleichen urheberrechtlichen Bestimmungen beachten wie bei einer Print-Veröffentlichung.</p>
-				<p class="ds-paragraph">Um unnötige Schwierigkeiten mit Verlagen zu vermeiden, die möglicherweise die Rechteinhaber solcher Abbildungen sind, sollten Sie für diese Abdruckgenehmigungen einholen.<br />Dabei gilt:</p>
-				<ul class="ds-bulleted-list">
-					<li>für die Übernahme einer Abbildung, die nur der Illustration einer Arbeit dient, muß die Abdruckgenehmigung des Verlages eingeholt werden. Das Einholen dieser Genehmigung sollte man möglichst mit einer sogenannten „Verschweigefrist“ von 3 bis 4 Wochen verbinden.</li>
-					<li>für die Übernahme einer Abbildung, die dann im Text diskutiert wird, ist die Verwendung durch das „Zitatrecht“ abgedeckt.</li>
-				</ul>Weitere Information finden Sie unter:<br />
-				<a href="https://eldorado.tu-dortmund.de/handle/2003/21358">Multimediarecht in der Hochschulpraxis</a> Centrum für eCompetence (CeC) in Hochschulen NRW
-			</div>
+			</ul>
+		</div>
+		<h2 class="ds-div-head">PDF aus LaTeX-Dokumenten</h2>
+		<div class="ds-static-div">
+			<p class="ds-paragraph">Die einfachste Methode bietet der TeXDocC-Service <a target="_blank" href="http://www.texdocc.de/cgi-bin/texdocc/webhandler3.pl?function=proceedlogin&amp;login=gast&amp;passwd=gast&amp;continue=pruefen">TeXDocC</a>. Dazu die TeX-Datei mit allen Komponenten in ein Zip-Archiv packen und dann hochladen. Das System kompiliert die Datei und schickt eine PDF-Datei zurück. Weitere Hinweise finden Sie im Informationsbereich vom <a target="_blank" href="http://www.texdocc.de/">TEX Document Center</a>.</p>
+			<p class="ds-paragraph">Mit <a target="_blank" href="http://www.tug.org/applications/hyperref/manual.html">Hyperref</a> können Sie Lesezeichen im Inhaltsverzeichnis erstellen.</p>
+			<p class="ds-paragraph">Weitere Hilfe zum Umgang mit LaTeX-Dateien finden Sie <a target="_blank" href="http://www.ub.tum.de/technische-hinweise">auf dieser Seite</a> weiter unten.</p>
+		</div>
+		<h2 class="ds-div-head">Einscannen und Bearbeiten von Bildern</h2>
+		<div class="ds-static-div">
+			<p class="ds-paragraph">Mit einem Bildbearbeitungsprogramm können Sie die beim Scannen entstandenen Grafikdateien bearbeiten. Die den Scannern häufig beiliegenden Programme sind in der Regel ausreichend.</p>
+			<p class="ds-paragraph">Bei der Bildbearbeitung nehmen Sie bitte die folgenden Schritte in jedem Fall vor:</p>
+			<ol class="ds-ordered-list">
+				<li>Beschneiden Sie das Bild exakt, um unnötige Bereiche des Bildes oder versehentlich miteingescannten Hintergrund zu entfernen.</li>
+				<li>Verändern sie die tatsächliche Größe des Bildes, gemessen in Pixel oder Zentimeter, bevor Sie es in Ihr Dokument einfügen. Dies reduziert die Dateigröße des Bildes und des zu erstellenden Dokuments. Achten Sie bitte darauf, dass das Größenverhältnis zur Vorlage beibehalten wird, damit die Abbildung nach der Vergrößerung oder Verkleinerung nicht verzerrt erscheint.</li>
+				<li>Speichern Sie das Bild im JPG-Format ab, wenn es sich um ein Foto bzw. eine Grafik handelt, die sehr viele verschiedene Farbnuancen enthält. Wählen Sie dagegen das GIF-Format, wenn es sich um eine Grafik handelt, die nur wenige Farbabstufungen beinhaltet. Mit diesen Formaten erreichen Sie eine optimale Komprimierung der Bildgröße. Nur so kann gewährleistet werden, dass auch Dokumente, die viele Grafiken enthalten, in vertretbarem Zeitaufwand im Internet betrachtet werden können.</li>
+				<li>Fügen Sie das so bearbeitete Bild mit Hilfe Ihrer Textverarbeitung in die Dissertation ein. In Microsoft Word funktioniert dies über den Menüpunkt „Einfügen &gt; Grafik &gt; Aus Datei...“.</li>
+			</ol>
+		</div>
+		<h2 class="ds-div-head">Rechtliche Bestimmungen bei der Wiedergabe von Abbildungen</h2>
+		<div class="ds-static-div">
+			<p class="ds-paragraph">Bei einer Online-Veröffentlichung müssen Sie die gleichen urheberrechtlichen Bestimmungen beachten wie bei einer Print-Veröffentlichung.</p>
+			<p class="ds-paragraph">Um unnötige Schwierigkeiten mit Verlagen zu vermeiden, die möglicherweise die Rechteinhaber solcher Abbildungen sind, sollten Sie für diese Abdruckgenehmigungen einholen.<br />Dabei gilt:</p>
+			<ul class="ds-bulleted-list">
+				<li>für die Übernahme einer Abbildung, die nur der Illustration einer Arbeit dient, muß die Abdruckgenehmigung des Verlages eingeholt werden. Das Einholen dieser Genehmigung sollte man möglichst mit einer sogenannten „Verschweigefrist“ von 3 bis 4 Wochen verbinden.</li>
+				<li>für die Übernahme einer Abbildung, die dann im Text diskutiert wird, ist die Verwendung durch das „Zitatrecht“ abgedeckt.</li>
+			</ul>Weitere Information finden Sie unter:<br />
+			<a target="_blank" href="https://eldorado.tu-dortmund.de/handle/2003/21358">Multimediarecht in der Hochschulpraxis</a> Centrum für eCompetence (CeC) in Hochschulen NRW
 		</div>
 	</message>
 
-	
 	<!-- static page: deposit license -->
 	<message key="xmlui.static.help.deposit-license">
 		<div id="file_deposit-licence_pdf" class="ds-static-div download">
@@ -2670,8 +2644,8 @@
 				<em>1. Online-Bereitstellung</em>
 			</p>
 			<p class="ds-paragraph">Der Universität Göttingen wird das nicht-ausschließliche (einfache) Recht zur freien elektronischen Publikation im Internet und zur Archivierung auf ihrem Dokumentenserver eingeräumt. Im Rahmen der einfachen Nutzung ist es der Universität erlaubt, durch die SUB ergänzend eine kostendeckende Print-on-Demand Möglichkeit anzubieten, soweit diese nicht mit den Verwertungsrechten Dritter am Werk des Autors kollidiert. Alle weiteren Rechte für die Verwertung der Arbeit verbleiben beim Autor. Mit der Anmeldung ist kein rechtlich verbindlicher Anspruch auf die Online-Bereitstellung eines Dokumentes verbunden. <br />
-				Im Rahmen der öffentlichen Bereitstellung sind Nutzer berechtigt, Dokumente zum privaten und sonstigen eigenen Gebrauch herunterzuladen, zu speichern oder in kleiner Anzahl zu drucken (<a href="http://www.bundesrecht.juris.de/urhg">§ 53 UrhG</a>).<br />
-				Gleichzeitig gestattet der Veröffentlichende die Lizenzierung seines Werks unter einer <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/de/">Creative-Commons-Lizenz 3.0</a> (Namensnennung - Keine kommerzielle Nutzung - Keine Bearbeitung), die den Nutzern erlaubt, das Werk in unveränderter Form zu vervielfältigen, zu verbreiten und öffentlich zugänglich zu machen, insofern er als Autor genannt wird. 
+				Im Rahmen der öffentlichen Bereitstellung sind Nutzer berechtigt, Dokumente zum privaten und sonstigen eigenen Gebrauch herunterzuladen, zu speichern oder in kleiner Anzahl zu drucken (<a target="_blank" href="http://www.bundesrecht.juris.de/urhg">§ 53 UrhG</a>).<br />
+				Gleichzeitig gestattet der Veröffentlichende die Lizenzierung seines Werks unter einer <a target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/3.0/de/">Creative-Commons-Lizenz 3.0</a> (Namensnennung - Keine kommerzielle Nutzung - Keine Bearbeitung), die den Nutzern erlaubt, das Werk in unveränderter Form zu vervielfältigen, zu verbreiten und öffentlich zugänglich zu machen, insofern er als Autor genannt wird. 
 			</p>
 			<p class="ds-paragraph">
 				<i>2. Rechte Dritter</i>
@@ -2686,13 +2660,12 @@
 			<p class="ds-paragraph">
 				<i>4. Weitergabe an Bibliotheken mit einem nationalen Sammelauftrag</i>
 			</p>
-			<p class="ds-paragraph">Der Universität ist es gestattet, über die SUB die elektronische Version der Deutschen Nationalbibliothek (DNB) im Rahmen der Pflichtabgabe nach dem Gesetz über die Deutsche Nationalbibliothek zur Verfügung zu stellen. Darüber hinaus ist es der SUB gestattet, die Dokumente fachspezifischen Bibliotheken mit einem nationalen Sammelauftrag, wie den <a href="http://webis.sub.uni-hamburg.de/ssg/">Sondersammelgebietsbibliotheken des Förderprogramms der Deutschen Forschungsgemeinschaft</a>, zur Verfügung zu stellen. Diesen Einrichtungen werden die gleichen Rechte wie der Universität Göttingen eingeräumt.
+			<p class="ds-paragraph">Der Universität ist es gestattet, über die SUB die elektronische Version der Deutschen Nationalbibliothek (DNB) im Rahmen der Pflichtabgabe nach dem Gesetz über die Deutsche Nationalbibliothek zur Verfügung zu stellen. Darüber hinaus ist es der SUB gestattet, die Dokumente fachspezifischen Bibliotheken mit einem nationalen Sammelauftrag, wie den <a target="_blank" href="http://webis.sub.uni-hamburg.de/ssg/">Sondersammelgebietsbibliotheken des Förderprogramms der Deutschen Forschungsgemeinschaft</a>, zur Verfügung zu stellen. Diesen Einrichtungen werden die gleichen Rechte wie der Universität Göttingen eingeräumt.
 			</p>
 			<p class="ds-paragraph">
 				<i>5. Rücknahme der Einverständniserklärung</i>
 			</p>
-			<p class="ds-paragraph">ine Rücknahme dieser Einverständniserklärung ist nur unter Berufung auf § 42 UrhG (Werk entspricht nicht mehr der Überzeugung des Autors) möglich. Die Universität Göttingen ist berechtigt, dem Veröffentlichenden den hierdurch entstandenen zusätzlichen Aufwand in Rechnung zu stellen.
-			</p>
+			<p class="ds-paragraph">Eine Rücknahme dieser Einverständniserklärung ist nur unter Berufung auf § 42 UrhG (Werk entspricht nicht mehr der Überzeugung des Autors) möglich. Die Universität Göttingen ist berechtigt, dem Veröffentlichenden den hierdurch entstandenen zusätzlichen Aufwand in Rechnung zu stellen.</p>
 			<p class="ds-paragraph">
 				<strong>Der Veröffentlichende versichert, dass die gelieferte Datei und die ausgedruckten Exemplare der vom Fachbereich genehmigten Druckfassung entsprechen und die zuständige Einrichtung der Veröffentlichung der Dokumente zugestimmt hat.</strong>
 			</p>
@@ -2700,10 +2673,11 @@
 				<strong>Enthält die zur Publikation eingereichte elektronische Version (PDF) der Qualifikationsarbeit  einen Lebenslauf, ist der Veröffentlichende damit einverstanden, dass auch dieser mit der Arbeit im Netz einsehbar ist.</strong>
 			</p>
 			<hr />
-			<strong>Doktoranden der Medizin</strong>
+			<p><strong>Doktoranden der Medizin</strong></p>
 			<p class="ds-paragraph">Ich habe die Einladung zur mündlichen Prüfung erhalten. Ich sichere hiermit verbindlich zu, daß ich Terminänderungen oder Korrekturauflagen seitens der Prüfer umgehend an  die Mitarbeiter von EDiss bei der SUB melden werde.
 			</p>
-			<p class="ds-paragraph">Sofern ich meine Staatsexamenprüfung noch nicht absolviert habe, verpflichte ich mich die Mitarbeiter von eDiss umgehend zu informieren, sobald ich die Prüfung abgelegt und bestanden habe.
+			<p class="ds-paragraph">
+				Sofern ich meine Staatsexamenprüfung noch nicht absolviert habe, verpflichte ich mich die Mitarbeiter von eDiss umgehend zu informieren, sobald ich die Prüfung abgelegt und bestanden habe.
 			</p>
 		</div>
 	</message>
@@ -2723,10 +2697,9 @@
 					<li>
 						<a href="#change">Kann ich meine Publikation <strong>nach der Veröffentlichung ändern</strong>?</a>
 					</li>
-
 				</ul>
 			</div>
-
+			
 			<div class="ds-static-div">
 				<h2 class="ds-div-head" id="parallel">Darf ich meine Dissertation neben der Veröffentlichung auf eDiss auch anderswo online stellen oder publizieren?</h2>
 				<p class="ds-paragraph"><strong>Ja</strong>, Sie dürfen Ihre Dissertation zugleich auf anderen Websites (z.B. auf der eigenen Homepage) online stellen. Zum Herunterladen ist es zu empfehlen, mittels der persistenten Identifiers, die Ihre Dissertation auf eDiss bekommt, auf Ihr Dokument zu verlinken.
@@ -2734,6 +2707,7 @@
 				<p class="ds-paragraph">Da Sie im Rahmen des eDiss-Vertrages uns nur ein einfaches (nicht-ausschliessliches) Nutzungrecht übertragen, können Sie weiteren Personen oder Institutionen Nutzungsrechte einräumen. Bei einer späteren Verlagsveröffentlichung infomieren Sie bitte den Verlag darüber, dass Ihre Arbeit bereits auf eDiss open access erschienen ist.
 				</p>
 			</div>
+			
 			<h2 id="benefits">Welche Vorteile bringt mir die elekronische Veröffentlichung meiner Dissertation?</h2>
 			<div class="ds-static-div">
 				<ul class="ds-bulleted-list">
@@ -2743,26 +2717,21 @@
 					<li>Im Rahmen der technischen Möglichkeiten übernehmen wir eine dauerhafte Archivierung.</li>
 				</ul>
 			</div>
+			
 			<h2 id="change">Kann ich meine Publikation auf eDiss nach der Veröffentlichung ändern?</h2>
 			<div class="ds-static-div">
 				<p class="ds-paragraph">
-					<strong>Nein</strong>. Um die Authentizität, Zitierbarkeit und dauerhafte Erreichbarkeit Ihrer Dissertation zu sichern, können Publikationen auf eDiss nach ihrer Freischaltung nicht mehr verändert werden.
-
+					<strong>Nein.</strong> Um die Authentizität, Zitierbarkeit und dauerhafte Erreichbarkeit Ihrer Dissertation zu sichern, können Publikationen auf eDiss nach ihrer Freischaltung nicht mehr verändert werden.
 				</p>
 				<p class="ds-paragraph">
-					Ist eine Korrektur notwendig und kann der Verfasser dies plausibel begründen, wenden Sie sich bite an <a href="ediss/contact">unsere Redakteure</a>. Nur sie sind berechtigt, Änderungen an den Angaben zur Dissertation durchzuführen bzw. eine korrigierte Version des Dokuments neu einzustellen. <br />Das Zurückziehen eines bereits publizierten Dokumentes ist nur möglich, wenn es lizenz- bzw. patentrechtliche Probleme gibt. Das Zurückziehen wird im System dokumentiert. Zusätzlich wird eine Informationsseite mit dem Hinweis „Dieses Dokument wurde zurückgezogen“ erstellt und über die permanente URL-Adresse angezeigt.
+					Ist eine Korrektur notwendig und kann der Verfasser dies plausibel begründen, wenden Sie sich bitte an <a href="/contact">unsere Redakteure</a>. Nur sie sind berechtigt, Änderungen an den Angaben zur Dissertation vorzunehmen bzw. eine korrigierte Version des Dokuments neu einzustellen.<br />
+					Das Zurückziehen eines bereits publizierten Dokumentes ist nur möglich, wenn es lizenz- bzw. patentrechtliche Probleme gibt oder falls sich die Auffassung des Urhebers zu seinem Thema grundlegend geändert hat (§42 UrhG). Das Zurückziehen wird im System dokumentiert. Zusätzlich wird eine Informationsseite mit dem Hinweis „Dieses Dokument wurde zurückgezogen“ erstellt und über die permanente URL angezeigt.
 				</p>
-
-			</div>        
+			</div>   
+			
 		</div>
 	</message>
-	
-	
-	
-	
-	
-	
-	
+
 	<!-- static page: impressum -->
 	<message key="xmlui.static.impressum">
 		<div class="ds-static-div">
@@ -2774,7 +2743,7 @@
 					<li>Tel.: +49 (0)551 / 39-5212</li>
 					<li>Fax: +49 (0)551 / 39-5222</li>
 					<li>E-Mail: <a href="mailto:sekretariat@sub.uni-goettingen.de">sekretariat@sub.uni-goettingen.de</a></li>
-					<li>Internet: <a href="http://www.sub.uni-goettingen.de">www.sub.uni-goettingen.de</a></li>
+					<li>Internet: <a target="_blank" href="http://www.sub.uni-goettingen.de">www.sub.uni-goettingen.de</a></li>
 				</ul>
 			</div>
 			<h2 class="ds-div-head">Vertreter</h2>
@@ -2803,7 +2772,7 @@
 				<p class="ds-paragraph">Redaktionsverantwortlich für den eDiss Server der SUB Göttingen nach § 55 Abs. 2 RStV ist:</p>
 				<ul class="ds-simple-list">
 					<li>Margo Bargheer</li>
-					<li>Tel.: +49 (0)551 / 39-9118</li>
+					<li>Tel.: +49 (0)551 / 39-91188</li>
 					<li>Fax.: +49 (0)551 / 39-22457</li>
 					<li>E-Mail: <a href="mailto:bargheer@sub.uni-goettingen.de">bargheer@sub.uni-goettingen.de</a></li>
 				</ul>
@@ -2818,13 +2787,13 @@
 			<h2 class="ds-div-head">Bildnachweise</h2>
 			<div class="ds-static-div">
 				<p class="ds-paragraph">
-					Die verwendeten Icons basieren auf den <a href="http://pc.de/icons/#Munich">„Munich“-Icons von PC.DE</a> und stehen unter der <a href="http://creativecommons.org/licenses/by/3.0/">„CC BY 3.0“-Lizenz</a>.
-					Das Foanlickbaresto in der Kopfzeile ist eine Bearbeitung eines Fotos von Daniel Schwen für Wikimedia Commons, veröffentlicht unter der <a href="http://creativecommons.org/licenses/by-sa/2.5/deed.de">„CC BY-SA 2.5 unported“-Lizenz</a>.
+					Die verwendeten Icons basieren auf den <a target="_blank" href="http://pc.de/icons/#Munich">„Munich“-Icons von PC.DE</a> und stehen unter der <a target="_blank" href="http://creativecommons.org/licenses/by/3.0/">„CC BY 3.0“-Lizenz</a>.
+					Das Foanlickbaresto in der Kopfzeile ist eine Bearbeitung eines Fotos von Daniel Schwen für Wikimedia Commons, veröffentlicht unter der <a target="_blank" href="http://creativecommons.org/licenses/by-sa/2.5/deed.de">„CC BY-SA 2.5 unported“-Lizenz</a>.
 				</p>
 			</div>
 		</div>
 	</message>
-	
+
 	<message key="xmlui.contact.head">Sie können uns auf verschiedenem Wege erreichen</message>
 	<message key="xmlui.home.contact.post">Per Post:</message>
 	<message key="xmlui.home.contact.life">Persönlich:</message>
@@ -2845,14 +2814,12 @@
 	<message key="xmlui.contact.admin">Mit technischen Problemen kontaktieren Sie bitte unseren <a mailto="mmuehlh@sub.uni-goettingen.de">Administrator</a> oder verwenden Sie unseren <a href="feedback">Online Kontakformular</a>!</message>
 	<message key="xmlui.help.workflow.head">Online-Publikationsprozess</message>
 
-	<!-- ENGLISH CATALOGUE ENDS HERE - LINES BELOW ONLY AVAILABLE IN GERMAN -->
-	
 	<!-- static page: cumulative dissertations -->
 	<message key="xmlui.static.cumulative.dissertations">
 		<div class="ds-static-div">
 			<p class="ds-paragraph">Bei einer kumulativen Dissertation (mehrere eigenständige Artikel für Zeitschriften oder Sammelbände werden zu einer Dissertation zusammengefasst) ist stets zu beachten, dass die Rechtesituation vom Doktoranden mit den entsprechenden Verlagen zu klären ist.
 			</p>
-			<p class="ds-paragraph">Die Verbreitung und Akzeptanz dieser Form der Dissertation ist von Fakultät zu Fakultät verschieden. Bitte lesen Sie Ihre <a href="http://www.sub.uni-goettingen.de/elektronisches-publizieren/publizieren/dissertationen-abschlussarbeiten/promotionsordnungen-der-fakultaeten/">Promotionsordnung</a> aufmerksam und informieren Sie sich ggf. bei Ihrem Prüfungsamt.
+			<p class="ds-paragraph">Die Verbreitung und Akzeptanz dieser Form der Dissertation ist von Fakultät zu Fakultät verschieden. Bitte lesen Sie Ihre <a target="_blank" href="http://www.sub.uni-goettingen.de/elektronisches-publizieren/publizieren/dissertationen-abschlussarbeiten/promotionsordnungen-der-fakultaeten/">Promotionsordnung</a> aufmerksam und informieren Sie sich ggf. bei Ihrem Prüfungsamt.
 			</p>
 			<h3 class="ds-head">Anforderungen an Abgabe-Exemplare</h3>
 
@@ -2880,55 +2847,14 @@
 			</ul>
 		</div>	
 	</message>
-	
+
 	<message key="xmlui.general.locale.language">Sprache</message>
 	<message key="xmlui.notify"><strong>BITTE BEACHTEN SIE: </strong></message>
 	<message key="xmlui.home.head">Dissertationen der Georg-August-Universität Göttingen</message>
 	<message key="xmlui.home.head2">Veröffentlichen Sie Ihre elektronische Dissertation bei der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB).</message>
 	<message key="xmlui.home.publication.process">Und so geht es:</message>
 	<message key="xmlui.test">Button test</message>
-	<message key="xmlui.home.publication.process.step1">
-		<span class="help" id="step1"><span class="icon"> </span>Speichern Sie Ihre Dissertation als PDF.
-			<span>Erstellen Sie Ihre Dissertation als <strong>eine</strong> PDF Datei (nicht als mehrere Einzeldateien) ohne Sicherheitseinschränkungen mit anklickbarem Inhaltsverzeichnis und optimiert auf „schnelle Webanzeige“. <a href="/help/pdf-howto">Anleitung</a></span>
-		</span>
-	</message>
-	<message key="xmlui.home.publication.process.step2">
-		<span class="help" id="step2"><span class="icon"> </span><a href="/login">Loggen</a> Sie sich bei eDiss ein.
-			<span>Beim ersten Mal ist eine kostenlose <a href="/register">Registrierung</a> notwendig.</span>
-		</span>
-	</message>
-	<message key="xmlui.home.publication.process.step3">
-		<span class="help" id="step3"><span class="icon"> </span>Klicken Sie auf <a href="/submit">„Jetzt veröffentlichen“</a> und folgen Sie dem Formular.
-			<span>Im letzten Schritt müssen Sie unseren Vertragsbedingungen zustimmen, die Sie auch <a href="help/deposit-license">hier</a> lesen und herunterladen können.</span>
-		</span>
-	</message>
-	<message key="xmlui.home.publication.process.step4">
-		<span class="help" id="step4"><span class="icon"> </span>Liefern Sie zwei gedruckte Exemplare Ihrer Arbeit bei uns in der SUB ab.
-			<span>Die Adresse finden Sie weiter unten.<br /><strong>Mediziner</strong> müssen ein Kopie Ihrer Einladung zur mündlichen Prüfung den Druckexemplaren beilegen!</span>
-		</span>
-	</message>
-	<message key="xmlui.home.publication.process.step5">
-		<span class="help" id="step5"><span class="icon"> </span>Bezahlen Sie die Publikationsgebühr in Höhe von € 45,00.
-			<span>Sie erhalten per Post eine Rechnung mit unseren Kontodaten.</span>
-		</span>
-	</message>
-	<message key="xmlui.home.publication.process.step6">
-		<span class="help" id="step6"><span class="icon"> </span>Fertig! Ihre Publikation wird von unseren Redakteuren freigeschaltet.
-			<span>Über die Veröffentlichung Ihrer Arbeit werden Sie per E-Mail benachrichtigt.</span>
-		</span>
-	</message>
-	<message key="xmlui.home.contact.label">Sie können sich gern an uns wenden:</message>
-	<message key="xmlui.home.library.name">Zentralbibliothek</message>
-	<message key="xmlui.home.epu.place">Elektronisches Publizieren</message>
-	<message key="xmlui.home.epu.room">2. Etage links im LRC, Raum 2.19</message>
-	<message key="xmlui.home.library.address">Platz der Göttinger Sieben 1</message>
-	<message key="xmlui.home.library.zipcode">37073 Göttingen</message>
-	<message key="xmlui.home.library.tel">Tel.: 0551 / 39-5383</message>
-	<message key="xmlui.home.library.email">E-Mail: eDiss@sub.uni-goettingen.de</message>
-	<message key="xmlui.home.contact.time.label">Unsere Öffnungszeiten:</message>
-	<message key="xmlui.home.epu.times">Montag bis Freitag jeweils von 10:00 bis 12:00 Uhr.</message>
-	<message key="xmlui.home.epu.freetime">Es können auch Termine außerhalb der Öffnungszeiten vereinbart werden.</message>
-	
+
 </catalogue>
 
 

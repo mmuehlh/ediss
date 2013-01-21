@@ -130,20 +130,23 @@
 			-->
 			<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
 
-			<link rel="shortcut icon">
+			<link rel="icon">
 				<xsl:attribute name="href">
 					<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
 					<xsl:text>/themes/</xsl:text>
 					<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
 					<xsl:text>/images/favicon.ico</xsl:text>
 				</xsl:attribute>
+				<xsl:attribute name="type">
+					<xsl:text>image/x-icon</xsl:text>
+				</xsl:attribute>
 			</link>
-			<link rel="apple-touch-icon">
+			<link rel="shortcut icon">
 				<xsl:attribute name="href">
 					<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
 					<xsl:text>/themes/</xsl:text>
 					<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
-					<xsl:text>/images/apple-touch-icon.png</xsl:text>
+					<xsl:text>/images/favicon.ico</xsl:text>
 				</xsl:attribute>
 			</link>
 
@@ -328,7 +331,10 @@
 					</a>
 				</h1>
 				
-				<div class="navlink"><a class="left" href="#content">xmlui.dri2xhtml.structural.content-link</a><a class="right" href="#nav">xmlui.dri2xhtml.structural.nav-link</a></div>
+				<div class="navlink">
+					<a class="left" href="#content"><i18n:text>xmlui.dri2xhtml.structural.content-link</i18n:text></a>
+					<a class="right" href="#nav"><i18n:text>xmlui.dri2xhtml.structural.nav-link</i18n:text></a>
+				</div>
 
 				<div id="topbox">
 

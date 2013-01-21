@@ -10,7 +10,7 @@ $(function() {
 		// If current item contains more than one word, replace last word with … (&hellip;). Otherwise, move to next item.
 		if ( item.text().indexOf(' ') >= 0 ) {
 			if ( !cut_items[i] ) cut_items[i] = item.text();
-			item.text( item.text().replace(/[\s,-]+[^\s]+…*$/, '…') );
+			item.text( item.text().replace(/[\s,-\.\/]+[^\s]+…*$/, '…') );
 		} else {
 			i++;
 		}
@@ -24,9 +24,11 @@ $(function() {
 		key = parseInt(i / 10 - 1);
 		items = $('#ds-trail .ds-trail-link');
 		item_text = items.eq(key).text();
-		items.eq(key).text( items.eq(key).text().replace(/[\s,-]+[^\s]+…*$/, '…') );
+		items.eq(key).text( items.eq(key).text().replace(/[\s,-\.\/]+[^\s]+…*$/, '…') );
 		if ( item_text != items.eq(key).text() && !cut_items[key] ) cut_items[key] = item_text;
 	}
+	// Save layout in case anything went wrong
+	$('#ds-trail').css({height: 28, overflow: 'hidden'});
 	// Add hint div for truncated/removed elements, fade in on hover
 	for (i = -2; i < cut_items.length; i++) {
 		if (cut_items[i]) $('#ds-trail .ds-trail-link').eq(i).append('<div class="hint"><span>' + cut_items[i] + '</span></div>');
@@ -47,8 +49,8 @@ $(function() {
 		$('#userbox ul').toggle();
 	});
 	
-	/* Sidebar: truncate items */
-	$('#sidebar a').each( function() {
+	/* Nav: truncate items */
+	$('#nav a').each( function() {
 		i = 0;
 		while ( $(this).height() > 28 && i++ < 99 ) {
 			$(this).text( $(this).text().replace(/\.*.…*\s(\(\d+\))$/, '… $1') );
@@ -64,6 +66,18 @@ $(function() {
 		if ( $(this).val() == searchtext ) $(this).val('');
 	}).blur(function() {
 		if ( $(this).val() == '' ) $(this).val(searchtext);
+	});
+	
+	/* Corrent margins in forms with invisible elements */
+	$('form p:hidden + p').css('margin-top', 0);
+	
+	/* Ensure optimal width of content */
+	content_resize();
+	$(window).resize( function() { content_resize() } );
+	
+	/* Remove empty elements */
+	$('p, h2').each( function() {
+		if ( $(this).html() == '&nbsp;' ) $(this).remove();
 	});
 	
 	/* Main page 6 step help slider */
@@ -106,6 +120,16 @@ $(function() {
 	});
 	
 });
+
+content_resize = function() {
+	var width = $(window).width();
+	if ( width < 640 )
+		$('#content').width( 'auto' );
+	else if ( width >= 640 && width < 1000 )
+		$('#content').width( $(window).width() - 279 );
+	else if (width >= 1000)
+		$('#content').width( 720 );
+}
 
 /**
  * --------------------------------------------------------------------

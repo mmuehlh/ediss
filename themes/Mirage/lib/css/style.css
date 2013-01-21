@@ -255,12 +255,14 @@ form {
 form p {
 	margin: 0;
 }
+form p + p {
+	margin-top: 13px;
+}
 p + fieldset {
 	margin-top: 13px;
 }
 form h2 {
   margin-bottom: 5px;
-  top: -7px;
 }
 form + h2 {
 	margin-top: 4px;
@@ -531,6 +533,7 @@ br {
 	margin: 0;
 }
 #header h1 {
+	margin: 0;
 	top: 0;
 }
 #logo {
@@ -564,7 +567,6 @@ br {
 }
 #footer-left {
 	float: left;
-	width: 50%;
 	padding-left: 12px;
 	text-align: left;
 }
@@ -740,12 +742,9 @@ input[name=starts_with] {
 	border: 0;
 	box-shadow: none;
 	height: 28px;
+	margin-left: -32px;
 	min-width: 0;
-	position: absolute;
-	right: 0;
 	text-indent: -9999px;
-	text-transform: capitalize; /* IE 7 */
-	top: 0; /* Chrome and others */
 	width: 28px;
 }
 #topbox .ds-button-field:hover {
@@ -939,7 +938,7 @@ form a[href$="/advanced-search"]:hover,
 }
 #nav a,
 #userbox ul a {
-	background: url(../../images/icons.png) 7px -500px no-repeat;
+	background: url(../../images/icons.png) 7px -501px no-repeat;
 	display: block;
 	font-weight: bold;
 	padding: 9px 10px 8px 34px;
@@ -1004,6 +1003,10 @@ a {
 a:hover {
 	text-decoration: underline;
 	text-shadow: 0 0 5px rgba(255,255,255,.8);
+}
+a[target=_blank] {
+	padding-left: 20px;
+	background: url(../../images/icons.png) 0 -546px no-repeat;
 }
 
 /* Original DSpace Styles (TODO: Delete redundant styles)
@@ -1088,7 +1091,7 @@ table textarea.ds-textarea-field {
 	width: 426px;
 }
 #aspect_administrative_item_EditItemMetadataForm_field_value {
-	width: 596px;
+	width: 487px;
 }
 #aspect_administrative_registries_EditMetadataSchema_list_edit-schema-new-field-form .ds-text-field,
 #aspect_administrative_item_EditItemMetadataForm_field_language,
@@ -1105,109 +1108,20 @@ span.error {
 	margin-top: 3px;
 	max-width: 512px;
 }
-textarea.ds-textarea-field.error,
-input.ds-text-field.error,
-input.ds-password-field.error {
-	border-color: #c22121;
-	background-color: #fff2f2;
-}
-.ds-form-item legend {
-	margin: 0;
-	color: inherit;
-}
-fieldset ol {
-	margin: 0;
-}
-fieldset h2 + ol {
-	margin-top: -5px;
-}
-li.ds-form-item.last {
-	margin-bottom: 0;
-}
-li.ds-form-item .ds-form-label {
-	font-weight: bold;
-	position: relative;
-	top: 5px;
-}
-li.ds-form-item label.ds-composite-component {
-	display: block;
-	float: left;
-}
-label.ds-composite-component + label.ds-composite-component {
-	margin-left: 6px;
-}
-select#aspect_submission_submit_SelectCollectionStep_field_handle {
-	max-width: 350px;
-}
-#aspect_submission_StepTransformer_field_dc_date_issued_year,
-#aspect_submission_StepTransformer_field_dc_date_issued_day {
-	width: 50px;
-}
-#aspect_submission_StepTransformer_field_dc_identifier_value {
-	width: 130px;
-	margin-bottom: 0;
-}
-span.composite-help,
-span.field-help {
-	display: block;
-	margin-bottom: 5px;
-	max-width: 575px;
-}
-span.field-help {
-	margin-top: 5px;
-}
-.ds-checkbox-field input,
-.ds-radio-field input {
-	margin-left: 0;
-}
-/*hide the double label for checkboxes & radio buttons*/
-.ds-checkbox-field legend,
-.ds-radio-field legend {
-	display: none;
-}
-.ds-previous-values {
-	padding-top: 13px;
-	clear: both;
-}
-.ds-previous-values .ds-button-field {
-	margin-top: 13px;
-}
-.ds-interpreted-field {
-	font-style: italic;
-}
-.submission .ds-form-sublist li.ds-form-item {
-	margin-bottom: 5px;
-}
-.submission .ds-form-sublist .ds-form-label {
-	font-weight: bold;
-}
-
-.administrative.tabbed ul.horizontal {
-	list-style: none;
-	margin: 15px 0 0;
-	border-bottom: 1px solid #5C739F;
-}
 .administrative.tabbed ul.horizontal li {
+	border-radius: 5px;
 	float: left;
-	border: 1px solid #5C739F;
-	border-radius: 5px 5px 0 0;
-	padding: 5px 7px;
-	margin-bottom: -1px;
-	margin-right: 7px;
-	border-bottom: none;
-}
-.administrative.tabbed ul.horizontal li.active-tab{
-	background-color: #fafafa;
-	z-index: 1;
 	font-weight: bold;
+	margin-bottom: 20px;
+	margin-right: 5px;
+	padding: 5px 7px;
+}
+.administrative.tabbed ul.horizontal li.active-tab {
+	border: 1px solid #163776;
+	background: #fff;
 }
 .pane {
-	padding: 10px;
 	clear: both;
-	background-color: #fafafa;
-	border: 1px solid #5C739F;
-	margin-bottom: 25px;
-	margin-top: 0;
 }
 .pane .ds-form-list {
 	margin-top: 0;
@@ -1411,14 +1325,12 @@ form.discover-sort-box select{
 }
 /* FOR CC License */
 span.floatleft {
-	border:none;
-	float:right;
-	display:inline;
+	border: none;
+	float: right;
+	display: inline;
 }
-/* FOR CC PAGE to GROUP ITEMS horizontally */
-ul.horizontal li span.bold a { color: black; }
-/* group items horizontally in a list */
 
+/* group items horizontally in a list */
 ul.horizontalVanilla {
 	font-weight: bold;
 	list-style-type: none;
@@ -1704,6 +1616,8 @@ p,
 	position: absolute;
 	height: 70px;
 	width: 72px;
+	color: #fff;
+	text-indent: -9999px;
 }
 .help#step2 .icon {
 	background-position: 0 -72px;
@@ -1767,27 +1681,6 @@ p,
 
 /* Common Form Styles
 ---------------------------------------------------------------------------*/
-.ds-form-item {
-	float: left;
-	clear: both;
-	position: relative;
-	width: 100%;
-}
-.ds-form-item + .ds-form-item {
-	margin-top: 9px;
-}
-.ds-form-label,
-.ds-form-content {
-	float: left;
-}
-.ds-form-label {
-	padding-right: 5px;
-	width: 138px;
-}
-.ds-form-content span {
-	/*margin: 5px 0;*/
-	position: relative;
-}
 input[type=checkbox],
 input[type=radio] {
 	background: none;
@@ -1805,6 +1698,103 @@ fieldset + h2 {
 }
 fieldset + p {
 	margin-top: 20px;
+}
+textarea.ds-textarea-field.error,
+input.ds-text-field.error,
+input.ds-password-field.error {
+	border-color: #c22121;
+	background-color: #fff2f2;
+}
+.ds-form-item legend {
+	margin: 0;
+	color: inherit;
+}
+fieldset ol {
+	margin: 0;
+}
+fieldset h2 + ol {
+	margin-top: -5px;
+}
+fieldset + div {
+	margin-top: 18px;
+}
+li.ds-form-item.last {
+	margin-bottom: 0;
+}
+li.ds-form-item .ds-form-label {
+	font-weight: bold;
+	position: relative;
+	top: 5px;
+}
+li.ds-form-item label.ds-composite-component {
+	display: block;
+	float: left;
+	margin-right: 6px;
+}
+select#aspect_submission_submit_SelectCollectionStep_field_handle {
+	max-width: 350px;
+}
+#aspect_submission_StepTransformer_field_dc_date_issued_year,
+#aspect_submission_StepTransformer_field_dc_date_issued_day {
+	width: 50px;
+}
+#aspect_submission_StepTransformer_field_dc_identifier_value {
+	width: 130px;
+	margin-bottom: 0;
+}
+span.composite-help,
+span.field-help {
+	display: block;
+	margin-bottom: 5px;
+	max-width: 575px;
+}
+span.field-help {
+	margin-top: 5px;
+}
+.ds-form-item {
+	float: left;
+	clear: both;
+	position: relative;
+}
+.ds-form-item + .ds-form-item {
+	margin-top: 9px;
+}
+.ds-form-label,
+.ds-form-content {
+	float: left;
+}
+.ds-form-label {
+	padding-right: 5px;
+	width: 138px;
+}
+.ds-form-content span {
+	/*margin: 5px 0;*/
+	position: relative;
+}
+.ds-checkbox-field input,
+.ds-radio-field input {
+	margin-left: 0;
+}
+/*hide the double label for checkboxes & radio buttons*/
+.ds-checkbox-field legend,
+.ds-radio-field legend {
+	display: none;
+}
+.ds-previous-values {
+	padding-top: 13px;
+	clear: both;
+}
+.ds-previous-values .ds-button-field {
+	margin-top: 13px;
+}
+.ds-interpreted-field {
+	font-style: italic;
+}
+.submission .ds-form-sublist li.ds-form-item {
+	margin-bottom: 5px;
+}
+.submission .ds-form-sublist .ds-form-label {
+	font-weight: bold;
 }
 
 /* Login Form
@@ -1938,6 +1928,7 @@ ul.ds-progress-list li.disabled input.ds-button-field
 	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
 	width: 260px;
 	margin-top: 7px;
+	white-space: nowrap;
 }
 .check-true {
 	background: url(../../images/icons.png) 7px -440px no-repeat;
@@ -2054,12 +2045,10 @@ a[href ^="http://creativecommons.org/licenses/by-sa/"] {
 #aspect_discovery_SimpleSearch_field_filtertype {
 	width: 250px;
 }
-/*
+
 .ds-add-button {
-	float: right;
 	margin-left: 5px;
 }
-*/
 #aspect_artifactbrowser_CommunitySearch_div_community-search a[href$="/advanced-search"],
 #aspect_artifactbrowser_CollectionSearch_div_collection-search a[href$="/advanced-search"] {
 	border-left: 1px solid #ccc;
@@ -2117,6 +2106,12 @@ input[size="6"] {
 /* replacement for the inline-block display (that only works due to incorrect rendering in IE7) */
 *:first-child+html .browse li {
 	display: inline;
+}
+*:first-child+html #topbox .ds-button-field {
+	position: absolute;
+	right: 0;
+	text-transform: capitalize; /* IE 7 */
+	top: 0; /* Chrome and others */
 }
 /* breadcrumbs position too low */
 *:first-child+html #ds-trail {

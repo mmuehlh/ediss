@@ -17,8 +17,7 @@
 	/* Style adjustments for landscape mode goes here */
 }
 
-/*
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 999px) {
 	body,
 	#header-wrapper,
 	#header,
@@ -34,6 +33,10 @@
 	#footer {
 		width: 100%;
 	}
+	#content,
+	#nav {
+		padding-bottom: 20px;
+	}
 	#content {
 		margin-left: 240px;
 		width: auto;
@@ -48,12 +51,54 @@
 	#ds-trail .first-link a {
 		border-radius: 0;
 	}
+	#footer-wrapper,
+	#footer {
+		position: relative;
+		height: auto;
+		margin-top: 0;
+	}
+	#footer-left,
+	#footer-right {
+		width: auto;
+		line-height: 18px;
+		padding: 9px;
+		float: none;
+		text-align: center;
+	}
 	form {
 		border-radius: 0;
 	}
+	.ds-form-label,
+	.ds-form-content {
+		float: none;
+	}
+	.ds-progress-list {
+		margin-right: -20px;
+		width: auto;
+	}
+	input[type="text"],
+	input[type="password"],
+	textarea {
+		max-width: 95%;
+	}
+	.submission .ds-form-list input.ds-text-field,
+	.administrative .ds-form-list input.ds-text-field,
+	textarea.ds-textarea-field,
+	.customfile {
+		width: auto;
+	}
+	table {
+		display: block;
+		margin-right: -20px;
+		overflow: auto;
+		width: auto;
+	}
+	.ds-form-content input[type=submit] {
+		margin-top: 13px;
+	}
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
 	body,
 	#header-wrapper,
 	#header,
@@ -63,6 +108,26 @@
 	#ds-trail,
 	#nav {
 		float: none;
+	}
+	#header-wrapper {
+		background: #163776;
+		height: auto;
+	}
+	#logo {
+		background-size: 480px;
+		height: 146px;
+		width: auto;
+	}
+	#topbox {
+		width: auto;
+	}
+	#topbox .ds-text-field {
+		width: 160px;
+	}
+	#localebox,
+	#localebox ul,
+	#localebox a {
+		border-radius: 5px 0 0 5px;
 	}
 	#page-wrapper {
 		background: #fff;
@@ -77,21 +142,7 @@
 		width: auto;
 	}
 	#footer-wrapper {
-		padding-bottom: 50px;
-	}
-	#footer-wrapper,
-	#footer {
-		position: relative;
-		margin: 0;
-		height: auto;
-	}
-	#footer-left,
-	#footer-right {
-		width: auto;
-		line-height: 18px;
-		padding: 9px;
-		float: none;
-		text-align: center;
+		padding-bottom: 40px;
 	}
 	.publish {
 		margin: 0 auto 20px;
@@ -101,7 +152,9 @@
 		display: block;
 		position: fixed;
 		bottom: 0;
+		font-weight: bold;
 		height: 40px;
+		line-height: 40px;
 		right: 0;
 		background: #000;
 		z-index: 999;
@@ -113,7 +166,7 @@
 		display: block;
 		max-width: 40%;
 		overflow: hidden;
-		padding: 9px;
+		padding: 0 12px;
 	}
 	.navlink a.right {
 		float: right;
@@ -121,16 +174,11 @@
 	.ds-form-label,
 	.ds-form-content {
 		float: none;
-	}
-	input[type="text"],
-	input[type="password"],
-	textarea {
-		margin: 9px 0;
-		width: 95%;
+		top: 0 !important;
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
 	#ds-trail,
 	.pagination-links li.page-link {
 		display: none;
@@ -146,8 +194,31 @@
 	.pagination-info {
 		margin: 0 !important;
 	}
+	#logo {
+		height: 100px;
+	}
+	#topbox {
+		background-position: 0 -120px;
+		background-size: 480px;
+		position: relative;
+	}
+	#topbox .ds-text-field {
+		width: 78%;
+	}
+	#topbox label {
+		display: inline-block;
+		padding-right: 12px;
+	}
+	#userbox {
+		position: relative;
+	}
+	#localebox {
+		bottom: auto;
+		position: absolute;
+		right: 0;
+		top: -90px;
+	}
 }
-*/
 
 /* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)
    Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
