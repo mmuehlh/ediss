@@ -73,6 +73,9 @@ select {
 	font-size: 100%;
 	margin: 0;
 }
+.clearfix {
+	clear: both;
+}
 
 /* Baseline grid (13px/18px) and colors
 ---------------------------------------------------------------------------*/
@@ -88,7 +91,6 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 }
 h1, h2 {
-	color: #5C739F;
 	line-height: 36px;
 }
 h1, h2, h3, h4 {
@@ -322,7 +324,7 @@ input[type=button],
 .browse li a,
 .customfile-button {
 	border: 1px solid;
-	border-color: #163776 #163776 #434343;
+	border-color: #163776 #163776 #444;
 	background: #163776 url(../../images/button-bg.png) 0 0 repeat-x;
 	box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
 	text-align: center;
@@ -393,7 +395,7 @@ input#upload:hover { background: #eee; color: #111; border-color:#777; }
 	margin: 0 !important;
 }
 .customfile-feedback-populated {
-	color: #434343;
+	color: #444;
 	font-style: normal;
 }
 .customfile-button {
@@ -465,7 +467,7 @@ html {
 body  {
 	background: #fff;
 	height: 100%;
-	color: #434343;
+	color: #444;
 	min-width: 1000px;
 	width: 100%;
 }
@@ -504,7 +506,7 @@ br {
 	display: none !important;
 }
 .navlink {
-	display: none;
+	display: none !important;
 }
 #page-wrapper {
 	background: url(../../images/content-bg.png) center top repeat-y;
@@ -593,6 +595,22 @@ br {
 	color: #fff;
 }
 
+/* Linkstyle
+---------------------------------------------------------------------------*/
+
+a {
+	color: #163776;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+	text-shadow: 0 0 5px rgba(255,255,255,.8);
+}
+a[target=_blank] {
+	padding-left: 20px;
+	background: url(../../images/icons.png) 0 -546px no-repeat;
+}
+
 /* Breadcrumbs Trail
 ---------------------------------------------------------------------------*/
 input[name=starts_with] {
@@ -638,7 +656,7 @@ input[name=starts_with] {
 	right: 0;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
 	list-style-type: none;
-	overflow: visible;
+	overflow: hidden;
 	width: 760px;
 }
 /*#ds-trail-hint {
@@ -657,11 +675,12 @@ input[name=starts_with] {
 	/* background: url(../../images/trail-arrow.png) 2px center no-repeat; */
 	/* padding-left: 16px; */
 	background: url(../../images/arrow-right.png) 3px center no-repeat;
-	padding-left: 9px;
+	padding: 0 4px 0 13px;
 }
 #ds-trail a {
 	color: #fff;
 	display: block;
+	margin: 0 -4px;
 	padding: 0 4px;
 	text-decoration: none;
 }
@@ -671,18 +690,16 @@ input[name=starts_with] {
 }
 #ds-trail .first-link a {
 	border-radius: 5px 0 0 0;
+	margin: 0;
 	padding: 0 5px 0 7px;
 }
-#ds-trail .last-link {
-	padding: 0 7px 0 13px;
-}
 #ds-trail .first-link.last-link {
-	padding: 0 7px 0 7px;
+	padding: 0 7px;
 }
 #ds-trail .hint {
 	background: url(../../images/hint-arrow.png) 2% bottom no-repeat;
 	bottom: 28px;
-	color: #434343;
+	color: #444;
 	display: none;
 	float: left;
 	font-size: 11px;
@@ -690,6 +707,7 @@ input[name=starts_with] {
 	padding-bottom: 5px;
 	position: absolute;
 	text-shadow: none;
+	z-index: 999;
 }
 #ds-trail .hint span {
 	background: url(../../images/white-80.png);
@@ -742,8 +760,10 @@ input[name=starts_with] {
 	border: 0;
 	box-shadow: none;
 	height: 28px;
-	margin-left: -32px;
 	min-width: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
 	text-indent: -9999px;
 	width: 28px;
 }
@@ -901,6 +921,9 @@ form a[href$="/advanced-search"]:hover,
 	padding: 27px 20px 60px;
 	width: 720px;
 }
+#content h1 {
+	color: #5C739F;
+}
 /*
 #content > div {
 	margin: -11px 0 20px;
@@ -933,7 +956,6 @@ form a[href$="/advanced-search"]:hover,
 	margin: 0 0 18px 0;
 }
 #nav .ds-simple-list li {
-	/*background: url(../../images/nav-line.png) left bottom no-repeat;*/
 	border-bottom: 1px solid #ccc;
 }
 #nav a,
@@ -941,8 +963,8 @@ form a[href$="/advanced-search"]:hover,
 	background: url(../../images/icons.png) 7px -501px no-repeat;
 	display: block;
 	font-weight: bold;
-	padding: 9px 10px 8px 34px;
-	width: 176px;
+	padding: 9px 10px 8px 32px;
+	width: 178px;
 }
 #userbox ul a {
 	width: auto;
@@ -991,22 +1013,6 @@ form a[href$="/advanced-search"]:hover,
 }
 .ds-simple-list .ds-simple-list {
 	margin-left: 18px;
-}
-
-/* Linkstyle
----------------------------------------------------------------------------*/
-
-a {
-	color: #163776;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-	text-shadow: 0 0 5px rgba(255,255,255,.8);
-}
-a[target=_blank] {
-	padding-left: 20px;
-	background: url(../../images/icons.png) 0 -546px no-repeat;
 }
 
 /* Original DSpace Styles (TODO: Delete redundant styles)
@@ -1085,7 +1091,7 @@ li.button.disabled input {
 .administrative .ds-form-list input.ds-text-field,
 textarea.ds-textarea-field,
 .customfile {
-	width: 503px;
+	width: 500px;
 }
 table textarea.ds-textarea-field {
 	width: 426px;
@@ -1412,8 +1418,8 @@ div.vocabulary-container li.error {
 }
 .ds-artifact-list .ds-artifact-item {
 	display: block;
-	margin: 0 0 0 -20px;
-	padding: 9px 0 9px 20px;
+	margin: 0 -20px;
+	padding: 9px 20px;
 	position: relative;
 }
 .list-thumbnail-wrapper {
@@ -1451,6 +1457,7 @@ tr.odd {
 	width: 90px;
 	padding: 0 20px !important;
 	position: absolute;
+	white-space: nowrap;
 	top: 0;
 	z-index: 0;
 }
@@ -1532,10 +1539,10 @@ tr.odd {
 	width: 147px !important;
 }
 .publish a {
-	background: url(../../images/icons.png) no-repeat scroll 10px -249px transparent !important;
+	background: url(../../images/icons.png) no-repeat 10px -249px !important;
 }
 .file-link a {
-	background: url(../../images/icons.png) no-repeat scroll 10px -281px transparent !important;
+	background: url(../../images/icons.png) no-repeat 10px -281px !important;
 }
 .publish a:hover,
 .file-link a:hover {
@@ -1566,9 +1573,6 @@ tr.odd {
 .bold {
 	font-weight: bold;
 }
-.file-wrapper + .file-wrapper {
-	margin-top: 20px;
-}
 p, 
 .ds-bulleted-list,
 .ds-ordered-list {
@@ -1583,11 +1587,30 @@ p,
 	list-style: decimal outside;
 	margin-left: 20px;
 }
+.simple-item-view-bookmark,
+.embargo-info {
+	background: url(../../images/noise.png);
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	clear: both;
+	margin: 13px 0 -5px;
+	padding: 4px 6px;
+	text-shadow: 0 1px 0 #fff;
+}
+.simple-item-view-bookmark p,
+.embargo-info p {
+	background: url(../../images/icons.png) no-repeat 0 -607px;
+	font-weight: bold;
+	margin: 0;
+	padding-left: 20px;
+}
+.embargo-info p {
+	background-position: 0 -575px;
+}
 
-/* Landing Page
+/* Frontpage
 ---------------------------------------------------------------------------*/
 #file_news_div_news .ds-ordered-list {
-	color: #5C739F;
 	list-style: none;
 	margin-left: 0;
 }
@@ -1726,13 +1749,8 @@ li.ds-form-item .ds-form-label {
 	position: relative;
 	top: 5px;
 }
-li.ds-form-item label.ds-composite-component {
-	display: block;
-	float: left;
-	margin-right: 6px;
-}
 select#aspect_submission_submit_SelectCollectionStep_field_handle {
-	max-width: 350px;
+	max-width: 300px;
 }
 #aspect_submission_StepTransformer_field_dc_date_issued_year,
 #aspect_submission_StepTransformer_field_dc_date_issued_day {
@@ -1907,7 +1925,7 @@ ul.ds-progress-list li.disabled input.ds-button-field
 	box-shadow: none;
 }
 .ds-composite-component input {
-	width: 240px !important;
+	width: 239px !important;
 }
 #aspect_submission_StepTransformer_field_dc_affiliation_dateOfBirth_year,
 #aspect_submission_StepTransformer_field_dc_affiliation_dateOfBirth_day,
@@ -1940,8 +1958,13 @@ ul.ds-progress-list li.disabled input.ds-button-field
 	background-color: #c22121;
 	padding: 2px 0 2px 30px;
 }
+#aspect_submission_StepTransformer_list_submit-describe .ds-form-item label.ds-composite-component {
+	display: block;
+	float: left;
+	margin-right: 6px;
+}
 #aspect_submission_StepTransformer_list_submit-review .ds-form-content fieldset { /* license */
-	background: none repeat scroll 0 0 #666666;
+	background: none repeat scroll 0 0 #666;
 	border: 1px solid #FFFFFF;
 	border-radius: 5px 5px 5px 5px;
 	color: #FFFFFF;
@@ -2037,17 +2060,12 @@ a[href ^="http://creativecommons.org/licenses/by-sa/"] {
 #aspect_discovery_SimpleSearch_list_primary-search .ds-form-content {
 	width: auto;
 }
-#aspect_discovery_SimpleSearch_list_primary-search .ds-form-item.last,
-#aspect_discovery_SimpleSearch_item_search-filter-list .last {
+#aspect_discovery_SimpleSearch_list_primary-search .ds-form-item.last {
 	margin: 0 0 0 5px;
 }
 #aspect_discovery_SimpleSearch_field_scope,
 #aspect_discovery_SimpleSearch_field_filtertype {
 	width: 250px;
-}
-
-.ds-add-button {
-	margin-left: 5px;
 }
 #aspect_artifactbrowser_CommunitySearch_div_community-search a[href$="/advanced-search"],
 #aspect_artifactbrowser_CollectionSearch_div_collection-search a[href$="/advanced-search"] {
@@ -2056,7 +2074,6 @@ a[href ^="http://creativecommons.org/licenses/by-sa/"] {
 	bottom: -1px;
 	position: absolute;
 	right: -1px;
-	box-shadow: inset 1px 5px rgba(0,0,0,.5);
 }
 #aspect_artifactbrowser_ConfigurableBrowse_div_browse-navigation {
 /*	padding-bottom: 47px;*/
@@ -2100,22 +2117,28 @@ input[size="6"] {
 /* IE 7 Fixes
 ---------------------------------------------------------------------------*/
 /* min-width cuts buttons in IE7, so remove it */
-*:first-child+html input[type=submit] {
+.ie7 input[type=submit] {
 	min-width: auto;
 }
 /* replacement for the inline-block display (that only works due to incorrect rendering in IE7) */
-*:first-child+html .browse li {
+.ie7 .browse li {
 	display: inline;
 }
-*:first-child+html #topbox .ds-button-field {
+.ie7 #topbox .ds-button-field {
 	position: absolute;
 	right: 0;
 	text-transform: capitalize; /* IE 7 */
 	top: 0; /* Chrome and others */
 }
 /* breadcrumbs position too low */
-*:first-child+html #ds-trail {
+.ie7 #ds-trail {
 	bottom: 7px;
+}
+.ie7 .ds-form-item {
+	float: none;
+}
+.ie7 .spacer {
+	clear: both;
 }
 
 /* Addons by MH (unsorted) ;p
@@ -2124,30 +2147,12 @@ input[size="6"] {
 #aspect_artifactbrowser_ConfigurableBrowse_div_browse-controls {
 	display: none;
 }
-
-#aspect_artifactbrowser_ConfigurableBrowse_div_browse-navigation p:nth-child(2) {
-	display: none; /* Does not work in IE7 (and maybe 8), please check */
-}
-
 #aspect_artifactbrowser_CommunityViewer_div_community-browse h2,
 #aspect_artifactbrowser_CommunityViewer_list_community-browse,
 #aspect_artifactbrowser_CollectionViewer_div_collection-browse h2,
 #aspect_artifactbrowser_CollectionViewer_list_collection-browse {
 	display: block;
 }
-
-.simple-item-view-bookmark {
-	background: url(../../images/noise.png);
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	margin: 13px 0 -5px;
-	padding: 4px 6px;
-	text-shadow: 0 1px 0 #fff;
-}
-.simple-item-view-bookmark span.bold {
-	width: 193px;
-}
-
 #aspect_eperson_EditProfile_list_memberships {
 	display: none;
 }

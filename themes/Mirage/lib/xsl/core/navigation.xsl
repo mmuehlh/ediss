@@ -44,6 +44,8 @@
     <xsl:template match="dri:options">
         <div id="nav">
 
+			<a class="navlink bottom" href="#top">▲ <i18n:text>xmlui.dri2xhtml.structural.content-link</i18n:text></a>
+			
 			<div class="publish">
 				<xsl:choose>
 					<xsl:when test="contains(//dri:metadata[@element='request'][@qualifier='URI'], 'submit')">

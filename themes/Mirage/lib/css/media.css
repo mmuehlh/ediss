@@ -5,6 +5,10 @@
  *
  * http://www.dspace.org/license/
  */
+ 
+/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)
+   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+  
 /*
  * Media queries for responsive design
  */
@@ -25,12 +29,8 @@
 	#footer,
 	#content-wrapper,
 	#ds-trail {
-		min-width: auto;
-		width: auto;
-	}
-	#content-wrapper,
-	#footer-wrapper,
-	#footer {
+		min-width: 100%;
+		max-width: 100%;
 		width: 100%;
 	}
 	#content,
@@ -73,8 +73,18 @@
 		float: none;
 	}
 	.ds-progress-list {
-		margin-right: -20px;
-		width: auto;
+		border: 1px solid #ccc;
+		margin: 0;
+		width: 100%;
+	}
+	form.search .ds-form-content {
+		display: block;
+	}
+	#aspect_discovery_SimpleSearch_item_search-filter-list .ds-composite-component input {
+		margin-top: 18px;
+	}
+	#aspect_discovery_SimpleSearch_list_primary-search .ds-form-item.last {
+		margin: 0;
 	}
 	input[type="text"],
 	input[type="password"],
@@ -93,8 +103,20 @@
 		overflow: auto;
 		width: auto;
 	}
-	.ds-form-content input[type=submit] {
-		margin-top: 13px;
+	.ds-form-label {
+		top: 0 !important;
+	}
+	.previous-page-link,
+	.next-page-link {
+		width: 20px;
+		padding: 0 !important;
+		text-indent: -9999px;
+	}
+	.previous-page-link {
+		box-shadow: -2px 0 0 rgba(0,0,0,.1) inset;
+	}
+	.next-page-link {
+		box-shadow: 2px 0 0 rgba(0,0,0,.1) inset;
 	}
 }
 
@@ -119,6 +141,7 @@
 		width: auto;
 	}
 	#topbox {
+		background-position: -9999px 0;
 		width: auto;
 	}
 	#topbox .ds-text-field {
@@ -141,48 +164,34 @@
 		padding: 20px;
 		width: auto;
 	}
-	#footer-wrapper {
-		padding-bottom: 40px;
+	#nav a {
+		width: auto;
 	}
 	.publish {
 		margin: 0 auto 20px;
 	}
 	.navlink {
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.5);
 		color: #fff;
-		display: block;
-		position: fixed;
-		bottom: 0;
+		display: block !important;
 		font-weight: bold;
 		height: 40px;
 		line-height: 40px;
-		right: 0;
-		background: #000;
+		background: #444 !important;
+		padding: 0 !important;
+		text-align: center;
 		z-index: 999;
-		width: 100%;
 	}
-	.navlink a {
-		color: #fff;
-		float: left;
-		display: block;
-		max-width: 40%;
-		overflow: hidden;
-		padding: 0 12px;
-	}
-	.navlink a.right {
-		float: right;
+	.navlink.bottom {
+		margin: -20px -20px 18px;
 	}
 	.ds-form-label,
 	.ds-form-content {
 		float: none;
-		top: 0 !important;
 	}
 }
 
 @media screen and (max-width: 479px) {
-	#ds-trail,
-	.pagination-links li.page-link {
-		display: none;
-	}
 	.file-metadata span.bold,
 	.metadata span.bold {
 		width: 100%;
@@ -198,12 +207,22 @@
 		height: 100px;
 	}
 	#topbox {
-		background-position: 0 -120px;
-		background-size: 480px;
+		background-position: 0 -117px;
+		background-size: 470px;
 		position: relative;
+		padding-bottom: 40px;
 	}
 	#topbox .ds-text-field {
-		width: 78%;
+		width: 60%;
+	}
+	#topbox .ds-button-field {
+		background-position: center 0;
+		border: 1px solid #fff;
+		width: 20%;
+		right: 0;
+	}
+	#topbox .ds-button-field:hover {
+		background-position: center -28px;
 	}
 	#topbox label {
 		display: inline-block;
@@ -218,11 +237,6 @@
 		right: 0;
 		top: -90px;
 	}
-}
-
-/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)
-   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px) {
 	/* Prevent iOS, WinMobile from adjusting font size */
 	html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
 }

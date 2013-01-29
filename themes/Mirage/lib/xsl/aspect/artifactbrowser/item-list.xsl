@@ -138,7 +138,7 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </span>
-            <xsl:if test="dim:field[@element='date' and @qualifier='issued'] or dim:field[@element='publisher']">
+            <xsl:if test="dim:field[@element='date' and @qualifier='issued']">
                 <span class="bold"><i18n:text>xmlui.dri2xhtml.pioneer.date</i18n:text><xsl:text>:</xsl:text></span>
                 <span class="content" style="width: {$metadataWidth - 110}px;">
                     <xsl:value-of
@@ -234,15 +234,9 @@
                     </xsl:choose>
                 </span>
                 <xsl:text> </xsl:text>
-                <xsl:if test="dim:field[@element='date' and @qualifier='issued'] or dim:field[@element='publisher']">
+                <xsl:if test="dim:field[@element='date' and @qualifier='issued']">
 	                <span class="publisher-date">
 	                    <xsl:text>(</xsl:text>
-	                    <xsl:if test="dim:field[@element='publisher']">
-	                        <span class="publisher">
-	                            <xsl:copy-of select="dim:field[@element='publisher']/node()"/>
-	                        </span>
-	                        <xsl:text>, </xsl:text>
-	                    </xsl:if>
 	                    <span class="date">
 	                        <xsl:value-of select="substring(dim:field[@element='date' and @qualifier='issued']/node(),1,10)"/>
 	                    </span>

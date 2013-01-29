@@ -121,6 +121,11 @@
 
 			<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
 			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+			
+			<!-- TEST ONLY REMOVE BEFORE GOING LIVE
+			<meta http-equiv="cache-control" content="no-cache"/>
+			<meta http-equiv="pragma" content="no-cache"/>
+			/TEST ONLY -->
 
 			<!--  Mobile Viewport Fix
 				  j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
@@ -278,9 +283,6 @@
 			<xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title']" />
 			<title>
 				<xsl:choose>
-					<xsl:when test="starts-with($request-uri, 'page/about')">
-						<xsl:text>About This Repository</xsl:text>
-					</xsl:when>
 					<xsl:when test="not($page_title)">
 						<xsl:text>  </xsl:text>
 					</xsl:when>
@@ -288,6 +290,8 @@
 						<xsl:copy-of select="$page_title/node()" />
 					</xsl:otherwise>
 				</xsl:choose>
+				&#8211;
+				<i18n:text>xmlui.dri2xhtml.structural.head-subtitle</i18n:text>
 			</title>
 
 			<!-- Head metadata in item pages -->
@@ -310,11 +314,10 @@
 	<xsl:template name="buildHeader">
 		<div id="header-wrapper">
 			<div id="header">
-				<h1>
+				<h1 id="top">
 					<a id="logo">
 						<xsl:attribute name="href">
-							<xsl:value-of
-									select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+							<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
 							<xsl:text>/</xsl:text>
 						</xsl:attribute>
 						<xsl:choose>
@@ -331,11 +334,6 @@
 					</a>
 				</h1>
 				
-				<div class="navlink">
-					<a class="left" href="#content"><i18n:text>xmlui.dri2xhtml.structural.content-link</i18n:text></a>
-					<a class="right" href="#nav"><i18n:text>xmlui.dri2xhtml.structural.nav-link</i18n:text></a>
-				</div>
-
 				<div id="topbox">
 
 					<form id="searchbox" method="post">
@@ -395,7 +393,7 @@
 						<xsl:choose>
 							<xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
 								<p class="profile">
-									<span class="profileicon">&#160;</span>
+									<span class="profileicon">&#160; </span>
 									<!--<i18n:text>xmlui.dri2xhtml.structural.profile</i18n:text>-->
 									<span class="username">
 										<xsl:choose>
@@ -409,7 +407,7 @@
 											</xsl:otherwise>
 										</xsl:choose>
 									</span>
-									<span class="profilemore">&#160;</span>
+									<span class="profilemore">&#160; </span>
 								</p>
 								<ul>
 									<li>
@@ -560,6 +558,9 @@
 				<!--</div>-->
 
 			</div>
+			
+							<a class="navlink top" href="#nav"><i18n:text>xmlui.dri2xhtml.structural.nav-link</i18n:text> ▼</a>
+			
 		</div>
 
 	</xsl:template>

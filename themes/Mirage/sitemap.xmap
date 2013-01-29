@@ -179,7 +179,7 @@
                                 <map:transform type="NamespaceFilter" src="http://www.w3.org/2005/Atom"/>
 
 
-			<!--	<map:transform src="identitiy.xsl" /> -->
+				<map:transform src="identitiy.xsl" />
 				<!-- Step 5: Serialize to the browser -->
 				<map:serialize type="xhtml"/>
 

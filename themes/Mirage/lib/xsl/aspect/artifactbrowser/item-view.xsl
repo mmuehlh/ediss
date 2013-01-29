@@ -109,6 +109,19 @@
 			</xsl:otherwise>
 		</xsl:choose>
 
+		<!-- show embargo date if existent -->
+		<xsl:if test="//dim:field[@qualifier='embargoed']">
+			<div class="embargo-info">
+				<xsl:variable name="year"><xsl:value-of select="substring-before(//dim:field[@qualifier='embargoed'], '-')" /></xsl:variable>
+				<xsl:variable name="monthday"><xsl:value-of select="substring-after(//dim:field[@qualifier='embargoed'], '-')" /></xsl:variable>
+
+				<p>
+					<i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-embargoed1</i18n:text>
+					<xsl:value-of select="substring-after($monthday, '-')" /><xsl:text>.</xsl:text><xsl:value-of select="substring-before($monthday, '-')" /><xsl:text>.</xsl:text><xsl:value-of select="$year" />
+					<i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-embargoed2</i18n:text>
+				</p>
+			</div>
+		</xsl:if>
 		<!-- Generate the Creative Commons license information from the file section (DSpace deposit license hidden by default)-->
 		<xsl:apply-templates select="./mets:fileSec/mets:fileGrp[@USE='CC-LICENSE']"/>
 		<xsl:apply-templates select="$dim" mode="itemLicense-DIM" />
@@ -264,8 +277,8 @@
 		<!-- identifier.uri row -->
 		<xsl:if test="dim:field[@element='identifier' and @qualifier='uri']">
 			<div class="simple-item-view-bookmark">
-				<span class="bold"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-uri</i18n:text>:</span>
-				<span>
+				<p>
+					<i18n:text>xmlui.dri2xhtml.METS-1.0.item-uri</i18n:text>:
 					<xsl:for-each select="dim:field[@element='identifier' and @qualifier='uri']">
 						<a>
 							<xsl:attribute name="class">
@@ -280,7 +293,7 @@
 							<br/>
 						</xsl:if>
 					</xsl:for-each>
-				</span>
+				</p>
 			</div>
 		</xsl:if>
 	</xsl:template>
