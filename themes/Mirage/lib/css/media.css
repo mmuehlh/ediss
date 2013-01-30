@@ -173,10 +173,12 @@
 	.navlink {
 		box-shadow: inset 0 1px 2px rgba(0,0,0,.5);
 		color: #fff;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #666;
 		display: block !important;
 		font-weight: bold;
-		height: 40px;
-		line-height: 40px;
+		height: 38px;
+		line-height: 38px;
 		background: #444 !important;
 		padding: 0 !important;
 		text-align: center;
@@ -185,6 +187,12 @@
 	.navlink.bottom {
 		margin: -20px -20px 18px;
 	}
+	.navlink.juxt {
+		width: 50%;
+	}
+	.navlink.juxt.right {
+		float: right;
+	}
 	.ds-form-label,
 	.ds-form-content {
 		float: none;
@@ -192,7 +200,7 @@
 }
 
 @media screen and (max-width: 479px) {
-	.file-metadata span.bold,
+	.file-metadata span,
 	.metadata span.bold {
 		width: 100%;
 	}

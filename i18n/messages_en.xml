@@ -488,7 +488,7 @@
 	<message key="xmlui.Submission.general.mydspace_home">MyDiss Home</message>
 	<message key="xmlui.Submission.general.showfull">Show full item record</message>
 	<message key="xmlui.Submission.general.showsimple">Show simple item record</message>
-	<message key="xmlui.Submission.general.submission.complete">Complete submission</message>
+	<message key="xmlui.Submission.general.submission.complete">Complete submission with costs</message>
 	<message key="xmlui.Submission.general.submission.head">Item submission</message>
 	<message key="xmlui.Submission.general.submission.next">Next &gt;</message>
 	<message key="xmlui.Submission.general.submission.previous">&lt; Previous</message>
@@ -668,7 +668,7 @@
 	<message key="xmlui.Submission.submit.EditFileStep.format_default">Format not in list</message>
 	<message key="xmlui.Submission.submit.EditFileStep.info2">If the format is not in the above list, <strong>select "format not in list" above</strong> and describe the file's format in the box below.</message>
 	<message key="xmlui.Submission.submit.EditFileStep.format_user">Other Format</message>
-	<message key="xmlui.Submission.submit.EditFileStep.format_user_help">The application's name you used to create the file, and the version number (for example, "<i>ACMESoft SuperApp version 1.5</i>").</message>
+	<message key="xmlui.Submission.submit.EditFileStep.format_user_help">The application's name you used to create the file, and the version number (for example, “ACMESoft SuperApp version 1.5”).</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.ReviewStep -->
 	<message key="xmlui.Submission.submit.ReviewStep.head">Review Submission</message>
@@ -692,8 +692,8 @@
 	<message key="xmlui.Submission.submit.LicenseStep.info2">&#160;</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3">&#160;</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Distribution license</message>
-	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">I Grant the License</message>
-	<message key="xmlui.Submission.submit.LicenseStep.decision_error">You must grant this license to complete your submission. If you are unable to grant this license at this time you may save your work and return later or remove the submission by clicking the 'Save &amp; Exit' button below.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">I accept the license terms and the costs of making my work available onlinethe online delivery and I consent to an invoice being sent to my postal address.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.decision_error">You must accept this license to complete your submission. If you are unable to do so at this time you may save your work and return later or remove the submission by clicking the “Save &amp; Exit” button below.</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.RemovedStep -->
 	<message key="xmlui.Submission.submit.RemovedStep.head">Submission removed</message>
@@ -2056,6 +2056,7 @@
 
 	<message key="xmlui.general.language.de">German</message>
 	<message key="xmlui.general.language.en">English</message>
+	<message key="xmlui.general.language.other">Other Languages</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.referee">Browsing by Advisor</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.referee">Browsing by Advisor</message>

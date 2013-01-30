@@ -2056,6 +2056,7 @@
 
 	<message key="xmlui.general.language.de">Deutsch</message>
 	<message key="xmlui.general.language.en">Englisch</message>
+	<message key="xmlui.general.language.other">Weitere Sprachen</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.referee">Auflistung nach Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.referee">Auflistung nach Gutachter</message>

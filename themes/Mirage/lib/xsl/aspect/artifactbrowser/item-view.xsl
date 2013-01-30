@@ -130,6 +130,7 @@
 		<div class="metadata">
 			<xsl:apply-templates select="$dim" mode="itemAbstractGer-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemAbstractEng-DIM"/>
+			<xsl:apply-templates select="$dim" mode="itemAbstractOther-DIM"/>
 			<div class="spacer">&#160;</div>
 		</div>
 
@@ -141,52 +142,26 @@
 
 	<xsl:template match="dim:dim" mode="itemSummaryView-DIM">
 
-		<!-- <xsl:choose> -->
-
-		<!-- Abstract row -->
-		<!--<xsl:when test="(dim:field[@element='description' and @qualifier='abstract'] and string-length(dim:field[@element='description' and @qualifier='abstract']) &gt; 1)">
-				<div class="simple-item-view-description">
-					<h2><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h2>
-					<div>
-						<xsl:if test="count(dim:field[@element='description' and @qualifier='abstract']) &gt; 1">
-							<div class="spacer">&#160;</div>
-						</xsl:if>
-						<xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
-							<xsl:copy-of select="./node()"/>
-							<xsl:if test="count(following-sibling::dim:field[@element='description' and @qualifier='abstract']) != 0">
-								<div class="spacer">&#160;</div>
-								
-							</xsl:if>
-						</xsl:for-each>
-						<xsl:if test="count(dim:field[@element='description' and @qualifier='abstract']) &gt; 1">
-							<div class="spacer">&#160;</div>
-						</xsl:if>
-					</div>
-				</div>
-			</xsl:when> -->
-
 		<!-- Description row -->
-		<!-- <xsl:when test="dim:field[@element='description' and not(@qualifier)]">
-				<div class="simple-item-view-description">
-					<h3 class="bold"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-description</i18n:text>:</h3>
-					<div>
-						<xsl:if test="count(dim:field[@element='description' and not(@qualifier)]) &gt; 1 and not(count(dim:field[@element='description' and @qualifier='abstract']) &gt; 1)">
+		<!-- <xsl:if test="dim:field[@element='description' and not(@qualifier)]">
+			<div class="simple-item-view-description">
+				<h3 class="bold"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-description</i18n:text>:</h3>
+				<div>
+					<xsl:if test="count(dim:field[@element='description' and not(@qualifier)]) &gt; 1 and not(count(dim:field[@element='description' and @qualifier='abstract']) &gt; 1)">
+						<div class="spacer">&#160;</div>
+					</xsl:if>
+					<xsl:for-each select="dim:field[@element='description' and not(@qualifier)]">
+						<xsl:copy-of select="./node()"/>
+						<xsl:if test="count(following-sibling::dim:field[@element='description' and not(@qualifier)]) != 0">
 							<div class="spacer">&#160;</div>
 						</xsl:if>
-						<xsl:for-each select="dim:field[@element='description' and not(@qualifier)]">
-							<xsl:copy-of select="./node()"/>
-							<xsl:if test="count(following-sibling::dim:field[@element='description' and not(@qualifier)]) != 0">
-								<div class="spacer">&#160;</div>
-							</xsl:if>
-						</xsl:for-each>
-						<xsl:if test="count(dim:field[@element='description' and not(@qualifier)]) &gt; 1">
-							<div class="spacer">&#160;</div>
-						</xsl:if>
-					</div>
+					</xsl:for-each>
+					<xsl:if test="count(dim:field[@element='description' and not(@qualifier)]) &gt; 1">
+						<div class="spacer">&#160;</div>
+					</xsl:if>
 				</div>
-			</xsl:when> -->
-
-		<!-- </xsl:choose> -->
+			</div>
+		</xsl:if> -->
 
 	</xsl:template>
 
@@ -476,6 +451,29 @@
 				<span>
 					<xsl:value-of select="dim:field[@element='description' and @qualifier='abstracteng']" disable-output-escaping="yes"/>
 				</span>
+			</div>
+		</xsl:if>
+	</xsl:template>
+	
+	<xsl:template match="dim:dim" mode="itemAbstractOther-DIM">
+		<xsl:if test="(dim:field[@element='description' and @qualifier='abstract'] and string-length(dim:field[@element='description' and @qualifier='abstract']) &gt; 1)">
+			<div class="simple-item-view-description">
+				<h3><i18n:text>xmlui.general.language.other</i18n:text></h3>
+				<div>
+					<xsl:if test="count(dim:field[@element='description' and @qualifier='abstract']) &gt; 1">
+						<div class="spacer">&#160;</div>
+					</xsl:if>
+					<xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
+						<xsl:copy-of select="./node()"/>
+						<xsl:if test="count(following-sibling::dim:field[@element='description' and @qualifier='abstract']) != 0">
+							<div class="spacer">&#160;</div>
+							
+						</xsl:if>
+					</xsl:for-each>
+					<xsl:if test="count(dim:field[@element='description' and @qualifier='abstract']) &gt; 1">
+						<div class="spacer">&#160;</div>
+					</xsl:if>
+				</div>
 			</div>
 		</xsl:if>
 	</xsl:template>
@@ -785,6 +783,11 @@
 				</xsl:if>
 			</div>
 			<div class="file-link"><!-- style="max-height: {$thumbnail.maxheight}px;" -->
+				<xsl:if test="//dim:field[@qualifier='embargoed']">
+					<xsl:attribute name="class">
+						<xsl:text>file-link disabled</xsl:text>
+					</xsl:attribute>
+				</xsl:if>
 				<a>
 					<xsl:attribute name="href">
 						<xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>

@@ -122,11 +122,6 @@
 			<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
 			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 			
-			<!-- TEST ONLY REMOVE BEFORE GOING LIVE
-			<meta http-equiv="cache-control" content="no-cache"/>
-			<meta http-equiv="pragma" content="no-cache"/>
-			/TEST ONLY -->
-
 			<!--  Mobile Viewport Fix
 				  j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
 			device-width : Occupy full width of the screen in its current orientation
@@ -559,7 +554,7 @@
 
 			</div>
 			
-							<a class="navlink top" href="#nav"><i18n:text>xmlui.dri2xhtml.structural.nav-link</i18n:text> ▼</a>
+			<a class="navlink top" href="#nav"><i18n:text>xmlui.dri2xhtml.structural.nav-link</i18n:text> ▼</a>
 			
 		</div>
 
@@ -663,6 +658,10 @@
 	<!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
 	<xsl:template name="buildFooter">
 		<div id="footer-wrapper">
+		
+			<a class="navlink juxt right" href="#top"><i18n:text>xmlui.dri2xhtml.structural.content-link</i18n:text> ▲</a>
+			<a class="navlink juxt" href="#nav"><i18n:text>xmlui.dri2xhtml.structural.nav-link</i18n:text> ▲</a>
+		
 			<div id="footer">
 				<div id="footer-left">
 					<a>

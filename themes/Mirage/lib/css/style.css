@@ -1072,10 +1072,9 @@ ol {
 	margin: 0;
 	list-style: none;
 }
-.ds-button-field[disabled="disabled"],
-.ds-button-field.disabled,
-li.button.disabled input {
-	opacity: 0.35;
+.disabled,
+.ds-button-field[disabled="disabled"] {
+	opacity: .4;
 }
 .ie6 ul.ds-progress-list li.arrow {
 	height: 25px;
@@ -1241,6 +1240,10 @@ table.detailtable td {
 .simple-item-view-other {
 	width: 100%; /* IE 7 */
 }
+.file-metadata span {
+	float: left;
+	width: 300px;
+}
 .thumbnail-wrapper,
 .file-metadata {
 	float: left;
@@ -1267,13 +1270,9 @@ table.detailtable td {
 .file-metadata {
 	margin: 0 20px 18px 0;
 }
-.file-metadata span.bold {
-	float: left;
-}
 #ds-system-wide-alert,
 .notice {
 	padding: 10px;
-	margin: 10px 0;
 	border: 1px solid #bfc221;
 	background-color: #fffff2;
 }
@@ -1319,15 +1318,18 @@ form.discover-sort-box select{
 	font-size: 0;
 	line-height: 0;
 }
-.icon-button.arrowUp{
+.icon-button.arrowUp {
 	background-image: url(../../images/arrow_up_ffffff_16x16.png);
 	background-repeat: no-repeat;
 	background-position: center center;
 }
-.icon-button.arrowDown{
+.icon-button.arrowDown {
 	background-image: url(../../images/arrow_down_ffffff_16x16.png);
 	background-repeat: no-repeat;
 	background-position: center center;
+}
+.icon-button:hover {
+	background-position: center center !important;
 }
 /* FOR CC License */
 span.floatleft {
@@ -1484,7 +1486,7 @@ tr.odd {
 	line-height: 18px;
 	margin-bottom: 0;
 	text-align: center;
-	margin: 13px 0 14px;
+	padding: 0 0 13px;
 }
 .pagination-links li {
 	display: inline;
@@ -1596,6 +1598,9 @@ p,
 	margin: 13px 0 -5px;
 	padding: 4px 6px;
 	text-shadow: 0 1px 0 #fff;
+}
+.embargo-info {
+	margin-bottom: 26px;
 }
 .simple-item-view-bookmark p,
 .embargo-info p {
