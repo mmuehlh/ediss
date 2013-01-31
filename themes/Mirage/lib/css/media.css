@@ -225,11 +225,14 @@
 	}
 	#topbox .ds-button-field {
 		background-position: center 0;
-		border: 1px solid #fff;
-		width: 20%;
+		border: 1px solid #ccc;
+		height: 30px;
 		right: 0;
+		top: 0;
+		width: 20%;
 	}
 	#topbox .ds-button-field:hover {
+		background-color: #5172B0;
 		background-position: center -28px;
 	}
 	#topbox label {

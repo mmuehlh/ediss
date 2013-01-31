@@ -110,10 +110,10 @@
 		</xsl:choose>
 
 		<!-- show embargo date if existent -->
-		<xsl:if test="//dim:field[@qualifier='embargoed']">
+		<xsl:if test="//dim:field[@element='date'][@qualifier='embargoed']">
 			<div class="embargo-info">
-				<xsl:variable name="year"><xsl:value-of select="substring-before(//dim:field[@qualifier='embargoed'], '-')" /></xsl:variable>
-				<xsl:variable name="monthday"><xsl:value-of select="substring-after(//dim:field[@qualifier='embargoed'], '-')" /></xsl:variable>
+				<xsl:variable name="year"><xsl:value-of select="substring-before(//dim:field[@element='date'][@qualifier='embargoed'], '-')" /></xsl:variable>
+				<xsl:variable name="monthday"><xsl:value-of select="substring-after(//dim:field[@element='date'][@qualifier='embargoed'], '-')" /></xsl:variable>
 
 				<p>
 					<i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-embargoed1</i18n:text>
@@ -783,7 +783,7 @@
 				</xsl:if>
 			</div>
 			<div class="file-link"><!-- style="max-height: {$thumbnail.maxheight}px;" -->
-				<xsl:if test="//dim:field[@qualifier='embargoed']">
+				<xsl:if test="//dim:field[@element='date'][@qualifier='embargoed']">
 					<xsl:attribute name="class">
 						<xsl:text>file-link disabled</xsl:text>
 					</xsl:attribute>

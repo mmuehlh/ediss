@@ -214,7 +214,7 @@ input, select, button {
 }
 input[type=text], input[type=password], textarea {
 	cursor: text;
-	width: 236px;
+	width: 240px;
 }
 p, pre, address {
 	font-size: 13px;
@@ -295,12 +295,11 @@ select,
 textarea,
 .customfile {
 	background: #fff;
-	border-color: #ccc #818181 #818181 #ccc;
-	border-left: 5px solid #5C739F;
-	box-shadow: inset 0 0 2px #777;
+	border: 1px solid #5C739F;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.4);
 	border-radius: 3px;
 	font-size: 13px;
-	padding: 6px;
+	padding: 5px;
 	position: relative;
 }
 input:focus,
@@ -378,8 +377,6 @@ input#upload:hover { background: #eee; color: #111; border-color:#777; }
 	background: transparent;
 	border: 0;
 	opacity: 0;
-	/*-moz-opacity: 0;
-	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);*/
 	z-index: 999;
 }
 .customfile {
@@ -743,17 +740,16 @@ input[name=starts_with] {
 }
 #topbox .ds-text-field {
 	background: url(../../images/white-20.png);
-	border: 0;
-	border-left: 5px solid #fff;
 	color: #fff;
 	font-size: 16px;
 	height: 28px;
 	line-height: 28px;
 	padding: 0 33px 0 5px;
-	width: 177px;
+	width: 180px;
 }
 #topbox .ds-text-field:focus {
-	box-shadow: inset 0 0 2px #ddd;
+	border-color: #6C97EB;
+	box-shadow: 0 0 2px rgba(255,255,255,.5);
 }
 #topbox .ds-button-field {
 	background: url(../../images/search-submit.png) 0 0 no-repeat;
@@ -762,8 +758,8 @@ input[name=starts_with] {
 	height: 28px;
 	min-width: 0;
 	position: absolute;
-	right: 0;
-	top: 0;
+	right: 1px;
+	top: 1px;
 	text-indent: -9999px;
 	width: 28px;
 }
@@ -960,7 +956,7 @@ form a[href$="/advanced-search"]:hover,
 }
 #nav a,
 #userbox ul a {
-	background: url(../../images/icons.png) 7px -501px no-repeat;
+	background: url(../../images/icons.png) 7px -502px no-repeat;
 	display: block;
 	font-weight: bold;
 	padding: 9px 10px 8px 32px;
@@ -1008,7 +1004,6 @@ form a[href$="/advanced-search"]:hover,
 }
 #nav .ds-simple-list li:hover,
 #nav #aspect_eperson_Navigation_list_administrative a:hover {
-	/*background: url(../../images/nav-hover-bg.png) left top repeat-y;*/
 	background-color: #ddd;
 }
 .ds-simple-list .ds-simple-list {
@@ -1072,7 +1067,7 @@ ol {
 	margin: 0;
 	list-style: none;
 }
-.disabled,
+div.disabled,
 .ds-button-field[disabled="disabled"] {
 	opacity: .4;
 }
@@ -1930,7 +1925,7 @@ ul.ds-progress-list li.disabled input.ds-button-field
 	box-shadow: none;
 }
 .ds-composite-component input {
-	width: 239px !important;
+	width: 241px !important;
 }
 #aspect_submission_StepTransformer_field_dc_affiliation_dateOfBirth_year,
 #aspect_submission_StepTransformer_field_dc_affiliation_dateOfBirth_day,
@@ -2121,7 +2116,7 @@ input[size="6"] {
 
 /* IE 7 Fixes
 ---------------------------------------------------------------------------*/
-/* min-width cuts buttons in IE7, so remove it */
+/* min-width cuts buttons, so remove it */
 .ie7 input[type=submit] {
 	min-width: auto;
 }
@@ -2132,8 +2127,7 @@ input[size="6"] {
 .ie7 #topbox .ds-button-field {
 	position: absolute;
 	right: 0;
-	text-transform: capitalize; /* IE 7 */
-	top: 0; /* Chrome and others */
+	text-transform: capitalize;
 }
 /* breadcrumbs position too low */
 .ie7 #ds-trail {
@@ -2146,7 +2140,7 @@ input[size="6"] {
 	clear: both;
 }
 
-/* Addons by MH (unsorted) ;p
+/* Workarounds: hide some elements
 ---------------------------------------------------------------------------*/
 #aspect_discovery_SimpleSearch_div_search-controls,
 #aspect_artifactbrowser_ConfigurableBrowse_div_browse-controls {
