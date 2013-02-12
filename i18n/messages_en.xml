@@ -1807,7 +1807,7 @@
 
 	<message key="xmlui.dri2xhtml.structural.content-link">Top</message>
 	<message key="xmlui.dri2xhtml.structural.nav-link">Navigation</message>
-	
+
 	<!-- DS-METS-1.0-MODS.xsl -->
 	<!-- DS-METS-1.0-DIM.xsl -->
 	<!-- DS-METS-1.0-QDC.xsl -->
@@ -2292,10 +2292,10 @@
 							</ul>
 						</li>
 						<li>
-							<a href="#print">Deliver two printed copies of your work from us in the SUB</a>
+							<a href="#print">Deliver two printed copies of your work from us in the SUB.</a>
 						</li>
 						<li>
-							<a href="#bill">Pay the publication fee of € 25.00</a>
+							<a href="#bill">Pay the publication fee of € 25.00.</a>
 						</li>
 					</ul>
 				</li>
@@ -2329,15 +2329,18 @@
 
 			<h3 id="normal" class="ds-head">Non-cumulative Thesis</h3>
 			<p class="ds-paragraph">
-				The printed copies and the electronic version of your work should be <strong>identical</strong>.
-				<br />
+				The printed copies and the electronic version of your work should be <strong>identical</strong>.<br />
 				The printed version has to contain your curriculum vitae (CV). You can omit the CV in the electronic thesis. On this point alone, a difference between printed and electronic version is allowed.
 			</p>
 			<h3 id="cumulative" class="ds-head">Cumulative Thesis</h3>
 			<p class="ds-paragraph">The dissemination and acceptance of this form of the thesis varies from faculty to faculty. Please read your <a target="_blank" href="http://www.sub.uni-goettingen.de/elektronisches-publizieren/publizieren/dissertationen-abschlussarbeiten/promotionsordnungen-der-fakultaeten/">doctorate regulations</a> carefully and if necessary consult your examination.
 			</p>
 
-			<p>In a cumulative thesis several separate articles for jounrals or anthologies are combined into a dissertation. Are some of them already published, please check the rights situation with the respective Publisher. If you gave exclusive user rights to a Publisher, you may not need to embed the text of the relevant article in the electronic dissertation. 
+			<p>
+				In a cumulative thesis several separate articles for jounrals or anthologies are combined into a dissertation.
+				Are some of them already published, please check the rights situation with the respective Publisher. If you
+				gave exclusive user rights to a Publisher, you may not need to embed the text of the relevant article in the
+				electronic dissertation. 
 			</p>
 
 			<p class="ds-paragraph">
@@ -2361,7 +2364,9 @@
 
 			<h2 class="ds-div-head">The publication process</h2>
 			<h3 id="pdfCreate" class="ds-head">Create your dissertation as a PDF file</h3>
-			<p><a href="pdf-howto">Guide</a> to create your electronic thesis as <strong>one</strong> PDF File (rather than multiple individual files)</p>
+			<p>
+				<a href="pdf-howto">Guide</a> to create your electronic thesis as <strong>one</strong> PDF File (rather than multiple individual files)
+			</p>
 			<ul class="ds-bulleted-list">
 				<li>with clickable Contentss,</li>
 				<li>optimized for “fast Web view”,</li>
@@ -2382,13 +2387,23 @@
 				<br />
 				<br />As an authenticated user, you have the option to publish on eDiss, resume interrupted publications or in your profile subscibe to automatic notification via email about new releases in individual collections.
 				<br />
-				<br />For security reasons, we recommend to log out explicitly (not just close the browser) in the end of the session. To do this click on your name in the upper right box in the page header. There pops up a menu in which the item “Logout” is offered.</p>
-			<h3 id="workflow">Start the online publication process</h3>
-
-			<p class="ds-paragraph">
-				Click “Publish Now” in the main menu at the top left! You will see a drop down menu with the list of all eDiss collections. Please select the one in which you want to publish your work!			
+				<br />For security reasons, we recommend to log out explicitly (not just close the browser) in the end of the session. To do this click on your name in the upper right box in the page header. There pops up a menu in which the item “Logout” is offered.
 			</p>
 
+			<h3 id="workflow">Start the online publication process</h3>
+			<p class="ds-paragraph">There are to options for starting this process on eDiss:</p>
+			<ol class="ds-ordered-list">
+				<li>
+					Click “Publish Now” in the main menu at the top left. You will see a drop down menu with
+					the list of all eDiss collections. Please select the one in which you want to publish
+					your work.
+				</li>
+				<li>
+					Alternatively, you can first select a collection in the menu on the left by clicking
+					“Communities &amp; Collections”. Then click on “Publish here” and you will start directly with the
+					upload step.
+				</li>
+			</ol>
 			<p class="ds-paragraph">
 				<strong>PLEASE NOTE: </strong>With two exceptions, the collections correspond to the faculties of the University of Göttingen. The Philosophical and Social Science faculties are so large and heterogeneous that we had to split them into more collections. If you start a Publication in one of these areas, please look first to these collections to determine in which collection your work belongs!</p>
 			<p class="ds-paragraph">
@@ -2400,28 +2415,33 @@
 				<strong>PLEASE NOTE: </strong>The <strong>first</strong> uploaded file has to be your thesis as PDF. eDiss accepts only after that files in other formats!</p>
 			<p class="ds-paragraph">Uploading the first PDF file it will be automatically checked whether the document meets our requirements. This process can take some time depending on file size to complete. Please do not interrupt this process!<br />
 				<br />Then the results of the check are shown. If one of the requirements is not met, your document is <strong>rejected</strong>. in this case  please interrupt the publication process by clicking on "Save and continue later, correct your PDF file and then <a href="#resume">take back to the publication process</a>.<br />
-				Is your PDF document accepted, you can upload additional or to go to the next step with the "Next"-button.<br />
-				<br />When uploading the first PDF file, some metadata like title, author and keywords saved with the file are displayed in additon. These data are used e.g. by Google in the hit list of a search. Since this data is not used by eDiss, you are quite free to decide whether to apply corrections here. To change the data, delete the uploaded document by clicking the check mark next to the file name and cklick the "Remove Selected" button. Interrupt please the process and save the data. Then correct the metadata in your document and resume the publication process. <br /></p>
+				When your PDF document is accepted, you can upload additional or to go to the next step with the "Next"-button.<br />
+				<br />When uploading the first PDF file, some metadata like title, author and keywords saved with the file are displayed in additon. These data are used e.g. by Google in the hit list of a search. Since this data is not used by eDiss, you are quite free to decide whether to apply corrections here. To change the data, delete the uploaded document by clicking the check mark next to the file name and cklick the "Remove Selected" button. Interrupt please the process and save the data. Then correct the metadata in your document and resume the publication process.
+			</p>
+
 			<h3 id="describe" class="ds-head">2. Describe your Document</h3>
 			<p>
 				In this step you are asked to give additional information to your doctoral thesis. First some personal information (date of birth, address) are required. The birth date is necessary to identify your person. The given address we use as the billing address for the publication fee. <br />
-				All personal information, along with your e-mail address will be treated <strong>confidentially</strong> and not visible for user of eDISS!</p>
+				All personal information, along with your e-mail address will be treated <strong>confidentially</strong> and not visible for user of eDiss!
+			</p>
 			<p id="special" class="ds-paragraph">Further description information are used to describe your work. Please enter the required data (title, subtitle, summary, etc.). Title, keywords and abstract must be available in English. If your thesis is written in a different language, you will be asked to provide English translations of these particulars.<br />
 				<br />
-				<br />The last field, "Message to the editors" is optional and gives you the option to leave a message for the editors. For example, you can make a special request <a href="#embargo">to delay</a> the publication of your thesis. The content of this field is evaluated by our editors and not made public.
+				The last field, "Message to the editors" is optional and gives you the option to leave a message for the editors. For example, you can make a special request <a href="#embargo">to delay</a> the publication of your thesis. The content of this field is evaluated by our editors and not made public.
 				<br />
-				<br />Mandatory fields are marked with "*". You can only turn to the next step, if all mandatory fields are filled in.
+				Mandatory fields are marked with "*". You can only turn to the next step, if all mandatory fields are filled in.
 			</p>
+
 			<h3 id="proof" class="ds-head">3. Check the Document description</h3>
 			<p class="ds-paragraph">Here you will see all information collected in the previous step with the possibility of correction. Please read your inputs carefully and correct them if necessary!</p>
 			<h3 id="depositLicense" class="ds-head">4. Accept the publication contract</h3>
 			<p class="ds-paragraph">
 				To publish your thesis on eDiss, you must accept the terms of our contract.
 				In this contract you agree, among other things that users of eDiss are allowed to download, save and print
-				your document. The full agreement can be viewed <a href="/help/deposit-license">here</a>.
-
+				your document. The full agreement can be viewed
+				<a href="/help/deposit-license">here</a>.
 				<br />
-				<a href="/static/terms_of_contract_121207.pdf">Download contract as PDF</a></p>
+				<a href="/static/terms_of_contract_121207.pdf">Download contract as PDF</a>
+			</p>
 			<p class="ds-paragraph">
 				<strong>PLEASE NOTE: </strong>We alert you at this point once again, that upon completion of the online publication process <strong>no changes</strong> to your publication are possible.</p>
 			<h3 id="print" class="ds-head">Deliver two printed version of your work from us in the SUB</h3>
@@ -2446,24 +2466,39 @@
 				In some cases (e.g. the PDF file contains a malformed Contentss or the bill for the publication fee could not be sent because of incorrect information), it is possible that the editor rejects a publication. In this case, you will receive an email with the reason for the refusal. 
 			</p>
 			<h3 id="bill" class="ds-head">Pay the publication fee of € 25.00</h3>
-			<p class="ds-paragraph">You will receive an invoice with our bank details to the publication fee per port immediately after completion of the online publication process. We recommend you to pay the fee as soon as possible. So we can make your work publicaly available when the printed copies of your thesis have arrived. If you personally come also a cashless payment at our cash system is possible.<br />
-				<br />
-			 
-			<strong>The publication fee will be increased from 01.04.2013 to € 45.00!</strong>
+			<p class="ds-paragraph">
+				You will receive an invoice with our bank details to the publication fee per port immediately after completion
+				of the online publication process. We recommend you to pay the fee as soon as possible so we can make
+				your work publicaly available when the printed copies of your thesis have arrived.
+				If you personally come also a cashless payment at our cash system is possible.
 			</p>
-			
+			<p class="ds-paragraph">
+				<strong>The publication fee will be increased from 01.04.2013 to € 45.00!</strong>
+			</p>
 			<p id="embargo" class="ds-paragraph">
 				<strong>PLEASE NOTE: </strong>A delay of the publication of your electronic dissertation on eDiss is usually not possible. This would violate the doctoral regulations. Only in very exceptional cases (patent pending legal process) is on special request a delay in the publication possible.
 			</p>
-			<h2 class="ds-div-head">Interrupting the online publication process</h2>
-			<p id="break" class="ds-paragraph">You can interrupt the online publication process at any time with the button " Save and continue later". Then you have the option to save your current information in order to continue with it later or delete the unfinished final publication.</p>
+
+			<h2 id="break" class="ds-div-head">Interrupting the online publication process</h2>
+			<p  lass="ds-paragraph">
+				You can interrupt the online publication process at any time with the button “Save and continue later”.
+				Then you have the option to save your current information in order to continue with it later or delete the
+				unfinished final publication.
+			</p>
+
 			<h2 id="resume" class="ds-div-head">Resuming an interrupted publication process</h2>
 			<div class="ds-static-div">
-				<p>For authtenticated users there is an option "Submissions" in the menu on the left. By clicking on "Submissions" you get the list of all publications you ever made. Select here  please the publication you want to continue. So you come to the first step of the known online publication process.</p>
+				<p class="ds-paragraph">
+					For authtenticated users there is an option “Submissions” in the menu on the left. By clicking on
+					“Submissions” you get the list of all publications you ever made, then select the publication
+					you want to continue with.
+					You restart at the first step of the online publication process.
+				</p>
 				<p class="ds-paragraph"> 
 					To navigate inside the online publication process please use the navigation bar directly on the forms labeled with each step. When using the browser's forward and backward-button we can not guarantee error-free operation!
 				</p>
 			</div>
+
 			<h2 id="rejected" class="ds-div-head">My publication was rejected</h2>
 			<div class="ds-static-div">
 				<p class="ds-paragraph">This can happen in two places</p>
@@ -2473,10 +2508,10 @@
 				</ol>
 				<p class="ds-paragraph">If corrections on your PDF document are required, please do it first.  Then you can resume and finish the online publication process with the correct document. The publication was rejected on the basis of descriptive data, so you can <a href = "#resume" >turn back immediately the publishing process</a> again and correct the information.</p>
 				<p class="ds-paragraph">
-					<strong>PLEASE NOTE: </strong>Your uploaded document(s) and all previous given data are saved in the online publication process. So you do not have to enter data twice. However it is necesssary to accept our contract after every correction again.</p>
+					<strong>PLEASE NOTE: </strong>Your uploaded document(s) and all previous given data are saved in the online publication process. So you do not have to enter data twice. However it is necesssary to accept our contract after every correction again.
+				</p>
 			</div>
-			
-			
+
 			<h2 class="ds-head">Contentss</h2>
 			<ul class="ds-simple-list">
 				<li>
@@ -2536,15 +2571,61 @@
 
 	<!-- static page: PDF Guide -->
 	<message key="xmlui.static.help.pdf-guide">
-		<h2 class="ds-div-head">Instructions for creating PDF documents</h2>
+		<div class="ds-static-div">
+			<h2 class="ds-head">Contents</h2>
+			<ul class="ds-simple-list">
+				<li>
+					<a href="#hints">Hints for creating PDF documents</a>
+				</li>
+				<li>
+					<a href="#fromword">Create a PDF with Word</a>
+					<ul class="ds-simple-list">
+						<li>
+							<a href="#min">Requirements for the Word document</a>
+						</li>	
+						<li>
+							<a href="#makepdf">Creating PDF documents</a>
+							<ul class="ds-simple-list">
+								<li>
+									<a href="#adobepro">With Adobe Acrobat X Pro</a>
+								</li>
+								<li>
+									<a href="#freeware">With free PDF software</a>
+								</li>
+								<li>
+									<a href="#msword">With Microsoft Word</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#fromlatex">Create a PDF with LaTeX</a>
+				</li>
+				<li>
+					<a href="#fastweb">Optimize PDF for fast web view</a>
+				</li>
+				<li>
+					<a href="#imagescan">Scan and edit images</a>
+				</li>
+				<li>
+					<a href="#imagerights">Legal provisions when disseminating images</a>
+				</li>
+			</ul>
+		</div>
+		
+		<h2 class="ds-div-head" id="hints">Instructions for creating PDF documents</h2>
 		<div class="ds-static-div">
 			<p class="ds-paragraph">work must be available as <strong>one</strong> PDF File (rather than multiple indidual files).
-				Please create a PDF file with <strong>navigation controls</strong> so either with bookmarks (bookmarks) or with clickable Contentss. Please make sure that your PDF is <strong>“optimized for fast web view”</strong> nd do not use security settings.
-				<br />Files that do not meet these requirements, can not be published at eDiss.</p>
+				Please create a PDF file with <strong>navigation controls</strong> so either with bookmarks (bookmarks) or with clickable Contentss. Please make sure that your PDF is <strong>“optimized for fast web view”</strong> nd do not use security settings.<br />
+				Files that do not meet these requirements, can not be published at eDiss.
+			</p>
 			<p class="ds-paragraph">
-				<strong>PLEASE NOTE: </strong>If you do not want to publish your curriculum vitae in your electronic thesis, please remove this page from your PDF file before you submit it to us. At this point alone, a difference to the printed version of your dissertation is allowed.</p>
+				<strong>PLEASE NOTE: </strong>If you do not want to publish your curriculum vitae in your electronic thesis, please remove this page from your PDF file before you submit it to us. At this point alone, a difference to the printed version of your dissertation is allowed.
+			</p>
 		</div>
-		<h2 class="ds-div-head">Create PDF from Word</h2>
+		
+		<h2 class="ds-div-head" id="fromword">Create PDF from Word</h2>
 		<div class="ds-static-div">
 			<h3 class="ds-div-head">Minimum Requirements for Word documents</h3>
 			<div class="ds-static-div">
@@ -2555,7 +2636,7 @@
 					<a href="/help/good-to-know#cumulative">See the section “Cumulative Dissertations”.</a>
 				</p>
 			</div>
-			<h3 class="ds-div-head">Creating the PDF document</h3>
+			<h3 class="ds-div-head" id="makepdf">Creating the PDF document</h3>
 			<div class="ds-static-div">
 				<h4 class="ds-div-head">With Adobe Acrobat X Pro</h4>
 				<div class="ds-static-div">
@@ -2569,14 +2650,15 @@
 						<li>Save the settings please by clicking “OK”.</li>
 						<li>Now save your document. Finished!</li>
 					</ul>
+					<img class="screenshot" src="../themes/Mirage/images/acrobat-pro.jpg" alt="Screenshot Acrobat X" />
 				</div>
-				<h4 class="ds-div-head">With free PDF Software</h4>
+				<h4 class="ds-div-head" id="freeware">With free PDF Software</h4>
 				<div class="ds-static-div">
 					<p class="ds-paragraph">
 						Alternatively, you can install the free open-source software <a target="_blank" href="http://www.pdfforge.org/products/pdfcreator">PDFCreator</a>. With these programs, you can create PDF documents that meet all requirements of eDiss.
 					</p>
 				</div>
-				<h4 class="ds-div-head">With Microsoft Word</h4>
+				<h4 class="ds-div-head" id="msword">With Microsoft Word</h4>
 				<div class="ds-static-div">
 					<p class="ds-paragraph">Microsoft Word (up from version 2007) does offer the ability to create PDF files directly. However the created PDFs are notoptimized for "fast web view". For that a post-processing step is needed. In this case please follow the instractions:</p>
 				</div>
@@ -2592,10 +2674,27 @@
 				<img class="screenshot" src="../themes/Mirage/images/word10.jpg" alt="Screenshot Word" />
 			</p>
 			<ul class="ds-bulleted-list">
-				<li>Than click “OK” and “Save”.</li>
+				<li>Then click “OK” and “Save”.</li>
 			</ul>
-			<p>Now your PDF will be optiomized for fast web viewing.<br />
-				The easiest way is with the free Software <a target="_blank" href="http://get.adobe.com/de/reader/">Adobe Reader</a>.</p>
+			<p>
+				Now your PDF will be optiomized for fast web viewing.<br />
+				See section <a href="#fastweb">“Optimize for fast web view”</a> for details.
+			</p>
+		</div>
+			
+		<h2 class="ds-div-head" id="fromlatex">PDF from LaTeX documents</h2>
+		<div class="ds-static-div">
+			<p class="ds-paragraph">The simplest method is to use the <a target="_blank" href="http://www.texdocc.de/cgi-bin/texdocc/webhandler3.pl?function=proceedlogin&amp;login=gast&amp;passwd=gast&amp;continue=pruefen">TeXDocC</a> Service. Pack your TeX file with all components in a zip archive and upload it. The system compiles the file and returns a PDF file. For more information, see the information section on <a target="_blank" href="http://www.texdocc.de/">TEX Document Center</a>.</p>
+			<p class="ds-paragraph">You can use <a target="_blank" href="http://www.tug.org/applications/hyperref/manual.html">Hyperref</a> to create the clickable Contentss.</p>
+			<p class="ds-paragraph">For more help on dealing with LaTeX files see <a target="_blank" href="http://www.ub.tum.de/technische-hinweise">this Page</a> below.</p>
+		</div>
+			
+		<h2 class="ds-div-head" id="fastweb">Optimize for fast web view</h2>
+		<div class="ds-static-div">
+			<p>
+				The simplest way is to use the freely available
+				<a target="_blank" href="http://get.adobe.com/de/reader/">Adobe Reader</a>.
+			</p>
 			<ul class="ds-bulleted-list">
 				<li>Open your PDF file with Adobe Reader.</li>
 				<li>Verify that the presetting “optimized for fast web view” is active: 
@@ -2606,17 +2705,13 @@
 						<li>To save the settings, click “OK”.</li>
 					</ul>
 				</li>
-				<li>Now go to “File” in the top menu bar and select “Save as” and save your document. <br />
-					The recreated PDF file is now optimized for fast web view!</li>
-
+				<li>
+					Now go to “File” in the top menu bar and select “Save as” and save your document.<br />
+					The recreated PDF file is now optimized for fast web view.
+				</li>
 			</ul>
 		</div>
-		<h2 class="ds-div-head">PDF from LaTeX documents</h2>
-		<div class="ds-static-div">
-			<p class="ds-paragraph">The simplest method is to use the <a target="_blank" href="http://www.texdocc.de/cgi-bin/texdocc/webhandler3.pl?function=proceedlogin&amp;login=gast&amp;passwd=gast&amp;continue=pruefen">TeXDocC</a> Service. Pack your TeX file with all components in a zip archive and upload it. The system compiles the file and returns a PDF file. For more information, see the information section on <a target="_blank" href="http://www.texdocc.de/">TEX Document Center</a>.</p>
-			<p class="ds-paragraph">You can use <a target="_blank" href="http://www.tug.org/applications/hyperref/manual.html">Hyperref</a> to create the clickable Contentss.</p>
-			<p class="ds-paragraph">For more help on dealing with LaTeX files see <a target="_blank" href="http://www.ub.tum.de/technische-hinweise">this Page</a> below.</p>
-		</div>
+
 		<h2 class="ds-div-head">Scanning and editing images</h2>
 		<div class="ds-static-div">
 			<p class="ds-paragraph">With an image editing program you can edit scanned image files. The often used scanning programs are usually sufficient.</p>
@@ -2648,23 +2743,31 @@
 			<a href="/static/License_ediss_de.pdf">PDF</a>
 		</div>
 		<div class="ds-static-div">
-			<p class="ds-paragraph">I herewith give permission to the University of Göttingen, represented by the Niedersächsische Staats- und Universitätsbibliothek Göttingen (SUB), to publish my work electronically according to the terms of contract mentioned below and to provide its open access on the Internet.
+			<p class="ds-paragraph">
+				I herewith give permission to the University of Göttingen, represented by the Niedersächsische
+				Staats- und Universitätsbibliothek Göttingen (SUB), to publish my work electronically according to the
+				terms of contract mentioned below and to provide its open access on the Internet.
 			</p>
 			<p class="ds-paragraph">
 				<em>1. Non-exclusive (basic) right to publish</em>
 			</p>
-			<p class="ds-paragraph">The University of Göttingen is granted the basic right to publish the thesis electronically on the Internet and to archive on its document server. In line with these basic utilization rights the SUB Göttingen is permitted to offer its users a cost-covering Print-on-Demand opportunity provided that no third-party rights are infringed. Further rights concerning the exploitation of the work remain with the author. The registration does not imply any legally binding claim to an electronic publication. 
-				Within these limits, users are allowed to download, to save or to print a small number of the online document for private or non commercial use only (§53 UrhG1).
-				The author herewith gives permission to license his work under the conditions of the Creative-Commons-
-				Licence 3.0 which allows the user to copy, distribute and transmit the work as long as it is attributed  in the manner specified by him.</p>
 			<p class="ds-paragraph">
-				<em>2. Rights of any third parties</em>
+				The University of Göttingen is granted the basic right to publish the thesis electronically on the Internet and to archive on its document server. In line with these basic utilization rights the SUB Göttingen is permitted to offer its users a cost-covering Print-on-Demand opportunity provided that no third-party rights are infringed. Further rights concerning the exploitation of the work remain with the author. The registration does not imply any legally binding claim to an electronic publication. 
+				Within these limits, users are allowed to download, to save or to print a small number of the online document for private or non commercial use only (§53 UrhG1).
+				The author herewith gives permission to license his work under the conditions of the Creative Commons Licence 3.0 which allows the user to copy, distribute and transmit the work as long as it is attributed  in the manner specified by him.
 			</p>
-			<p class="ds-paragraph">The author declares that by the publication of his resource and its components (for instance in case of cumulative emerging dissertation scripts) no rights of third parties are violated. The publisher dismisses the University of Göttingen from possible claims of third parties. The University of Göttingen is permitted to bar access to a publication if there is evidence that rights of third parties have been violated. In that case the University of Göttingen will contact the publisher immediately and inform him about the blocking of the access.</p>
+			<p class="ds-paragraph">
+				<em>2. Third party rights</em>
+			</p>
+			<p class="ds-paragraph">
+				The author declares that by the publication of his resource and its components (for instance in case of cumulative emerging dissertation scripts) no rights of third parties are violated. The publisher dismisses the University of Göttingen from possible claims of third parties. The University of Göttingen is permitted to bar access to a publication if there is evidence that rights of third parties have been violated. In that case the University of Göttingen will contact the publisher immediately and inform him about the blocking of the access.
+			</p>
 			<p class="ds-paragraph">
 				<em>3. Long term archiving and transformation into other formats</em>
 			</p>
-			<p class="ds-paragraph">The University of Göttingen is entitled to store the resource and its components in a long term archive and to convert it into other electronic and physical formats and to use them according to article 1 if necessary.</p>
+			<p class="ds-paragraph">
+				The University of Göttingen is entitled to store the resource and its components in a long term archive and to convert it into other electronic and physical formats and to use them according to article 1 if necessary.
+			</p>
 			<p class="ds-paragraph">
 				<em>4. Transfer to the Deutsche Nationalbibliothek</em>
 			</p>
@@ -2673,7 +2776,9 @@
 			<p class="ds-paragraph">
 				<em>5. Withdrawal of the declaration of consent</em>
 			</p>
-			<p class="ds-paragraph">A withdrawal of this declaration of consent is only possible with appeal to §42 UrhG (the work does not any longer comply with the author´s conviction). In this case the University of Göttingen is entitled to charge the author with any cost which is caused by this withdrawal.</p>
+			<p class="ds-paragraph">
+				A withdrawal of this declaration of consent is only possible with appeal to §42 UrhG (the work does not any longer comply with the author´s conviction). In this case the University of Göttingen is entitled to charge the author with any cost which is caused by this withdrawal.
+			</p>
 			<p class="ds-paragraph">
 				<strong>If the resource is a dissertation, state doctorate, master´s thesis, bachelor´s thesis or any other kind of qualification work at the University of Göttingen, the author confirms that the supplied data and printed versions are in accordance with the original form of the publication which has been approved by the department and that the appropriate institution has consented to the publication of the work. </strong>
 			</p>
@@ -2682,7 +2787,8 @@
 			</p>
 			<hr />
 			<p><strong>Doctoral candidates of medicine</strong></p>
-			<p class="ds-paragraph">I have received the invitation for my oral exam. I affirm to give notice immediately to the staff of Ediss at the SUB in case of any change in dates or if I have to  submit changes in my written doctoral thesis.
+			<p class="ds-paragraph">
+				I have received the invitation for my oral exam. I affirm to give notice immediately to the staff of Ediss at the SUB in case of any change in dates or if I have to  submit changes in my written doctoral thesis.
 			</p>
 			<p class="ds-paragraph"> 	
 				If I have not yet completed my State exam exam, I undertake eDiss employees promptly to inform, as soon as I have the exam and passed.
@@ -2707,7 +2813,7 @@
 					</li>
 				</ul>
 			</div>
-			
+
 			<div class="ds-static-div">
 				<h2 class="ds-div-head" id="parallel">May I publish my dissertation elsewhere after it has been published on eDiss?</h2>
 				<p class="ds-paragraph"><strong>Yes</strong>, you may put it on multiple websites (e.g. your personal homepage). We recommend linking to your document with the persistent identifier which your document got assigned on eDiss.
@@ -2715,7 +2821,7 @@
 				<p class="ds-paragraph">Our terms of contract require only simple and non-exclusive usage rights. You may grant other usage rights to other persons and legal entities, but you need to inform a future publisher about your work being already available open access on eDiss.
 				</p>
 			</div>
-			
+
 			<h2 id="benefits" class="ds-div-head">What are the benefits of the electronic publishing on eDiss?</h2>
 			<div class="ds-static-div">
 				<ul class="ds-bulleted-list">
@@ -2725,7 +2831,7 @@
 					<li>We register your dissertation by the Deutsche Nationalbibliothek (DNB). The DNB takes care for the permanent archiving of your work.</li>
 				</ul>
 			</div>
-			
+
 			<h2 id="change">Is it possibly to make changes to my dissertation after it has been published?</h2>
 			<div class="ds-static-div">
 				<p class="ds-paragraph">
@@ -2736,10 +2842,65 @@
 					According to German copyright law, a previously published document can only be withdrawn if there are important licensing and patent issues, or if the author's opinion on his subject has fundamentally changed (§ 42 UrhG). The withdrawal will be documented in the system and the message “This document has been withdrawn” will be displayed on the permanent URL.
 				</p>
 			</div>   
-			
+
 		</div>
 	</message>
 
+	<!-- Contact -->
+	<message key="xmlui.static.contact.head">You can contact us in various ways</message>
+	<message key="xmlui.static.contact.trail">Contact</message>
+	<message key="xmlui.static.contact">
+		<h2 class="ds-div-head">Do you have special requests regarding the publishment of your doctoral thesis?</h2>
+		<div class="ds-static-div">
+			<p class="ds-paragraph">During the <a href="/help/fullpublication#workflow">online publication process</a> you can leave a note for our editors. This enables us to easily assign your request to your thesis.</p>
+		</div>
+		<h2 class="ds-div-head">Do you have some questions or suggestions?</h2>
+		<div class="ds-static-div">
+			<p class="ds-paragraph">Please use our <a href="feedback">Online contact form</a>.</p>
+		</div>
+		<h2 class="ds-div-head">By phone or by e-mail</h2>
+		<div class="ds-static-div">
+			<p class="ds-paragraph">
+				<h3 class="ds-head">Eileen Degenhardt-Witte</h3>
+			</p>
+			<ul class="ds-simple-list">
+				<li>Tel: +49 551 39-5383</li>
+				<li>Fax: +49 551 39-22457</li>
+			</ul>
+			<p class="ds-paragraph">
+				<h3 class="ds-head">Norbert Herre</h3>
+			</p>
+			<ul class="ds-simple-list">
+				<li>Tel: +49 551 39-14671 oder +49 551 39-5383</li>
+				<li>Fax: +49 551 39-22457</li>
+			</ul>
+			<ul class="ds-simple-list">
+				<li>E-Mail: <a mailto="ediss@sub.uni-goettingen.de">ediss@sub.uni-goettingen.de</a></li>
+			</ul>
+		</div>
+		<h2 class="ds-div-head">In person</h2>
+		<div class="ds-static-div">
+			<ul class="ds-simple-list">
+				<li>Central Library</li>
+				<li>Second Floor left in the LRC, room 2.19</li>
+				<li>Tel.: 0551 / 39-5383</li>
+				<li>E-Mail: eDiss@sub.uni-goettingen.de</li>
+			</ul>
+			<p class="ds-paragraph">
+				<h3 class="ds-head">Opening hours:</h3>
+			</p>
+			<ul class="ds-simple-list">
+				<li>Monday to Friday from 10:00 to 12:00 h.</li>
+				<li>Appointments can also be made outside of these hours.</li>
+			</ul>
+		</div>
+		<h2 class="ds-div-head">Technical problems</h2>
+		<div class="ds-static-div">
+			<p class="ds-paragraph">With technical problems, please conatct our <a mailto="mmuehlh@sub.uni-goettingen.de">administrator</a> or use the <a href="feedback">Online contact form</a>!
+			</p>
+		</div>
+	</message>
+	
 	<!-- static page: impressum -->
 	<message key="xmlui.impressum.head">Impressum</message>
 	<message key="xmlui.static.impressum">
@@ -2803,6 +2964,7 @@
 		</div>
 	</message>
 
+	<!-- Vermutlich überflüssig, nochmal checken -->
 	<message key="xmlui.contact.head">You can contact us in various ways</message>
 	<message key="xmlui.home.contact.post">Via Mail:</message>
 	<message key="xmlui.home.contact.life">Personally:</message>
@@ -2822,56 +2984,6 @@
 	<message key="xmlui.contact.technik">Technical problems</message>
 	<message key="xmlui.contact.admin">With technical problems, please conatct our <a mailto="mmuehlh@sub.uni-goettingen.de">administrator</a> or use the <a href="feedback">Online contact form</a>!</message>
 	<message key="xmlui.help.workflow.head">Online Publikationsprozess</message>
-
-	<message key="xmlui.static.contact.head">You can contact us in various ways</message>
-        <message key="xmlui.static.contact">
-		<h2 class="ds-div-head">Do you have some questions or suggestions?</h2>
-		<div class="ds-static-div">
-			<p class="ds-paragraph">Please use our <a href="feedback">Online contact form</a>.</p>
-		</div>
-		<h2 class="ds-div-head">Via phone or e-Mail</h2>
-		<div class="ds-static-div">
-			<p class="ds-paragraph">
-				<h3 class="ds-head">Eileen Degenhardt-Witte</h3>
-			</p>
-			<ul class="ds-simple-list">
-				<li>Tel: +49 551 39-5383</li>
-				<li>Fax: +49 551 39-22457</li>
-			</ul>
-			<p class="ds-paragraph">
-				<h3 class="ds-head">Norbert Herre</h3>
-			</p>
-			<ul class="ds-simple-list">
-				<li>Tel: +49 551 39-14671 oder +49 551 39-5383</li>
-				<li>Fax: +49 551 39-22457</li>
-			</ul>
-			<ul class="ds-simple-list">
-				<li>E-Mail: <a mailto="ediss@sub.uni-goettingen.de">ediss@sub.uni-goettingen.de</a>
-				</li>
-			</ul>
-		</div>
- 		<h2 class="ds-div-head">Personally</h2>
-                <div class="ds-static-div">
-			<ul class="ds-simple-list">
-				<li>Central Library</li>
-				<li>Second Floor left in the LRC, room 2.19</li>
-				<li>Tel.: 0551 / 39-5383</li>
-			 	<li>E-Mail: eDiss@sub.uni-goettingen.de</li>
-			</ul>
-			<p class="ds-paragraph">
-				<h3 class="ds-head">Opening hours:</h3>
-			</p>
-			<ul class="ds-simple-list">
-				<li>Monday to Friday from 10:00 to 12:00 h.</li>
-				<li>Appointments can also be made outside of these hours.</li>
-			</ul>
-		</div>
-		<h2 class="ds-div-head">Technical problems</h2>
-		<div class="ds-static-div">
-			<p class="ds-paragraph">With technical problems, please conatct our <a mailto="mmuehlh@sub.uni-goettingen.de">administrator</a> or use the <a href="feedback">Online contact form</a>!
-			</p>
-		</div>
-	</message>
 
 	<!-- static page: cumulative dissertations -->
 	<message key="xmlui.static.cumulative.dissertations">
@@ -2915,5 +3027,15 @@
 	<message key="xmlui.test">Button test</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed1">This file is not freely accessible until </message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed2">.</message>
-	
+
+	<message key="xmlui.administrative.Navigation.context_confirm_postpone">Conf verzögert</message>
+	<message key="xmlui.administrative.Navigation.context_confirm_med">Conf: Mediziner</message>
+	<message key="xmlui.administrative.Navigation.context_confirm_med_examen">Conf: Medizinier + Examen</message>
+	<message key="xmlui.administrative.Navigation.context_confirm_abstract_ggnb">Conf: Abstract GGNB</message>
+
+	<message key="xmlui.item.type.magister">Magister thesis</message>
+	<message key="xmlui.item.type.master">Master thesis</message>
+	<message key="xmlui.item.type.habilitation">Habilitation</message>
+	<message key="xmlui.item.type.doctoral">Doctoral thesis</message>
+
 </catalogue>

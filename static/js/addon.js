@@ -51,9 +51,6 @@ $(function() {
 	});
 	$('#aspect_artifactbrowser_ConfigurableBrowse_field_update').hide();
 	
-	/* Style file input for submission upload */
-	$('#aspect_submission_StepTransformer_div_submit-upload .ds-file-field').customFileInput();
-	
 	/* Loading icon for file upload */
 	$('<img/>')[0].src = '/ediss/themes/Mirage/images/white-80.png';
 	$('<img/>')[0].src = '/ediss/themes/Mirage/images/loader.gif';
@@ -110,8 +107,6 @@ content_resize = function() {
 		items.eq(key).text( items.eq(key).text().replace(/[\s,-\.\/]+[^\s]+…*$/, '…') );
 		if ( item_text != items.eq(key).text() && !cut_items[key] ) cut_items[key] = item_text;
 	}
-	// Make sure trail is never too big
-	$('#ds-trail').height(28);
 	// Add hint div for truncated/removed elements, fade in on hover
 	for (i = -2; i < cut_items.length; i++) {
 		if (cut_items[i]) $('#ds-trail .ds-trail-link').eq(i).append('<div class="hint"><span>' + cut_items[i] + '</span></div>');
@@ -141,86 +136,3 @@ content_resize = function() {
 	});
 	
 }
-
-/**
- * --------------------------------------------------------------------
- * jQuery customfileinput plugin
- * Author: Scott Jehl, scott@filamentgroup.com
- * Copyright (c) 2009 Filament Group 
- * licensed under MIT (filamentgroup.com/examples/mit-license.txt)
- * --------------------------------------------------------------------
- */
-$.fn.customFileInput = function(){
-	//apply events and styles for file input element
-	var fileInput = $(this)
-		.addClass('customfile-input') //add class for CSS
-		.focus(function(){
-			upload.addClass('customfile-focus'); 
-			fileInput.data('val', fileInput.val());
-		})
-		.blur(function(){ 
-			upload.removeClass('customfile-focus');
-			$(this).trigger('checkChange');
-		 })
-		.bind('disable',function(){
-			fileInput.attr('disabled',true);
-			upload.addClass('customfile-disabled');
-		})
-		.bind('enable',function(){
-			fileInput.removeAttr('disabled');
-			upload.removeClass('customfile-disabled');
-		})
-		.bind('checkChange', function(){
-			if(fileInput.val() && fileInput.val() != fileInput.data('val')){
-				fileInput.trigger('change');
-			}
-		})
-		.bind('change',function(){
-			//get file name
-			var fileName = $(this).val().split(/\\/).pop();
-			//get file extension
-			var fileExt = 'customfile-ext-' + fileName.split('.').pop().toLowerCase();
-			//update the feedback
-			uploadFeedback
-				.text(fileName) //set feedback text to filename
-				.removeClass(uploadFeedback.data('fileExt') || '') //remove any existing file extension class
-				.addClass(fileExt) //add file extension class
-				.data('fileExt', fileExt) //store file extension for class removal on next change
-				.addClass('customfile-feedback-populated'); //add class to show populated state
-			//change text of button	
-			uploadButton.text('Ändern');	
-		})
-		.click(function(){ //for IE and Opera, make sure change fires after choosing a file, using an async callback
-			fileInput.data('val', fileInput.val());
-			setTimeout(function(){
-				fileInput.trigger('checkChange');
-			},100);
-		});
-		
-	//create custom control container
-	var upload = $('<div class="customfile"></div>');
-	//create custom control button
-	var uploadButton = $('<span class="customfile-button" aria-hidden="true">' + $('.browse-text.hidden').text() + '</span>').appendTo(upload);
-	//create custom control feedback
-	var uploadFeedback = $('<span class="customfile-feedback" aria-hidden="true">' + $('.none-selected-text.hidden').text() + '</span>').appendTo(upload);
-	
-	//match disabled state
-	if (fileInput.is('[disabled]')) {
-		fileInput.trigger('disable');
-	}
-	
-	//on mousemove, keep file input under the cursor to steal click
-	upload
-		.mousemove(function(e){
-			fileInput.css({
-				'left': e.pageX - upload.offset().left - fileInput.outerWidth() + 20, //position right side 20px right of cursor X)
-				'top': e.pageY - upload.offset().top - $(window).scrollTop() - 3
-			});	
-		})
-		.insertAfter(fileInput); //insert after the input
-	
-	fileInput.appendTo(upload);
-		
-	//return jQuery
-	return $(this);
-};

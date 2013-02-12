@@ -244,8 +244,8 @@
 	                </span>
                 </xsl:if>
             </div>
-            <xsl:if test="dim:field[@element = 'description' and @qualifier='abstract']">
-                <xsl:variable name="abstract" select="dim:field[@element = 'description' and @qualifier='abstract']/node()"/>
+            <xsl:if test="dim:field[@element = 'description' and @qualifier='abstracteng']">
+                <xsl:variable name="abstract" select="dim:field[@element = 'description' and @qualifier='abstracteng']/node()"/>
                 <div class="artifact-abstract">
                     <xsl:value-of select="util:shortenString($abstract, 220, 10)"/>
                 </div>

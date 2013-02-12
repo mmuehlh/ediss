@@ -644,9 +644,23 @@
 	</xsl:template>
 
 	<xsl:template name="itemType">
-		<span class="bold">
-			Dissertation
-		</span>
+                <span class="bold">
+                        <xsl:choose>
+                                <xsl:when test="contains(//dim:field[@element='type' and not(@qualifier)], 'magister')">
+                                        <i18n:text>xmlui.item.type.magister</i18n:text>
+                                </xsl:when>
+                                <xsl:when test="contains(//dim:field[@element='type' and not(@qualifier)], 'master')">
+                                        <i18n:text>xmlui.item.type.master</i18n:text>
+                                </xsl:when>
+                                <xsl:when test="contains(//dim:field[@element='type' and not(@qualifier)], 'habil')">
+                                        <i18n:text>xmlui.item.type.habilitation</i18n:text>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                        <i18n:text>xmlui.item.type.doctoral</i18n:text>
+                                </xsl:otherwise>
+                        </xsl:choose>
+                </span>
+
 	</xsl:template>
 
 	<!--dont render the item-view-toggle automatically in the summary view, only when it get's called-->

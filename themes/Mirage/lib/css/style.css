@@ -920,6 +920,35 @@ form a[href$="/advanced-search"]:hover,
 #content h1 {
 	color: #5C739F;
 }
+
+#sub {
+	width: 1100px;
+	padding-left: 75px;
+	border: 0;
+}
+
+h1.confirm {
+	font-size: 1.3em;
+	color: #000;
+}
+
+p.publication {
+	font-size: 1.1em;
+	padding-bottom: 8px;
+}
+
+p.text {
+	padding-top: 10px;
+}
+.sign td {
+	line-height: 8px;
+	padding: 0 0 9px 20px;
+	vertical-align: top;
+}
+
+div.confirm {
+	padding-top: 100px;
+}
 /*
 #content > div {
 	margin: -11px 0 20px;

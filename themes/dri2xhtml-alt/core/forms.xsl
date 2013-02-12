@@ -682,9 +682,9 @@
         <xsl:if test="not(position()=1)">
             <xsl:text>, </xsl:text>
         </xsl:if>
-        <xsl:for-each select="dri:instance[position()=$position]/dri:value[@type='option']">
-            <!--<input type="hidden" name="{concat(@n,'_',$position)}" value="{../../dri:option[@returnValue = current()/@option]}"/>-->
-        </xsl:for-each>
+        <!-- <xsl:for-each select="dri:instance[position()=$position]/dri:value[@type='option']">
+            <input type="hidden" name="{concat(@n,'_',$position)}" value="{../../dri:option[@returnValue = current()/@option]}"/>
+        </xsl:for-each> -->
         <xsl:choose>
             <xsl:when test="dri:instance[position()=$position]/dri:value[@type='interpreted']">
                 <span class="ds-interpreted-field"><xsl:apply-templates select="dri:instance[position()=$position]/dri:value[@type='interpreted']" mode="interpreted"/></span>
