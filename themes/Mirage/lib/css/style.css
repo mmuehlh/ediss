@@ -653,7 +653,6 @@ input[name=starts_with] {
 	right: 0;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
 	list-style-type: none;
-	overflow: hidden;
 	width: 760px;
 }
 /*#ds-trail-hint {

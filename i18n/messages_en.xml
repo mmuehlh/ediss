@@ -3028,11 +3028,13 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed1">This file is not freely accessible until </message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed2">.</message>
 
+	<message key="xmlui.administrative.Navigation.context_confirm_default">Conf: default</message>
 	<message key="xmlui.administrative.Navigation.context_confirm_postpone">Conf verzögert</message>
 	<message key="xmlui.administrative.Navigation.context_confirm_med">Conf: Mediziner</message>
 	<message key="xmlui.administrative.Navigation.context_confirm_med_examen">Conf: Medizinier + Examen</message>
 	<message key="xmlui.administrative.Navigation.context_confirm_abstract_ggnb">Conf: Abstract GGNB</message>
 
+	
 	<message key="xmlui.item.type.magister">Magister thesis</message>
 	<message key="xmlui.item.type.master">Master thesis</message>
 	<message key="xmlui.item.type.habilitation">Habilitation</message>

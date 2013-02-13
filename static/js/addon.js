@@ -76,7 +76,6 @@ content_resize = function() {
 	// Restore profile and trail before truncation
 	if ( typeof username_bak !== 'undefined' ) { $('.username').html( username_bak ); }
 	if ( typeof trail_bak !== 'undefined' ) { $('#ds-trail').html( trail_bak ); }
-	$('#ds-trail').height('auto');
 	
 	/* Trail */
 	// Cut trail if too long and if there are still untruncated items

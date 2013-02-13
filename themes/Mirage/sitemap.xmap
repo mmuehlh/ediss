@@ -10,17 +10,17 @@
 -->
 <map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
 
-    <map:components>
-        <map:readers>
-            <map:reader name="ConcatenationReader" src="org.dspace.app.xmlui.cocoon.ConcatenationReader"/>
-        </map:readers>
-	<map:selectors>
-		<map:selector name="AuthenticatedSelector" src="org.dspace.app.xmlui.aspect.general.AuthenticatedSelector"/>
-	</map:selectors>
-    </map:components>
+	<map:components>
+		<map:readers>
+			<map:reader name="ConcatenationReader" src="org.dspace.app.xmlui.cocoon.ConcatenationReader"/>
+		</map:readers>
+		<map:selectors>
+			<map:selector name="AuthenticatedSelector" src="org.dspace.app.xmlui.aspect.general.AuthenticatedSelector"/>
+		</map:selectors>
+	</map:components>
 
-    <map:pipelines>
-		
+	<map:pipelines>
+
 
 		<!--
 			Define global theme variables that are used later in this
@@ -35,7 +35,7 @@
 				<theme-path>Mirage</theme-path>
 				<theme-name>Mirage</theme-name>
 			</global-variables>
-        </map:component-configurations>
+		</map:component-configurations>
 
 
 
@@ -45,22 +45,22 @@
 
 
 
-            <!-- handle static js and css -->
-            <map:match pattern="themes/*/**.js">
-                    <map:read type="ConcatenationReader" src="{2}.js">
-                        <map:parameter name="requestQueryString" value="{request:queryString}"/>
-                    </map:read>
-            </map:match>
-            <map:match pattern="themes/*/**.css">
-                    <map:read type="ConcatenationReader" src="{2}.css">
-                        <map:parameter name="requestQueryString" value="{request:queryString}"/>
-                    </map:read>
-            </map:match>
-            <map:match pattern="themes/*/**.json">
-                    <map:read type="ConcatenationReader" src="{2}.json">
-                        <map:parameter name="requestQueryString" value="{request:queryString}"/>
-                    </map:read>
-            </map:match>
+			<!-- handle static js and css -->
+			<map:match pattern="themes/*/**.js">
+				<map:read type="ConcatenationReader" src="{2}.js">
+					<map:parameter name="requestQueryString" value="{request:queryString}"/>
+				</map:read>
+			</map:match>
+			<map:match pattern="themes/*/**.css">
+				<map:read type="ConcatenationReader" src="{2}.css">
+					<map:parameter name="requestQueryString" value="{request:queryString}"/>
+				</map:read>
+			</map:match>
+			<map:match pattern="themes/*/**.json">
+				<map:read type="ConcatenationReader" src="{2}.json">
+					<map:parameter name="requestQueryString" value="{request:queryString}"/>
+				</map:read>
+			</map:match>
 
 			<!-- Static content -->
 			<map:match pattern="themes/*/**">
@@ -127,31 +127,30 @@
 
 				<!-- Step 2 Add page metadata -->
 
-                <!--3 different IncludePageMeta transformers to ensure that the
+				<!--3 different IncludePageMeta transformers to ensure that the
                 stylesheets end up in the correct order-->
-                <map:transform type="IncludePageMeta">
-                    <!--<map:parameter name="stylesheet.screen#1" value="lib/css/reset.css"/>
-                    <map:parameter name="stylesheet.screen#2" value="lib/css/base.css"/> -->
-                    <map:parameter name="stylesheet.screen#3" value="lib/css/helper.css"/>
-                    <map:parameter name="stylesheet.screen#4" value="lib/css/jquery-ui-1.8.15.custom.css"/>
-                    <map:parameter name="stylesheet.screen#5" value="lib/css/style.css"/>
-                    <map:parameter name="stylesheet.screen#6" value="lib/css/authority-control.css"/>
-                </map:transform>
-
-                <map:transform type="IncludePageMeta">
-                    <map:parameter name="stylesheet.handheld" value="lib/css/handheld.css"/>
+				<map:transform type="IncludePageMeta">
+					<!--
+					<map:parameter name="stylesheet.screen" value="lib/css/reset.css"/>
+                    <map:parameter name="stylesheet.screen" value="lib/css/base.css"/>
+					<map:parameter name="stylesheet.handheld" value="lib/css/handheld.css"/>
                     <map:parameter name="stylesheet.print" value="lib/css/print.css"/>
-                </map:transform>
+					-->
+					<map:parameter name="stylesheet.screen#1" value="lib/css/style.css"/>
+					<map:parameter name="stylesheet.screen#2" value="lib/css/helper.css"/>
+					<map:parameter name="stylesheet.screen#3" value="lib/css/jquery-ui-1.8.15.custom.css"/>
+					<map:parameter name="stylesheet.screen#4" value="lib/css/authority-control.css"/>					
+				</map:transform>
 
-		<map:act type="locale">
-                <map:transform type="IncludePageMeta">
-                    <map:parameter name="stylesheet.all" value="lib/css/media.css"/>
-                    <map:parameter name="javascript" value="lib/js/jquery-ui-1.8.15.custom.min.js"/>
-                    <map:parameter name="theme.path" value="{global:theme-path}"/>
-                    <map:parameter name="theme.name" value="{global:theme-name}"/>
-		    <map:parameter name="locale" value="{locale}"/>
-                </map:transform>
-		</map:act>
+				<map:act type="locale">
+					<map:transform type="IncludePageMeta">
+						<map:parameter name="stylesheet.all" value="lib/css/media.css"/>
+						<map:parameter name="javascript" value="lib/js/jquery-ui-1.8.15.custom.min.js"/>
+						<map:parameter name="theme.path" value="{global:theme-path}"/>
+						<map:parameter name="theme.name" value="{global:theme-name}"/>
+						<map:parameter name="locale" value="{locale}"/>
+					</map:transform>
+				</map:act>
 
 				<!-- Debuging output -->
 				<map:match type="request" pattern="XML">
@@ -160,7 +159,7 @@
 
 				<!-- Step 3: Transform to XHTML -->
 				<map:transform src="{global:theme-name}.xsl"/>
-			    <!-- <map:transform src="Mirage.xsl"/> -->
+				<!-- <map:transform src="Mirage.xsl"/> -->
 
 				<!-- Step 4: Localize the page -->
 				<map:act type="locale">
@@ -169,14 +168,14 @@
 					</map:transform>
 				</map:act>
 
-                               <!-- Remove any leftover i18n or dri namespaces from the final document -->
-                                <map:transform type="NamespaceFilter" src="http://di.tamu.edu/DRI/1.0/"/>
-                                <map:transform type="NamespaceFilter" src="http://apache.org/cocoon/i18n/2.1"/>
-                                <map:transform type="NamespaceFilter" src="org.dspace.app.xmlui.utils.XSLUtils"/>
-                                <map:transform type="NamespaceFilter" src="org.dspace.core.ConfigurationManager"/>
-                                <map:transform type="NamespaceFilter" src="http://www.openarchives.org/ore/atom/"/>
-                                <map:transform type="NamespaceFilter" src="http://www.openarchives.org/ore/terms/"/>
-                                <map:transform type="NamespaceFilter" src="http://www.w3.org/2005/Atom"/>
+				<!-- Remove any leftover i18n or dri namespaces from the final document -->
+				<map:transform type="NamespaceFilter" src="http://di.tamu.edu/DRI/1.0/"/>
+				<map:transform type="NamespaceFilter" src="http://apache.org/cocoon/i18n/2.1"/>
+				<map:transform type="NamespaceFilter" src="org.dspace.app.xmlui.utils.XSLUtils"/>
+				<map:transform type="NamespaceFilter" src="org.dspace.core.ConfigurationManager"/>
+				<map:transform type="NamespaceFilter" src="http://www.openarchives.org/ore/atom/"/>
+				<map:transform type="NamespaceFilter" src="http://www.openarchives.org/ore/terms/"/>
+				<map:transform type="NamespaceFilter" src="http://www.w3.org/2005/Atom"/>
 
 
 				<map:transform src="identitiy.xsl" />

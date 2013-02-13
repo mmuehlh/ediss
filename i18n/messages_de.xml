@@ -3028,10 +3028,12 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed1">Diese Datei wird erst ab dem </message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed2"> freigegeben.</message>
 
-	<message key="xmlui.administrative.Navigation.context_confirm_postpone">Conf verzögert</message>
+ 	<message key="xmlui.administrative.Navigation.context_confirm_default">Conf: normal</message>
+	<message key="xmlui.administrative.Navigation.context_confirm_postpone">Conf: verzögert</message>
 	<message key="xmlui.administrative.Navigation.context_confirm_med">Conf: Mediziner</message>
 	<message key="xmlui.administrative.Navigation.context_confirm_med_examen">Conf: Medizinier + Examen</message>
 	<message key="xmlui.administrative.Navigation.context_confirm_abstract_ggnb">Conf: Abstract GGNB</message>
+	
 
 	<message key="xmlui.item.type.magister">Magisterarbeit</message>
 	<message key="xmlui.item.type.master">Masterarbeit</message>
