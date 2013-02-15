@@ -488,7 +488,7 @@
 	<message key="xmlui.Submission.general.mydspace_home">Mein eDiss</message>
 	<message key="xmlui.Submission.general.showfull">Zur Langanzeige</message>
 	<message key="xmlui.Submission.general.showsimple">Zur Kurzanzeige</message>
-	<message key="xmlui.Submission.general.submission.complete">Veröffentlichung kostenpflichtig abschließen</message>
+	<message key="xmlui.Submission.general.submission.complete">Veröffentlichung abschließen</message>
 	<message key="xmlui.Submission.general.submission.head">Dokument veröffentlichen</message>	
 	<message key="xmlui.Submission.general.submission.next">Weiter →</message>
 	<message key="xmlui.Submission.general.submission.previous">← Zurück</message>
@@ -692,7 +692,8 @@
 	<message key="xmlui.Submission.submit.LicenseStep.info2">&#160;</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3">&#160;</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Lizenzbestimmung</message>
-	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">Ich akzeptiere die Lizenzbestimmungen, werde die Kosten für die Online-Bereitstellung übernehmen und willige ein, dass mir eine Rechnung an meine Postadresse zugeschickt wird.</message>
+<!--	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">Ich akzeptiere die Lizenzbestimmungen, werde die Kosten für die Online-Bereitstellung übernehmen und willige ein, dass mir eine Rechnung an meine Postadresse zugeschickt wird.</message> -->
+	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">Ich akzeptiere die Lizenzbestimmungen</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_error">Sie müssen die Lizenzbestimmung akzeptieren, um Ihre Veröffentlichung abzuschließen. Wenn Sie dies zum jetzigen Zeitpunkt nicht tun können, haben Sie die Möglichkeit Ihre Veröffentlichung zwischenzuspeichern, um sie später zu vollenden oder zu löschen, indem Sie auf „Speichern und später fortsetzen“ klicken.</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.RemovedStep -->
@@ -702,7 +703,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.CompletedStep -->
 	<message key="xmlui.Submission.submit.CompletedStep.head">Veröffentlichung abgeschlossen</message>	
-	<message key="xmlui.Submission.submit.CompletedStep.info1">Ihre Veröffentlichung ist noch nicht öffentlich sichtbar. Sie liegt der eDiss-Redaktion zum Freischalten vor. Sobald Sie uns zwei gedruckte Exemplare Ihrer Arbeit geliefert und die Publikationsgebühr bezahlt haben, wird Ihre Publikation veröffentlicht. Sie werden darüber per E-Mail informiert. Bei Rückfragen wenden sich unsere Redakteure per E-Mail an Sie. Den Bearbeitungsstand Ihrer Veröffentlichung können Sie als angemeldeter Nutzer unter „Veröffentlichungen“ einsehen.</message>	
+	<message key="xmlui.Submission.submit.CompletedStep.info1">Ihre Veröffentlichung ist noch nicht öffentlich sichtbar. Sie liegt der eDiss-Redaktion zum Freischalten vor. Sobald Sie uns zwei gedruckte Exemplare Ihrer Arbeit geliefert haben, wird Ihre Publikation veröffentlicht. Sie werden darüber per E-Mail informiert. Bei Rückfragen wenden sich unsere Redakteure per E-Mail an Sie. Den Bearbeitungsstand Ihrer Veröffentlichung können Sie als angemeldeter Nutzer unter „Veröffentlichungen“ einsehen.</message>	
 	<message key="xmlui.Submission.submit.CompletedStep.go_submission">Zur Veröffentlichungsseite</message>	
 	<message key="xmlui.Submission.submit.CompletedStep.submit_again">Ein weiteres Dokument veröffentlichen</message>		
 
@@ -2207,14 +2208,15 @@
 				<li>
 					<span class="help" id="step5">
 						<span class="icon">5</span>
-						<a href="/help/fullpublication#bill">Bezahlen Sie die Publikationsgebühr in Höhe von € 25,00.</a>
-						<span>Sie erhalten per Post eine Rechnung mit unseren Kontodaten.</span>
+						Ab dem 15.02.2013 ist unser Publikationsservice kostenlos.
+						<!-- <a href="/help/fullpublication#bill">Bezahlen Sie die Publikationskosten in Höhe von € 25,00. </a> 
+						<span>Ab 15.02.2013 entfallen die Publikationskosten!.</span> -->
 					</span>
-				</li>
+				</li> 
 				<li>
 					<span class="help" id="step6">
 						<span class="icon">6</span>
-						Fertig! Ihre Publikation wird von unseren Redakteuren freigeschaltet.
+						 <a href="/help/fullpublication#finished">Fertig! Ihre Publikation wird von unseren Redakteuren freigeschaltet.</a>
 						<span>Über die Veröffentlichung Ihrer Arbeit werden Sie per E-Mail benachrichtigt.</span>
 					</span>
 				</li>
@@ -2294,9 +2296,12 @@
 						<li>
 							<a href="#print">Liefern Sie uns zwei gedruckte Exemplare Ihrer Dissertation</a>
 						</li>
+						<!-- <li>
+							<a href="#bill">Bezahlen Sie die 25,00 € Publikationskosten.</a>
+						</li> -->
 						<li>
-							<a href="#bill">Bezahlen Sie die 25,00 € Publikationsgebühr.</a>
-						</li>
+                                                        <a href="#finished">Fertig! Ihre Publikation wird von unseren Redakteuren freigeschaltet.</a>
+                                                </li>
 					</ul>
 				</li>
 				<li>
@@ -2420,10 +2425,14 @@
 			</p>
 
 			<h3 id="describe" class="ds-head">2. Dokument beschreiben</h3>
-			<p>
-				In diesem Schritt werden in einem Formular zunächst Ihre persönlichen Daten (Geburtsdatum, Adresse) abgefragt. Das Geburtsdatum ist zur Identifikation Ihrer Person notwendig. Die angegebene Adresse verwenden wir als Rechnungsadresse für die Publikationsgebühr. <br />
+			<!-- <p>
+				In diesem Schritt werden in einem Formular zunächst Ihre persönlichen Daten (Geburtsdatum, Adresse) abgefragt. Das Geburtsdatum ist zur Identifikation Ihrer Person notwendig. Die angegebene Adresse verwenden wir als Rechnungsadresse für die Publikationskosten. <br />
 				Die persönlichen Angaben, zusammen mit Ihrer E-Mail-Adresse werden <strong>vertraulich</strong> behandelt und für die Besucher des eDiss-Servers nicht sichtbar!
-			</p>
+			</p> -->
+			<p>
+                                In diesem Schritt werden in einem Formular zunächst Ihre persönlichen Daten (Geburtsdatum, Adresse) abgefragt. Das Geburtsdatum ist zur Identifikation Ihrer Person notwendig. <br />
+                                Die persönlichen Angaben, zusammen mit Ihrer E-Mail-Adresse werden <strong>vertraulich</strong> behandelt und für die Besucher des eDiss-Servers nicht sichtbar!
+                        </p>
 			<p id="special" class="ds-paragraph">Weitere Felder des Formulars dienen dazu, Ihre Arbeit zu beschreiben. Geben Sie hier bitte die erforderlichen Informationen (Originaltitel, Untertitel, Zusammenfassung etc.) an. Titel, Schlüsselwörter und Zusammenfassung müssen in jedem Fall auf Englisch vorhanden sein. Falls Ihre Arbeit in einer anderen Sprache verfasst ist, werden Sie aufgefordert, englische Übersetzungen zu diesen Angaben zu liefern.<br />
 				<br />
 				Das letzte Formularfeld, "Nachricht für die Redakteure" ist optional und gibt Ihnen die Möglichkeit, eine Nachricht für die Redakteure zu hinterlassen. Beispielsweise können Sie hier einen <a href="#embargo">Sonderantrag zur Verzögerung</a> der Veröffentlichung Ihrer Publikation stellen. Der Inhalt dieses Feldes wird von unseren Redakteuren ausgewertet und nicht öffentlich sichtbar gemacht.
@@ -2460,12 +2469,18 @@
 				<li>Platz der Göttinger Sieben 1</li>
 				<li>37073 Göttingen</li>
 			</ul>
-			<p class="ds-paragraph">
-				Sobald die gedruckte Versionen Ihrer Arbeit bei uns angekommen sind, prüft die Redaktion Ihre elektronische Publikation und (sofern die Publikationsgebühr bezahlt ist) schalten wir sie frei. Ab dem Moment wird Ihre Dissertation öffentlich sichtbar und Sie werden über die Freischaltung in einer E-Mail informiert.
+			<!-- <p class="ds-paragraph">
+				Sobald die gedruckte Versionen Ihrer Arbeit bei uns angekommen sind, prüft die Redaktion Ihre elektronische Publikation und (sofern die Publikationskosten bezahlt ist) schalten wir sie frei. Ab dem Moment wird Ihre Dissertation öffentlich sichtbar und Sie werden über die Freischaltung in einer E-Mail informiert.
 				<br />
 				In einzelnen Fällen (z.B. das PDF Dokument enthält ein fehlerhaftes Inhaltsverzeichnis oder die Rechnung konnte wegen falscher Angaben nicht verschickt werden) kann es vorkommen, dass die Redaktion eine Publikation ablehnt. In diesem Fall erhalten Sie eine E-Mail mit der Begründung der Ablehnung.
-			</p>
-			<h3 id="bill" class="ds-head">Bezahlen Sie die 25,00 € Publikationsgebühr.</h3>
+			</p> -->
+			<h3 id="finished" class="ds-head">Fertig! Ihre Publikation wird von unseren Redakteuren freigeschaltet.</h3>
+			<p class="ds-paragraph">
+                                Sobald die gedruckte Versionen Ihrer Arbeit bei uns angekommen sind, prüft die Redaktion Ihre elektronische Publikation und schaltet sie frei. Ab dem Moment wird Ihre Dissertation öffentlich sichtbar und Sie werden über die Freischaltung in einer E-Mail informiert.
+                                <br />
+                                In einzelnen Fällen (z.B. die Beschreibung des Dokumentes enthält fehlerhafte Angaben) kann es vorkommen, dass die Redaktion eine Publikation ablehnt. In diesem Fall erhalten Sie eine E-Mail mit der Begründung der Ablehnung.
+                        </p>
+			<!-- <h3 id="bill" class="ds-head">Bezahlen Sie die 25,00 € Publikationskosten.</h3>
 			<p class="ds-paragraph">
 				Nach Abschluss des online Publikationsprozesses erhalten Sie per Post eine
 				Rechnung mit unseren Kontodaten. Wir empfehlen Ihnen die 25,00 € möglichst bald zu überweisen,
@@ -2473,8 +2488,8 @@
 				Wenn Sie persönlich vorbeikommen ist auch eine bargeldlose Zahlung an unseren Kassensystemen möglich.
 			</p>
 			<p class="ds-paragraph">
-				<strong>Ab 01.04.2013 wird die Publikationsgebühr auf 45 € erhöht!</strong>
-			</p>
+				<strong>Ab 01.04.2013 wird die Publikationskosten auf 45 € erhöht!</strong>
+			</p> -->
 			<p id="embargo" class="ds-paragraph">
 				<strong>BITTE BEACHTEN SIE: </strong>Eine Verzögerung der Publikation Ihrer elektronischen Dissertation auf eDiss ist nicht mehr möglich. Damit würde gegen die Promotionsordnung verstoßen. Nur in besonderen Ausnahmefällen (patentrechtliches Verfahren anhängig) ist auf Sonderantrag eine Verzögerung der Publikation möglich.
 			</p>
@@ -2551,9 +2566,12 @@
 						<li>
 							<a href="#print">Liefern Sie uns zwei gedruckte Exemplare Ihrer Dissertation</a>
 						</li>
+						<!-- <li>
+							<a href="#bill">Bezahlen Sie die 25,00 € Publikationskosten.</a>
+						</li> -->
 						<li>
-							<a href="#bill">Bezahlen Sie die 25,00 € Publikationsgebühr.</a>
-						</li>
+                                                        <a href="#finished">Fertig! Ihre Publikation wird von unseren Redakteuren freigeschaltet.</a>
+                                                </li>
 					</ul>
 				</li>
 				<li>

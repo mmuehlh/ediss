@@ -240,22 +240,6 @@
                         </map:select>
 		</map:pipeline>
 
-		 <map:pipeline>
-		<!-- create confirmation site -->
-		                        <map:select type="AuthenticatedSelector">
-                                <map:when test="eperson">
-                                        <map:match pattern="confirm-*/handle/*/*/">
-                                                <map:generate type="DSpaceMETSGenerator">
-                                                        <map:parameter name="handle" value="{2}/{3}"/>
-                                                <!--<map:parameter name="extra" value="{3}"/>-->
-                                                </map:generate>
-                                                <map:serialize type="xml"/>
-                                        </map:match>
-                                </map:when>
-                        </map:select>
-                </map:pipeline>
-
-
                 <!-- Bitstream pipeline -->
                 <map:pipeline type="noncaching">
                         <map:parameter name="outputBufferSize" value="8192"/>
@@ -519,19 +503,6 @@
                                         </map:match>
                                 </map:when>
                     </map:select>
-
-                    <map:select type="AuthenticatedSelector">
-                                <map:when test="eperson">
-                                        <map:match pattern="confirm-*/handle/*/*">
-                                                <map:generate type="DSpaceMETSGenerator">
-                                                        <map:parameter name="handle" value="{2}/{3}"/>
-                                                </map:generate>
-                                                <map:transform src="file://opt/dspace/ediss/config/crosswalks/confirm-{1}.xsl"/>
-                                                 <map:serialize type="xhtml"/>
-                                        </map:match>
-                                </map:when>
-                    </map:select>
-
 
                     <map:match pattern="metadata/**">
                         <map:match pattern="metadata/handle/*/*/mets.xml">

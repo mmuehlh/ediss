@@ -695,9 +695,9 @@
 					<!--<a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2011
 					<xsl:text> | </xsl:text>
 					<a href="http://www.duraspace.org/" target="_blank">Duraspace</a>-->
-					<a href="http://www.sub.uni-goettingen.de">Staats- und Universitätsbibliothek Göttingen</a>
+					<a href="http://www.sub.uni-goettingen.de">Niedersächsische Staats- und Universitätsbibliothek Göttingen</a>
 					<xsl:text> | </xsl:text>
-					<a href="http://www.uni-goettingen.de">Georg-August-Univerisät Göttingen</a>
+					<a href="http://www.uni-goettingen.de">Georg-August-Universität Göttingen</a>
 				</div>
 				<!--Invisible link to HTML sitemap (for search engines) -->
 				<a class="hidden">

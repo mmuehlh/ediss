@@ -282,7 +282,7 @@ hr {
 	clear: both;
 	height: 1px;
 	left: -20px;
-	margin: 0 -20px -5px 0;
+	margin: 26px -20px -9px 0;
 	position: relative;
 	width: auto;
 }
@@ -1038,7 +1038,7 @@ div.confirm {
 	margin-left: 18px;
 }
 
-/* Original DSpace Styles (TODO: Delete redundant styles)
+/* Original DSpace Styles
 ---------------------------------------------------------------------------*/
 select.multiple {
 	height: auto;
@@ -1189,58 +1189,6 @@ td select.ds-select-field {
 tr input {
 	margin-top: 7px;
 }
-/*
-#aspect_administrative_registries_EditMetadataSchema_table_metadata-schema-edit-existing-fields,
-#aspect_administrative_registries_MetadataRegistryMain_table_metadata-registry-main-table,
-#aspect_administrative_registries_FormatRegistryMain_table_bitstream-format-registry,
-#aspect_submission_Submissions_table_unfinished-submissions,
-#aspect_submission_Submissions_table_submissions-inprogress,
-#aspect_submission_Submissions_table_completed-submissions,
-table.detailtable {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	border-collapse: collapse;
-}
-#aspect_administrative_registries_EditMetadataSchema_table_metadata-schema-edit-existing-fields tr,
-#aspect_administrative_registries_MetadataRegistryMain_table_metadata-registry-main-table tr,
-#aspect_administrative_registries_FormatRegistryMain_table_bitstream-format-registry tr,
-#aspect_submission_Submissions_table_unfinished-submissions tr,
-#aspect_submission_Submissions_table_submissions-inprogress tr,
-#aspect_submission_Submissions_table_completed-submissions tr,
-table.detailtable tr {
-	line-height: 1.6em;
-	border: 1px solid #ebebeb;
-}
-#aspect_administrative_registries_EditMetadataSchema_table_metadata-schema-edit-existing-fields tr.even,
-#aspect_administrative_registries_MetadataRegistryMain_table_metadata-registry-main-table tr.even,
-#aspect_administrative_registries_FormatRegistryMain_table_bitstream-format-registry tr.even,
-#aspect_submission_Submissions_table_unfinished-submissions tr.even,
-#aspect_submission_Submissions_table_submissions-inprogress tr.even,
-#aspect_submission_Submissions_table_completed-submissions tr.even,
-table.detailtable tr.even {
-	background-color: #fafafa;
-}
-#aspect_administrative_registries_EditMetadataSchema_table_metadata-schema-edit-existing-fields td,
-#aspect_administrative_registries_MetadataRegistryMain_table_metadata-registry-main-table td,
-#aspect_administrative_registries_FormatRegistryMain_table_bitstream-format-registry td,
-#aspect_submission_Submissions_table_unfinished-submissions td,
-#aspect_submission_Submissions_table_submissions-inprogress td,
-#aspect_submission_Submissions_table_completed-submissions td,
-table.detailtable td {
-	padding: 5px 10px;
-	text-align: justify;
-	border: 1px solid #ebebeb;
-	vertical-align: top;
-}
-#aspect_administrative_registries_EditMetadataSchema_table_metadata-schema-edit-existing-fields tr.ds-table-header-row,
-#aspect_administrative_registries_MetadataRegistryMain_table_metadata-registry-main-table tr.ds-table-header-row,
-#aspect_administrative_registries_FormatRegistryMain_table_bitstream-format-registry tr.ds-table-header-row,
-#aspect_submission_Submissions_table_unfinished-submissions tr.ds-table-header-row,
-#aspect_submission_Submissions_table_submissions-inprogress tr.ds-table-header-row,
-#aspect_submission_Submissions_table_completed-submissions tr.ds-table-header-row {
-	border: none;
-}
-*/
 .detailtable .label-cell {
 	font-weight: bold;
 	text-align: left;
@@ -1299,14 +1247,12 @@ table.detailtable td {
 	border: 1px solid #bfc221;
 	background-color: #fffff2;
 }
-.notice.success
-{
+.notice.success {
 	border-color: #21c221;
 	background-color: #f2fff2;
 }
 #ds-system-wide-alert,
-.notice.failure
-{
+.notice.failure {
 	border-color: #c22121;
 	background-color: #fff2f2;
 }
@@ -1337,9 +1283,8 @@ form.discover-sort-box select{
 	width: 30px;
 	height: 30px;
 	display:block;
-	/*Required for IE*/
-	font-size: 0;
-	line-height: 0;
+	font-size: 0; /* IE */
+	line-height: 0; /* IE */
 }
 .icon-button.arrowUp {
 	background-image: url(../../images/arrow_up_ffffff_16x16.png);
@@ -1360,7 +1305,6 @@ span.floatleft {
 	float: right;
 	display: inline;
 }
-
 /* group items horizontally in a list */
 ul.horizontalVanilla {
 	font-weight: bold;
@@ -1394,7 +1338,6 @@ ul.vocabulary li {
     margin-left: 15px;
 
 }
-
 ul.vocabulary div.vocabulary-node-icon {
     cursor: pointer;
     width: 15px;
@@ -1436,7 +1379,8 @@ div.vocabulary-container li.error {
 	position: absolute;
 	top: 0;
 	width: 625px;
-} */
+}
+*/
 .ds-artifact-list {
 	margin-top: 9px;
 	margin-bottom: 9px;
@@ -1697,35 +1641,6 @@ p,
 	position: relative;
 	top: 1px;
 }
-/*#file_news_div_news .ds-bulleted-list {
-	color: #5C739F;
-	display: block;
-	height: 162px;
-	font-size: 16px;
-	list-style: none;
-	margin-left: 0;
-	position: relative;
-}
-#file_news_div_news .ds-bulleted-list li {
-	background: url(../../images/todo-bg.png) 0 0 no-repeat;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-	border: 1px solid #ccc;
-	border-radius: 6px;
-	float: left;
-	height: 36px;
-	padding: 127px 7px 7px;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, .15);
-	width: 211px;
-}
-#file_news_div_news .ds-bulleted-list li + li {
-	background-position: -227px 0;
-	margin-left: 20px;
-}
-#file_news_div_news .ds-bulleted-list li + li + li {
-	background-position: -454px 0;
-	float: right;
-	margin: 0;
-}*/
 #aspect_submission_CollectionViewer_div_collection-view p {
 	font-weight: bold;
 }
@@ -2103,9 +2018,6 @@ a[href ^="http://creativecommons.org/licenses/by-sa/"] {
 	position: absolute;
 	right: -1px;
 }
-#aspect_artifactbrowser_ConfigurableBrowse_div_browse-navigation {
-/*	padding-bottom: 47px;*/
-}
 #aspect_artifactbrowser_ConfigurableBrowse_div_browse-controls {
 	background: none;
 	border: 0 none;
@@ -2148,7 +2060,7 @@ input[size="6"] {
 .ie7 input[type=submit] {
 	min-width: auto;
 }
-/* replacement for the inline-block display (that only works due to incorrect rendering in IE7) */
+/* replacement for the inline-block display (which only works due to incorrect rendering in IE7) */
 .ie7 .browse li {
 	display: inline;
 }

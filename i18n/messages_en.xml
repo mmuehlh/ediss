@@ -2207,14 +2207,16 @@
 				<li>
 					<span class="help" id="step5">
 						<span class="icon">5</span>
-						<a href="/help/fullpublication#bill">Pay the publication fee of € 25.00.</a>
-						<span>You will be mailed an invoice with our bank details.</span>
+						<!-- <a href="/help/fullpublication#bill">-y the publication fee of € 25.00.</a> -->
+						From 15. Februar 2013 the publication service is free of charge!
+						<!-- <span>You will be mailed an invoice with our bank details.</span> -->
+						<!-- <span>From 15.02.2013 the publication service is free of charge!</span> -->
 					</span>
 				</li>
 				<li>
 					<span class="help" id="step6">
 						<span class="icon">6</span>
-						Done! Your publication is enabled by our editors.
+						<a href="/help/fullpublication#finished">Done! Your publication is enabled by our editors.</a>
 						<span>On the publication of your work, you will be notified via e-mail.</span>
 					</span>
 				</li>
@@ -2226,7 +2228,7 @@
 				<strong>By postal mail:</strong>
 			</p>
 			<ul class="ds-simple-list">
-				<li>Niedersächsischen Staats- und Universitätsbibliothek Göttingen</li>
+				<li>Niedersächsische Staats- und Universitätsbibliothek Göttingen</li>
 				<li>eDiss – Raum 2.19</li>
 				<li>Platz der Göttinger Sieben 1</li>
 				<li>37073 Göttingen</li>
@@ -2294,9 +2296,12 @@
 						<li>
 							<a href="#print">Deliver two printed copies of your work from us in the SUB.</a>
 						</li>
-						<li>
+						<!-- <li>
 							<a href="#bill">Pay the publication fee of € 25.00.</a>
-						</li>
+						</li> -->
+						<li>
+                                                        <a href="#finished">Done! Your publication will be enabled by our editors.</a>
+                                                </li>
 					</ul>
 				</li>
 				<li>
@@ -2460,12 +2465,14 @@
 				<li>Platz der Göttinger Sieben 1</li>
 				<li>37073 Göttingen</li>
 			</ul>
+
+			<h3 id="finished" class="ds-head">Done! Your publication will be enabled by our editors.</h3>
 			<p class="ds-paragraph">
-				As soon as the printed versions of your work have reached us, the editor checks your electronic publication and (if the publication fee is paid) we unlock them. From the moment your dissertation will be visible to the public and you will be informed about the release in an E-Mail.
+				As soon as the printed versions of your work have reached us, the editor checks your electronic publication and unlock them. From the moment your dissertation will be visible to the public and you will be informed about the release in an E-Mail.
 				<br />
-				In some cases (e.g. the PDF file contains a malformed Contentss or the bill for the publication fee could not be sent because of incorrect information), it is possible that the editor rejects a publication. In this case, you will receive an email with the reason for the refusal. 
+				In some cases (e.g. the PDF file contains a malformed Contentss), it is possible that the editor rejects a publication. In this case, you will receive an email with the reason for the refusal. 
 			</p>
-			<h3 id="bill" class="ds-head">Pay the publication fee of € 25.00</h3>
+			<!-- <h3 id="bill" class="ds-head">Pay the publication fee of € 25.00</h3>
 			<p class="ds-paragraph">
 				You will receive an invoice with our bank details to the publication fee per port immediately after completion
 				of the online publication process. We recommend you to pay the fee as soon as possible so we can make
@@ -2474,7 +2481,7 @@
 			</p>
 			<p class="ds-paragraph">
 				<strong>The publication fee will be increased from 01.04.2013 to € 45.00!</strong>
-			</p>
+			</p> -->
 			<p id="embargo" class="ds-paragraph">
 				<strong>PLEASE NOTE: </strong>A delay of the publication of your electronic dissertation on eDiss is usually not possible. This would violate the doctoral regulations. Only in very exceptional cases (patent pending legal process) is on special request a delay in the publication possible.
 			</p>
@@ -2551,9 +2558,13 @@
 						<li>
 							<a href="#print">Deliver two printed copies of your work from us in the SUB</a>
 						</li>
-						<li>
+						<!--<li>
 							<a href="#bill">Pay the publication fee of € 25.00</a>
-						</li>
+						</lii> -->
+						<li>
+	                                                <a href="#finished">Done! Your publication is enabled by our editors.</a>
+                                                </li>
+
 					</ul>
 				</li>
 				<li>
@@ -3021,7 +3032,7 @@
 
 	<message key="xmlui.general.locale.language">Sprache</message>
 	<message key="xmlui.notify"><strong>BITTE BEACHTEN SIE: </strong></message>
-	<message key="xmlui.home.head">Dissertationen der Georg-August-Universität Göttingen</message>
+	<message key="xmlui.home.head">Dissertations at the Georg-August-Universität Göttingen</message>
 	<message key="xmlui.home.head2">Veröffentlichen Sie Ihre elektronische Dissertation bei der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB).</message>
 	<message key="xmlui.home.publication.process">Und so geht es:</message>
 	<message key="xmlui.test">Button test</message>
