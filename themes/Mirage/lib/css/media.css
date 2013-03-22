@@ -38,7 +38,6 @@
 		padding-bottom: 20px;
 	}
 	#content {
-		margin-left: 240px;
 		width: auto;
 	}
 	#page-wrapper {
@@ -161,6 +160,7 @@
 	}
 	#nav {
 		background: #eff1f5;
+		clear: both;
 		padding: 20px;
 		width: auto;
 	}

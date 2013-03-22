@@ -63,262 +63,217 @@
 
                                                 </xsl:if>
 
-						<xsl:variable name="paging">
+						<xsl:variable name="linkPrefix">
 							<xsl:choose>
-								<xsl:when test="parent::node()/@previousPage or parent::node()/@nextPage">
-									<xsl:text>1</xsl:text>
+								<xsl:when test="parent::node()/@previousPage">
+									<xsl:value-of select="substring-before(parent::node()/@previousPage, 'rpp=')"/>
+								</xsl:when>
+								<xsl:when test="parent::node()/@nextPage">
+									<xsl:value-of select="substring-before(parent::node()/@nextPage, 'rpp=')"/>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:text>0</xsl:text>
+									<xsl:text>nopaging</xsl:text>
 								</xsl:otherwise>
 							</xsl:choose>
-						</xsl:variable>
+					</xsl:variable>
+					
+					<xsl:if test="$linkPrefix != 'nopaging'">
+					<xsl:variable name="linkPostfix">
+						<xsl:choose>
+							<xsl:when test="parent::node()/@previousPage">
+								<xsl:value-of select="substring-after(parent::node()/@previousPage, 'sort_by=')"/>
+							</xsl:when>
+							<xsl:when test="parent::node()/@nextPage">
+								<xsl:value-of select="substring-after(parent::node()/@nextPage, 'sort_by=')"/>
+							</xsl:when>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="defaultrpp">60</xsl:variable>
+					<xsl:variable name="currentPage">
+						<xsl:value-of select='(format-number((parent::node()/@firstItemIndex -1)  div $defaultrpp, "#")) + 1'/>
+					</xsl:variable>
+					<xsl:variable name="pagesTotal">
+						<xsl:value-of select='format-number(parent::node()/@itemsTotal div $defaultrpp, "#")'/>
+					</xsl:variable>
+					TOTAL: <xsl:value-of select="$pagesTotal"/> <xsl:text> Current: </xsl:text><xsl:value-of select="$currentPage"/>
+					<!-- it does not work with search-filter and epeaple -->
+	       <xsl:if test="not(contains(//dri:metadata[@qualifier='URI'], 'search-filter'))">	
+
+					<ul class="pagination-links">
+
+						<xsl:if test="parent::node()/@previousPage">
+						    
+							<li>
+							<a class="previous-page-link">
+								<xsl:attribute name="href">
+									<xsl:value-of select="parent::node()/@previousPage"/>
+								</xsl:attribute>
+								<i18n:text>xmlui.dri2xhtml.structural.pagination-previous</i18n:text>
+							</a>
+							</li>
+						</xsl:if>
+
+						<xsl:if test="$currentPage &gt; 4">
+							 <li class="page-link">
+							<a>
+							<xsl:attribute name="href">
+								<xsl:value-of select="concat($linkPrefix, 'offset=0', '&amp;sort_by=', $linkPostfix)"/>
+							</xsl:attribute>
+							1
+							</a>
+							</li>
+						</xsl:if>
 						
-						<xsl:if test="$paging != '0'">
-						
-                                                       
-                      
-						<!--<xsl:variable name="rpp">
-							 <xsl:choose>
-                                                                <xsl:when test="parent::node()/@previousPage">
-									<xsl:variable name="temp"><xsl:value-of select="substring-before(parent::node()/@previousPage, '&amp;sort_by=')"/></xsl:variable>		
-												
-                                                                        <xsl:value-of select="substring-after($temp, 'rpp=')"/>
-                                                                </xsl:when>
-                                                                <xsl:when test="parent::node()/@nextPage">
-									<xsl:variable name="temp"><xsl:value-of select="substring-before(parent::node()/@nextPage, '&amp;sort_by=')"/></xsl:variable>
+						<xsl:if test="$currentPage &gt; 5">
+							<li class="page-link">
+								...
+							</li>
+						</xsl:if>
 
-                                                                        <xsl:value-of select="substring-after($temp, 'rpp=')"/>
-                                                                </xsl:when>
-                                                        </xsl:choose>
+						<xsl:if test="($currentPage - 3) &gt; 0">
+						<li class="page-link">
+							<a>
+							<xsl:attribute name="href">
+								<xsl:choose>
+								<xsl:when test="parent::node()/@firstItemIndex &gt; 181">
+										<xsl:value-of select="concat($linkPrefix, 'offset=', (parent::node()/@firstItemIndex - 181 ), '&amp;sort_by=', $linkPostfix)"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat($linkPrefix, '&amp;offset=0', '&amp;sort_by=', $linkPostfix)"/>
+									</xsl:otherwise>
+								</xsl:choose>
+								</xsl:attribute>
+							<xsl:value-of select="$currentPage - 3"/>
+							</a>
+						</li>
+						</xsl:if>
 
-							</xsl:variable> -->
-						<xsl:variable name="rpp"> <xsl:value-of select="//dri:field[@n='rpp']/dri:value"/></xsl:variable>
-						<xsl:variable name="sort_by"> <xsl:value-of select="//dri:field[@n='sort_by']/dri:value"/></xsl:variable>	
-						<xsl:variable name="type"> <xsl:value-of select="//dri:field[@n='type']/dri:value"/></xsl:variable>
-						<xsl:variable name="order"> <xsl:value-of select="//dri:field[@n='order']/dri:value"/></xsl:variable>
-						<xsl:variable name="etal"> <xsl:value-of select="//dri:field[@n='etal']/dri:value"/></xsl:variable>
-						<xsl:variable name="currentPage">
-							<xsl:choose>
-								<xsl:when test="((parent::node()/@firstItemIndex -1)  mod $rpp) = 0">
-									<xsl:value-of select='(format-number((parent::node()/@firstItemIndex -1)  div $rpp, "#")) '/>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select='(format-number((parent::node()/@firstItemIndex -1)  div $rpp, "#")) + 21'/>
-								</xsl:otherwise>
-							</xsl:choose>
-						</xsl:variable>
-						<xsl:variable name="pagesTotal">
-							<xsl:choose>
-								<xsl:when test="parent::node()/@itemsTotal mod $rpp = 0">
-									<xsl:value-of select='(parent::node()/@itemsTotal div $rpp) '/>
-								</xsl:when>	
-								<xsl:otherwise>
-									<xsl:value-of select='format-number(parent::node()/@itemsTotal  div $rpp, "#") + 1'/>
-								</xsl:otherwise>
-							</xsl:choose>
-						</xsl:variable>
-						<xsl:variable name="linkPrefix"><xsl:value-of select="concat(//dri:metadata[@qualifier='URI'], '?sort_by=', $sort_by, '&amp;type=', $type, '&amp;etal=', $etal, '&amp;order=', $order, '&amp;rpp=', $rpp, '&amp;offset=')"/></xsl:variable>
-						<!-- it does not work with search-filter and epeaple -->
-                       
-						<xsl:if test="$paging != '0'" >
-						<ul class="pagination-links">
-							pTotal: <xsl:value-of select="$pagesTotal"/>
-							current: <xsl:value-of select="$currentPage"/>
-							<xsl:if test="parent::node()/@previousPage">
-							    
-		                                                <li>
-								<a class="previous-page-link">
-                		                                        <xsl:attribute name="href">
-                                		                                <xsl:value-of select="parent::node()/@previousPage"/>
-                                                		        </xsl:attribute>
-	                	                                        <i18n:text>xmlui.dri2xhtml.structural.pagination-previous</i18n:text>
-        		                                        </a>
-								</li>
-                             </xsl:if>
+						<xsl:if test="($currentPage - 2) &gt; 0">
+						<li class="page-link">
+							<a>
+							<xsl:attribute name="href">
+								<xsl:choose>
+								<xsl:when test="parent::node()/@firstItemIndex  &gt; 121">
+										<xsl:value-of select="concat($linkPrefix, 'offset=', (parent::node()/@firstItemIndex - 121 ), '&amp;sort_by=', $linkPostfix)"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat($linkPrefix,'&amp;offset=0', '&amp;sort_by=', $linkPostfix)"/>
+									</xsl:otherwise>
+								</xsl:choose>
+								</xsl:attribute>
+							<xsl:value-of select="$currentPage - 2"/>
+							</a>
+						</li>
+						</xsl:if>
 
-							<!-- firstPage -->
-							<xsl:if test="($currentPage - 4)  &gt; 0">
-                                                        <li class="page-link">
-                                                             <a>
-                                                                <xsl:attribute name="href">
-												
-                                                                       <xsl:value-of select="concat($linkPrefix, '0')"/>
-                                                                </xsl:attribute>
-                                                                1
-                                                             </a>
-                                                        </li>
-                                                        <li class="page-link">
-									...
-								</li>
-							</xsl:if>
-							 <xsl:if test="($currentPage - 3)  &gt;= 0">
-								<li class="page-link">
-                                 <a>
+						 <xsl:if test="(($currentPage - 1) &gt; 0)">
+						<li class="page-link">
+							<a>
+							<xsl:attribute name="href">
 								<xsl:choose>
-										<xsl:when test="(parent::node()/@itemsTotal - (3 * $rpp)) &lt;= 0">
-											<xsl:attribute name="href">
-												
-                                                                       <xsl:value-of select="concat($linkPrefix, '0')"/>
-                                                                </xsl:attribute>
-                                                               	
-										</xsl:when>
-										<xsl:otherwise>
-                                                        
-                                                                <xsl:attribute name="href">
-                                                                        <xsl:value-of select="concat($linkPrefix, (parent::node()/@firstItemIndex -1 ) - $rpp) "/>
-                                                                </xsl:attribute>
-                                                              
-                                                                
-										</xsl:otherwise>
+									<xsl:when test="(parent::node()/@firstItemIndex &gt; 61)">
+										<xsl:value-of select="concat($linkPrefix, 'offset=', (parent::node()/@firstItemIndex -61 ), '&amp;sort_by=', $linkPostfix)"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat($linkPrefix, '&amp;offset=0', '&amp;sort_by=', $linkPostfix)"/>	
+									</xsl:otherwise>
 								</xsl:choose>
-								<xsl:value-of select="$currentPage - 3"/>
-								</a>
-                             </li>
-							</xsl:if>
-							<xsl:if test="($currentPage - 2)  &gt;= 0">
-								<li class="page-link">
-                                 <a>
+							</xsl:attribute>
+							<xsl:value-of select="$currentPage - 1"/>
+							</a>
+						</li>
+
+						</xsl:if>
+					
+						<li class="current-page-link">
+							<a>
+							<xsl:attribute name="href">
 								<xsl:choose>
-										<xsl:when test="(parent::node()/@itemsTotal - (2 * $rpp)) &lt;= 0">
-											<xsl:attribute name="href">
-												
-                                                                       <xsl:value-of select="concat($linkPrefix, '0')"/>
-                                                                </xsl:attribute>
-                                                               	
-										</xsl:when>
-										<xsl:otherwise>
-                                                        
-                                                                <xsl:attribute name="href">
-                                                                        <xsl:value-of select="concat($linkPrefix, (parent::node()/@firstItemIndex -1 ) - (2 * $rpp)) "/>
-                                                                </xsl:attribute>
-                                                              
-                                                                
-										</xsl:otherwise>
+									<xsl:when test="$currentPage  != $pagesTotal">
+										<xsl:value-of select="concat($linkPrefix, 'offset=', (parent::node()/@firstItemIndex -1 ), '&amp;sort_by=', $linkPostfix)"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<!-- <xsl:variable name="temp"><xsl:value-of select="substring-before($linkPrefix, 'rpp=')"/></xsl:variable> -->
+										<xsl:value-of select="concat($linkPrefix, 'rpp=120&amp;offset=', ( parent::node()/@firstItemIndex -1), '&amp;sort_by=', $linkPostfix)"/>
+									</xsl:otherwise>
 								</xsl:choose>
-								<xsl:value-of select="$currentPage - 2"/>
-								</a>
-                             </li>
-							</xsl:if>
-							<xsl:if test="($currentPage - 1)  &gt;= 0">
-								<li class="page-link">
-                                 <a>
-								<xsl:choose>
-										<xsl:when test="(parent::node()/@itemsTotal - ($rpp)) &lt;= 0">
-											<xsl:attribute name="href">
-												
-                                                                       <xsl:value-of select="concat($linkPrefix, '0')"/>
-                                                                </xsl:attribute>
-                                                               	
-										</xsl:when>
-										<xsl:otherwise>
-                                                        
-                                                                <xsl:attribute name="href">
-                                                                        <xsl:value-of select="parent::node()/@previousPage"/>
-                                                                </xsl:attribute>
-                                                              
-                                                                
-										</xsl:otherwise>
-								</xsl:choose>
-								<xsl:value-of select="$currentPage - 1"/>
-								</a>
-                             </li>
-							</xsl:if>
-							
-							<li class="current-page-link">
+								</xsl:attribute>
+
+							<!--	<xsl:value-of select="concat($linkPrefix, 'offset=', (parent::node()/@firstItemIndex -1 ), '&amp;sort_by=', $linkPostfix)"/>
+							</xsl:attribute> -->
+							<xsl:value-of select="$currentPage"/>
+							</a>
+
+						</li>
+						<!-- <xsl:if test="parent::node()/@nextPage"> -->
+						<xsl:if test="($currentPage + 1) &lt;= $pagesTotal">
+							<li class="page-link">
 								<a>
 								<xsl:attribute name="href">
-									<xsl:value-of select="concat('browse?', //dri:metadata[@qualifier='queryString:w
-									'])"/>
-								</xsl:attribute>
-                                                                <xsl:value-of select="$currentPage"/>
-								</a>
-
-							</li>
-							
-							<xsl:if test="parent::node()/@nextPage">
-								<li class="page-link">
-									<a>
-									<xsl:attribute name="href">
-										<xsl:value-of select="parent::node()/@nextPage"/>
+								<xsl:choose>
+									<xsl:when test="($currentPage + 1) &lt; $pagesTotal">
+										<xsl:value-of select="concat($linkPrefix, 'offset=', parent::node()/@lastItemIndex, '&amp;sort_by=', $linkPostfix)"/>	
+									</xsl:when>
+									<xsl:otherwise>
+										<!-- <xsl:variable name="temp"><xsl:value-of select="substring-before($linkPrefix, 'rpp=')"/></xsl:variable> -->
+										<xsl:value-of select="concat($linkPrefix, 'rpp=120&amp;offset=', parent::node()/@lastItemIndex, '&amp;sort_by=', $linkPostfix)"/>
+										</xsl:otherwise>
+									</xsl:choose>
 									</xsl:attribute>
 									<xsl:value-of select="$currentPage + 1"/>
-									</a>
+                                                                        </a>
 								</li>
-							</xsl:if>
-							<xsl:if test="($currentPage + 2)  &lt;= $pagesTotal">
-								<li class="page-link">
-                                 <a>
-								<xsl:choose>
-										<xsl:when test="(parent::node()/@itemsTotal - (2 * $rpp)) &gt; 0">
-											<xsl:attribute name="href">
-												
-                                                                       <xsl:value-of select="concat($linkPrefix, parent::node()/@itemsTotal - (2 * $rpp))"/>
-                                                                </xsl:attribute>
-                                                               	
-										</xsl:when>
-										<xsl:otherwise>
-                                                        
-                                                                <xsl:attribute name="href">
-                                                                        <xsl:value-of select="concat($linkPrefix, parent::node()/@itemsTotal - (parent::node()/@itemsTotal mod $rpp)) "/>
-                                                                </xsl:attribute>
-                                                              
-                                                                
-										</xsl:otherwise>
-								</xsl:choose>
-								<xsl:value-of select="$currentPage + 2"/>
-								</a>
-                             </li>
-							</xsl:if>
-							<xsl:if test="($currentPage + 3)  &lt;= $pagesTotal">
-								<li class="page-link">
-                                 <a>
-								<xsl:choose>
-										<xsl:when test="(parent::node()/@itemsTotal - (3 * $rpp)) &gt; 0">
-											<xsl:attribute name="href">
-												
-                                                                       <xsl:value-of select="concat($linkPrefix, parent::node()/@itemsTotal - (3 * $rpp))"/>
-                                                                </xsl:attribute>
-                                                               	
-										</xsl:when>
-										<xsl:otherwise>
-                                                        
-                                                                <xsl:attribute name="href">
-                                                                        <xsl:value-of select="concat($linkPrefix, parent::node()/@itemsTotal - (parent::node()/@itemsTotal mod $rpp)) "/>
-                                                                </xsl:attribute>
-                                                              
-                                                                
-										</xsl:otherwise>
-								</xsl:choose>
-								<xsl:value-of select="$currentPage + 3"/>
-								</a>
-                             </li>
-							</xsl:if>				
-							<xsl:if test="($currentPage + 4 ) &lt;  $pagesTotal">
-								<!-- <li  class="page-link">
-									...
-								</li>
-							</xsl:if>
-							<xsl:if test="$currentPage != ( $pagesTotal - 1)"> -->
-										<xsl:text>...</xsl:text>
+							</xsl:if> 
+			
+							<xsl:if test="($currentPage + 2) &lt;= $pagesTotal">
                                                                 <li class="page-link">
                                                                         <a>
                                                                         <xsl:attribute name="href">
-                                                                               <!-- <xsl:value-of select="concat($linkPrefix, $rpp * ($pagesTotal - 1))"/> -->
-                                                                               <xsl:value-of select="concat($linkPrefix, parent::node()/@itemsTotal - (parent::node()/@itemsTotal mod $rpp)) "/>
+										 <xsl:choose>
+                                                                                <xsl:when test="($currentPage + 1) &lt; $pagesTotal">
+                                                                                        <xsl:value-of select="concat($linkPrefix, 'offset=', parent::node()/@lastItemIndex  + $defaultrpp, '&amp;sort_by=', $linkPostfix)"/>
+                                                                                </xsl:when>
+                                                                                <xsl:otherwise>
+                                                                                        <xsl:value-of select="concat($linkPrefix, 'rpp=120&amp;offset=', (parent::node()/@lastItemIndex + $defaultrpp), '&amp;sort_by=', $linkPostfix)"/>
+                                                                                </xsl:otherwise>
+                                                                        </xsl:choose>
+                                                                        </xsl:attribute>
+                                                                        <xsl:value-of select="$currentPage + 2"/>
+                                                                        </a>
+                                                                </li>
+                                                        </xsl:if>
+		
+							<xsl:if test="($currentPage + 3) &lt;= $pagesTotal">
+                                                                <li class="page-link">
+                                                                        <a>
+                                                                        <xsl:attribute name="href">
+										 <xsl:choose>
+                                                                                <xsl:when test="($currentPage + 1) &lt; $pagesTotal">
+											<xsl:value-of select="concat($linkPrefix, 'offset=', parent::node()/@lastItemIndex + 120, '&amp;sort_by=', $linkPostfix)"/>
+                                                                                </xsl:when>
+                                                                                <xsl:otherwise>
+                                                                                        <xsl:value-of select="concat($linkPrefix, 'rpp=120&amp;offset=', (parent::node()/@lastItemIndex + (2 * $defaultrpp)), '&amp;sort_by=', $linkPostfix)"/>
+                                                                                </xsl:otherwise>
+                                                                        </xsl:choose>
+                                                                        </xsl:attribute>
+                                                                        <xsl:value-of select="$currentPage + 3"/>
+                                                                        </a>
+                                                                </li>
+                                                        </xsl:if>						
+							<xsl:if test="($currentPage + 4) &lt; $pagesTotal">
+								<li  class="page-link">
+									...
+								</li>
+								<li class="page-link">
+                                                                        <a>
+                                                                        <xsl:attribute name="href">
+                                                                                <xsl:value-of select="concat($linkPrefix, 'rpp=120&amp;offset=',  ($pagesTotal -1) * $defaultrpp, '&amp;sort_by=', $linkPostfix)"/>
                                                                         </xsl:attribute>
                                                                         <xsl:value-of select="$pagesTotal"/>
                                                                         </a>
                                                                 </li>
+
 							</xsl:if>
-						<!--
-						<xsl:text>Now showing items </xsl:text>
-						<xsl:value-of select="parent::node()/@firstItemIndex"/>
-						<xsl:text>-</xsl:text>
-						<xsl:value-of select="parent::node()/@lastItemIndex"/>
-						<xsl:text> of </xsl:text>
-						<xsl:value-of select="parent::node()/@itemsTotal"/>
-							-->
 					<xsl:if test="parent::node()/@nextPage">
 						<li>
 							<a class="next-page-link">
@@ -333,7 +288,7 @@
 					</ul>
 					</xsl:if>
 				    </xsl:if>
-					<xsl:if test="parent::node()/@nextPage">
+					<xsl:if test="parent::node()/@nextPage and contains(//dri:metadata[@qualifier='URI'], 'search-filter')">
                                                 <a class="next-page-link">
                                                         <xsl:attribute name="href">
                                                                 <xsl:value-of select="parent::node()/@nextPage"/>
@@ -341,7 +296,7 @@
                                                         <i18n:text>xmlui.dri2xhtml.structural.pagination-next</i18n:text>
                                                         </a>
 
-                   </xsl:if>
+                                        </xsl:if>
 
 				</div>
 			</xsl:when>

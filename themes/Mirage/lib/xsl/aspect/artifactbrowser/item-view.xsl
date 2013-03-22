@@ -129,12 +129,16 @@
 		<h2><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h2>
 		<div class="metadata">
 			<xsl:apply-templates select="$dim" mode="itemAbstractGer-DIM"/>
+			<xsl:apply-templates select="$dim" mode="itemKeywords-DIM">
+				<xsl:with-param name="lang">ger</xsl:with-param>
+			</xsl:apply-templates>
 			<xsl:apply-templates select="$dim" mode="itemAbstractEng-DIM"/>
+			<xsl:apply-templates select="$dim" mode="itemKeywords-DIM">
+				<xsl:with-param name="lang">eng</xsl:with-param>
+			</xsl:apply-templates>
 			<xsl:apply-templates select="$dim" mode="itemAbstractOther-DIM"/>
 			<div class="spacer">&#160;</div>
 		</div>
-
-		<xsl:apply-templates select="$dim" mode="itemKeywords-DIM"/>
 
 		<!--<xsl:apply-templates select="$dim" mode="itemSummaryView-DIM"/>-->
 
@@ -255,15 +259,9 @@
 				<p>
 					<i18n:text>xmlui.dri2xhtml.METS-1.0.item-uri</i18n:text>:
 					<xsl:for-each select="dim:field[@element='identifier' and @qualifier='uri']">
-						<a>
-							<xsl:attribute name="class">
-								<xsl:text>bookmark</xsl:text>
-							</xsl:attribute>
-							<xsl:attribute name="href">
-								<xsl:copy-of select="./node()"/>
-							</xsl:attribute>
+						<span class="bookmark">
 							<xsl:copy-of select="./node()"/>
-						</a>
+						</span>
 						<xsl:if test="count(following-sibling::dim:field[@element='identifier' and @qualifier='uri']) != 0">
 							<br/>
 						</xsl:if>
@@ -274,11 +272,13 @@
 	</xsl:template>
 
 	<xsl:template match="dim:dim" mode="itemKeywords-DIM">
+		<xsl:param name="lang"/>
+		<!--
 		<xsl:if test="dim:field[@element='subject' and @qualifier='gokverbal']">
 			<div class="ds-item-categories"> 
 				<strong><i18n:text>xmlui.dri2xhtml.METS-1.0.item-gok</i18n:text>:</strong>
 				<xsl:for-each select="dim:field[@element='subject' and @qualifier='gokverbal']">
-					<!--<xsl:copy-of select="."/>-->
+					<xsl:copy-of select="."/>
 					<a>
 						<xsl:attribute name="href"><xsl:value-of select="concat('/browse?type=subject&amp;value=', .)"/></xsl:attribute><xsl:value-of select="."/>
 					</a>
@@ -288,10 +288,12 @@
 				</xsl:for-each>
 			</div>
 		</xsl:if>
-		<xsl:if test="dim:field[@element='subject' and not(@qualifier)] ">
+		-->
+		<xsl:if test="dim:field[@element='subject'] ">
 			<div class="ds-item-keywords">
 				<strong><i18n:text>xmlui.dri2xhtml.METS-1.0.item-subject</i18n:text>:</strong>
-				<!-- <xsl:for-each select="dim:field[@element='subject'][not(@qualifier)]"> 
+				<xsl:for-each select="dim:field[@element='subject' and @qualifier=$lang]"> 
+					<xsl:value-of select="lang"/>
 					<xsl:call-template name="split-list">
 						<xsl:with-param name="list">
 							<xsl:value-of select="."/> 
@@ -300,8 +302,7 @@
 					<xsl:if test="count(following-sibling::dim:field[@element='subject'and not(@qualifier)]) != 0">
 						<xsl:text>; </xsl:text>
 					</xsl:if>
-				</xsl:for-each> -->
-				<xsl:value-of select="dim:field[@element='subject' and not(@qualifier)]"/>
+				</xsl:for-each>
 			</div>
 		</xsl:if>
 	</xsl:template>

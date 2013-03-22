@@ -2417,6 +2417,7 @@
                             <xsl:apply-templates />
                         </input>
 
+
                         <xsl:variable name="confIndicatorID" select="concat(@id,'_confidence_indicator')"/>
                         <xsl:if test="dri:params/@authorityControlled">
                           <xsl:variable name="confidence">

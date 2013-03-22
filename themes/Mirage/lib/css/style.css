@@ -86,7 +86,6 @@ body {
 	line-height: 18px;
 }
 h1, h2, h3, h4, h5, h6 {
-	/*color: #818181;*/
 	font-family: helvetica, arial, sans-serif;
 	position: relative;
 }
@@ -110,15 +109,13 @@ h1 {
 	top: -7px;
 }
 h2 {
-	/*border-bottom: 2px solid #818181;*/
-	/*background: url(../../images/line-h2.png) left bottom no-repeat;*/
 	margin-bottom: 18px;
 	font-size: 22px;
-	/*padding-bottom: 5px;*/
 	top: 6px;
 }
 h3 {
 	font-size: 16px;
+	margin-bottom: 18px;
 	top: -1px;
 }
 h4 {
@@ -148,17 +145,10 @@ code, kbd, samp, pre, tt, var {
 	font-family: mono-space, monospace;
 }
 p {
-	margin-bottom: 13px;
+	clear: both;
+	margin: 7px 0 18px;
 	word-spacing: 0.125em;
 }
-/*
-p+p {
-	text-indent: 1.5em;
-}
-p+p.no-indent {
-	text-indent: 0;
-}
-*/
 pre {
 	white-space: pre;
 }
@@ -249,7 +239,6 @@ form {
 	border-radius: 0 5px 5px 0;
 	font-size: 13px; /* IE */
 	line-height: 18px; /* IE */
-	/*margin: 0 -21px 16px -20px;*/
 	margin: 0 -21px 18px -20px;
 	padding: 12px 20px;
 	position: relative;
@@ -281,8 +270,7 @@ caption {
 hr {
 	clear: both;
 	height: 1px;
-	left: -20px;
-	margin: 26px -20px -9px 0;
+	margin: 26px 0 -9px;
 	position: relative;
 	width: auto;
 }
@@ -982,6 +970,16 @@ div.confirm {
 #nav .ds-simple-list li {
 	border-bottom: 1px solid #ccc;
 }
+#nav .sublist ul {
+    margin: 0;
+}
+#nav .sublist ul li {
+    border: 0 none;
+    margin-left: 24px;
+}
+#nav .sublist ul a {
+    border: 0;
+}
 #nav a,
 #userbox ul a {
 	background: url(../../images/icons.png) 7px -502px no-repeat;
@@ -989,6 +987,10 @@ div.confirm {
 	font-weight: bold;
 	padding: 9px 10px 8px 32px;
 	width: 178px;
+}
+
+#nav .sublist ul li a {
+    margin-top: 1px;
 }
 #userbox ul a {
 	width: auto;
@@ -1003,8 +1005,8 @@ div.confirm {
 #nav a[href$="?type=dateissued"] {
 	background-position: 7px -150px;
 }
-#nav a[href$="?type=author"] {
-	background-position: 7px -22px;
+#nav a[href$="?type=person"] {
+        background-position: 7px -22px;
 }
 #nav a[href$="?type=title"] {
 	background-position: 7px -182px;
@@ -1030,7 +1032,7 @@ div.confirm {
 #nav a[href$="/register"] {
 	background-position: 7px -118px;
 }
-#nav .ds-simple-list li:hover,
+#nav li a:hover,
 #nav #aspect_eperson_Navigation_list_administrative a:hover {
 	background-color: #ddd;
 }
@@ -1542,7 +1544,6 @@ tr.odd {
 .bold {
 	font-weight: bold;
 }
-p, 
 .ds-bulleted-list,
 .ds-ordered-list {
 	clear: both;
@@ -1579,6 +1580,11 @@ p,
 .embargo-info p {
 	background-position: 0 -575px;
 }
+.bookmark-input {
+	font-weight: bold;
+	margin-left: -3px;
+	padding: 0 1px;
+}
 
 /* Frontpage
 ---------------------------------------------------------------------------*/
@@ -1605,7 +1611,7 @@ p,
 	text-decoration: none;
 }*/
 .help .icon {
-	background: url(../../images/6step-icons.png) 0 0 no-repeat;
+	background: url(../../images/step-icons.png) 0 0 no-repeat;
 	display: block;
 	left: 0;
 	position: absolute;
@@ -1630,10 +1636,6 @@ p,
 	background-position: 0 -288px;
 	/*margin-left: 112px;*/
 }
-.help#step6 .icon {
-	background-position: 0 -360px;
-	/*margin-left: 112px;*/
-}
 .help span {
 	color: #444;
 	display: block;
@@ -1643,6 +1645,43 @@ p,
 }
 #aspect_submission_CollectionViewer_div_collection-view p {
 	font-weight: bold;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.columns-golden {
+	clear: both;
+}
+.columns-golden .left {
+	width: 61.8%;
+}
+.columns-golden .right {
+	width: 38.2%;
+}
+.columns-equal {
+	border-top: 1px solid #ccc;
+	clear: both;
+	padding-top: 17px;
+}
+.columns-equal .left,
+.columns-equal .right {
+	width: 48%;
+}
+.highlight {
+/*      background: #EFF1F5;
+        border: 1px solid #ccc;*/
+        background: #FFF;
+        border: 1px solid #EFF1F5;
+	border-radius: 5px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.15), inset 0 0 20px rgba(255,255,255,.8);
+	font-weight: bold;
+	padding: 10px 19px 0;
+}
+.pad-top {
+	padding-top: 18px;
 }
 
 /* Common Form Styles
@@ -1929,19 +1968,17 @@ ul.ds-progress-list li.disabled input.ds-button-field
 	width: 100%;
 	z-index: 9999;
 }
-#overlay img {
+#overlay div {
 	background: url(../../images/loader.gif) center center no-repeat;
 	position: relative;
+	height: 32px;
 	left: 364px;
 	top: 180px;
+	width: 32px;
 }
 
 /* Item View
 ---------------------------------------------------------------------------*/
-.simple-item-view-abstract + div,
-.license-info {
-	margin-top: 18px;
-}
 a[href ^="http://creativecommons.org/licenses/by/"] {
 	background: url(../../images/cc-by.png) left center no-repeat;
 	padding-left: 86px;
@@ -1966,14 +2003,17 @@ a[href ^="http://creativecommons.org/licenses/by-sa/"] {
 	background: url(../../images/cc-by-sa.png) left center no-repeat;
 	padding-left: 86px;
 }
+.ds-item-keywords {
+	margin-bottom: 18px;
+}
 .item-view-toggle {
 	font-weight: bold;
 	text-align: right;
 }
 .item-view-toggle-bottom {
 	font-weight: bold;
-	margin-top: -18px;
-	position: absolute;
+/*	margin-top: -18px;
+	position: absolute;*/
 	right: 0;
 }
 
@@ -2042,6 +2082,10 @@ form.search table input.ds-text-field {
 }
 .result-query {
 	margin-bottom: 30px;
+}
+#aspect_artifactbrowser_ConfigurableBrowse_div_browse-navigation span {
+    font-weight: bold;
+    margin-left: 10px;
 }
 
 /* Admin Forms

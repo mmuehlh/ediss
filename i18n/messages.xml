@@ -183,7 +183,7 @@
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.full_text_search">Volltextsuche:</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_browse">Auflistung nach</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Titel</message>
-	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_authors">Autor/Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_ftauthor">Nur Autor</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_dates">Datum</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.advanced_search_link">Erweiterte Suche</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_recent_submissions">Neueste Zugänge</message>
@@ -200,7 +200,7 @@
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Volltextsuche:</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Durchsuche</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Titel</message>
-	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_authors">Autor/Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_ftauthor">Autor</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_dates">Datum</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.advanced_search_link">Erweiterte Suche</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_sub_communities">Teilbereiche in diesem Bereich</message>
@@ -245,16 +245,18 @@
 	<message key="xmlui.ArtifactBrowser.ItemViewer.withdrawn">Dieses Dokument wurde zurückgezogen und ist nicht mehr verfügbar.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.Navigation.java -->
-	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Stöbern</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Gesamter Bestand</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Blättern</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Im gesamten Bestand</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Bereiche &amp; Sammlungen</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titel</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Autor/Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_ftauthor">Nur Autor</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_ftadvisor">Nur Erstgutachter</message>	
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_person">Autor/Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Schlagworte</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Erscheinungsdatum</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">Zugangsdatum</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.head_this_collection">Diese Sammlung</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.head_this_community">Dieser Bereich</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_this_collection">In dieser Sammlung</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_this_community">In diesem Bereich</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.SimpleSearch.java -->
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.title">Suche</message>
@@ -588,7 +590,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.SaveOrRemoveStep -->
 	<message key="xmlui.Submission.submit.SaveOrRemoveStep.head">Veröffentlichung speichern oder abbrechen?</message>
-	<message key="xmlui.Submission.submit.SaveOrRemoveStep.info1">Möchten Sie, dass die Veröffentlichung gelöscht wird, oder möchten Sie später daran weiterarbeiten? Wenn Sie aus Versehen hier gelandet sind, klicken Sie auf „Veröffentlichung fortsetzen“.</message>
+	<message key="xmlui.Submission.submit.SaveOrRemoveStep.info1">Möchten Sie, dass die Veröffentlichung gelöscht wird, oder möchten Sie später daran weiterarbeiten? Wenn Sie aus Versehen hier gelandet sind, klicken Sie auf „fortsetzen“.</message>
 	<message key="xmlui.Submission.submit.SaveOrRemoveStep.submit_back">Fortsetzen</message>
 	<message key="xmlui.Submission.submit.SaveOrRemoveStep.submit_save">Speichern und zurück</message>
 	<message key="xmlui.Submission.submit.SaveOrRemoveStep.submit_remove">Löschen</message>
@@ -692,7 +694,7 @@
 	<message key="xmlui.Submission.submit.LicenseStep.info2">&#160;</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3">&#160;</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Lizenzbestimmung</message>
-<!--	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">Ich akzeptiere die Lizenzbestimmungen, werde die Kosten für die Online-Bereitstellung übernehmen und willige ein, dass mir eine Rechnung an meine Postadresse zugeschickt wird.</message> -->
+	<!--<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">Ich akzeptiere die Lizenzbestimmungen, werde die Kosten für die Online-Bereitstellung übernehmen und willige ein, dass mir eine Rechnung an meine Postadresse zugeschickt wird.</message>-->
 	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">Ich akzeptiere die Lizenzbestimmungen</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_error">Sie müssen die Lizenzbestimmung akzeptieren, um Ihre Veröffentlichung abzuschließen. Wenn Sie dies zum jetzigen Zeitpunkt nicht tun können, haben Sie die Möglichkeit Ihre Veröffentlichung zwischenzuspeichern, um sie später zu vollenden oder zu löschen, indem Sie auf „Speichern und später fortsetzen“ klicken.</message>
 
@@ -1214,7 +1216,7 @@
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.LICENSE">Lizenzen</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.CC-LICENSE">Creative Commons Lizenz</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.file_label">Datei</message>
-	<message key="xmlui.administrative.item.AddBitstreamForm.file_help">Bitte geben Sie den Dateinamen mit voll qualifizierten Pfad auf Ihrem Rechner ein. Wenn Sie auf "Stöbern" klicken, öffnet sich ein neues Fenster, in dem Sie die Datei auf Ihrem Rechner heraussuchen können. Nachdem Sie die entsprechende Datei gewählt haben, wird das Fenster automatisch geschlossen.</message>
+	<message key="xmlui.administrative.item.AddBitstreamForm.file_help">Klicken Sie bitte auf "Datei auswählen" und suchen Sie auf Ihrem Rechner die Datei aus, die Sie hochladen wollen. Durch Doppelklick auf die ausgesuchte Datei wird der Name der Datei hier automatisch eingetragen. Mit dem Button "Hochladen" können Sie dann den Hochladeprozess starten.</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.description_label">Beschreibung</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.description_help">Zusätzlich können Sie eine kurze Beschreibung der Datei, z. B. Anhang, Hauptband, Messergebnisse usw. eingeben.</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.submit_upload">Hochladen</message>
@@ -1827,7 +1829,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-author">Autor</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Zusammenfassung</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Beschreibung</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">Zum Verlinken/ Bookmarken</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">Zum Verlinken/Zitieren</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Erschienen</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Verlag</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Schlagwort</message>
@@ -2011,7 +2013,7 @@
 	<message key="xmlui.Submission.submit.UploadStep.check-true">ja</message>
 	<message key="xmlui.Submission.submit.UploadStep.check-false">nein</message>
 
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_advisor">Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_ftadvisor">Nur Erstgutachter</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_gok">GOK</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_bk">BK</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dnb">DNB-Klasse</message>
@@ -2022,7 +2024,7 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_institute">Institute</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subjecteng">Schlagworte (englisch)</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.advisor">Dokumente nach Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.ftadvisor">Dokumente {0} nach Erstgutachter {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.gok">Dokumente nach GOK</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.bk">Dokumente nach BK</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.dnb">Dokumente nach DNB-Klasse</message>
@@ -2033,7 +2035,9 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.institute">Dokumente nach Institut</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subjecteng">Dokumente nach Schlagworten (englisch)</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.advisor">Dokumente {0} nach Gutatchter {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.ftadvisor">Dokumente {0} nach Erstgutatchter {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.ftauthor">Dokumente {0} nach Autor {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.person">Dokumente {0} nach Autor/Gutatchter {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.gok">Dokumente {0} nach GOK {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.bk">Dokumente {0} nach BK {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.dnb">Dokumente {0} nach DNB-Klasse {1}</message>
@@ -2044,7 +2048,9 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.institute">Dokumente {0} nach Institute {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subjecteng">Dokuemente {0} nach Schlagworten eng {1}</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.advisor.column_heading">Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.ftadvisor.column_heading">Erstgutachter</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.ftauthor.column_heading">Autor</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.person.column_heading">Autor/Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.gok.column_heading">GOK</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.bk.column_heading">BK</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.dnb.column_heading">DNB-Klasse</message>
@@ -2059,8 +2065,12 @@
 	<message key="xmlui.general.language.en">Englisch</message>
 	<message key="xmlui.general.language.other">Weitere Sprachen</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.referee">Auflistung nach Gutachter</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.referee">Auflistung nach Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.ftauthor">Dokumente {0} nach Autor {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.ftadvisor">Dokumente {0} nach Erstgutachter {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.person">Dokumente {0} nach Autor/Gutachter {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.ftadvisor">Dokumente {0} nach Erstgutachter {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.ftauthor">Dokumente {0} nach Erstgutachter {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.person">Dokumente {0} nach Autor/Gutachter {1}</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_referee">Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.referee.column_heading">Gutachter</message>
 
@@ -2208,47 +2218,53 @@
 				<li>
 					<span class="help" id="step5">
 						<span class="icon">5</span>
-						Ab dem 15.02.2013 ist unser Publikationsservice kostenlos.
-						<!-- <a href="/help/fullpublication#bill">Bezahlen Sie die Publikationskosten in Höhe von € 25,00. </a> 
-						<span>Ab 15.02.2013 entfallen die Publikationskosten!.</span> -->
-					</span>
-				</li> 
-				<li>
-					<span class="help" id="step6">
-						<span class="icon">6</span>
 						 <a href="/help/fullpublication#finished">Fertig! Ihre Publikation wird von unseren Redakteuren freigeschaltet.</a>
 						<span>Über die Veröffentlichung Ihrer Arbeit werden Sie per E-Mail benachrichtigt.</span>
 					</span>
 				</li>
 			</ol>
-			<p class="ds-paragraph">
+			
+			<p class="ds-paragraph pad-top">
 				<strong>Sie können sich gern an uns wenden:</strong>
 			</p>
-			<p class="ds-paragraph">
-				<strong>Per Post:</strong>
-			</p>
-			<ul class="ds-simple-list">
-				<li>Niedersächsischen Staats- und Universitätsbibliothek Göttingen</li>
-				<li>eDiss – Raum 2.19</li>
-				<li>Platz der Göttinger Sieben 1</li>
-				<li>37073 Göttingen</li>
-			</ul>
-			<p class="ds-paragraph">
-				<strong>Persönlich:</strong>
-			</p>
-			<ul class="ds-simple-list">
-				<li>Zentralbibliothek</li>
-				<li>2. Etage links im LRC, Raum 2.19</li>
-				<li>Tel.: 0551 / 39-5383</li>
-				<li>E-Mail: eDiss@sub.uni-goettingen.de</li>
-			</ul>
-			<p class="ds-paragraph">
-				<strong>Unsere Öffnungszeiten: </strong>
-			</p>
-			<ul class="ds-simple-list">
-				<li>Montag bis Freitag jeweils von 10:00 bis 12:00 Uhr.</li>
-				<li>Es können auch Termine außerhalb der Öffnungszeiten vereinbart werden.</li>
-			</ul>
+			
+			<div class="columns-golden">
+				<div class="left">
+					<h3>Postanschrift</h3>
+					<p>
+						eDiss<br/>
+						Niedersächsische Staats- und Universitätsbibliothek Göttingen<br/>
+						Platz der Göttinger Sieben 1<br/>
+						37073 Göttingen<br/>
+					</p>
+				</div>
+				<div class="right">
+					<div class="highlight">
+						<p>
+							Telefon: (0551) 39-5383
+						</p>
+						<p>
+							<a href="mailto:ediss@sub.uni-goettingen.de">ediss@sub.uni-goettingen.de</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="columns-equal">
+				<div class="left">
+					<h3>Persönlich</h3>
+					<p>
+						Zentralbibliothek (Anschrift wie oben)<br/>
+						2. Etage links im LRC, Raum 2.19
+					</p>
+				</div>
+				<div class="right">
+					<h3>Unsere Öffnungszeiten</h3>
+					<p>Montag bis Freitag jeweils von 10:00 bis 12:00 Uhr.</p>
+					<p>Es können auch Termine außerhalb der Öffnungszeiten vereinbart werden.</p>
+				</div>
+			</div>
+			
 		</div>
 	</message>
 

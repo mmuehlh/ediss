@@ -17,15 +17,15 @@ $(function() {
 		if ( $(this).val() == '' ) $(this).val(searchtext);
 	});
 	
+	/* User box (top) */
+	$('#userbox').removeClass('hover');
+	$('#userbox').has('.profile').click( function() {
+		$(this).toggleClass('open')
+		$('#userbox ul').toggle();
+	});
+	
 	/* Corrent margins in forms with invisible elements */
 	$('form p:hidden + p').css('margin-top', 0);
-	
-	/* Remove empty elements */
-	/*
-	$('p, h2, span').each( function() {
-		if ( $(this).html() == '&nbsp;' ) $(this).remove();
-	});
-	*/
 	
 	/* Submission form */
 	// If selected language is english, hide fields that are only needed for non-english publications
@@ -33,7 +33,6 @@ $(function() {
 		var elements = [
 			'#aspect_submission_StepTransformer_field_dc_title_translated',
 			'#aspect_submission_StepTransformer_field_dc_title_alternativeTranslated'
-			
 			//'#aspect_submission_StepTransformer_field_dc_description_abstract',
 			//'#aspect_submission_StepTransformer_field_dc_subject'
 		];
@@ -52,10 +51,22 @@ $(function() {
 	$('#aspect_artifactbrowser_ConfigurableBrowse_field_update').hide();
 	
 	/* Loading icon for file upload */
-	$('<img/>')[0].src = '/ediss/themes/Mirage/images/white-80.png';
-	$('<img/>')[0].src = '/ediss/themes/Mirage/images/loader.gif';
+	$('<img/>')[0].src = '/themes/Mirage/images/white-80.png';
+	$('<img/>')[0].src = '/themes/Mirage/images/loader.gif';
 	$('#aspect_submission_StepTransformer_div_submit-upload').submit( function() {
-		$('#aspect_submission_StepTransformer_div_submit-upload').append('<div id="overlay"><img src="/ediss/themes/Mirage/images/loader.gif" alt="Loading..." /></div>');
+		$('#aspect_submission_StepTransformer_div_submit-upload').append('<div id="overlay"><div>&nbsp;</div></div>');
+	});
+	
+	$('.bookmark').click( function(e) {
+		e.stopPropagation();
+		var width = $(this).width();
+		$(this).hide().after('<input class="bookmark-input" type="text" value="' + $(this).text() + '" />');
+		$('.bookmark-input').width( width + 2 ).select();
+		$('body').click( function(e) {
+			$('.bookmark-input').remove();
+			$('.bookmark').show();
+			$('body').unbind('click');
+		});
 	});
 	
 });
@@ -120,11 +131,6 @@ content_resize = function() {
 	while ( $('#userbox').height() > 28 && ++i < 99) {
 		$('.username').text( $('.username').text().replace(/.…*$/, '…') );
 	};
-	$('#userbox').removeClass('hover');
-	$('#userbox').has('.profile').click( function() {
-		$(this).toggleClass('open')
-		$('#userbox ul').toggle();
-	});
 	
 	/* Nav: truncate items */
 	$('#nav a').each( function() {

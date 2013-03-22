@@ -158,11 +158,11 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.asc">ascending</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.desc">descending</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Authors/Advisors Name</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Author/Advisors Name</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Subject</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Browsing {0} by Author {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Browsing {0} by Author</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.ftauthor">Browsing {0} by Author {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.ftauthor">Browsing {0} by Author {1}</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Browsing {0} by Subject {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Browsing {0} by Subject</message>
@@ -249,7 +249,7 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">All of eDiss</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communities &amp; Collections</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titles</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Authors/Advisors</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_ftauthor">Author only</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Subjects</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">By Issue Date</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">By Submit Date</message>
@@ -692,7 +692,8 @@
 	<message key="xmlui.Submission.submit.LicenseStep.info2">&#160;</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3">&#160;</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Distribution license</message>
-	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">I accept the license terms and the costs of making my work available onlinethe online delivery and I consent to an invoice being sent to my postal address.</message>
+	<!--<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">I accept the license terms and the costs of making my work available onlinethe online delivery and I consent to an invoice being sent to my postal address.</message>-->
+	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">I accept the license terms.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_error">You must accept this license to complete your submission. If you are unable to do so at this time you may save your work and return later or remove the submission by clicking the “Save &amp; Exit” button below.</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.RemovedStep -->
@@ -2185,7 +2186,7 @@
 				<li>
 					<span class="help" id="step2">
 						<span class="icon">2</span>
-						<a href="/login">Login at EDISS.</a>
+						<a href="/login">Login at eDiss.</a>
 						<span>The first time, a one-time free <a href="/register">registration</a> is required.</span>
 					</span>
 				</li>
@@ -2207,48 +2208,53 @@
 				<li>
 					<span class="help" id="step5">
 						<span class="icon">5</span>
-						<!-- <a href="/help/fullpublication#bill">-y the publication fee of € 25.00.</a> -->
-						From 15. Februar 2013 the publication service is free of charge!
-						<!-- <span>You will be mailed an invoice with our bank details.</span> -->
-						<!-- <span>From 15.02.2013 the publication service is free of charge!</span> -->
-					</span>
-				</li>
-				<li>
-					<span class="help" id="step6">
-						<span class="icon">6</span>
 						<a href="/help/fullpublication#finished">Done! Your publication is enabled by our editors.</a>
 						<span>On the publication of your work, you will be notified via e-mail.</span>
 					</span>
 				</li>
 			</ol>
-			<p class="ds-paragraph">
+			
+			<p class="ds-paragraph pad-top">
 				<strong>If you have any questions, feel free to contact us:</strong>
 			</p>
-			<p class="ds-paragraph">
-				<strong>By postal mail:</strong>
-			</p>
-			<ul class="ds-simple-list">
-				<li>Niedersächsische Staats- und Universitätsbibliothek Göttingen</li>
-				<li>eDiss – Raum 2.19</li>
-				<li>Platz der Göttinger Sieben 1</li>
-				<li>37073 Göttingen</li>
-			</ul>
-			<p class="ds-paragraph">
-				<strong>Personally:</strong>
-			</p>
-			<ul class="ds-simple-list">
-				<li>Central Library</li>
-				<li>Second Floor left in the LRC, room 2.19</li>
-				<li>Tel.: 0551 / 39-5383</li>
-				<li>E-Mail: <a href="mailto:eDiss@sub.uni-goettingen.de">eDiss@sub.uni-goettingen.de</a></li>
-			</ul>
-			<p class="ds-paragraph">
-				<strong>Opening hours: </strong>
-			</p>
-			<ul class="ds-simple-list">
-				<li>Monday to Friday from 10:00 to 12:00 h.</li>
-				<li>Appointments can also be made outside of these hours.</li>
-			</ul>
+			
+			<div class="columns-golden">
+				<div class="left">
+					<h3>Postal Address</h3>
+					<p>
+						eDiss<br/>
+						Niedersächsischen Staats- und Universitätsbibliothek Göttingen<br/>
+						Platz der Göttinger Sieben 1<br/>
+						37073 Göttingen<br/>
+					</p>
+				</div>
+				<div class="right">
+					<div class="highlight">
+						<p>
+							Telephone: (0551) 39-5383
+						</p>
+						<p>
+							<a href="mailto:ediss@sub.uni-goettingen.de">ediss@sub.uni-goettingen.de</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="columns-equal">
+				<div class="left">
+					<h3>In Person</h3>
+					<p>
+						Central Library (address see above)<br/>
+						2<sup>nd</sup> floor left in the LRC, room 2.19
+					</p>
+				</div>
+				<div class="right">
+					<h3>Opening Hours</h3>
+					<p>Monday to Friday from 10:00 to 12:00 h.</p>
+					<p>Appointments can also be made outside of these hours.</p>
+				</div>
+			</div>
+			
 		</div>
 	</message>
 
@@ -2274,7 +2280,7 @@
 							<a href="#pdfCreate">Create your dissertation as a PDF file</a>
 						</li>
 						<li>
-							<a href="#register">Register or log in with EDISS</a>
+							<a href="#register">Register or log in with eDiss</a>
 						</li>
 						<li>
 							<a href="#workflow">Start the online publication process</a>
@@ -2383,7 +2389,7 @@
 				<li>In order to include your thesis in our full-text search we should be able to extract the text.</li>
 				<li>In the course of the archiving, it can be necessary to convert your document into other formats.</li>
 			</ul>
-			<h3 id="register" class="ds-head">Register or log in with EDISS</h3>
+			<h3 id="register" class="ds-head">Register or log in with eDiss</h3>
 			<p class="ds-paragraph">For the initial <strong>registration</strong>, please click on “Register” in the right upper box at the top of the page!<br />
 				It appears a form in which your E-Mail address will be asked. After completing and sending away the form, you will receive a message with a link to your future user profile. Please enter here your name and phone number. You can also speify the language in which you want to recieve notifications from us.<br />
 				<br />
@@ -2536,7 +2542,7 @@
 							<a href="#pdfCreate">Create your dissertation as a PDF file</a>
 						</li>
 						<li>
-							<a href="#register">Register or log in with EDISS</a>
+							<a href="#register">Register or log in with eDiss</a>
 						</li>
 						<li>
 							<a href="#workflow">Start the online publication process</a>
@@ -3051,4 +3057,13 @@
 	<message key="xmlui.item.type.habilitation">Habilitation</message>
 	<message key="xmlui.item.type.doctoral">Doctoral thesis</message>
 
+
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_ftadvisor">Advisor only</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_person">Author/Advisor</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.ftadvisor">Browsing {0} by Advisor {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.person">Browsing {0} by Author/Advisor {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.ftadvisor.column_heading">Advisor</message>        
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.person.column_heading">Author/Advisor</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.ftadvisor">Browsing {0} by Advisor {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.person">Browsing {0} by Author/Advisor {1}</message>
 </catalogue>

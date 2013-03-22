@@ -132,6 +132,7 @@
 	<!--<xsl:if test="not(./@id ='aspect.eperson.Navigation.list.account' and (count(//dri:item) &lt; 3))"> -->
 	        <xsl:apply-templates select="dri:head"/>
         	<div>
+		
 	            <xsl:call-template name="standardAttributes">
         	        <xsl:with-param name="class">ds-option-set</xsl:with-param>
 	            </xsl:call-template>
@@ -161,6 +162,7 @@
                 <xsl:with-param name="class">ds-option-set</xsl:with-param>
             </xsl:call-template>
             <ul class="ds-simple-list">
+		
                 <xsl:apply-templates select="dri:item" mode="nested"/>
             </ul>
         </div>
@@ -181,6 +183,7 @@
                 <xsl:with-param name="class">ds-option-set</xsl:with-param>
             </xsl:call-template>
             <ul class="ds-simple-list">
+		
                 <xsl:apply-templates select="dri:item" mode="nested"/>
             </ul>
         </div>
@@ -200,8 +203,37 @@
 
     <!-- Items inside option lists are excluded from the "orphan roundup" mechanism -->
     <xsl:template match="dri:options//dri:item" mode="nested" priority="3">
-        <li>
-            <xsl:apply-templates />
-        </li>
+	    <!-- M.M. show further person browsing in facetting style -->
+		<xsl:choose>
+		<xsl:when test="contains(dri:xref/@target, 'type=ft')"/>
+		<xsl:when test="contains(dri:xref/@target, 'type=person')">
+			<xsl:choose>
+				<xsl:when test="contains(//dri:metadata[@qualifier='queryString'], 'type=person') or contains(//dri:metadata[@qualifier='queryString'], 'type=ft')">
+					<li>
+						<xsl:apply-templates />
+						<ul>
+							<xsl:for-each select="following-sibling::dri:item">
+								<xsl:if test="dri:xref[contains(@target, 'type=ft')]">
+							<li>
+								<xsl:apply-templates />
+							</li>
+								</xsl:if>
+							</xsl:for-each>	
+						</ul>
+					</li>
+				</xsl:when>
+				<xsl:otherwise>
+					<li>
+						<xsl:apply-templates />
+					</li>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:when>
+		<xsl:otherwise>
+			<li>
+				<xsl:apply-templates />
+			</li>
+		</xsl:otherwise>
+		</xsl:choose>
     </xsl:template>
 </xsl:stylesheet>
