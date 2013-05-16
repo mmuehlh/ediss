@@ -157,6 +157,7 @@
 	#content {
 		float: none;
 		margin-left: 0;
+		padding-left: 20px;
 	}
 	#nav {
 		background: #eff1f5;

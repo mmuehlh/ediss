@@ -109,7 +109,7 @@
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.conjunction">Verknüpfung</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_type">Suchmodus</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_for">Suche nach</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_author">Autor/Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_author">Autor &amp; Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_title">Titel</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_subject">Schlagwort</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_abstract">Zusammenfassung</message>
@@ -136,7 +136,7 @@
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.not">NICHT</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.ConfigureableBrowse.java -->
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with">Oder geben Sie die ersten Buchstaben ein: </message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with">Geben Sie die ersten Buchstaben ein: </message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with_help">Auflistung von Dokumenten, die mit diesen Buchstaben anfangen</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_select">Gehe zu einem Punkt im Index: </message>	
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_month">(Monat)</message>	
@@ -158,11 +158,12 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.asc">aufsteigend</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.desc">absteigend</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Autor/Gutachter</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Schlagwort</message>
+	<!-- <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Autor/Gutachter</message> -->
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading"></message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading"></message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Dokumente {0} nach Autor/Gutachter {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Dokumente {0} nach Autor/Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Dokumente {0} nach Autor {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Dokumente {0} nach Autor</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Auflistung {0} nach Schlagwort {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Auflistung {0} nach Schlagwort</message>
@@ -249,9 +250,11 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Im gesamten Bestand</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Bereiche &amp; Sammlungen</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titel</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_ftauthor">Nur Autor</message>
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_ftadvisor">Nur Erstgutachter</message>	
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_person">Autor/Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_ftauthor">Autor</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_personftadvisor">Betreuer</message>	
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_author">Autor</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_person">Betreuer &amp; Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_personftreferee">Gutachter</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Schlagworte</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Erscheinungsdatum</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">Zugangsdatum</message>
@@ -540,7 +543,7 @@
 	<message key="xmlui.Submission.Submissions.submit_column2">Titel</message>
 	<message key="xmlui.Submission.Submissions.submit_column3">Sammlung</message>
 	<message key="xmlui.Submission.Submissions.submit_column4">Veröffentlicht von</message>
-	<message key="xmlui.Submission.Submissions.submit_head3">Autor/Gutachter:</message>
+	<message key="xmlui.Submission.Submissions.submit_head3">Autor &amp; Gutachter:</message>
 	<message key="xmlui.Submission.Submissions.submit_info3">Es gibt keine unvollendeten Veröffentlichungen</message>
 	<message key="xmlui.Submission.Submissions.submit_head4">Supervision:</message>
 	<message key="xmlui.Submission.Submissions.submit_submit_remove">Ausgewählte löschen</message>
@@ -1420,7 +1423,7 @@
 	<message key="xmlui.administrative.mapper.SearchItemForm.submit_map">Ausgewählte Dokumente spiegeln</message>
 	<message key="xmlui.administrative.mapper.SearchItemForm.column1">&#160;</message>
 	<message key="xmlui.administrative.mapper.SearchItemForm.column2">Sammlung</message>
-	<message key="xmlui.administrative.mapper.SearchItemForm.column3">Autor/Gutachter</message>
+	<message key="xmlui.administrative.mapper.SearchItemForm.column3">Autor &amp; Gutachter</message>
 	<message key="xmlui.administrative.mapper.SearchItemForm.column4">Titel</message>
 
 	<!-- org.dspace.app.xmlui.administrative.mapper.BrowseItemForm -->
@@ -1430,7 +1433,7 @@
 	<message key="xmlui.administrative.mapper.BrowseItemForm.submit_unmap">Spiegelungen löschen</message>
 	<message key="xmlui.administrative.mapper.BrowseItemForm.column1">&#160;</message>
 	<message key="xmlui.administrative.mapper.BrowseItemForm.column2">Sammlung</message>
-	<message key="xmlui.administrative.mapper.BrowseItemForm.column3">Autor/Gutachter</message>
+	<message key="xmlui.administrative.mapper.BrowseItemForm.column3">Autor &amp; Gutachter</message>
 	<message key="xmlui.administrative.mapper.BrowseItemForm.column4">Titel</message>
 	<message key="xmlui.administrative.mapper.BrowseItemForm.no_remove">Sie benötigen REMOVE (Entfernen) Rechte an dieser Sammlung, um Spiegelungen zu löschen.</message>
 
@@ -1559,7 +1562,7 @@
 	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.harvest_status_queued">Diese Sammlung befindet sich in der Warteschleife für das Harvesting.</message>
 	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.harvest_status_oai_error">Während des letzen Harvesting ist ein OAI-PMH Fehler aufgetreten.</message>
 	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.harvest_status_unknown_error">Ein unerwarteter/unbekannter Fehler ist währen des letzten Harvestings aufgetreten.</message>
-	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.option_md_only">HNur die Metadaten über Harvesting beziehen.</message>
+	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.option_md_only">Nur die Metadaten über Harvesting beziehen.</message>
 	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.option_md_and_ref">Beziehe die Metadaten über Harvesting und referenziere die Dateien.</message>
 	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.option_md_and_bs">Beziehe sowohl die Metadaten alsauch die Dateien über Harvesting (komplette Reproduktion der Ressource).</message>
 	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.submit_change_settings">Einstellungen ändern</message>
@@ -2013,7 +2016,7 @@
 	<message key="xmlui.Submission.submit.UploadStep.check-true">ja</message>
 	<message key="xmlui.Submission.submit.UploadStep.check-false">nein</message>
 
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_ftadvisor">Nur Erstgutachter</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_personftadvisor">Betreuer</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_gok">GOK</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_bk">BK</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dnb">DNB-Klasse</message>
@@ -2024,7 +2027,7 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_institute">Institute</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subjecteng">Schlagworte (englisch)</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.ftadvisor">Dokumente {0} nach Erstgutachter {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.personftadvisor">Dokumente {0} nach Betreuer {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.gok">Dokumente nach GOK</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.bk">Dokumente nach BK</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.dnb">Dokumente nach DNB-Klasse</message>
@@ -2035,9 +2038,10 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.institute">Dokumente nach Institut</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subjecteng">Dokumente nach Schlagworten (englisch)</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.ftadvisor">Dokumente {0} nach Erstgutatchter {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.ftauthor">Dokumente {0} nach Autor {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.person">Dokumente {0} nach Autor/Gutatchter {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.personftadvisor">Dokumente {0} nach Betreuer {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Dokumente {0} nach Autor {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.personftreferee">Dokumente {0} nach Gutachter {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.person">Dokumente {0} nach Betreuer &amp; Gutatchter {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.gok">Dokumente {0} nach GOK {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.bk">Dokumente {0} nach BK {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.dnb">Dokumente {0} nach DNB-Klasse {1}</message>
@@ -2048,9 +2052,10 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.institute">Dokumente {0} nach Institute {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subjecteng">Dokuemente {0} nach Schlagworten eng {1}</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.ftadvisor.column_heading">Erstgutachter</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.ftauthor.column_heading">Autor</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.person.column_heading">Autor/Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.personftadvisor.column_heading"></message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading"></message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.person.column_heading"></message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.personftreferee.column_heading"></message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.gok.column_heading">GOK</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.bk.column_heading">BK</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.dnb.column_heading">DNB-Klasse</message>
@@ -2065,17 +2070,16 @@
 	<message key="xmlui.general.language.en">Englisch</message>
 	<message key="xmlui.general.language.other">Weitere Sprachen</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.ftauthor">Dokumente {0} nach Autor {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.ftadvisor">Dokumente {0} nach Erstgutachter {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.person">Dokumente {0} nach Autor/Gutachter {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.ftadvisor">Dokumente {0} nach Erstgutachter {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.ftauthor">Dokumente {0} nach Erstgutachter {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.person">Dokumente {0} nach Autor/Gutachter {1}</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_referee">Gutachter</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.referee.column_heading">Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Dokumente {0} nach Autor {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.personftadvisor">Dokumente {0} nach Betreuer {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.person">Dokumente {0} nach Betreuer &amp; Gutachter {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.personftreferee">Dokumente {0} nach Gutachter {1}</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_personftreferee">Gutachter</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.personftreferee.column_heading"></message>
 
 	<message key="xmlui.item-view.examination">Angenommen am</message>
 	<message key="xmlui.item-view.advisor">Betreuer</message>
+	<message key="xmlui.item-view.furtherReferee">Weitere Gutachter</message>
 	<message key="xmlui.item-view.referee">Gutachter</message>
 
 	<message key="xmlui.general.publish_now">Jetzt veröffentlichen</message>
@@ -2140,7 +2144,7 @@
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Schlagwort</message>
 
 	<message key="xmlui.Discovery.AbstractSearch.startswith">Anfangsbuchstaben</message>
-	<message key="xmlui.Discovery.AbstractSearch.startswith.help">Oder geben Sie die ersten Buchstaben ein:</message>
+	<message key="xmlui.Discovery.AbstractSearch.startswith.help">Geben Sie die ersten Buchstaben ein:</message>
 	<message key="xmlui.Discovery.AbstractSearch.type_author">Filtern nach Autor</message>
 	<message key="xmlui.Discovery.AbstractSearch.type_subject">Filtern nach Schlagwort</message>
 
@@ -2811,7 +2815,7 @@
 				<em>5. Rücknahme der Einverständniserklärung</em>
 			</p>
 			<p class="ds-paragraph">
-				Eine Rücknahme dieser Einverständniserklärung ist nur unter Berufung auf § 42 UrhG (Werk entspricht nicht mehr der Überzeugung des Autors) möglich. Die Universität Göttingen ist berechtigt, dem Veröffentlichenden den hierdurch entstandenen zusätzlichen Aufwand in Rechnung zu stellen.
+				Eine Rücknahme dieser Einverständniserklärung ist nur unter Berufung auf § 42 UrhG (Werk entspricht nicht mehr der Überzeugung des Autors) möglich. 
 			</p>
 			<p class="ds-paragraph">
 				<strong>Der Veröffentlichende versichert, dass die gelieferte Datei und die ausgedruckten Exemplare der vom Fachbereich genehmigten Druckfassung entsprechen und die zuständige Einrichtung der Veröffentlichung der Dokumente zugestimmt hat.</strong>
@@ -2837,14 +2841,26 @@
 				<h2 class="ds-head">Inhaltsverzeichnis</h2>
 				<ul class="ds-simple-list">
 					<li>
-						<a href="#parallel">Darf ich meine Dissertation neben der Veröffentlichung auf eDiss <strong>auch anderswo online stellen oder publizieren</strong>?</a>
+						<a href="#parallel">Darf ich meine Dissertation neben der Veröffentlichung auf eDiss auch anderswo online stellen oder publizieren?</a>
 					</li>
 					<li>
-						<a href="#benefits"><strong>Welche Vorteile</strong> bringt mir die  Veröffentlichung auf eDiss?</a>
+						<a href="#benefits">Welche Vorteile bringt mir die  Veröffentlichung auf eDiss?</a>
 					</li>
 					<li>
-						<a href="#change">Kann ich meine Publikation <strong>nach der Veröffentlichung ändern</strong>?</a>
+						<a href="#change">Kann ich meine Publikation nach der Veröffentlichung ändern?</a>
 					</li>
+					<li>
+						<a href="#abstract">Was ist ein Abstract (= Kurzreferat)?</a>
+					</li>
+					<li>
+						<a href="fastweb">Wie optimiere ich mein PDF-Dokument auf schnelle Webanzeige?</a>
+					</li>
+					<li>
+                                                <a href="abo">Wie kann man Neuerscheinungen abonnieren?</a>
+                                        </li>
+					<li>
+                                                <a href="referee">Wieviele Gutachter/Coreferenten muß ich beim Publizieren meiner Dissertation angeben?</a>
+                                        </li>
 				</ul>
 			</div>
 
@@ -2859,10 +2875,11 @@
 			<h2 id="benefits">Welche Vorteile bringt mir die elekronische Veröffentlichung meiner Dissertation?</h2>
 			<div class="ds-static-div">
 				<ul class="ds-bulleted-list">
+					<li>Die Veröffentlichung als elektronische Dissertation ist an der SUB Göttingen kostenfrei für den Doktoranden.</li>
 					<li>Wir bürgen für die Integrität Ihres Dokumentes. Jede Dissertation oder Abschlussarbeit wird verschlüsselt, um die Authentizität der Arbeit sicherzustellen und prüfen zu können.</li>
 					<li>Ihre Dissertation bekommt einen persistenten Identifier (einen sog. Handle), so dass Ihre Abschlussarbeit dauerhaft adressiert und zitiert werden kann.</li>
 					<li>Wir nehmen Ihre Publikation in unsere elektronischen Zugangssysteme auf, d. h. sie wird über der Homepage der SUB und den Göttinger Universitätskatalog (GUK) schnell gefunden.</li>
-					<li>Im Rahmen der technischen Möglichkeiten übernehmen wir eine dauerhafte Archivierung.</li>
+					<li>Ihre Dissertation wird bei der DNB (Deutschen Nationalbiblithek) gemeldet und dort archiviert.</li>
 				</ul>
 			</div>
 
@@ -2875,7 +2892,42 @@
 					Ist eine Korrektur notwendig und kann der Verfasser dies plausibel begründen, wenden Sie sich bitte an <a href="/contact">unsere Redakteure</a>. Nur sie sind berechtigt, Änderungen an den Angaben zur Dissertation vorzunehmen bzw. eine korrigierte Version des Dokuments neu einzustellen.<br />
 					Das Zurückziehen eines bereits publizierten Dokumentes ist nur möglich, wenn es lizenz- bzw. patentrechtliche Probleme gibt oder falls sich die Auffassung des Urhebers zu seinem Thema grundlegend geändert hat (§42 UrhG). Das Zurückziehen wird im System dokumentiert. Zusätzlich wird eine Informationsseite mit dem Hinweis „Dieses Dokument wurde zurückgezogen“ erstellt und über die permanente URL angezeigt.
 				</p>
-			</div>   
+			</div>  
+                        <h2 id="#abstract">Was ist ein Abstract (= Kurzreferat)?</h2>
+			<div class="ds-static-div">
+				<p class="ds-paragraph">
+					Ein Kurzreferat (Abstract) gibt kurz und klar den Inhalt des Dokuments wieder. Das Kurzreferat soll informativ ohne Interpretation und Wertung und auch ohne die Originalvorlage verständlich sein. Der Sachtitel soll nicht wiederholt, vielmehr, wenn nötig, ergänzt oder erläutert werden. Es müssen nicht alle Inhaltskomponenten des Dokuments dargestellt, sondern es können diejenigen ausgewählt werden, die von besonderer Bedeutung sind (Grundlagen der praktischen Information und Dokumentation / Marianne Buder [Hrsg.], Münschen : Saur, 1997)
+				</p>
+				<p class="ds-paragraph">
+					Für manche Wissenschaftsbereiche ist es vielleicht hilfreich, ZIEL, METHODEN, ERGEBNISSE, SCHLUSSFOLGERUNG der Reihe nach aufzuführen. (Englisch: OBJECTIVE, METHODS, RESULTES, CONCLUSION)
+                                </p>
+				<p class="ds-paragraph">
+					Bei eDISS wird gefordert, daß Sie wenigstens einen Abstract in englischer Sprache (bei der Beschreibung Ihrer Publikation) eingeben. Falls Ihre Arbeit auf deutsch geschrieben ist, wäre es wünschenswert, auch noch einen Abstract in deutscher Sprache einzugeben.
+                                </p>
+			</div>
+
+                        <h2 id="fastweb">Wie optimiere ich mein PDF-Dokument auf schnelle Webanzeige?</h2>
+                        <div class="ds-static-div">
+                                <p class="ds-paragraph">
+					Eine ausführliche Anleitung dazu finden Sie auf unserer Hilfeseite <a href="/help/pdf-howto#fastweb">PDF richtig erstellen</a>.
+                                </p>
+                        </div>
+                        <h2 id="abo">Wie kann man Neuerscheinungen abonnieren?</h2>
+                        <div class="ds-static-div">
+                                <p class="ds-paragraph">
+					Sie können „Bereiche / Sammlungen“ abonnieren, um tagesaktuell per E-Mail über Neuerscheinungen informiert zu werden. Sie können beliebig viele Sammlungen abonnieren. Dazu loggen Sie sich bitte bei eDISS ein, wählen in der linken Spalte den Menüpunkt BENUTZERDATEN und können dort in einem Unterpunkt „Abonnements“ die Bereiche / Sammlungen eintragen, zu denen Sie gerne eine automatische Mail-Benachrichtigung bei einer Neuerscheinung erhalten möchten.
+                                </p>
+                                <p class="ds-paragraph">
+					Eine Alternative zur Benachrichtigung per E-Mail sind die RSS feeds.
+				</p>
+                        </div>
+                        <h2 id="referee">Wieviele Gutachter/Coreferenten muß ich beim Publizieren meiner Dissertation angeben?</h2>
+                        <div class="ds-static-div">
+                                <p class="ds-paragraph">
+					Sie haben die Möglichkeit, in der Eingabemaske einen Betreuer (Doktorvater) und einen Gutachter anzugeben. Es stehen noch zwei Felder für weitere Gutachter („Zweitgutachter“ und „weitere Gutachter“) zur Verfügung. Diese müssen jedoch nicht genutzt werden, wenn keine weiteren Gutachter für Ihre Arbeit bestellt waren.
+                                </p>
+                        </div>
+ 
 
 		</div>
 	</message>
@@ -3059,8 +3111,8 @@
 	<message key="xmlui.home.head2">Veröffentlichen Sie Ihre elektronische Dissertation bei der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB).</message>
 	<message key="xmlui.home.publication.process">Und so geht es:</message>
 	<message key="xmlui.test">Button test</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed1">Diese Datei wird erst ab dem </message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed2"> freigegeben.</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed1">Diese Datei ist bis (einschließlich) </message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed2"> gesperrt.</message>
 
  	<message key="xmlui.administrative.Navigation.context_confirm_default">Conf: normal</message>
 	<message key="xmlui.administrative.Navigation.context_confirm_postpone">Conf: verzögert</message>
@@ -3074,4 +3126,6 @@
 	<message key="xmlui.item.type.habilitation">Habilitationsschrift</message>
 	<message key="xmlui.item.type.doctoral">Dissertation</message>
 
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_ft.label">Dokumente nach: </message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.person">Betreuer &amp; Gutachter</message>
 </catalogue>

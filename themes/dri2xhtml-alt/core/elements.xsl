@@ -517,9 +517,15 @@
 
     <!-- Generic item handling for cases where nothing special needs to be done -->
     <xsl:template match="dri:item" mode="nested">
-        <li>
-            <xsl:apply-templates />
-        </li>
+	<!-- M.M. Do not show person facet browsing on community and collection site -->
+	<xsl:choose>
+		<xsl:when test="contains(dri:xref/@target, 'type=personft')"/>
+		<xsl:otherwise>
+		        <li>
+        		     <xsl:apply-templates />
+		        </li>	
+		</xsl:otherwise>
+	</xsl:choose>
     </xsl:template>
 
     <xsl:template match="dri:list/dri:list" priority="1" mode="nested">

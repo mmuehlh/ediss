@@ -205,8 +205,8 @@
     <xsl:template match="dri:options//dri:item" mode="nested" priority="3">
 	    <!-- M.M. show further person browsing in facetting style -->
 		<xsl:choose>
-		<xsl:when test="contains(dri:xref/@target, 'type=ft')"/>
-		<xsl:when test="contains(dri:xref/@target, 'type=person')">
+		<xsl:when test="contains(dri:xref/@target, 'type=personft')"/>
+		<!-- <xsl:when test="contains(dri:xref/@target, 'type=person')">
 			<xsl:choose>
 				<xsl:when test="contains(//dri:metadata[@qualifier='queryString'], 'type=person') or contains(//dri:metadata[@qualifier='queryString'], 'type=ft')">
 					<li>
@@ -228,7 +228,7 @@
 					</li>
 				</xsl:otherwise>
 			</xsl:choose>
-		</xsl:when>
+		</xsl:when> -->
 		<xsl:otherwise>
 			<li>
 				<xsl:apply-templates />

@@ -1,9 +1,9 @@
 $(function() {
 	
 	/* Ensure optimal width of content */
-	content_resize();
 	username_bak = $('.username').html();
 	trail_bak = $('#ds-trail').html();
+	content_resize();
 	$(window).resize( function() { content_resize() } );
 	
 	/* Search form (top) */
@@ -73,12 +73,12 @@ $(function() {
 
 content_resize = function() {
 
-	var width = $(document).width();
+	var width = $(window).width();
 	if ( width < 640 ) {
 		$('#content, table').width( 'auto' );
 	} else if ( width < 1000 ) {
-		$('#content').width( width - 279 );
-		$('table').width( width - 239 );
+		$('#content').width( width - 280 );
+		$('table').width( width - 240 );
 	} else {
 		$('#content').width( 720 );
 		$('table').width( 740 );

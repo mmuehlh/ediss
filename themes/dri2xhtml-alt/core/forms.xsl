@@ -1012,57 +1012,31 @@
 					<xsl:apply-templates />
 				</input>
 				<!-- M.M. In cace of author-Browsing append links to special author browsing -->
-				<xsl:if test="./@id='aspect.artifactbrowser.ConfigurableBrowse.field.submit'">
-					<xsl:choose>
-						<xsl:when test="contains(//dri:metadata[@qualifier='queryString'],'person')">
+				<xsl:if test="(./@id='aspect.artifactbrowser.ConfigurableBrowse.field.submit') and (contains(//dri:metadata[@qualifier='queryString'],'person'))">
+					<span class="filter">
+						<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_ft.label</i18n:text>
+				
 							<span>
-								<a>
-									 <xsl:attribute name="href"><xsl:value-of select="concat(//dri:metadata[@element='contextPath'], '/', //dri:metadata[@qualifier='URI'],'?type=ftauthor')" /></xsl:attribute> 
-										<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_ftauthor</i18n:text>
+								<a class="ft">
+									 <xsl:attribute name="href"><xsl:value-of select="concat(//dri:metadata[@element='contextPath'], '/', //dri:metadata[@qualifier='URI'],'?type=personftadvisor')" /></xsl:attribute> 
+										<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_personftadvisor</i18n:text>
 								</a> 
 							</span>
+							&#160;|&#160;
 							<span>
 								<a>
-								        <xsl:attribute name="href"><xsl:value-of select="concat( //dri:metadata[@element='contextPath'] , '/', //dri:metadata[@qualifier='URI'],'?type=ftadvisor')" /></xsl:attribute> 
-										<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_ftadvisor</i18n:text>
+								        <xsl:attribute name="href"><xsl:value-of select="concat( //dri:metadata[@element='contextPath'] , '/', //dri:metadata[@qualifier='URI'],'?type=personftreferee')" /></xsl:attribute> 
+										<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_personftreferee</i18n:text>
 								</a>
 							</span>
-						
-						</xsl:when>
-
-						<xsl:when test="contains(//dri:metadata[@qualifier='queryString'], 'ftadvisor')">
-                                                        <span>
-                                                                <a>
-                                                                         <xsl:attribute name="href"><xsl:value-of select="concat(//dri:metadata[@element='contextPath'], '/', //dri:metadata[@qualifier='URI'],'?type=person')" /></xsl:attribute>
-                                                                                <i18n:text>xmlui.ArtifactBrowser.Navigation.browse_ftauthor</i18n:text>
+							&#160;|&#160;
+							<span>
+								<a>
+									<xsl:attribute name="href"><xsl:value-of select="concat( //dri:metadata[@element='contextPath'] , '/', //dri:metadata[@qualifier='URI'],'?type=person')" /></xsl:attribute>
+                                                                                <i18n:text>xmlui.ArtifactBrowser.Navigation.browse_person</i18n:text>
                                                                 </a>
                                                         </span>
-                                                        <span>
-                                                                <a>
-                                                                         <xsl:attribute name="href"><xsl:value-of select="concat(//dri:metadata[@element='contextPath'], '/', //dri:metadata[@qualifier='URI'],'?type=author')" /></xsl:attribute>                                                                        	
-										<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_person</i18n:text>
-                                                                </a>
-                                                        </span>
-
-                                                </xsl:when>
-						<xsl:when test="contains(//dri:metadata[@qualifier='queryString'], 'ftauthor')">
-                                                        <span>
-                                                                <a>
-                                                                         <xsl:attribute name="href"><xsl:value-of select="concat( //dri:metadata[@element='contextPath'], '/', //dri:metadata[@qualifier='URI'],'?type=ftadvisor')" /></xsl:attribute>
-                                                                                <i18n:text>xmlui.ArtifactBrowser.Navigation.browse_ftadvisor</i18n:text>
-                                                                </a>
-                                                        </span>
-                                                        <span>
-                                                                <a>
-                                                                         <xsl:attribute name="href"><xsl:value-of select="concat( //dri:metadata[@element='contextPath'], '/', //dri:metadata[@qualifier='URI'],'?type=ftauthor')" /></xsl:attribute>                                                                       
-										<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_person</i18n:text>
-                                                                </a>
-                                                        </span>
-
-                                                </xsl:when> 
-
-					</xsl:choose> 
-					
+					</span>
 				</xsl:if> 
 				
 

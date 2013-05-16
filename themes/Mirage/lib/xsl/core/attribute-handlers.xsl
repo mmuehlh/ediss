@@ -38,7 +38,7 @@
 				<div class="pagination clearfix {$position}">
 				
 					
-					<p class="pagination-info">
+					<!-- <p class="pagination-info">
 						<i18n:translate>
 							<xsl:choose>
 								<xsl:when test="parent::node()/@itemsTotal = -1">
@@ -52,7 +52,7 @@
 							<i18n:param><xsl:value-of select="parent::node()/@lastItemIndex"/></i18n:param>
 							<i18n:param><xsl:value-of select="parent::node()/@itemsTotal"/></i18n:param>
 						</i18n:translate>
-					</p>
+					</p> -->
 						<xsl:if test="parent::node()/@previousPage and contains(//dri:metadata[@qualifier='URI'], 'search-filter')">
                                                         <a class="previous-page-link">
                                                                         <xsl:attribute name="href">
@@ -95,13 +95,12 @@
 					<xsl:variable name="pagesTotal">
 						<xsl:value-of select='format-number(parent::node()/@itemsTotal div $defaultrpp, "#")'/>
 					</xsl:variable>
-					TOTAL: <xsl:value-of select="$pagesTotal"/> <xsl:text> Current: </xsl:text><xsl:value-of select="$currentPage"/>
 					<!-- it does not work with search-filter and epeaple -->
 	       <xsl:if test="not(contains(//dri:metadata[@qualifier='URI'], 'search-filter'))">	
 
 					<ul class="pagination-links">
 
-						<xsl:if test="parent::node()/@previousPage">
+						<!-- <xsl:if test="parent::node()/@previousPage">
 						    
 							<li>
 							<a class="previous-page-link">
@@ -111,6 +110,23 @@
 								<i18n:text>xmlui.dri2xhtml.structural.pagination-previous</i18n:text>
 							</a>
 							</li>
+						</xsl:if> -->
+						<xsl:if test="(($currentPage - 1) &gt; 0)">
+                                                <li>
+                                                        <a class="previous-page-link">
+                                                        <xsl:attribute name="href">
+                                                                <xsl:choose>
+                                                                        <xsl:when test="(parent::node()/@firstItemIndex &gt; 61)">
+                                                                                <xsl:value-of select="concat($linkPrefix, 'offset=', (parent::node()/@firstItemIndex -61 ), '&amp;sort_by=', $linkPostfix)"/>
+                                                                        </xsl:when>
+                                                                        <xsl:otherwise>
+                                                                                <xsl:value-of select="concat($linkPrefix, '&amp;offset=0', '&amp;sort_by=', $linkPostfix)"/>
+                                                                        </xsl:otherwise>
+                                                                </xsl:choose>
+                                                        </xsl:attribute>
+							<i18n:text>xmlui.dri2xhtml.structural.pagination-previous</i18n:text>
+                                                        </a>
+                                                </li>
 						</xsl:if>
 
 						<xsl:if test="$currentPage &gt; 4">
@@ -274,6 +290,7 @@
                                                                 </li>
 
 							</xsl:if>
+					<!--
 					<xsl:if test="parent::node()/@nextPage">
 						<li>
 							<a class="next-page-link">
@@ -284,7 +301,27 @@
 							</a>
 						</li>
 					</xsl:if>
-					
+					-->
+					<xsl:if test="($currentPage + 1) &lt;= $pagesTotal">
+						<li>
+                                                        <a class="next-page-link">
+
+                                                                <xsl:attribute name="href">
+                                                                <xsl:choose>
+                                                                        <xsl:when test="($currentPage + 1) &lt; $pagesTotal">
+                                                                                <xsl:value-of select="concat($linkPrefix, 'offset=', parent::node()/@lastItemIndex, '&amp;sort_by=', $linkPostfix)"/>
+                                                                        </xsl:when>
+                                                                        <xsl:otherwise>
+                                                                                <!-- <xsl:variable name="temp"><xsl:value-of select="substring-before($linkPrefix, 'rpp=')"/></xsl:variable> -->
+                                                                                <xsl:value-of select="concat($linkPrefix, 'rpp=120&amp;offset=', parent::node()/@lastItemIndex, '&amp;sort_by=', $linkPostfix)"/>
+                                                                                </xsl:otherwise>
+                                                                        </xsl:choose>
+                                                                        </xsl:attribute>
+							 	<i18n:text>xmlui.dri2xhtml.structural.pagination-next</i18n:text>
+							</a>
+						</li>
+					</xsl:if>
+
 					</ul>
 					</xsl:if>
 				    </xsl:if>
@@ -302,7 +339,7 @@
 			</xsl:when>
 		<xsl:when test=". = 'simple' and not(contains(//dri:metadata[@qualifier='URI'], 'browse'))">
                 <div class="pagination clearfix {$position}">
-                    <p class="pagination-info">
+                    <!-- <p class="pagination-info">
                         <i18n:translate>
                             <xsl:choose>
                                 <xsl:when test="parent::node()/@itemsTotal = -1">
@@ -316,15 +353,7 @@
                             <i18n:param><xsl:value-of select="parent::node()/@lastItemIndex"/></i18n:param>
                             <i18n:param><xsl:value-of select="parent::node()/@itemsTotal"/></i18n:param>
                         </i18n:translate>
-                        <!--
-                        <xsl:text>Now showing items </xsl:text>
-                        <xsl:value-of select="parent::node()/@firstItemIndex"/>
-                        <xsl:text>-</xsl:text>
-                        <xsl:value-of select="parent::node()/@lastItemIndex"/>
-                        <xsl:text> of </xsl:text>
-                        <xsl:value-of select="parent::node()/@itemsTotal"/>
-                            -->
-                    </p>
+                    </p> -->
                     <ul class="pagination-links">
                         <li>
                             <xsl:if test="parent::node()/@previousPage">

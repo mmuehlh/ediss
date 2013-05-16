@@ -58,10 +58,11 @@
 			<!-- <xsl:apply-templates select="$dim" mode="itemInstitute-DIM"/> -->
 			<!-- <xsl:apply-templates select="$dim" mode="itemURN-DIM"/> -->
 			<xsl:apply-templates select="$dim" mode="itemAdvisor-DIM"/>
-			<xsl:apply-templates select="$dim" mode="itemReferee-DIM"/>
+			<xsl:apply-templates select="$dim" mode="itemFurtherReferee-DIM"/>
+			<!-- <xsl:apply-templates select="$dim" mode="itemReferee-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemCoreferee-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemThirdreferee-DIM"/> 
-
+			-->
 			<xsl:apply-templates select="$dim" mode="itemURI-DIM"/>	
 			<!--<xsl:apply-templates select="$dim" mode="itemType-DIM"/>-->
 			<!--<xsl:apply-templates select="$dim" mode="itemLanguage-DIM"/>-->
@@ -129,9 +130,11 @@
 		<h2><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h2>
 		<div class="metadata">
 			<xsl:apply-templates select="$dim" mode="itemAbstractGer-DIM"/>
-			<xsl:apply-templates select="$dim" mode="itemKeywords-DIM">
-				<xsl:with-param name="lang">ger</xsl:with-param>
-			</xsl:apply-templates>
+			<xsl:if test="//dim:field[@element='description'][@qualifier='abstractger']">
+				<xsl:apply-templates select="$dim" mode="itemKeywords-DIM">
+					<xsl:with-param name="lang">ger</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
 			<xsl:apply-templates select="$dim" mode="itemAbstractEng-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemKeywords-DIM">
 				<xsl:with-param name="lang">eng</xsl:with-param>
@@ -289,7 +292,7 @@
 			</div>
 		</xsl:if>
 		-->
-		<xsl:if test="dim:field[@element='subject'] ">
+		<xsl:if test="dim:field[@element='subject'][@qualifier=$lang] ">
 			<div class="ds-item-keywords">
 				<strong><i18n:text>xmlui.dri2xhtml.METS-1.0.item-subject</i18n:text>:</strong>
 				<xsl:for-each select="dim:field[@element='subject' and @qualifier=$lang]"> 
@@ -299,7 +302,7 @@
 							<xsl:value-of select="."/> 
 						</xsl:with-param>
 					</xsl:call-template> 
-					<xsl:if test="count(following-sibling::dim:field[@element='subject'and not(@qualifier)]) != 0">
+					<xsl:if test="count(following-sibling::dim:field[@element='subject' and @qualifier=$lang]) != 0">
 						<xsl:text>; </xsl:text>
 					</xsl:if>
 				</xsl:for-each>
@@ -464,8 +467,8 @@
 					<xsl:if test="count(dim:field[@element='description' and @qualifier='abstract']) &gt; 1">
 						<div class="spacer">&#160;</div>
 					</xsl:if>
-					<xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
-						<xsl:copy-of select="./node()"/>
+					<xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']" >
+						<xsl:value-of select="." disable-output-escaping="yes"/>
 						<xsl:if test="count(following-sibling::dim:field[@element='description' and @qualifier='abstract']) != 0">
 							<div class="spacer">&#160;</div>
 							
@@ -556,6 +559,24 @@
 			</div>
 		</xsl:if>
 	</xsl:template>
+
+	<xsl:template match="dim:dim" mode="itemFurtherReferee-DIM">
+                <xsl:if test="dim:field[@element='contributor' and contains(@qualifier,'eferee')]">
+                        <div class="simple-item-view-other">
+                                <span class="bold"><i18n:text>xmlui.item-view.furtherReferee</i18n:text>:</span>
+                                <span>
+					<xsl:for-each select="dim:field[@element='contributor' and contains(@qualifier,'eferee')]">
+	                                        <xsl:value-of select="." />
+						<xsl:if test="position() != last()">
+					<!-- <xsl:if test="count(following-sibling::dim:field[@element='contributor'][contains(@qualifier, 'ereferee')]) != 0"> -->
+						<xsl:text>; </xsl:text>	
+					</xsl:if>
+					</xsl:for-each>
+                                </span>
+                        </div>
+                </xsl:if>
+        </xsl:template>
+
 
 	<xsl:template match="dim:dim" mode="itemReferee-DIM">
 		<xsl:if test="dim:field[@element='contributor' and @qualifier='referee']">

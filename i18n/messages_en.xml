@@ -136,9 +136,9 @@
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.not">NOT</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.ConfigureableBrowse.java -->
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with">Or enter first few letters: </message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with">Enter first few letters: </message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with_help">Browse for items that begin with these letters</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_select">Jump to a point in the index:</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_select">Jump to a point in the index: </message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_month">(Choose month)</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.choose_year">(Choose year)</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.jump_year">Jump to year: </message>
@@ -158,11 +158,15 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.asc">ascending</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.desc">descending</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Author/Advisors Name</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Subject</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading"></message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading"></message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.ftauthor">Browsing {0} by Author {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.ftauthor">Browsing {0} by Author {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.personftadvisor">Browsing {0} by Advisor {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.personftadvisor">Browsing {0} by Advisor {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Browsing {0} by Author {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Browsing {0} by Author {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.personftreferee">Browsing {0} by Referee {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.personftreferee">Browsing {0} by Referee {1}</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Browsing {0} by Subject {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Browsing {0} by Subject</message>
@@ -183,7 +187,7 @@
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.full_text_search">Search within this collection:</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_browse">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Titles</message>
-	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_authors">Authors/Advisors</message>
+	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_authors">Authors</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_dates">Dates</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.advanced_search_link">Advanced Search</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_recent_submissions">Recent Submissions</message>
@@ -200,7 +204,7 @@
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Search within this community and its collections:</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Titles</message>
-	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_authors">Authors/Advisors</message>
+	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_authors">Author</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_dates">Dates</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.advanced_search_link">Advanced Search</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_sub_communities">Sub-communities within this community</message>
@@ -249,9 +253,10 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">All of eDiss</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communities &amp; Collections</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titles</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_ftauthor">Author only</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_ftauthor">Author</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_author">Author</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Subjects</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">By Issue Date</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Issue Date</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">By Submit Date</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_collection">This Collection</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_community">This Community</message>
@@ -2044,7 +2049,8 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.institute">Documents {0} by institute {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subjecteng">Documents {0} by subject {1} (english)</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.advisor.column_heading">Advisor</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.advisor.column_heading"></message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading"></message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.gok.column_heading">GOK</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.bk.column_heading">BK</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.dnb.column_heading">DNB Class</message>
@@ -2062,11 +2068,12 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.referee">Browsing by Advisor</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.referee">Browsing by Advisor</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_referee">Advisor</message>	
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.referee.column_heading">Advisor</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.referee.column_heading"></message>
 
 	<message key="xmlui.item-view.examination">Date of Examination</message>
 	<message key="xmlui.item-view.advisor">Advisor</message>
 	<message key="xmlui.item-view.referee">Referee</message>
+	<message key="xmlui.item-view.furtherReferee">Further Referee</message>
 
 	<message key="xmlui.general.publish_now">Publish now</message>
 	<message key="xmlui.general.publish_here">Publish here</message>
@@ -2130,7 +2137,7 @@
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Subject</message>
 
 	<message key="xmlui.Discovery.AbstractSearch.startswith">Starts with</message>
-	<message key="xmlui.Discovery.AbstractSearch.startswith.help">Or enter first few letters:</message>
+	<message key="xmlui.Discovery.AbstractSearch.startswith.help">Enter first few letters:</message>
 	<message key="xmlui.Discovery.AbstractSearch.type_author">Filter by author</message>
 	<message key="xmlui.Discovery.AbstractSearch.type_subject">Filter by subject</message>
 
@@ -2794,7 +2801,7 @@
 				<em>5. Withdrawal of the declaration of consent</em>
 			</p>
 			<p class="ds-paragraph">
-				A withdrawal of this declaration of consent is only possible with appeal to §42 UrhG (the work does not any longer comply with the author´s conviction). In this case the University of Göttingen is entitled to charge the author with any cost which is caused by this withdrawal.
+				A withdrawal of this declaration of consent is only possible with appeal to §42 UrhG (the work does not any longer comply with the author´s conviction).
 			</p>
 			<p class="ds-paragraph">
 				<strong>If the resource is a dissertation, state doctorate, master´s thesis, bachelor´s thesis or any other kind of qualification work at the University of Göttingen, the author confirms that the supplied data and printed versions are in accordance with the original form of the publication which has been approved by the department and that the appropriate institution has consented to the publication of the work. </strong>
@@ -2826,8 +2833,12 @@
 						<a href="#benefits"><strong>What are the benefits</strong> of the electronic publishing	on eDiss?</a>
 					</li>
 					<li>
-						<a href="#change">Is it possibly to <strong>make changes</strong> to my dissertation after it has been published?</a>
+						<a href="#change">Is it possible to <strong>make changes</strong> to my dissertation after it has been published?</a>
 					</li>
+                                        <li>
+                                                <a href="#fastweb">How to optimize my PDF Document for fast web view?</a>
+                                        </li>
+
 				</ul>
 			</div>
 
@@ -2842,6 +2853,7 @@
 			<h2 id="benefits" class="ds-div-head">What are the benefits of the electronic publishing on eDiss?</h2>
 			<div class="ds-static-div">
 				<ul class="ds-bulleted-list">
+					<li>Publishing your doctoral thesis on eDISS is free of charge.</li>
 					<li>We guarantee the integrity of your document. Every dissertation or thesis will be encrypted to ensure  and to be able to check the authenticity of the work.</li>
 					<li>Your Dissertation gets a persistent identifier (so-called Handle), so that it can be permanently addressed and cited.</li>
 					<li>We include your publication in our electronic access systems i.e. in the Homepage of the SUB and the University Cataloge (GUK). Therefore your dissertation will be more visible and found quickly. </li>
@@ -2849,7 +2861,7 @@
 				</ul>
 			</div>
 
-			<h2 id="change">Is it possibly to make changes to my dissertation after it has been published?</h2>
+			<h2 id="change">Is it possible to make changes to my dissertation after it has been published?</h2>
 			<div class="ds-static-div">
 				<p class="ds-paragraph">
 					<strong>No.</strong> To ensure authenticity, ability to quote and permanent availability, you cannot change your publication after it has been made available online on eDiss.
@@ -2858,7 +2870,13 @@
 					If you deem a correction absolutely necessary, please contact <a href="/contact">our editors</a>.<br />
 					According to German copyright law, a previously published document can only be withdrawn if there are important licensing and patent issues, or if the author's opinion on his subject has fundamentally changed (§ 42 UrhG). The withdrawal will be documented in the system and the message “This document has been withdrawn” will be displayed on the permanent URL.
 				</p>
-			</div>   
+			</div>  
+                        <h2 id="fastweb">How to optimize my PDF Document for fast web view?</h2>
+                        <div class="ds-static-div">
+                                <p class="ds-paragraph">
+					Please Find detailed instructions <a href="/help/pdf-howto#fastweb">here</a>!
+				</p>
+			</div> 
 
 		</div>
 	</message>
@@ -3058,12 +3076,17 @@
 	<message key="xmlui.item.type.doctoral">Doctoral thesis</message>
 
 
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_ftadvisor">Advisor only</message>
-        <message key="xmlui.ArtifactBrowser.Navigation.browse_person">Author/Advisor</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_personftadvisor">Advisor</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_personftreferee">Referee</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_person">Advisor &amp; Referee</message>
         <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.ftadvisor">Browsing {0} by Advisor {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.person">Browsing {0} by Author/Advisor {1}</message>
-        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.ftadvisor.column_heading">Advisor</message>        
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.person.column_heading">Author/Advisor</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.ftadvisor">Browsing {0} by Advisor {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.person">Browsing {0} by Author/Advisor {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Browsing {0} by  Author {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.ftadvisor.column_heading"></message>        
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.person.column_heading"></message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.personftadvisor">Browsing {0} by Advisor {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.person">Browsing {0} by Advisor &amp; Referee {1}</message>
+
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_ft.label">Browse by: </message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.person">Advisor &amp; Referee</message>	
+
 </catalogue>

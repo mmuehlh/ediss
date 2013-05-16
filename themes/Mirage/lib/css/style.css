@@ -907,23 +907,19 @@ form a[href$="/advanced-search"]:hover,
 #content h1 {
 	color: #5C739F;
 }
-
 #sub {
 	width: 1100px;
 	padding-left: 75px;
 	border: 0;
 }
-
 h1.confirm {
 	font-size: 1.3em;
 	color: #000;
 }
-
 p.publication {
 	font-size: 1.1em;
 	padding-bottom: 8px;
 }
-
 p.text {
 	padding-top: 10px;
 }
@@ -932,16 +928,9 @@ p.text {
 	padding: 0 0 9px 20px;
 	vertical-align: top;
 }
-
 div.confirm {
 	padding-top: 100px;
 }
-/*
-#content > div {
-	margin: -11px 0 20px;
-	position: relative;
-}
-*/
 
 /* Sidebar & Userbox
 ---------------------------------------------------------------------------*/
@@ -970,27 +959,14 @@ div.confirm {
 #nav .ds-simple-list li {
 	border-bottom: 1px solid #ccc;
 }
-#nav .sublist ul {
-    margin: 0;
-}
-#nav .sublist ul li {
-    border: 0 none;
-    margin-left: 24px;
-}
-#nav .sublist ul a {
-    border: 0;
-}
 #nav a,
-#userbox ul a {
+#userbox ul a
+.ft  {
 	background: url(../../images/icons.png) 7px -502px no-repeat;
 	display: block;
 	font-weight: bold;
 	padding: 9px 10px 8px 32px;
 	width: 178px;
-}
-
-#nav .sublist ul li a {
-    margin-top: 1px;
 }
 #userbox ul a {
 	width: auto;
@@ -1005,8 +981,8 @@ div.confirm {
 #nav a[href$="?type=dateissued"] {
 	background-position: 7px -150px;
 }
-#nav a[href$="?type=person"] {
-        background-position: 7px -22px;
+#nav a[href$="?type=author"], #nav a[href$="?type=person"] {
+	background-position: 7px -22px;
 }
 #nav a[href$="?type=title"] {
 	background-position: 7px -182px;
@@ -1032,7 +1008,7 @@ div.confirm {
 #nav a[href$="/register"] {
 	background-position: 7px -118px;
 }
-#nav li a:hover,
+#nav .ds-simple-list li:hover,
 #nav #aspect_eperson_Navigation_list_administrative a:hover {
 	background-color: #ddd;
 }
@@ -1243,6 +1219,12 @@ tr input {
 .file-metadata {
 	margin: 0 20px 18px 0;
 }
+
+.simple-item-view-abstract,
+.simple-item-view-description {
+	margin-top: 10px;
+}
+
 #ds-system-wide-alert,
 .notice {
 	padding: 10px;
@@ -1373,7 +1355,7 @@ div.vocabulary-container li.error {
 	display: inline-block;
 	padding: 3px 5px;
 	margin-top: 5px;
-	width: 128px;
+	width: 140px;
 }
 /* Only needed if thumbnails are enabled
 .ds-artifact-list .artifact-description {
@@ -1580,10 +1562,9 @@ tr.odd {
 .embargo-info p {
 	background-position: 0 -575px;
 }
-.bookmark-input {
-	font-weight: bold;
-	margin-left: -3px;
-	padding: 0 1px;
+
+span.bookmark {
+	cursor: move;
 }
 
 /* Frontpage
@@ -1668,13 +1649,11 @@ tr.odd {
 }
 .columns-equal .left,
 .columns-equal .right {
-	width: 48%;
+	width: 50%;
 }
 .highlight {
-/*      background: #EFF1F5;
-        border: 1px solid #ccc;*/
-        background: #FFF;
-        border: 1px solid #EFF1F5;
+	background: #f7f7f7;
+	border: 1px solid #ccc;
 	border-radius: 5px;
 	box-shadow: 0 1px 2px rgba(0,0,0,.15), inset 0 0 20px rgba(255,255,255,.8);
 	font-weight: bold;
@@ -1897,6 +1876,7 @@ ul.ds-progress-list li.disabled input.ds-button-field
 .ds-progress-list input {
 	background: none;
 	border: none;
+	border-radius: 0;
 	box-shadow: none;
 	color: inherit;
 	display: inline;
@@ -1979,6 +1959,10 @@ ul.ds-progress-list li.disabled input.ds-button-field
 
 /* Item View
 ---------------------------------------------------------------------------*/
+.simple-item-view-abstract + div,
+.license-info {
+	margin-top: 18px;
+}
 a[href ^="http://creativecommons.org/licenses/by/"] {
 	background: url(../../images/cc-by.png) left center no-repeat;
 	padding-left: 86px;
@@ -2002,9 +1986,6 @@ a[href ^="http://creativecommons.org/licenses/by-nd/"] {
 a[href ^="http://creativecommons.org/licenses/by-sa/"] {
 	background: url(../../images/cc-by-sa.png) left center no-repeat;
 	padding-left: 86px;
-}
-.ds-item-keywords {
-	margin-bottom: 18px;
 }
 .item-view-toggle {
 	font-weight: bold;
@@ -2083,10 +2064,6 @@ form.search table input.ds-text-field {
 .result-query {
 	margin-bottom: 30px;
 }
-#aspect_artifactbrowser_ConfigurableBrowse_div_browse-navigation span {
-    font-weight: bold;
-    margin-left: 10px;
-}
 
 /* Admin Forms
 ---------------------------------------------------------------------------*/
@@ -2138,4 +2115,13 @@ input[size="6"] {
 }
 #aspect_eperson_EditProfile_list_memberships {
 	display: none;
+}
+
+.filter {
+	display: block;
+	padding-top: 10px;
+}
+
+.filter span {
+	font-weight: bolder;
 }
