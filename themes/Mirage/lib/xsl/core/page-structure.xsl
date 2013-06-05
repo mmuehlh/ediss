@@ -87,6 +87,7 @@
 						<!--ds-content is a groups ds-body and the navigation together and used to put the clearfix on, center, etc.
 							ds-content-wrapper is necessary for IE6 to allow it to center the page content-->
 						<div id="content-wrapper">
+							<a class="navlink top" href="#nav"><i18n:text>xmlui.dri2xhtml.structural.nav-link</i18n:text></a>
 							<!--
 							   Goes over the document tag's children elements: body, options, meta. The body template
 							   generates the ds-body div that contains all the content. The options template generates
@@ -554,8 +555,6 @@
 
 			</div>
 			
-			<a class="navlink top" href="#nav"><i18n:text>xmlui.dri2xhtml.structural.nav-link</i18n:text> ▼</a>
-			
 		</div>
 
 	</xsl:template>
@@ -659,9 +658,6 @@
 	<xsl:template name="buildFooter">
 		<div id="footer-wrapper">
 		
-			<a class="navlink juxt right" href="#top"><i18n:text>xmlui.dri2xhtml.structural.content-link</i18n:text> ▲</a>
-			<a class="navlink juxt" href="#nav"><i18n:text>xmlui.dri2xhtml.structural.nav-link</i18n:text> ▲</a>
-		
 			<div id="footer">
 				<div id="footer-left">
 					<a>
@@ -725,32 +721,32 @@
 	-->
 	<xsl:template match="dri:body">
 		<div id="content">
-			<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']">
-				<div id="ds-system-wide-alert">
-					<p>
-						<xsl:copy-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']/node()"/>
-					</p>
-				</div>
-			</xsl:if>
-
-			<!-- Check for the custom pages -->
-			<xsl:choose>
-				<xsl:when test="starts-with($request-uri, 'page/about')">
-					<div>
-						<h1>About This Repository</h1>
-						<p>To add your own content to this page, edit webapps/xmlui/themes/Mirage/lib/xsl/core/page-structure.xsl and
-							add your own content to the title, trail, and body. If you wish to add additional pages, you
-							will need to create an additional xsl:when block and match the request-uri to whatever page
-							you are adding. Currently, static pages created through altering XSL are only available
-							under the URI prefix of page/.</p>
+			<div id="content-inner">
+				<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']">
+					<div id="ds-system-wide-alert">
+						<p>
+							<xsl:copy-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']/node()"/>
+						</p>
 					</div>
-				</xsl:when>
-				<!-- Otherwise use default handling of body -->
-				<xsl:otherwise>
-					<xsl:apply-templates />
-				</xsl:otherwise>
-			</xsl:choose>
-
+				</xsl:if>
+				<!-- Check for the custom pages -->
+				<xsl:choose>
+					<xsl:when test="starts-with($request-uri, 'page/about')">
+						<div>
+							<h1>About This Repository</h1>
+							<p>To add your own content to this page, edit webapps/xmlui/themes/Mirage/lib/xsl/core/page-structure.xsl and
+								add your own content to the title, trail, and body. If you wish to add additional pages, you
+								will need to create an additional xsl:when block and match the request-uri to whatever page
+								you are adding. Currently, static pages created through altering XSL are only available
+								under the URI prefix of page/.</p>
+						</div>
+					</xsl:when>
+					<!-- Otherwise use default handling of body -->
+					<xsl:otherwise>
+						<xsl:apply-templates />
+					</xsl:otherwise>
+				</xsl:choose>
+			</div>
 		</div>
 	</xsl:template>
 

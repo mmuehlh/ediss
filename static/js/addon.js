@@ -69,10 +69,18 @@ $(function() {
 		});
 	});
 	
+	// Navigation for small screens
+	$('.navlink').click( function(e) {
+		e.preventDefault();
+		var el = $('#content-wrapper');
+		el.animate( { left: ( el.css('left') == '0px' ? '-240px' : '0px' ) } );
+	});
+	
 });
 
 content_resize = function() {
 
+	/*
 	var width = $(window).width();
 	if ( width < 640 ) {
 		$('#content, table').width( 'auto' );
@@ -83,6 +91,7 @@ content_resize = function() {
 		$('#content').width( 720 );
 		$('table').width( 740 );
 	}
+	*/
 	
 	// Restore profile and trail before truncation
 	if ( typeof username_bak !== 'undefined' ) { $('.username').html( username_bak ); }
@@ -103,10 +112,9 @@ content_resize = function() {
 			i++;
 		}
 	}
-	// If still too long, remove items completely
+	// If still too long, remove items completely; truncate second-to-last li, then last li; exit after 10 iterations each
 	i = 0;
 	while ( $('#ds-trail').height() > 28 && i++ < 5) items.eq(i).text('…');
-	// Still too long? Truncate second-to-last li, then last li; exit after 10 iterations each
 	i = -20;
 	while ( $('#ds-trail').height() > 28 && ++i < 0) {
 		// Negative key: -2 or -1

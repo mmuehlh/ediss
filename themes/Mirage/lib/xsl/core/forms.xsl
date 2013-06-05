@@ -214,6 +214,11 @@
 			<!-- Add buttons should be named "submit_[field]_add" so that we can ignore errors from required fields when simply adding new values-->
 			<input type="submit" name="{concat('submit_',@n,'_add')}" class="ds-button-field ds-add-button">
 				<xsl:attribute name="value"><xsl:text>+</xsl:text>
+              <!-- manually tracking subscriptions -->
+              <xsl:if test="./@n='subscriptions'">
+                <xsl:attribute name="onclick"><xsl:text><![CDATA[javascript:_paq.push(['trackGoal', 2]);]]></xsl:text></xsl:attribute>
+              </xsl:if>
+
 					<!-- <xsl:choose>    
                         <xsl:when test="//dri:pageMeta/dri:metadata[@element='locale'] = 'en'">
                                 <xsl:text>Add</xsl:text> 
@@ -300,15 +305,20 @@
 			<!-- Add buttons should be named "submit_[field]_add" so that we can ignore errors from required fields when simply adding new values-->
 			<input type="submit" name="{concat('submit_',@n,'_add')}" class="ds-button-field ds-add-button">
 				<xsl:attribute name="value"><xsl:text>+</xsl:text>
-					<!-- <xsl:choose>    
-                        <xsl:when test="//dri:pageMeta/dri:metadata[@element='locale'] = 'en'">
-                                <xsl:text>Add</xsl:text>
-                        </xsl:when>
-                        <xsl:otherwise>
-                                <xsl:text>Hinzufügen</xsl:text>
-                        </xsl:otherwise>
-                </xsl:choose>    -->
+
+			<!-- <xsl:choose>    
+       		                 <xsl:when test="//dri:pageMeta/dri:metadata[@element='locale'] = 'en'">
+                	                <xsl:text>Add</xsl:text>
+                        	</xsl:when>
+	                        <xsl:otherwise>
+        	                        <xsl:text>Hinzufügen</xsl:text>
+                	        </xsl:otherwise>
+	                </xsl:choose>    -->
 				</xsl:attribute>
+        		      <!-- manually tracking subscriptions 
+		              <xsl:if test="@n='subscriptions'">
+                		<xsl:attribute name="onclick"><xsl:text><![CDATA[javascript:_paq.push(['trackGoal', 2]);]]></xsl:text></xsl:attribute>
+		              </xsl:if> -->
 
 				<!-- Make invisible if we have choice-lookup popup that provides its own Add. -->
 				<xsl:if test="dri:params/@choicesPresentation = 'lookup'">
@@ -331,7 +341,13 @@
                     removing one or more values stored for this field. -->
 				<xsl:if test="contains(dri:params/@operations,'delete') and dri:instance">
 					<!-- Delete buttons should be named "submit_[field]_delete" so that we can ignore errors from required fields when simply removing values-->
-					<input type="submit" value="Remove selected" name="{concat('submit_',@n,'_delete')}" class="ds-button-field ds-delete-button" />
+					<input type="submit" value="Remove selected" name="{concat('submit_',@n,'_delete')}" class="ds-button-field ds-delete-button" >
+                              <!-- manually tracking deleted subscriptions 
+                              <xsl:if test="@n='subscriptions'">
+                                <xsl:attribute name="onclick"><xsl:text><![CDATA[javascript:_paq.push(['trackGoal', 3]);]]></xsl:text></xsl:attribute>
+                              </xsl:if> -->
+
+					</input>
 				</xsl:if>
 				<!-- Behind the scenes, add hidden fields for every instance set. This is to make sure that
                     the form still submits the information in those instances, even though they are no

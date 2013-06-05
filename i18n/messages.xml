@@ -2081,6 +2081,8 @@
 	<message key="xmlui.item-view.advisor">Betreuer</message>
 	<message key="xmlui.item-view.furtherReferee">Weitere Gutachter</message>
 	<message key="xmlui.item-view.referee">Gutachter</message>
+        <message key="xmlui.item-view.firstReferee">Erstgutachter</message>
+        <message key="xmlui.item-view.coReferee">Zweitgutachter</message>
 
 	<message key="xmlui.general.publish_now">Jetzt veröffentlichen</message>
 	<message key="xmlui.general.publish_here">Hier veröffentlichen</message>
@@ -2853,13 +2855,13 @@
 						<a href="#abstract">Was ist ein Abstract (= Kurzreferat)?</a>
 					</li>
 					<li>
-						<a href="fastweb">Wie optimiere ich mein PDF-Dokument auf schnelle Webanzeige?</a>
+						<a href="#fastweb">Wie optimiere ich mein PDF-Dokument auf schnelle Webanzeige?</a>
 					</li>
 					<li>
-                                                <a href="abo">Wie kann man Neuerscheinungen abonnieren?</a>
+                                                <a href="#abo">Wie kann man Neuerscheinungen abonnieren?</a>
                                         </li>
 					<li>
-                                                <a href="referee">Wieviele Gutachter/Coreferenten muß ich beim Publizieren meiner Dissertation angeben?</a>
+                                                <a href="#referee">Wieviele Gutachter/Coreferenten muß ich beim Publizieren meiner Dissertation angeben?</a>
                                         </li>
 				</ul>
 			</div>
@@ -2942,7 +2944,7 @@
 		</div>
 		<h2 class="ds-div-head">Haben Sie Fragen oder Anregungen?</h2>
 		<div class="ds-static-div">
-			<p class="ds-paragraph">Benutzen Sie unseren <a href="feedback">Online Kontaktformular</a>.</p>
+			<p class="ds-paragraph">Benutzen Sie unseren <a href="/feedback">Online Kontaktformular</a>.</p>
 		</div>
 		<h2 class="ds-div-head">Telefonisch oder per E-mail</h2>
 		<div class="ds-static-div">
@@ -2961,7 +2963,7 @@
 				<li>Fax: +49 551 39-22457</li>
 			</ul>
 			<ul class="ds-simple-list">
-				<li>E-Mail: <a mailto="ediss@sub.uni-goettingen.de">ediss@sub.uni-goettingen.de</a></li>
+				<li>E-Mail: <a href="mailto:ediss@sub.uni-goettingen.de">ediss@sub.uni-goettingen.de</a></li>
 			</ul>
 		</div>
 		<h2 class="ds-div-head">Persönlich</h2>
@@ -2982,7 +2984,7 @@
 		</div>	
 		<h2 class="ds-div-head">Technische Probleme</h2>
 		<div class="ds-static-div">
-			<p class="ds-paragraph">Mit technischen Problemen kontaktieren Sie bitte unseren <a mailto="mmuehlh@sub.uni-goettingen.de">Administrator</a> oder verwenden Sie unseren <a href="feedback">Online Kontakformular</a>!
+			<p class="ds-paragraph">Mit technischen Problemen kontaktieren Sie bitte unseren <a href="mailto:mmuehlh@sub.uni-goettingen.de">Administrator</a> oder verwenden Sie unseren <a href="feedback">Online Kontakformular</a>!
 			</p>
 		</div>
 	</message>
@@ -3037,8 +3039,11 @@
 			<p class="ds-paragraph">
 				Trotz sorgfaeltiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
 			</p>
+                        <h2 class="ds-div-head">Datenschutzhinweis</h2>
 			<p>
-				Diese Website erfasst anonymisierte Daten zur Nutzung.
+				Diese Website erfasst anonymisierte Daten zur Nutzung.<br />
+				Zustimmung verweigern: <a href="http://piwik.gwdg.de/index.php?module=CoreAdminHome&amp;action=optOut&amp;language=de" target="_blank">Meine Besuche sollen nicht erfasst werden.</a>
+				
 			</p>
 			<h2 class="ds-div-head">Bildnachweise</h2>
 			<div class="ds-static-div">
@@ -3057,7 +3062,7 @@
 	<message key="xmlui.contact.special.head">Haben Sie besondere Wünsche bezüglich der Veröffentlichung Ihrer Dissertation?</message>
 	<message key="xmlui.contact.special">Sie haben die Möglichkeit, im Laufe des <a href="/help/fullpublication#workflow">Online-Publikationsprozesses</a> unseren Redaktueren eine Nachricht mitzugeben. So können wir besondere Wünsche Ihrer Publikation direkt zuordnen.</message>
 	<message key="xmlui.contact.feedback">Haben Sie Fragen oder Anregungen?</message>
-	<message key="xmlui.contact.feedbackform">Benutzen Sie unseren <a href="feedback">Online Kontaktformular</a>.</message>
+	<message key="xmlui.contact.feedbackform">Benutzen Sie unseren <a href="/feedback">Online Kontaktformular</a>.</message>
 	<message key="xmlui.contact.address">Telefonisch oder per E-mail</message>
 	<message key="xmlui.contact.degenhardt">Eileen Degenhardt-Witte</message>
 	<message key="xmlui.contact.degenhardt.phone">Tel: +49 551 39-5383</message>
@@ -3068,7 +3073,7 @@
 	<message key="xmlui.contact.herre.fax">Fax: +49 551 39-22457</message>
 	<message key="xmlui.contact.life">Persönlich</message>
 	<message key="xmlui.contact.technik">Technische Probleme</message>
-	<message key="xmlui.contact.admin">Mit technischen Problemen kontaktieren Sie bitte unseren <a mailto="mmuehlh@sub.uni-goettingen.de">Administrator</a> oder verwenden Sie unseren <a href="feedback">Online Kontakformular</a>!</message>
+	<message key="xmlui.contact.admin">Mit technischen Problemen kontaktieren Sie bitte unseren <a mailto="mmuehlh@sub.uni-goettingen.de">Administrator</a> oder verwenden Sie unseren <a href="/feedback">Online Kontakformular</a>!</message>
 	<message key="xmlui.help.workflow.head">Online-Publikationsprozess</message>
 
 	<!-- static page: cumulative dissertations -->
@@ -3113,6 +3118,7 @@
 	<message key="xmlui.test">Button test</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed1">Diese Datei ist bis (einschließlich) </message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed2"> gesperrt.</message>
+        <message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed-examen">Diese Datei ist bis zum Abschluß der Staatsexamensprüfung gesperrt.</message>
 
  	<message key="xmlui.administrative.Navigation.context_confirm_default">Conf: normal</message>
 	<message key="xmlui.administrative.Navigation.context_confirm_postpone">Conf: verzögert</message>

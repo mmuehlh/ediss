@@ -58,11 +58,10 @@
 			<!-- <xsl:apply-templates select="$dim" mode="itemInstitute-DIM"/> -->
 			<!-- <xsl:apply-templates select="$dim" mode="itemURN-DIM"/> -->
 			<xsl:apply-templates select="$dim" mode="itemAdvisor-DIM"/>
-			<xsl:apply-templates select="$dim" mode="itemFurtherReferee-DIM"/>
-			<!-- <xsl:apply-templates select="$dim" mode="itemReferee-DIM"/>
+			<xsl:apply-templates select="$dim" mode="itemReferee-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemCoreferee-DIM"/>
 			<xsl:apply-templates select="$dim" mode="itemThirdreferee-DIM"/> 
-			-->
+
 			<xsl:apply-templates select="$dim" mode="itemURI-DIM"/>	
 			<!--<xsl:apply-templates select="$dim" mode="itemType-DIM"/>-->
 			<!--<xsl:apply-templates select="$dim" mode="itemLanguage-DIM"/>-->
@@ -113,13 +112,21 @@
 		<!-- show embargo date if existent -->
 		<xsl:if test="//dim:field[@element='date'][@qualifier='embargoed']">
 			<div class="embargo-info">
-				<xsl:variable name="year"><xsl:value-of select="substring-before(//dim:field[@element='date'][@qualifier='embargoed'], '-')" /></xsl:variable>
-				<xsl:variable name="monthday"><xsl:value-of select="substring-after(//dim:field[@element='date'][@qualifier='embargoed'], '-')" /></xsl:variable>
-
 				<p>
-					<i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-embargoed1</i18n:text>
-					<xsl:value-of select="substring-after($monthday, '-')" /><xsl:text>.</xsl:text><xsl:value-of select="substring-before($monthday, '-')" /><xsl:text>.</xsl:text><xsl:value-of select="$year" />
-					<i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-embargoed2</i18n:text>
+				<xsl:choose>
+					<xsl:when test="contains(//dim:field[@element='date'][@qualifier='embargoed'], '3000')">
+						<i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-embargoed-examen</i18n:text>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:variable name="year"><xsl:value-of select="substring-before(//dim:field[@element='date'][@qualifier='embargoed'], '-')" /></xsl:variable>
+						<xsl:variable name="monthday"><xsl:value-of select="substring-after(//dim:field[@element='date'][@qualifier='embargoed'], '-')" /></xsl:variable>
+
+			
+						<i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-embargoed1</i18n:text>
+						<xsl:value-of select="substring-after($monthday, '-')" /><xsl:text>.</xsl:text><xsl:value-of select="substring-before($monthday, '-')" /><xsl:text>.</xsl:text><xsl:value-of select="$year" />
+						<i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-embargoed2</i18n:text>
+					</xsl:otherwise>
+				</xsl:choose> 
 				</p>
 			</div>
 		</xsl:if>
@@ -294,18 +301,29 @@
 		-->
 		<xsl:if test="dim:field[@element='subject'][@qualifier=$lang] ">
 			<div class="ds-item-keywords">
-				<strong><i18n:text>xmlui.dri2xhtml.METS-1.0.item-subject</i18n:text>:</strong>
+				<strong>
+					<xsl:choose>
+						<xsl:when test="count(following-sibling::dim:field[@element='subject'and @qualifier=$lang]) != 0">
+							<i18n:text>xmlui.dri2xhtml.METS-1.0.item-subjects</i18n:text>
+						</xsl:when>
+						<xsl:otherwise>
+							<i18n:text>xmlui.dri2xhtml.METS-1.0.item-subject</i18n:text>
+						</xsl:otherwise>
+					</xsl:choose>:
+				</strong>
 				<xsl:for-each select="dim:field[@element='subject' and @qualifier=$lang]"> 
 					<xsl:value-of select="lang"/>
-					<xsl:call-template name="split-list">
+					<!-- <xsl:call-template name="split-list">
 						<xsl:with-param name="list">
 							<xsl:value-of select="."/> 
 						</xsl:with-param>
-					</xsl:call-template> 
-					<xsl:if test="count(following-sibling::dim:field[@element='subject' and @qualifier=$lang]) != 0">
+					</xsl:call-template> -->
+					<xsl:value-of select="." />
+					<xsl:if test="count(following-sibling::dim:field[@element='subject'and @qualifier=$lang]) != 0">
 						<xsl:text>; </xsl:text>
 					</xsl:if>
 				</xsl:for-each>
+				
 			</div>
 		</xsl:if>
 	</xsl:template>
@@ -560,24 +578,6 @@
 		</xsl:if>
 	</xsl:template>
 
-	<xsl:template match="dim:dim" mode="itemFurtherReferee-DIM">
-                <xsl:if test="dim:field[@element='contributor' and contains(@qualifier,'eferee')]">
-                        <div class="simple-item-view-other">
-                                <span class="bold"><i18n:text>xmlui.item-view.furtherReferee</i18n:text>:</span>
-                                <span>
-					<xsl:for-each select="dim:field[@element='contributor' and contains(@qualifier,'eferee')]">
-	                                        <xsl:value-of select="." />
-						<xsl:if test="position() != last()">
-					<!-- <xsl:if test="count(following-sibling::dim:field[@element='contributor'][contains(@qualifier, 'ereferee')]) != 0"> -->
-						<xsl:text>; </xsl:text>	
-					</xsl:if>
-					</xsl:for-each>
-                                </span>
-                        </div>
-                </xsl:if>
-        </xsl:template>
-
-
 	<xsl:template match="dim:dim" mode="itemReferee-DIM">
 		<xsl:if test="dim:field[@element='contributor' and @qualifier='referee']">
 			<div class="simple-item-view-other">
@@ -602,12 +602,14 @@
 
 	<xsl:template match="dim:dim" mode="itemThirdreferee-DIM">
 		<xsl:if test="dim:field[@element='contributor' and @qualifier='thirdReferee']">
-			<div class="simple-item-view-other">
-				<span class="bold"><i18n:text>xmlui.item-view.referee</i18n:text>:</span>
-				<span>
-					<xsl:value-of select="dim:field[@element='contributor' and @qualifier='thirdReferee']" />
-				</span>
-			</div>
+			<xsl:for-each select="dim:field[@element='contributor' and @qualifier='thirdReferee']">
+				<div class="simple-item-view-other">
+					<span class="bold"><i18n:text>xmlui.item-view.referee</i18n:text>:</span>
+					<span>
+						<xsl:value-of select="." />
+					</span>
+				</div>
+			</xsl:for-each>
 		</xsl:if>
 	</xsl:template>
 

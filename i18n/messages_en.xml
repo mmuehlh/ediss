@@ -1836,6 +1836,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date of issue</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Publisher</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Subject</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-subjects">Subjects</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Files in this item</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Files</message>
@@ -2073,7 +2074,9 @@
 	<message key="xmlui.item-view.examination">Date of Examination</message>
 	<message key="xmlui.item-view.advisor">Advisor</message>
 	<message key="xmlui.item-view.referee">Referee</message>
-	<message key="xmlui.item-view.furtherReferee">Further Referee</message>
+	<message key="xmlui.item-view.furtherReferee">Further referee</message>
+        <message key="xmlui.item-view.firstReferee">First referee</message>
+        <message key="xmlui.item-view.coReferee">Coreferee</message>
 
 	<message key="xmlui.general.publish_now">Publish now</message>
 	<message key="xmlui.general.publish_here">Publish here</message>
@@ -2891,7 +2894,7 @@
 		</div>
 		<h2 class="ds-div-head">Do you have some questions or suggestions?</h2>
 		<div class="ds-static-div">
-			<p class="ds-paragraph">Please use our <a href="feedback">Online contact form</a>.</p>
+			<p class="ds-paragraph">Please use our <a href="/feedback">Online contact form</a>.</p>
 		</div>
 		<h2 class="ds-div-head">By phone or by e-mail</h2>
 		<div class="ds-static-div">
@@ -2910,7 +2913,7 @@
 				<li>Fax: +49 551 39-22457</li>
 			</ul>
 			<ul class="ds-simple-list">
-				<li>E-Mail: <a mailto="ediss@sub.uni-goettingen.de">ediss@sub.uni-goettingen.de</a></li>
+				<li>E-Mail: <a href="mailto:ediss@sub.uni-goettingen.de">ediss@sub.uni-goettingen.de</a></li>
 			</ul>
 		</div>
 		<h2 class="ds-div-head">In person</h2>
@@ -2931,7 +2934,7 @@
 		</div>
 		<h2 class="ds-div-head">Technical problems</h2>
 		<div class="ds-static-div">
-			<p class="ds-paragraph">With technical problems, please conatct our <a mailto="mmuehlh@sub.uni-goettingen.de">administrator</a> or use the <a href="feedback">Online contact form</a>!
+			<p class="ds-paragraph">With technical problems, please conatct our <a href="mailto:mmuehlh@sub.uni-goettingen.de">administrator</a> or use the <a href="/feedback">Online contact form</a>!
 			</p>
 		</div>
 	</message>
@@ -2986,8 +2989,10 @@
 			<p class="ds-paragraph">
 				Despite careful contentwise control we take over no liability for the content of external links. For the content of linked pages exclusively their operators are responsible.
 			</p>
+                        <h2 class="ds-div-head">Privacy</h2>
 			<p>
-				The Repository may collect anonyme information on the use.
+				The Repository may collect anonymized information on the use.<br />
+				Opt out: <a href="http://piwik.gwdg.de/index.php?module=CoreAdminHome&amp;action=optOut&amp;language=en" target="_blank">Do not count my visits.</a>
 			</p>
 			<h2 class="ds-div-head">Image Credits</h2>
 			<div class="ds-static-div">
@@ -3006,18 +3011,18 @@
 	<message key="xmlui.contact.special.head">Do you have any special requests for the release of your dissertation?</message>
 	<message key="xmlui.contact.special">In the course of our <a target="_blank" href="http://ediss.sub.uni-goettingen.de/help/fullpublication#workflow">online publishing process</a> you have the option to leave a message to our editors. So we can bind your special needs to your publication directly.</message>
 	<message key="xmlui.contact.feedback">Do you have some questions or suggestions?</message>
-	<message key="xmlui.contact.feedbackform">Please use our <a href="feedback">Online contact form</a>.</message>
+	<message key="xmlui.contact.feedbackform">Please use our <a href="/feedback">Online contact form</a>.</message>
 	<message key="xmlui.contact.address">Via phone or e-Mail</message>
 	<message key="xmlui.contact.degenhardt">Eileen Degenhardt-Witte</message>
 	<message key="xmlui.contact.degenhardt.phone">Tel: +49 551 39-5383</message>
 	<message key="xmlui.contact.degenhardt.fax">Fax: +49 551 39-22457</message>
-	<message key="xmlui.contact.email">E-Mail: <a mailto="ediss@sub.uni-goettingen.de">ediss@sub.uni-goettingen.de</a></message>
+	<message key="xmlui.contact.email">E-Mail: <a hfer="mailto:ediss@sub.uni-goettingen.de">ediss@sub.uni-goettingen.de</a></message>
 	<message key="xmlui.contact.herre">Norbert Herre</message>
 	<message key="xmlui.contact.herre.phone">Tel: +49 551 39-14671 oder +49 551 39-5383</message>
 	<message key="xmlui.contact.herre.fax">Fax: +49 551 39-22457</message>
 	<message key="xmlui.contact.life">Personally</message>
 	<message key="xmlui.contact.technik">Technical problems</message>
-	<message key="xmlui.contact.admin">With technical problems, please conatct our <a mailto="mmuehlh@sub.uni-goettingen.de">administrator</a> or use the <a href="feedback">Online contact form</a>!</message>
+	<message key="xmlui.contact.admin">With technical problems, please conatct our <a href="mailto:mmuehlh@sub.uni-goettingen.de">administrator</a> or use the <a href="/feedback">Online contact form</a>!</message>
 	<message key="xmlui.help.workflow.head">Online Publikationsprozess</message>
 
 	<!-- static page: cumulative dissertations -->
@@ -3062,6 +3067,7 @@
 	<message key="xmlui.test">Button test</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed1">This file is not freely accessible until </message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed2">.</message>
+        <message key="xmlui.dri2xhtml.METS-1.0.item-files-embargoed-examen">This file is not accessible until the state exam has been passed.</message>
 
 	<message key="xmlui.administrative.Navigation.context_confirm_default">Conf: default</message>
 	<message key="xmlui.administrative.Navigation.context_confirm_postpone">Conf verzögert</message>

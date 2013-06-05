@@ -239,8 +239,8 @@ form {
 	border-radius: 0 5px 5px 0;
 	font-size: 13px; /* IE */
 	line-height: 18px; /* IE */
-	margin: 0 -21px 18px -20px;
-	padding: 12px 20px;
+	margin: 0 -21px 27px -20px;
+	padding: 12px 20px 20px;
 	position: relative;
 }
 form p {
@@ -270,9 +270,12 @@ caption {
 hr {
 	clear: both;
 	height: 1px;
-	margin: 26px 0 -9px;
+	margin: 26px 0px 9px;
 	position: relative;
 	width: auto;
+}
+hr + h2 {
+	margin-top: 0px;
 }
 #header p {
 	margin: 2px 0;
@@ -301,7 +304,8 @@ textarea:active {
 	box-shadow: 0 0 4px #5C739F;
 }
 select {
-	padding: 5px 5px 5px 0;
+	margin: -1px 0 1px;
+	padding: 4px;
 }
 input[type=submit],
 input[type=reset],
@@ -412,7 +416,7 @@ table {
 	height: auto;
 	position: relative;
 	margin: 9px 0 9px -20px;
-	width: 740px;
+	width: 100%;
 }
 form table {
 	border-bottom: 1px solid #ccc;
@@ -765,7 +769,8 @@ input[name=starts_with] {
 }
 a.advanced-search,
 #localebox,
-form a[href$="/ediss/discover"] {
+form a[href$="/ediss/discover"],
+.navlink {
 	background: #5172B0;
 	border-radius: 5px 0;
 	color: #fff !important;
@@ -778,11 +783,13 @@ form a[href$="/ediss/discover"] {
 }
 a.advanced-search:hover,
 form a[href$="/advanced-search"]:hover,
-#localebox a:hover {
+#localebox a:hover,
+.navlink:hover {
 	background: #6C97EB;
 	text-decoration: none;
 }
-#localebox {
+#localebox,
+.navlink {
 	/*
 	bottom: 0;
 	right: 0;
@@ -900,9 +907,12 @@ form a[href$="/advanced-search"]:hover,
 	margin: 0 auto;
 }
 #content {
-	float: right;
+	float: left;
+	width: 100%;
+}
+#content-inner {
 	padding: 27px 20px 60px;
-	width: 720px;
+	margin-left: 240px;
 }
 #content h1 {
 	color: #5C739F;
@@ -935,8 +945,9 @@ div.confirm {
 /* Sidebar & Userbox
 ---------------------------------------------------------------------------*/
 #nav {
-	/*float: left;*/
 	/*background: #e6e9ee;*/
+	float: left;
+	margin-left: -100%;
 	overflow: hidden;
 	padding: 27px 0 60px 20px;
 	width: 219px;
@@ -1156,7 +1167,7 @@ span.error {
 }
 ul.alphabet {
 	list-style: none;
-	margin: 4px 0 10px -3px;
+	margin: 5px 0 10px -3px;
 }
 ul.alphabet li {
 	display: inline;
@@ -1391,7 +1402,7 @@ tr.odd {
 .pagination,
 .pagination-masked {
 	font-size: 11px;
-	margin: 21px 0 0;
+	margin: -2px 0px -4px;
 	position: relative;
 }
 .pagination-info {
@@ -1435,9 +1446,7 @@ tr.odd {
 }
 .pagination-links {
 	line-height: 18px;
-	margin-bottom: 0;
 	text-align: center;
-	padding: 0 0 13px;
 }
 .pagination-links li {
 	display: inline;
@@ -1545,7 +1554,7 @@ tr.odd {
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	clear: both;
-	margin: 13px 0 -5px;
+	margin: 13px 0 -12px;
 	padding: 4px 6px;
 	text-shadow: 0 1px 0 #fff;
 }
@@ -1562,9 +1571,23 @@ tr.odd {
 .embargo-info p {
 	background-position: 0 -575px;
 }
-
-span.bookmark {
-	cursor: move;
+.bookmark {
+	cursor: pointer;
+}
+.bookmark-input {
+	font-weight: bold;
+	margin-left: -3px;
+	padding: 0 1px;
+}
+.ds-static-div {
+	margin-bottom: 18px;
+}
+.filter {
+	display: block;
+	margin: 13px 0 -12px;
+}
+.filter span {
+	font-weight: bold;
 }
 
 /* Frontpage
@@ -1961,7 +1984,7 @@ ul.ds-progress-list li.disabled input.ds-button-field
 ---------------------------------------------------------------------------*/
 .simple-item-view-abstract + div,
 .license-info {
-	margin-top: 18px;
+	margin: 18px 0;
 }
 a[href ^="http://creativecommons.org/licenses/by/"] {
 	background: url(../../images/cc-by.png) left center no-repeat;
@@ -2081,7 +2104,7 @@ input[size="6"] {
 .ie7 input[type=submit] {
 	min-width: auto;
 }
-/* replacement for the inline-block display (which only works due to incorrect rendering in IE7) */
+/* replacement for inline-block (which only works due to incorrect rendering in IE7) */
 .ie7 .browse li {
 	display: inline;
 }
@@ -2089,10 +2112,6 @@ input[size="6"] {
 	position: absolute;
 	right: 0;
 	text-transform: capitalize;
-}
-/* breadcrumbs position too low */
-.ie7 #ds-trail {
-	bottom: 7px;
 }
 .ie7 .ds-form-item {
 	float: none;
@@ -2115,13 +2134,4 @@ input[size="6"] {
 }
 #aspect_eperson_EditProfile_list_memberships {
 	display: none;
-}
-
-.filter {
-	display: block;
-	padding-top: 10px;
-}
-
-.filter span {
-	font-weight: bolder;
 }

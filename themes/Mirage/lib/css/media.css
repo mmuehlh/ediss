@@ -1,18 +1,3 @@
-/**
- * The contents of this file are subject to the license and copyright
- * detailed in the LICENSE and NOTICE files at the root of the source
- * tree and available online at
- *
- * http://www.dspace.org/license/
- */
- 
-/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)
-   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-  
-/*
- * Media queries for responsive design
- */
-
 @media all and (orientation:portrait) {
 	/* Style adjustments for portrait mode goes here */
 }
@@ -37,11 +22,11 @@
 	#nav {
 		padding-bottom: 20px;
 	}
-	#content {
-		width: auto;
-	}
 	#page-wrapper {
 		background-position: left top;
+	}
+	#content-inner {
+		padding-bottom: 0;
 	}
 	#ds-trail {
 		border-radius: 0;
@@ -97,10 +82,8 @@
 		width: auto;
 	}
 	table {
-		display: block;
 		margin-right: -20px;
 		overflow: auto;
-		width: auto;
 	}
 	.ds-form-label {
 		top: 0 !important;
@@ -126,8 +109,7 @@
 	#footer-wrapper,
 	#footer,
 	#content-wrapper,
-	#ds-trail,
-	#nav {
+	#ds-trail {
 		float: none;
 	}
 	#header-wrapper {
@@ -154,35 +136,37 @@
 	#page-wrapper {
 		background: #fff;
 	}
-	#content {
-		float: none;
-		margin-left: 0;
-		padding-left: 20px;
+	#content-wrapper {
+		position: relative;
+	}
+	#content-inner {
+		margin: 0;
+	}
+	#content h1 {
+		padding-right: 100px;
 	}
 	#nav {
+		border-bottom: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+		border-radius: 0 0 0 5px;
 		background: #eff1f5;
-		clear: both;
-		padding: 20px;
-		width: auto;
+		left: 100%;
+		position: relative;
 	}
 	#nav a {
 		width: auto;
 	}
-	.publish {
-		margin: 0 auto 20px;
-	}
 	.navlink {
-		box-shadow: inset 0 1px 2px rgba(0,0,0,.5);
-		color: #fff;
-		border-top: 1px solid #000;
-		border-bottom: 1px solid #666;
+		border-radius: 5px 0 0 5px;
 		display: block !important;
 		font-weight: bold;
-		height: 38px;
-		line-height: 38px;
-		background: #444 !important;
-		padding: 0 !important;
+		height: 40px;
+		line-height: 40px;
+		position: absolute;
+		right: 0;
 		text-align: center;
+		top: 10px;
+		width: 90px;
 		z-index: 999;
 	}
 	.navlink.bottom {
@@ -222,19 +206,8 @@
 		padding-bottom: 40px;
 	}
 	#topbox .ds-text-field {
-		width: 60%;
-	}
-	#topbox .ds-button-field {
-		background-position: center 0;
-		border: 1px solid #ccc;
-		height: 30px;
-		right: 0;
-		top: 0;
-		width: 20%;
-	}
-	#topbox .ds-button-field:hover {
-		background-color: #5172B0;
-		background-position: center -28px;
+		width: 100%;
+		padding-right: 0 3.5%;
 	}
 	#topbox label {
 		display: inline-block;
