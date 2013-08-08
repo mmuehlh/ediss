@@ -69,30 +69,25 @@ $(function() {
 		});
 	});
 	
-	// Navigation for small screens
-	$('.navlink').click( function(e) {
-		e.preventDefault();
-		var el = $('#content-wrapper');
-		el.animate( { left: ( el.css('left') == '0px' ? '-240px' : '0px' ) } );
+	/* Scroll to top button */
+	$('body').append('<button id="totop">&uarr;</button>');
+	$(window).scroll( function() {
+		console.log($(window).scrollTop());
+		if ( $(window).scrollTop() > 300 ) {
+			$('#totop:hidden').fadeIn();
+			$('#totop').css('top', $(window).scrollTop() + $(window).height() - 85);
+		} else {
+			$('#totop:visible').fadeOut();
+		}
+	});
+	$('#totop').click( function() {
+		$('html, body').animate({scrollTop: 0});
 	});
 	
 });
 
 content_resize = function() {
 
-	/*
-	var width = $(window).width();
-	if ( width < 640 ) {
-		$('#content, table').width( 'auto' );
-	} else if ( width < 1000 ) {
-		$('#content').width( width - 280 );
-		$('table').width( width - 240 );
-	} else {
-		$('#content').width( 720 );
-		$('table').width( 740 );
-	}
-	*/
-	
 	// Restore profile and trail before truncation
 	if ( typeof username_bak !== 'undefined' ) { $('.username').html( username_bak ); }
 	if ( typeof trail_bak !== 'undefined' ) { $('#ds-trail').html( trail_bak ); }

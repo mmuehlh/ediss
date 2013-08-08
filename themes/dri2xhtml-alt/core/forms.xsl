@@ -32,12 +32,11 @@
 	<xsl:output indent="yes"/>
 
 	<!-- Special treatment of a list type "form", which is used to encode simple forms and give them structure.
-        This is done partly to ensure that the resulting HTML form follows accessibility guidelines. -->
+	This is done partly to ensure that the resulting HTML form follows accessibility guidelines. -->
 
 	<xsl:template match="dri:list[@type='form']" priority="3">
 		<xsl:choose>
 			<xsl:when test="ancestor::dri:list[@type='form']">
-
 				<li>
 					<fieldset>
 						<xsl:call-template name="standardAttributes">
@@ -54,7 +53,6 @@
 							</xsl:with-param>
 						</xsl:call-template>
 						<xsl:apply-templates select="dri:head"/>
-
 						<ol>
 							<xsl:apply-templates select="*[not(name()='label' or name()='head')]" />
 						</ol>
@@ -146,7 +144,7 @@
 					<xsl:text>ds-form-item </xsl:text>
 
 					<!-- Row counting voodoo, meant to impart consistent row alternation colors to the form lists.
-                    Should probably be chnaged to a system that is more straigtforward. -->
+		    Should probably be chnaged to a system that is more straigtforward. -->
 					<xsl:choose>
 						<xsl:when test="(count(../../..//dri:item) - count(../../..//dri:list[@type='form'])) mod 2 = 0">
 							<!--<xsl:if test="count(../dri:item) > 3">-->
@@ -162,8 +160,8 @@
 						</xsl:when>
 					</xsl:choose>
 					<!--
-                <xsl:if test="position()=last() and dri:field[@type='button'] and not(dri:field[not(@type='button')])">last</xsl:if>
-                    -->
+		<xsl:if test="position()=last() and dri:field[@type='button'] and not(dri:field[not(@type='button')])">last</xsl:if>
+		    -->
 				</xsl:with-param>
 			</xsl:call-template>
 
@@ -243,8 +241,8 @@
 			</xsl:when>
 			<xsl:otherwise>
 				<!-- If the label is empty and the item contains no field, omit the label. This is to
-                    make the text inside the item (since what else but text can be there?) stretch across
-                    both columns of the list. -->
+		    make the text inside the item (since what else but text can be there?) stretch across
+		    both columns of the list. -->
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
@@ -329,10 +327,10 @@
 					<xsl:attribute name="value">
 						<xsl:choose>    
 							<xsl:when test="//dri:pageMeta/dri:metadata[@element='locale'] = 'en'">
-                                Add
+				Add
 							</xsl:when>
 							<xsl:otherwise>
-                                Hinzufügen
+				Hinzufügen
 							</xsl:otherwise>
 						</xsl:choose>   
 					</xsl:attribute>
@@ -397,14 +395,14 @@
 
 
 	<!-- TODO: The field section works but needs a lot of scrubbing. I would say a third of the
-        templates involved are either bloated or superfluous. -->
+	templates involved are either bloated or superfluous. -->
 
 
 	<!-- Things I know:
-        1. I can tell a field is multivalued if it has instances in it
-        2. I can't really do that for composites, although I can check its
-            component fields for condition 1 above.
-        3. Fields can also be inside "form" lists, which is its own unique condition
+	1. I can tell a field is multivalued if it has instances in it
+	2. I can't really do that for composites, although I can check its
+	    component fields for condition 1 above.
+	3. Fields can also be inside "form" lists, which is its own unique condition
     -->
 
 	<!-- Fieldset (instanced) field stuff, in the case of non-composites -->
@@ -412,17 +410,17 @@
 		<!-- Create the first field normally -->
 		<xsl:apply-templates select="." mode="normalField"/>
 		<!-- Follow it up with an ADD button if the add operation is specified. This allows
-            entering more than one value for this field. -->
+	    entering more than one value for this field. -->
 		<xsl:if test="contains(dri:params/@operations,'add')">
 			<!-- Add buttons should be named "submit_[field]_add" so that we can ignore errors from required fields when simply adding new values-->
 			<input type="submit" name="{concat('submit_',@n,'_add')}" class="ds-button-field ds-add-button">
 				<xsl:attribute name="value">
 					<xsl:choose>    
 						<xsl:when test="//dri:pageMeta/dri:metadata[@element='locale'] = 'en'">
-                                Add
+				Add
 						</xsl:when>
 						<xsl:otherwise>
-                                Hinzufügen
+				Hinzufügen
 						</xsl:otherwise>
 					</xsl:choose>   
 				</xsl:attribute>
@@ -440,28 +438,28 @@
 		<xsl:if test="dri:instance">
 			<div class="ds-previous-values">
 				<!-- Iterate over the dri:instance elements contained in this field. The instances contain
-                    stored values as either "interpreted", "raw", or "default" values. -->
+		    stored values as either "interpreted", "raw", or "default" values. -->
 				<xsl:call-template name="simpleFieldIterator">
 					<xsl:with-param name="position">1</xsl:with-param>
 				</xsl:call-template>
 				<!-- Conclude with a DELETE button if the delete operation is specified. This allows
-                    removing one or more values stored for this field. -->
+		    removing one or more values stored for this field. -->
 				<xsl:if test="contains(dri:params/@operations,'delete') and dri:instance">
 					<!-- Delete buttons should be named "submit_[field]_delete" so that we can ignore errors from required fields when simply removing values-->
 					<input type="submit" value="Remove selected" name="{concat('submit_',@n,'_delete')}" class="ds-button-field ds-delete-button" />
 				</xsl:if>
 				<!-- Behind the scenes, add hidden fields for every instance set. This is to make sure that
-                    the form still submits the information in those instances, even though they are no
-                    longer encoded as HTML fields. The DRI Reference should contain the exact attributes
-                    the hidden fields should have in order for this to work properly. -->
+		    the form still submits the information in those instances, even though they are no
+		    longer encoded as HTML fields. The DRI Reference should contain the exact attributes
+		    the hidden fields should have in order for this to work properly. -->
 				<xsl:apply-templates select="dri:instance" mode="hiddenInterpreter"/>
 			</div>
 		</xsl:if>
 	</xsl:template>
 
 	<!-- The iterator is a recursive function that creates a checkbox (to be used in deletion) for
-        each value instance and interprets the value inside. It also creates a hidden field from the
-        raw value contained in the instance. -->
+	each value instance and interprets the value inside. It also creates a hidden field from the
+	raw value contained in the instance. -->
 	<xsl:template name="simpleFieldIterator">
 		<xsl:param name="position"/>
 		<xsl:if test="dri:instance[position()=$position]">
@@ -510,8 +508,8 @@
 					<xsl:value-of select="concat(../../@n,'_',$position)"/>
 				</xsl:attribute>
 				<!-- Since the dri:option and dri:values inside a select field are related by the return
-                    value, encoded in @returnValue and @option attributes respectively, the option
-                    attribute can be used directly instead of being resolved to the the correct option -->
+		    value, encoded in @returnValue and @option attributes respectively, the option
+		    attribute can be used directly instead of being resolved to the the correct option -->
 				<xsl:attribute name="value">
 					<!--<xsl:value-of select="../../dri:option[@returnValue = current()/@option]"/>-->
 					<xsl:value-of select="@option"/>
@@ -526,7 +524,7 @@
 	<!-- It is also the one that receives the special error and help handling -->
 	<xsl:template match="dri:field[@type='composite'][dri:field/dri:instance | dri:params/@operations]" priority="3">
 		<!-- First is special, so first we grab all the values from the child fields.
-            We do this by applying normal templates to the field, which should ignore instances. -->
+	    We do this by applying normal templates to the field, which should ignore instances. -->
 		<span class="ds-composite-field">
 			<xsl:apply-templates select="dri:field" mode="compositeComponent"/>
 		</span>
@@ -534,8 +532,8 @@
 		<xsl:apply-templates select="dri:error" mode="compositeComponent"/>
 		<xsl:apply-templates select="dri:help" mode="compositeComponent"/>
 		<!-- Insert choice mechanism here.
-             Follow it up with an ADD button if the add operation is specified. This allows
-            entering more than one value for this field. -->
+	     Follow it up with an ADD button if the add operation is specified. This allows
+	    entering more than one value for this field. -->
 
 		<xsl:if test="contains(dri:params/@operations,'add')">
 			<!-- Add buttons should be named "submit_[field]_add" so that we can ignore errors from required fields when simply adding new values-->
@@ -562,8 +560,8 @@
 		<xsl:variable name="confidenceIndicatorID" select="concat(translate(@id,'.','_'),'_confidence_indicator')"/>
 		<xsl:if test="dri:params/@authorityControlled">
 			<!-- XXX note that this is wrong and won't get any authority values, but
-             - for instanced inputs the entry box starts out empty anyway.
-            -->
+	     - for instanced inputs the entry box starts out empty anyway.
+	    -->
 			<xsl:call-template name="authorityConfidenceIcon">
 				<xsl:with-param name="confidence" select="dri:value[@type='authority']/@confidence"/>
 				<xsl:with-param name="id" select="$confidenceIndicatorID"/>
@@ -597,7 +595,7 @@
 					<xsl:with-param name="position">1</xsl:with-param>
 				</xsl:call-template>
 				<!-- Conclude with a DELETE button if the delete operation is specified. This allows
-                    removing one or more values stored for this field. -->
+		    removing one or more values stored for this field. -->
 				<xsl:if test="contains(dri:params/@operations,'delete') and (dri:instance or dri:field/dri:instance)">
 					<!-- Delete buttons should be named "submit_[field]_delete" so that we can ignore errors from required fields when simply removing values-->
 					<input type="submit" value="Remove selected" name="{concat('submit_',@n,'_delete')}" class="ds-button-field ds-delete-button" />
@@ -610,11 +608,11 @@
 	</xsl:template>
 
 	<!-- The iterator is a recursive function that creates a checkbox (to be used in deletion) for
-        each value instance and interprets the value inside. It also creates a hidden field from the
-        raw value contained in the instance.
+	each value instance and interprets the value inside. It also creates a hidden field from the
+	raw value contained in the instance.
 
-         What makes it different from the simpleFieldIterator is that it works with a composite field's
-        components rather than a single field, which requires it to consider several sets of instances. -->
+	 What makes it different from the simpleFieldIterator is that it works with a composite field's
+	components rather than a single field, which requires it to consider several sets of instances. -->
 	<xsl:template name="fieldIterator">
 		<xsl:param name="position"/>
 		<!-- add authority value for this instance -->
@@ -628,7 +626,7 @@
 		</xsl:if>
 		<xsl:choose>
 			<!-- First check to see if the composite itself has a non-empty instance value in that
-                position. In that case there is no need to go into the individual fields. -->
+		position. In that case there is no need to go into the individual fields. -->
 			<xsl:when test="count(dri:instance[position()=$position]/dri:value[@type != 'authority'])">
 				<input type="checkbox" value="{concat(@n,'_',$position)}" name="{concat(@n,'_selected')}"/>
 				<xsl:apply-templates select="dri:instance[position()=$position]" mode="interpreted"/>
@@ -683,8 +681,8 @@
 			<xsl:text>, </xsl:text>
 		</xsl:if>
 		<!-- <xsl:for-each select="dri:instance[position()=$position]/dri:value[@type='option']">
-            <input type="hidden" name="{concat(@n,'_',$position)}" value="{../../dri:option[@returnValue = current()/@option]}"/>
-        </xsl:for-each> -->
+	    <input type="hidden" name="{concat(@n,'_',$position)}" value="{../../dri:option[@returnValue = current()/@option]}"/>
+	</xsl:for-each> -->
 		<xsl:choose>
 			<xsl:when test="dri:instance[position()=$position]/dri:value[@type='interpreted']">
 				<span class="ds-interpreted-field"><xsl:apply-templates select="dri:instance[position()=$position]/dri:value[@type='interpreted']" mode="interpreted"/></span>
@@ -777,26 +775,26 @@
 	<!--
     <xsl:template match="dri:field">
 
-        Possible child elements:
-        params(one), help(zero or one), error(zero or one), value(any), field(one or more – only with the composite type)
+	Possible child elements:
+	params(one), help(zero or one), error(zero or one), value(any), field(one or more – only with the composite type)
 
-        Possible attributes:
-        @n, @id, @rend
-        @disabled
-        @required
-        @type =
-            button: A button input control that when activated by the user will submit the form, including all the fields, back to the server for processing.
-            checkbox: A boolean input control which may be toggled by the user. A checkbox may have several fields which share the same name and each of those fields may be toggled independently. This is distinct from a radio button where only one field may be toggled.
-            file: An input control that allows the user to select files to be submitted with the form. Note that a form which uses a file field must use the multipart method.
-            hidden: An input control that is not rendered on the screen and hidden from the user.
-            password: A single-line text input control where the input text is rendered in such a way as to hide the characters from the user.
-            radio:  A boolean input control which may be toggled by the user. Multiple radio button fields may share the same name. When this occurs only one field may be selected to be true. This is distinct from a checkbox where multiple fields may be toggled.
-            select: A menu input control which allows the user to select from a list of available options.
-            text: A single-line text input control.
-            textarea: A multi-line text input control.
-            composite: A composite input control combines several input controls into a single field. The only fields that may be combined together are: checkbox, password, select, text, and textarea. When fields are combined together they can possess multiple combined values.
+	Possible attributes:
+	@n, @id, @rend
+	@disabled
+	@required
+	@type =
+	    button: A button input control that when activated by the user will submit the form, including all the fields, back to the server for processing.
+	    checkbox: A boolean input control which may be toggled by the user. A checkbox may have several fields which share the same name and each of those fields may be toggled independently. This is distinct from a radio button where only one field may be toggled.
+	    file: An input control that allows the user to select files to be submitted with the form. Note that a form which uses a file field must use the multipart method.
+	    hidden: An input control that is not rendered on the screen and hidden from the user.
+	    password: A single-line text input control where the input text is rendered in such a way as to hide the characters from the user.
+	    radio:  A boolean input control which may be toggled by the user. Multiple radio button fields may share the same name. When this occurs only one field may be selected to be true. This is distinct from a checkbox where multiple fields may be toggled.
+	    select: A menu input control which allows the user to select from a list of available options.
+	    text: A single-line text input control.
+	    textarea: A multi-line text input control.
+	    composite: A composite input control combines several input controls into a single field. The only fields that may be combined together are: checkbox, password, select, text, and textarea. When fields are combined together they can possess multiple combined values.
     </xsl:template>
-        -->
+	-->
 
 
 
@@ -836,18 +834,18 @@
 
 
 	<!-- The handling of the field element is more complex. At the moment, the handling of input fields in the
-        DRI schema is very similar to HTML, utilizing the same controlled vocabulary in most cases. This makes
-        converting DRI fields to HTML inputs a straightforward, if a bit verbose, task. We are currently
-        looking at other ways of encoding forms, so this may change in the future. -->
+	DRI schema is very similar to HTML, utilizing the same controlled vocabulary in most cases. This makes
+	converting DRI fields to HTML inputs a straightforward, if a bit verbose, task. We are currently
+	looking at other ways of encoding forms, so this may change in the future. -->
 	<!-- The simple field case... not part of a complex field and does not contain instance values -->
 	<xsl:template match="dri:field">
 		<xsl:apply-templates select="." mode="normalField"/>
 		<xsl:if test="not(@type='composite') and ancestor::dri:list[@type='form']">
 			<!--
-            <xsl:if test="not(@type='checkbox') and not(@type='radio') and not(@type='button')">
-                <br/>
-            </xsl:if>
-            -->
+	    <xsl:if test="not(@type='checkbox') and not(@type='radio') and not(@type='button')">
+		<br/>
+	    </xsl:if>
+	    -->
 			<xsl:apply-templates select="dri:help" mode="help"/>
 			<xsl:apply-templates select="dri:error" mode="error"/>
 		</xsl:if>
@@ -868,9 +866,9 @@
 					<xsl:call-template name="fieldAttributes"/>
 
 					<!--
-                                        if the cols and rows attributes are not defined we need to call
-                                        the templates for them since they are required attributes in strict xhtml
-                                     -->
+					if the cols and rows attributes are not defined we need to call
+					the templates for them since they are required attributes in strict xhtml
+				     -->
 					<xsl:choose>
 						<xsl:when test="not(./dri:params[@cols])">
 							<xsl:call-template name="textAreaCols"/>
@@ -957,14 +955,14 @@
 				</fieldset>
 			</xsl:when>
 			<!--
-                <input>
-                            <xsl:call-template name="fieldAttributes"/>
-                    <xsl:if test="dri:value[@checked='yes']">
-                                <xsl:attribute name="checked">checked</xsl:attribute>
-                    </xsl:if>
-                    <xsl:apply-templates/>
-                </input>
-                -->
+		<input>
+			    <xsl:call-template name="fieldAttributes"/>
+		    <xsl:if test="dri:value[@checked='yes']">
+				<xsl:attribute name="checked">checked</xsl:attribute>
+		    </xsl:if>
+		    <xsl:apply-templates/>
+		</input>
+		-->
 			<xsl:when test="@type= 'composite'">
 				<!-- TODO: add error and help stuff on top of the composite -->
 				<span class="ds-composite-field">
@@ -976,9 +974,9 @@
 				<!--<xsl:apply-templates select="dri:help" mode="compositeComponent"/>-->
 			</xsl:when>
 			<!-- text, password, file, and hidden types are handled the same.
-                        Buttons: added the xsl:if check which will override the type attribute button
-                            with the value 'submit'. No reset buttons for now...
-                    -->
+			Buttons: added the xsl:if check which will override the type attribute button
+			    with the value 'submit'. No reset buttons for now...
+		    -->
 			<xsl:otherwise>
 				<input>
 					<xsl:call-template name="fieldAttributes"/>
@@ -1015,31 +1013,29 @@
 				<xsl:if test="(./@id='aspect.artifactbrowser.ConfigurableBrowse.field.submit') and (contains(//dri:metadata[@qualifier='queryString'],'person'))">
 					<span class="filter">
 						<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_ft.label</i18n:text>
-				
-							<span>
-								<a class="ft">
-									 <xsl:attribute name="href"><xsl:value-of select="concat(//dri:metadata[@element='contextPath'], '/', //dri:metadata[@qualifier='URI'],'?type=personftadvisor')" /></xsl:attribute> 
-										<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_personftadvisor</i18n:text>
-								</a> 
-							</span>
-							&#160;|&#160;
-							<span>
-								<a>
-								        <xsl:attribute name="href"><xsl:value-of select="concat( //dri:metadata[@element='contextPath'] , '/', //dri:metadata[@qualifier='URI'],'?type=personftreferee')" /></xsl:attribute> 
-										<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_personftreferee</i18n:text>
-								</a>
-							</span>
-							&#160;|&#160;
-							<span>
-								<a>
-									<xsl:attribute name="href"><xsl:value-of select="concat( //dri:metadata[@element='contextPath'] , '/', //dri:metadata[@qualifier='URI'],'?type=person')" /></xsl:attribute>
-                                                                                <i18n:text>xmlui.ArtifactBrowser.Navigation.browse_person</i18n:text>
-                                                                </a>
-                                                        </span>
+						<span>
+							<a class="ft">
+								<xsl:attribute name="href"><xsl:value-of select="concat(//dri:metadata[@element='contextPath'], '/', //dri:metadata[@qualifier='URI'],'?type=personftadvisor')" /></xsl:attribute> 
+								<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_personftadvisor</i18n:text>
+							</a> 
+						</span>
+						&#160;|&#160;
+						<span>
+							<a>
+								<xsl:attribute name="href"><xsl:value-of select="concat( //dri:metadata[@element='contextPath'] , '/', //dri:metadata[@qualifier='URI'],'?type=personftreferee')" /></xsl:attribute> 
+								<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_personftreferee</i18n:text>
+							</a>
+						</span>
+						&#160;|&#160;
+						<span>
+							<a>
+								<xsl:attribute name="href"><xsl:value-of select="concat( //dri:metadata[@element='contextPath'] , '/', //dri:metadata[@qualifier='URI'],'?type=person')" /></xsl:attribute>
+								<i18n:text>xmlui.ArtifactBrowser.Navigation.browse_person</i18n:text>
+							</a>
+						</span>
 					</span>
 				</xsl:if> 
 				
-
 				<xsl:variable name="confIndicatorID" select="concat(@id,'_confidence_indicator')"/>
 				<xsl:if test="dri:params/@authorityControlled">
 					<xsl:variable name="confidence">
@@ -1104,9 +1100,9 @@
 	</xsl:template>
 
 	<!-- Since the field element contains only the type attribute, all other attributes commonly associated
-        with input fields are stored on the params element. Rather than parse the attributes directly, this
-        template generates a call to attribute templates, something that is not done in XSL by default. The
-        templates for the attributes can be found further down. -->
+	with input fields are stored on the params element. Rather than parse the attributes directly, this
+	template generates a call to attribute templates, something that is not done in XSL by default. The
+	templates for the attributes can be found further down. -->
 	<xsl:template match="dri:params">
 		<xsl:apply-templates select="@*"/>
 	</xsl:template>
@@ -1142,15 +1138,15 @@
 
 
 	<!-- A special case for the value element under field of type 'select'. Instead of being used to create
-        the value attribute of an HTML input tag, these are used to create selection options.
+	the value attribute of an HTML input tag, these are used to create selection options.
     <xsl:template match="dri:field[@type='select']/dri:value" priority="2">
-        <option>
-            <xsl:attribute name="value"><xsl:value-of select="@optionValue"/></xsl:attribute>
-            <xsl:if test="@optionSelected = 'yes'">
-                <xsl:attribute name="selected">selected</xsl:attribute>
-            </xsl:if>
-            <xsl:apply-templates />
-        </option>
+	<option>
+	    <xsl:attribute name="value"><xsl:value-of select="@optionValue"/></xsl:attribute>
+	    <xsl:if test="@optionSelected = 'yes'">
+		<xsl:attribute name="selected">selected</xsl:attribute>
+	    </xsl:if>
+	    <xsl:apply-templates />
+	</option>
     </xsl:template>-->
 
 	<!-- In general cases the value of this element is used directly, so the template does nothing. -->

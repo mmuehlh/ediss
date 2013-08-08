@@ -519,7 +519,7 @@
     <xsl:template match="dri:item" mode="nested">
 	<!-- M.M. Do not show person facet browsing on community and collection site -->
 	<xsl:choose>
-		<xsl:when test="contains(dri:xref/@target, 'type=personft')"/>
+		<xsl:when test="(contains(dri:xref/@target, 'type=personft') and (../@n != 'jump-list'))"/>
 		<xsl:otherwise>
 		        <li>
         		     <xsl:apply-templates />

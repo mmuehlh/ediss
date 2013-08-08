@@ -87,7 +87,6 @@
 						<!--ds-content is a groups ds-body and the navigation together and used to put the clearfix on, center, etc.
 							ds-content-wrapper is necessary for IE6 to allow it to center the page content-->
 						<div id="content-wrapper">
-							<a class="navlink top" href="#nav"><i18n:text>xmlui.dri2xhtml.structural.nav-link</i18n:text></a>
 							<!--
 							   Goes over the document tag's children elements: body, options, meta. The body template
 							   generates the ds-body div that contains all the content. The options template generates
@@ -118,6 +117,7 @@
 		references to stylesheets pulled directly from the pageMeta element. -->
 	<xsl:template name="buildHead">
 		<head>
+			<!-- <meta name="google-site-verification" content="LIW-IxIo_2yZemsXW2SW5x0maQdjkAZ0iJNZLQy_Xkw" /> -->
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
 			<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
@@ -555,6 +555,8 @@
 
 			</div>
 			
+			<a class="navlink top" href="#nav"><i18n:text>xmlui.dri2xhtml.structural.nav-link</i18n:text> ▼</a>
+			
 		</div>
 
 	</xsl:template>
@@ -658,6 +660,8 @@
 	<xsl:template name="buildFooter">
 		<div id="footer-wrapper">
 		
+			<a class="navlink" href="#nav"><i18n:text>xmlui.dri2xhtml.structural.nav-link</i18n:text> ▲</a>
+			
 			<div id="footer">
 				<div id="footer-left">
 					<a>
@@ -704,6 +708,25 @@
 					<xsl:text>&#160;</xsl:text>
 				</a>
 			</div>
+				<!-- Piwik -->
+				
+				<!--
+				<script type="text/javascript">
+						var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.gwdg.de/" : "http://piwik.gwdg.de/");
+						document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+						</script><script type="text/javascript">
+						try {
+								var piwikTracker=Piwik.getTracker("http://piwik.gwdg.de/piwik.php",170);
+								piwikTracker.enableLinkTracking();
+								piwikTracker.trackPageView();
+						} catch(err) {}
+
+
+				</script>
+				<noscript><p><img src="http://piwik.gwdg.de/piwik.php?idsite=170" style="border:0" alt=""/></p></noscript>
+				-->
+				
+				<!-- /Piwik -->
 		</div>
 	</xsl:template>
 
@@ -721,7 +744,7 @@
 	-->
 	<xsl:template match="dri:body">
 		<div id="content">
-			<div id="content-inner">
+			<div id="content-inner" class="clearfix">
 				<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']">
 					<div id="ds-system-wide-alert">
 						<p>
@@ -870,14 +893,15 @@
 		<!-- Add a google analytics script if the key is present -->
 		<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">
 			<script type="text/javascript"><xsl:text>
-				   var _gaq = _gaq || [];
-				   _gaq.push(['_setAccount', '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']"/><xsl:text>']);
-				   _gaq.push(['_trackPageview']);
+					var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']"/><xsl:text>']);
+					_gaq.push(['_trackPageview']);
 
-				   (function() {
-					   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-					   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-					   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					(function() {
+							var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+						//_paq.push(['trackGoal', 2]); // logs a conversion for goal Submission  
 				   })();
 				</xsl:text></script>
 		</xsl:if>

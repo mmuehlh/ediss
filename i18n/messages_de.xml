@@ -1836,7 +1836,6 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Erschienen</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Verlag</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Schlagwort</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-subjects">Schlagworte</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Dateien zu dieser Ressource</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Dateien</message>
@@ -2262,7 +2261,7 @@
 					<h3>Persönlich</h3>
 					<p>
 						Zentralbibliothek (Anschrift wie oben)<br/>
-						2. Etage links im LRC, Raum 2.19
+						2. Etage links im LRC, Raum 2.22
 					</p>
 				</div>
 				<div class="right">
@@ -2492,6 +2491,11 @@
 				<li>Platz der Göttinger Sieben 1</li>
 				<li>37073 Göttingen</li>
 			</ul>
+			<p>
+			Falls Sie uns die gedruckten Exemplare Ihrer Arbeit per Post zuschicken, leiten wir die Bestätigung über die erfolgte Publikation unmittelbar nach derer <a href="#finished">Freischaltung</a> direkt an das zuständige Prüfungsamt / Dekanat weiter.<br />
+			Bringen Sie die Druckversionen persönlich bei uns vorbei, geben wir Ihnen die Bestätigung direkt mit.<br />
+			Diese benötigen Sie zusammen mit Ihrem Revisionsschein, um bei Ihrem zuständigen Prüfungsamt / Dekanat Ihre Urkunde abholen zu können.
+			</p>
 			<!-- <p class="ds-paragraph">
 				Sobald die gedruckte Versionen Ihrer Arbeit bei uns angekommen sind, prüft die Redaktion Ihre elektronische Publikation und (sofern die Publikationskosten bezahlt ist) schalten wir sie frei. Ab dem Moment wird Ihre Dissertation öffentlich sichtbar und Sie werden über die Freischaltung in einer E-Mail informiert.
 				<br />
@@ -2501,8 +2505,16 @@
 			<p class="ds-paragraph">
                                 Sobald die gedruckte Versionen Ihrer Arbeit bei uns angekommen sind, prüft die Redaktion Ihre elektronische Publikation und schaltet sie frei. Ab dem Moment wird Ihre Dissertation öffentlich sichtbar und Sie werden über die Freischaltung in einer E-Mail informiert.
                                 <br />
+
                                 In einzelnen Fällen (z.B. die Beschreibung des Dokumentes enthält fehlerhafte Angaben) kann es vorkommen, dass die Redaktion eine Publikation ablehnt. In diesem Fall erhalten Sie eine E-Mail mit der Begründung der Ablehnung.
                         </p>
+			<p>
+				Falls Sie uns die gedruckten Exemplare Ihrer Arbeit per Post zugeschickt haben, <strong>leiten wir die Bestätigung über die erfolgte Publikation direkt an das zuständige Prüfungsamt/Dekanat weiter</strong>.
+			
+			<br />
+				
+Diese benötigen Sie zusammen mit Ihrem Revisionsschein, um Ihre Urkunde dort abholen zu können.
+			</p>
 			<!-- <h3 id="bill" class="ds-head">Bezahlen Sie die 25,00 € Publikationskosten.</h3>
 			<p class="ds-paragraph">
 				Nach Abschluss des online Publikationsprozesses erhalten Sie per Post eine
@@ -2516,6 +2528,7 @@
 			<p id="embargo" class="ds-paragraph">
 				<strong>BITTE BEACHTEN SIE: </strong>Eine Verzögerung der Publikation Ihrer elektronischen Dissertation auf eDiss ist nicht mehr möglich. Damit würde gegen die Promotionsordnung verstoßen. Nur in besonderen Ausnahmefällen (patentrechtliches Verfahren anhängig) ist auf Sonderantrag eine Verzögerung der Publikation möglich.
 			</p>
+			
 
 			<h2 id="break" class="ds-div-head">Den Publikationsprozess unterbrechen</h2>
 			<p class="ds-paragraph">
@@ -2844,38 +2857,82 @@
 				<h2 class="ds-head">Inhaltsverzeichnis</h2>
 				<ul class="ds-simple-list">
 					<li>
+						<a href="#whocan">Kann jeder Doktorand auf eDiss veröffentlichen?</a>
+					</li>
+                                        <li>
+                                                <a href="#printrequirements">Welche Anforderungen müssen die gedruckten Exemplare erfüllen?</a>
+                                        </li>
+					<li>
 						<a href="#parallel">Darf ich meine Dissertation neben der Veröffentlichung auf eDiss auch anderswo online stellen oder publizieren?</a>
 					</li>
+                                        <li>
+                                                <a href="#confirmation">Wie erhalte ich meine Bestätigung über die erfolgte Publikation?</a>
+                                        </li>
 					<li>
 						<a href="#benefits">Welche Vorteile bringt mir die  Veröffentlichung auf eDiss?</a>
 					</li>
 					<li>
 						<a href="#change">Kann ich meine Publikation nach der Veröffentlichung ändern?</a>
 					</li>
+                                        <li>
+                                                <a href="#publicationstate">Kann ich den Bearbeitungprozess meiner eDiss mitverfolgen?</a>
+                                        </li>
+                                        <!-- <li>
+                                                <a href="#whocan">Was ist ein Handle?</a>
+                                        </li> -->
 					<li>
 						<a href="#abstract">Was ist ein Abstract (= Kurzreferat)?</a>
 					</li>
 					<li>
 						<a href="#fastweb">Wie optimiere ich mein PDF-Dokument auf schnelle Webanzeige?</a>
 					</li>
-					<li>
-                                                <a href="#abo">Wie kann man Neuerscheinungen abonnieren?</a>
+                                        <li>
+                                                <a href="#referee">Wieviele Gutachter/Koreferenten muß ich beim Publizieren meiner Dissertation angeben?</a>
+                                        </li>
+                                        <li>
+                                                <a href="#keywords">Wie erstelle ich bei der Beschreibung meiner Dissertation eine Liste von Schlagwörtern / GOK Einträgen?</a>
                                         </li>
 					<li>
-                                                <a href="#referee">Wieviele Gutachter/Coreferenten muß ich beim Publizieren meiner Dissertation angeben?</a>
+                                                <a href="#abo">Wie kann ich Neuerscheinungen abonnieren /bestehende Abos kündigen?</a>
                                         </li>
 				</ul>
 			</div>
-
+			<h2 class="ds-div-head" id="whocan">Kann jeder Doktorand auf eDiss veröffentlichen?</h2>
 			<div class="ds-static-div">
-				<h2 class="ds-div-head" id="parallel">Darf ich meine Dissertation neben der Veröffentlichung auf eDiss auch anderswo online stellen oder publizieren?</h2>
+				<p>
+				Nur wer tatsächlich an der Georg-August-Universität Göttingen seine Dissertation abgeschlossen hat, darf seine Arbeit auch auf dem Dissertationsserver der Universität Göttingen veröffentlichen. In der Regel schreiben die Promotionsordnungen der Fakultäten vor, dass der Kandidat <strong>an der Universität Göttingen als Doktorand eingeschrieben</strong> sein muss.
+				</p>
+			</div>
+			<h2 class="ds-div-head" id="printrequirements">Welche Anforderungen müssen die gedruckten Exemplare erfüllen?</h2>
+                        <div class="ds-static-div">
+                                <p>
+				Die SUB stellt <strong>keine formellen Anforderungen</strong> an die zwei ausgedruckten Exemplare der elektronischen Dissertation. Falls es bestimmte Auflagen gibt, sind diese von der jeweiligen Fakultät in der Promotionsordnung festgelegt.</p>
+				<p>
+				<strong>Inhaltlich</strong> müssen die gedruckten Exemplare Ihrer Arbeit mit Ihrer elektronischen Dissertation identisch sein. In die gedruckte Version muss am Ende Ihr Lebenslauf eingebunden sein.
+                                </p>
+                        </div>
+			<h2 class="ds-div-head" id="parallel">Darf ich meine Dissertation neben der Veröffentlichung auf eDiss auch anderswo online stellen oder publizieren?</h2>
+			<div class="ds-static-div">
 				<p class="ds-paragraph"><strong>Ja</strong>, Sie dürfen Ihre Dissertation zugleich auf anderen Websites (z.B. auf der eigenen Homepage) online stellen. Zum Herunterladen ist es zu empfehlen, mittels der persistenten Identifiers, die Ihre Dissertation auf eDiss bekommt, auf Ihr Dokument zu verlinken.
 				</p>
 				<p class="ds-paragraph">Da Sie im Rahmen des eDiss-Vertrages uns nur ein einfaches (nicht-ausschliessliches) Nutzungrecht übertragen, können Sie weiteren Personen oder Institutionen Nutzungsrechte einräumen. Bei einer späteren Verlagsveröffentlichung infomieren Sie bitte den Verlag darüber, dass Ihre Arbeit bereits auf eDiss open access erschienen ist.
 				</p>
 			</div>
 
-			<h2 id="benefits">Welche Vorteile bringt mir die elekronische Veröffentlichung meiner Dissertation?</h2>
+			<h2 class="ds-div-head" id="confirmation">Wie erhalte ich meine Bestätigung über die erfolgte Publikation?</h2>
+			<div class="ds-static-div">
+                                
+                                <p>
+				Die Bestätigung über die erfolgte Publikation erhalten Sie erst, wenn das <a href="fullpublication#detailed">Publikationsverfahren</a> Ihrer Dissertation abgeschlossen ist.<br />
+				 Falls Sie die gedruckten Exemplare Ihrer Arbeit 
+				 <ul class="ds-bulleted-list">
+					<li>persönlich bei uns abliefern, geben wir Ihnen die Bestätigung direkt mit.</li>
+					<li>uns per Post zuschicken, leiten wir die Bestätigung direkt an das zuständige Prüfungsamt weiter.</li>
+				</ul>
+				Diese benötigen Sie zusammen mit Ihrem Revisionsschein, um bei Ihrem zuständigen Prüfungsamt / Dekanat Ihre Urkunde abholen zu können.
+                                </p>
+                        </div> 
+			 <h2 class="ds-div-head" id="benefits">Welche Vorteile bringt mir die elekronische Veröffentlichung meiner Dissertation?</h2>
 			<div class="ds-static-div">
 				<ul class="ds-bulleted-list">
 					<li>Die Veröffentlichung als elektronische Dissertation ist an der SUB Göttingen kostenfrei für den Doktoranden.</li>
@@ -2892,11 +2949,29 @@
 					<strong>Nein.</strong> Um die Authentizität, Zitierbarkeit und dauerhafte Erreichbarkeit Ihrer Dissertation zu sichern, können Publikationen auf eDiss nach ihrer Freischaltung nicht mehr verändert werden.
 				</p>
 				<p class="ds-paragraph">
-					Ist eine Korrektur notwendig und kann der Verfasser dies plausibel begründen, wenden Sie sich bitte an <a href="/contact">unsere Redakteure</a>. Nur sie sind berechtigt, Änderungen an den Angaben zur Dissertation vorzunehmen bzw. eine korrigierte Version des Dokuments neu einzustellen.<br />
-					Das Zurückziehen eines bereits publizierten Dokumentes ist nur möglich, wenn es lizenz- bzw. patentrechtliche Probleme gibt oder falls sich die Auffassung des Urhebers zu seinem Thema grundlegend geändert hat (§42 UrhG). Das Zurückziehen wird im System dokumentiert. Zusätzlich wird eine Informationsseite mit dem Hinweis „Dieses Dokument wurde zurückgezogen“ erstellt und über die permanente URL angezeigt.
+					Ist eine <strong>Korrektur</strong> doch notwendig und kann der Verfasser dies plausibel begründen, wenden Sie sich bitte an <a href="/contact">unsere Redakteure</a>. Nur sie sind berechtigt, Änderungen an den Angaben zur Dissertation vorzunehmen bzw. eine korrigierte Version des Dokuments neu einzustellen.</p>
+				<p>
+					Das <strong>Zurückziehen</strong> eines bereits publizierten Dokumentes ist nur möglich, wenn es lizenz- bzw. patentrechtliche Probleme gibt oder falls sich die Auffassung des Urhebers zu seinem Thema grundlegend geändert hat (§42 UrhG). Das Zurückziehen wird im System dokumentiert. Zusätzlich wird eine Informationsseite mit dem Hinweis „Dieses Dokument wurde zurückgezogen“ erstellt und über die permanente URL angezeigt.
 				</p>
-			</div>  
-                        <h2 id="#abstract">Was ist ein Abstract (= Kurzreferat)?</h2>
+			</div> 
+                        <h2 class="ds-div-head" id="publicationstate">Kann ich den Bearbeitungprozess meiner eDiss mitverfolgen?</h2>
+			<div class="ds-static-div">
+                                
+                                <p>
+				<strong>Ja</strong>, nachdem Sie den online Publikationsprozess abgeschlossen haben, können Sie sich unter dem Menüpunkt <em>Veröffentlichungen</em> (im linken Hauptmenü) den Stand der Bearbeitung Ihrer Dissertation anzeigen lassen. Dort können Sie unter “Status” (rechte Spalte nebem dem Titel der Publikation) ablesen, ob Ihre Publikationsdaten derzeit von einem Redakteur geprüft werden oder noch in der Warteschleife liegen.
+                                </p>
+                        </div> 
+		        <!-- <h2 class="ds-div-head" id="handle">Was ist ein Handle?</h2>
+			<div class="ds-static-div">
+                                <p>
+				Zur Zeit sind Publikationen auf eDiss unter einer Adresse wie etwa "http://ediss.uni-goettingen.de/handle/11858/00-1735-XXXX-XXXX-XXXX-C" aufrufbar. Unter bestimmten Umständen (beispielsweise beim Umzug des Dissertationsservers oder bei einer Änderung des Servenamens) können diese URLs nicht beibehalten werden. In diesem Fall werden alle Links, die über diese Adresse auf Ihre Disseration verweisen, möglicherweise nicht mehr funktionieren. Deshalb vergeben wir jeder Publikation auf eDiss einen weltweit eindeutigen persistenen Identifier, in unserem Falle einen sog. Handle (11858/00-1735-XXXX-XXXX-XXXX-C). Die Handles werden ins Handlesystem von <abbr title="European Persisten Identifier Consortium">EPIC</abbr> eingebunden. D.h. Wir registrieren die Identifier zusammen mit dem zugehörigen aktuellen URL beim Handleserver der GWDG. Die Dissertationen auf eDiss sind dann über eine permanente Adresse, wie "http://hdl.handle.net/handle/11858/00-1735-XXXX-XXXX-XXXX-C" adressierbar. Wird diese permanente Adresse aufgerufen, so geht die Anfrage zunächst an den Handleserver der GWDG und der leitet die Anfrage an die registrierte zugehörige faktische Adresse (hier an eDiss) weiter. Sobald sich unsere URLs ändern, aktualsieren wir die Zuordnung der persistenten und der neuen aktuellen Adressen beim Handleserver. Auf diese Weise können Sie sich darauf verlassen, dass Ihre Dissertation über die persistenten URLs dauerhaft referenziert werden können.
+Die persistente Adresse finden Sie in der Mitte auf der Seite Ihrer Publikation (durch Umrahmung und grauen Hintergrund hervorgehoben) mit dem Text "Zum Verlinken/Zitieren". Wenn Sie auf die Adresse klicken, wird die URL markiert und Sie können sie mit der Tastenkombination "Ctrl"+"c" zwischenspeichern. Um den Link irgendwo einzufügen, gehen Sie mit dem Maus zum Zielort und drücken Sie "Ctrl" + "v".
+				</p>
+				<p>
+				Weitere Informationen zum EPIC Handlesystem finden Sie unter <a href="http://www.pidconsortium.eu">http://www.pidconsortium.eu</a>.
+                                </p>
+                        </div> -->
+                        <h2 id="abstract">Was ist ein Abstract (= Kurzreferat)?</h2>
 			<div class="ds-static-div">
 				<p class="ds-paragraph">
 					Ein Kurzreferat (Abstract) gibt kurz und klar den Inhalt des Dokuments wieder. Das Kurzreferat soll informativ ohne Interpretation und Wertung und auch ohne die Originalvorlage verständlich sein. Der Sachtitel soll nicht wiederholt, vielmehr, wenn nötig, ergänzt oder erläutert werden. Es müssen nicht alle Inhaltskomponenten des Dokuments dargestellt, sondern es können diejenigen ausgewählt werden, die von besonderer Bedeutung sind (Grundlagen der praktischen Information und Dokumentation / Marianne Buder [Hrsg.], Münschen : Saur, 1997)
@@ -2915,22 +2990,59 @@
 					Eine ausführliche Anleitung dazu finden Sie auf unserer Hilfeseite <a href="/help/pdf-howto#fastweb">PDF richtig erstellen</a>.
                                 </p>
                         </div>
-                        <h2 id="abo">Wie kann man Neuerscheinungen abonnieren?</h2>
+
+                        <h2 id="referee">Wieviele Gutachter/Koreferenten muß ich beim Publizieren meiner Dissertation angeben?</h2>
                         <div class="ds-static-div">
                                 <p class="ds-paragraph">
-					Sie können „Bereiche / Sammlungen“ abonnieren, um tagesaktuell per E-Mail über Neuerscheinungen informiert zu werden. Sie können beliebig viele Sammlungen abonnieren. Dazu loggen Sie sich bitte bei eDISS ein, wählen in der linken Spalte den Menüpunkt BENUTZERDATEN und können dort in einem Unterpunkt „Abonnements“ die Bereiche / Sammlungen eintragen, zu denen Sie gerne eine automatische Mail-Benachrichtigung bei einer Neuerscheinung erhalten möchten.
+                                        Sie haben die Möglichkeit, in der Eingabemaske einen Betreuer (Doktorvater) und einen Gutachter anzugeben. Es stehen noch zwei Felder für weitere Gutachter („Zweitgutachter“ und „weitere Gutachter“) zur Verfügung. Diese müssen jedoch nicht genutzt werden, wenn keine weiteren Gutachter für Ihre Arbeit bestellt waren.
                                 </p>
-                                <p class="ds-paragraph">
-					Eine Alternative zur Benachrichtigung per E-Mail sind die RSS feeds.
+                        </div>
+                        <h2 class="ds-div-head" id="keywords">Wie erstelle ich bei der Beschreibung meiner Dissertation eine Liste von Schlagwörtern/<abbr title="Göttinger Online Klassifikation">GOK</abbr> Einträgen?</h2>
+			<div class="ds-static-div">
+                                
+                                <p>
+				<strong>Die Schlagwörter</strong> sind frei wählbar. Bitte klicken Sie nach jedem Schlagwort auf den “+” Knopf neben dem Eingabefeld, um den Begriff zu speichern.
 				</p>
-                        </div>
-                        <h2 id="referee">Wieviele Gutachter/Coreferenten muß ich beim Publizieren meiner Dissertation angeben?</h2>
-                        <div class="ds-static-div">
-                                <p class="ds-paragraph">
-					Sie haben die Möglichkeit, in der Eingabemaske einen Betreuer (Doktorvater) und einen Gutachter anzugeben. Es stehen noch zwei Felder für weitere Gutachter („Zweitgutachter“ und „weitere Gutachter“) zur Verfügung. Diese müssen jedoch nicht genutzt werden, wenn keine weiteren Gutachter für Ihre Arbeit bestellt waren.
+				<p>
+Für <strong>die GOK Einträge</strong> öffnen Sie den Kategorien-Baum über GOK-Link unter dem Eingabefeld. Die “+” ,“ -” Zeichen vor den Kategorien dienen der Navigation im Baum. Mit einem  Klick auf den Begriff selbst wird dieser automatisch im Formular übernommen.  Danach wird der Kategorien-Baum wieder geschlossen und Sie müssen für weitere Begriffe das Procedere wiederholen.
                                 </p>
                         </div>
- 
+                        <h2 id="abo">Wie kann ich Neuerscheinungen abonnieren/bestehende Abos kündigen?</h2>
+                        <div class="ds-static-div">
+				
+                                <div>
+					
+				Sie können <strong>Neuerscheinungen</strong> in beliebig vielen ausgwählten <em>Bereichen/Sammlungen</em> <strong>abonnieren</strong>, um darüber per E-Mail informiert zu werden. <br />Dazu brauchen Sie einen eDiss Account. <br />Um <strong>Abos anzulegen</strong>
+				
+				<ol class="ds-ordered-list">
+					<li>loggen Sie sich bitte bei eDISS ein,</li>
+					<li>wählen Sie im Hauptmenü links <em>Benutzerdaten</em> (Ihre Aboliste wird in der Mitte der Seite unter dem Punkt <em>Abonnements</em> verwaltet),</li>
+					<li>wählen Sie aus der Dropdown-Liste eine Sammlung,</li>
+					<li>Auswahl mit dem “+”-Zeichen rechts neben der Liste bestätigen,</li>
+					<li>ggf. die beide letzten Schritte wiederholen,</li>
+					<li>Änderungen mit dem Knopf <em>Benutzerdaten aktualisieren</em> speichern.</li>
+				</ol>
+                                </div>
+				<div>
+				Um <strong>bestehenede Abonnements zu kündigen</strong>
+				<ol class="ds-ordered-list">
+					<li>loggen Sie sich bitte bei eDISS ein,</li>
+                                        <li>wählen Sie im Hauptmenü links <em>Benutzerdaten</em> (Ihre Aboliste wird in der Mitte der Seite unter dem Punkt <em>Abonnements</em> verwaltet),</li>
+                                        <li>markieren Sie die Kästchen neben den entsprechenden Sammlungen aus der Liste Ihrer Abos,</li>
+                                        <li>klicken Sie auf den Knopf <em>remove selected</em>,</li>
+                                        <li>Änderungen mit dem Knopf <em>Benutzerdaten aktualisieren</em>.</li>
+                                </ol>
+
+				</div>
+                                <div>
+			Eine Alternative zur Benachrichtigung per E-Mail sind die <strong>RSS Feeds</strong>. Sie brauchen sich dafür nicht anzumelden. 
+				<ol class="ds-ordered-list">
+                                        <li>Navigieren Sie einfach zu der Sammlung, über die Sie informiert werden möchten.</li>
+					<li>Klicken Sie auf das RSS-Logo rechts neben der Überschrift <em>Neueste Zugänge</em></li>
+					<li>Fügen Sie die URL der erscheinenden Seite in Ihr Feedreader ein.</li>
+				</ol>
+				</div>
+                        </div>
 
 		</div>
 	</message>
@@ -2971,7 +3083,7 @@
 		<div class="ds-static-div">
 			<ul class="ds-simple-list">
 				<li>Zentralbibliothek</li>
-				<li>2. Etage links im LRC, Raum 2.19</li>
+				<li>2. Etage links im LRC, Raum 2.22</li>
 				<li>Tel.: 0551 / 39-5383</li>
 				<li>E-Mail: eDiss@sub.uni-goettingen.de</li>
 			</ul>

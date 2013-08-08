@@ -1836,7 +1836,6 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date of issue</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Publisher</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Subject</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-subjects">Subjects</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Files in this item</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Files</message>
@@ -2255,7 +2254,7 @@
 					<h3>In Person</h3>
 					<p>
 						Central Library (address see above)<br/>
-						2<sup>nd</sup> floor left in the LRC, room 2.19
+						2<sup>nd</sup> floor left in the LRC, room 2.22
 					</p>
 				</div>
 				<div class="right">
@@ -2487,6 +2486,10 @@
 				As soon as the printed versions of your work have reached us, the editor checks your electronic publication and unlock them. From the moment your dissertation will be visible to the public and you will be informed about the release in an E-Mail.
 				<br />
 				In some cases (e.g. the PDF file contains a malformed Contentss), it is possible that the editor rejects a publication. In this case, you will receive an email with the reason for the refusal. 
+			</p>
+			<p>
+			If you have sent us the printed copies of your work by post, we <strong>forward the confirmation of the successful publication directly to the responsible examination Office.</strong><br />
+You need this along with your revision ticket, to be able to pick up your certificate there.
 			</p>
 			<!-- <h3 id="bill" class="ds-head">Pay the publication fee of € 25.00</h3>
 			<p class="ds-paragraph">
@@ -2920,7 +2923,7 @@
 		<div class="ds-static-div">
 			<ul class="ds-simple-list">
 				<li>Central Library</li>
-				<li>Second Floor left in the LRC, room 2.19</li>
+				<li>Second Floor left in the LRC, room 2.22</li>
 				<li>Tel.: 0551 / 39-5383</li>
 				<li>E-Mail: eDiss@sub.uni-goettingen.de</li>
 			</ul>
