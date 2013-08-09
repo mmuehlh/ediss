@@ -405,7 +405,7 @@
 									</span>
 									<span class="profilemore">&#160; </span>
 								</p>
-								<ul>
+								<ul id="topnav">
 									<li>
 										<a>
 											<xsl:attribute name="href">

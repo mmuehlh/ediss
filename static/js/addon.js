@@ -70,12 +70,12 @@ $(function() {
 	});
 	
 	/* Scroll to top button */
-	$('body').append('<button id="totop">&uarr;</button>');
+	$('#page-wrapper').append('<button id="totop">&uarr;</button>');
 	$(window).scroll( function() {
 		console.log($(window).scrollTop());
 		if ( $(window).scrollTop() > 300 ) {
 			$('#totop:hidden').fadeIn();
-			$('#totop').css('top', $(window).scrollTop() + $(window).height() - 85);
+			$('#totop').css('top', $(window).scrollTop() + $(window).height() - 95);
 		} else {
 			$('#totop:visible').fadeOut();
 		}
